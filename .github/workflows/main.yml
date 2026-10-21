@@ -1,0 +1,36 @@
+name: Atualizar Ranking PUBG
+
+on:
+  schedule:
+    - cron: '0 * * * *' # Roda sozinho de hora em hora
+  workflow_dispatch: # Cria um botão para você rodar manualmente quando quiser
+
+jobs:
+  atualizar-dados:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 1. Baixar código do repositório
+        uses: actions/checkout@v4
+
+      - name: 2. Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 3. Instalar Biblioteca Requests
+        run: pip install requests
+
+      - name: 4. Rodar o Script de Coleta da API do PUBG
+        env:
+          PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
+        run: python atualizar_ranking.py
+
+      - name: 5. Salvar o novo JSON no site
+        run: |
+          git config --global user.name "Pamonhas Bot"
+          git config --global user.email "bot@pamonhas.pubg"
+          git add ranking_cla.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Atualização automática do ranking" && git push)
