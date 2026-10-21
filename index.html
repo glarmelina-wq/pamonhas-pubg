@@ -741,25 +741,29 @@
             renderizarRankings();
         }
 
-        function renderizarIncompetencia() {
+function renderizarIncompetencia() {
             const lista = [...estado.dados.jogadores];
             if (!lista.length) return;
             const kamikaze = [...lista].sort((a, b) => (b.km_rodados + b.suicides * 30) - (a.km_rodados + a.suicides * 30))[0];
             const atentado = [...lista].sort((a, b) => (b.team_kills * 10 + b.suicides) - (a.team_kills * 10 + a.suicides))[0];
             const pacifista = [...lista].sort((a, b) => a.adr - b.adr)[0];
             const pokemon = [...lista].sort((a, b) => a.tempo_medio_min - b.tempo_medio_min)[0];
+            
+            // NOVO: O cara que pega mais arma/loot por partida e tem baixo dano
+            const zelutinho = [...lista].sort((a, b) => (b.armas_loot || 0) - (a.armas_loot || 0))[0];
 
             document.getElementById('hall-incompetencia-cards').innerHTML = [
                 { t: "O Kamikaze / Caminhoneiro", i: "truck", c: "text-amber-400", b: "border-amber-500/40", n: kamikaze.nick, d: `Dirigiu <b>${kamikaze.km_rodados} km</b> na Kombi, atropelou <b>${kamikaze.road_kills}</b> e teve <b>${kamikaze.suicides}</b> acidentes fatais.` },
                 { t: "O Atentado / Bin Laden", i: "bomb", c: "text-rose-400", b: "border-rose-500/40", n: atentado.nick, d: `Perigo para o próprio squad: <b>${atentado.team_kills} Team Kills</b> e <b>${atentado.suicides}</b> suicídios na granada.` },
-                { t: "O Pacifista (Loot Simulator)", i: "backpack", c: "text-sky-400", b: "border-sky-500/40", n: pacifista.nick, d: `Jogou <b>${pacifista.partidas} partidas</b> só loteando, garantindo uma média inofensiva de <b>${pacifista.adr} ADR</b>.` },
-                { t: "O Pokémon (Vítima da Blue Zone)", i: "zap", c: "text-purple-400", b: "border-purple-500/40", n: pokemon.nick, d: `Sempre pego pelo gás fora da Safe Zone: tempo de sobrevivência de apenas <b>${pokemon.tempo_medio_min} min</b> por jogo.` }
+                { t: "Maior Zé Lutinho do Mês", i: "shopping-bag", c: "text-emerald-400", b: "border-emerald-500/40", n: zelutinho.nick, d: `O verdadeiro Loot Simulator. Passa a partida inteira catando chão: troca de arma e cata loot <b>${zelutinho.armas_loot} vezes por jogo</b>.` },
+                { t: "O Pokémon (Blue Zone)", i: "zap", c: "text-purple-400", b: "border-purple-500/40", n: pokemon.nick, d: `Sempre pego pelo gás fora da Safe Zone: tempo de sobrevivência de apenas <b>${pokemon.tempo_medio_min} min</b> por jogo.` }
             ].map(c => `
                 <div class="bg-card border-2 ${c.b} rounded-2xl p-6 flex items-start gap-4">
                     <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 ${c.c}"><i data-lucide="${c.i}" class="w-7 h-7"></i></div>
                     <div><span class="text-xs font-extrabold uppercase tracking-wider ${c.c}">${c.t}</span><h3 class="text-2xl font-bold font-gamer text-white mt-1">${c.n}</h3><p class="text-xs text-slate-400 mt-2 leading-relaxed">${c.d}</p></div>
                 </div>
             `).join('');
+            lucide.createIcons();
         }
 
         function renderizarRecordes() {
