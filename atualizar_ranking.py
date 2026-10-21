@@ -257,4 +257,3 @@ if __name__ == "__main__":
         calcular_estatisticas()
     except Exception as e:
         print(f"\n❌ Ocorreu um erro inesperado: {e}")
-    input("\nPressione ENTER para fechar esta janela...")
