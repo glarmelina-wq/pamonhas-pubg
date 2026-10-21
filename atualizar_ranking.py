@@ -20,7 +20,7 @@ MIN_PARTIDAS_MVP = 15
 
 # ⚠️ IMPORTANTE: Troque abaixo pelos nicks REAIS do PUBG (exatamente como no jogo, com maiúsculas e minúsculas!)
 MEMBROS_CLA = [
-"Gerskol",
+"gerskol",
     	"Burallosh",
 	"VoVoGOW",
     	"lauSL",
@@ -45,6 +45,7 @@ MEMBROS_CLA = [
 	"ShigS-08",
 	"robo-_G",
     	"tematoo",
+	"zPaT0__",
     "Zeus_god45"
 ]
 
