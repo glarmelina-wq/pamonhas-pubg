@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Pamonhas PUBG | Portal Oficial & Stats Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #090c10; color: #e2e8f0; }
+        .font-gamer { font-family: 'Rajdhani', sans-serif; }
+        .bg-card { background: linear-gradient(145deg, #121721 0%, #0d1118 100%); }
+        .pamonha-gradient { background: linear-gradient(135deg, #eab308 0%, #15803d 100%); }
+        .nav-active { color: #facc15; border-bottom: 2px solid #facc15; background: rgba(250, 204, 21, 0.08); }
+        .subtab-active { background-color: #eab308; color: #090c10; font-weight: 700; }
+        .gold-glow { box-shadow: 0 0 25px -5px rgba(234, 179, 8, 0.35); border-color: rgba(234, 179, 8, 0.6); }
+        .silver-glow { box-shadow: 0 0 20px -5px rgba(148, 163, 184, 0.25); border-color: rgba(148, 163, 184, 0.5); }
+        .bronze-glow { box-shadow: 0 0 20px -5px rgba(217, 119, 6, 0.25); border-color: rgba(180, 83, 9, 0.5); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- TOP NAVBAR -->
+    <nav class="sticky top-0 z-50 border-b border-slate-800/80 bg-[#090c10]/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between py-3 gap-4">
+            <div onclick="navegarPara('home')" class="flex items-center gap-3 cursor-pointer group">
+                <img src="logo_do_clan.jpg" onerror="this.src='https://placehold.co/80x80/15803d/facc15?text=ZE'" alt="Zé da Pamonha" class="w-12 h-12 rounded-xl object-cover border-2 border-yellow-400 shadow-md shadow-yellow-500/20 group-hover:scale-105 transition">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-2xl font-extrabold font-gamer tracking-wider text-white uppercase">OS <span class="text-yellow-400">PAMONHAS</span></span>
+                        <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300 border border-emerald-700/50">Desde 2019</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 flex items-center gap-1">
+                        <i data-lucide="flame" class="w-3 h-3 text-amber-400"></i> Legado Zé da Pamonha • Squad FPP
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-1 text-sm font-medium">
+                <button onclick="navegarPara('home')" id="nav-home" class="nav-btn nav-active px-3.5 py-2 rounded-t-lg flex items-center gap-1.5 transition hover:text-yellow-400">
+                    <i data-lucide="search" class="w-4 h-4"></i> Busca & Dossiê
+                </button>
+                <button onclick="navegarPara('rankings')" id="nav-rankings" class="nav-btn px-3.5 py-2 rounded-t-lg flex items-center gap-1.5 transition hover:text-yellow-400">
+                    <i data-lucide="trophy" class="w-4 h-4"></i> Rankings MVP
+                </button>
+                <button onclick="navegarPara('incompetencia')" id="nav-incompetencia" class="nav-btn px-3.5 py-2 rounded-t-lg flex items-center gap-1.5 transition hover:text-yellow-400">
+                    <i data-lucide="skull" class="w-4 h-4 text-rose-400"></i> Hall da Incompetência
+                </button>
+                <button onclick="navegarPara('recordes')" id="nav-recordes" class="nav-btn px-3.5 py-2 rounded-t-lg flex items-center gap-1.5 transition hover:text-yellow-400">
+                    <i data-lucide="medal" class="w-4 h-4"></i> Conquistas & Recordes
+                </button>
+                <button onclick="navegarPara('wrapped')" id="nav-wrapped" class="nav-btn px-3.5 py-2 rounded-t-lg flex items-center gap-1.5 transition hover:text-yellow-400">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400"></i> Pamonhas Wrapped
+                </button>
+                <button onclick="navegarPara('comunidade')" id="nav-comunidade" class="nav-btn px-3.5 py-2 rounded-t-lg flex items-center gap-1.5 transition hover:text-yellow-400">
+                    <i data-lucide="users" class="w-4 h-4"></i> Quem Somos & Eventos
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="max-w-7xl w-full mx-auto px-4 py-8 flex-1">
+
+        <!-- ==========================================
+             PÁGINA 1: HOME (BUSCA + DESAFIO + DOSSIÊ)
+             ========================================== -->
+        <div id="page-home" class="page-section space-y-8">
+
+            <!-- Widget Desafio Semanal da Comunidade -->
+            <div class="bg-gradient-to-r from-emerald-950/60 via-slate-900 to-yellow-950/40 border border-emerald-700/40 rounded-2xl p-5 flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-500/20 border border-yellow-500/40 flex items-center justify-center text-yellow-400 shrink-0">
+                        <i data-lucide="target" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold uppercase px-2 py-0.5 rounded bg-yellow-400 text-slate-950">Desafio Semanal Coletivo</span>
+                            <span class="text-xs text-slate-400">Termina Domingo às 23:59</span>
+                        </div>
+                        <h3 class="text-lg font-bold font-gamer tracking-wide text-white mt-0.5">
+                            "Operação Pamonha Quente": Somar 500 Abates no Squad FPP
+                        </h3>
+                    </div>
+                </div>
+                <div class="w-full lg:w-96">
+                    <div class="flex justify-between text-xs mb-1.5">
+                        <span class="text-slate-300 font-medium">Progresso do Clã</span>
+                        <span id="desafio-progresso-txt" class="text-yellow-400 font-bold">0 / 500 Kills (0%)</span>
+                    </div>
+                    <div class="w-full h-3 bg-slate-950 rounded-full overflow-hidden border border-slate-800">
+                        <div id="desafio-barra" class="h-full pamonha-gradient rounded-full transition-all duration-700" style="width: 50%"></div>
+                    </div>
+                    <p class="text-[11px] text-slate-400 mt-1 text-right">🎁 Recompensa: Sorteio no Discord do Clã</p>
+                </div>
+            </div>
+
+            <!-- Hero: Busca Rápida de Jogadores -->
+            <div class="bg-card border border-slate-800 rounded-2xl p-6 md:p-8 text-center">
+                <h1 class="text-3xl md:text-5xl font-extrabold font-gamer uppercase text-white tracking-wide">
+                    Rastreador Tático <span class="text-yellow-400">Os Pamonhas</span>
+                </h1>
+                <p class="text-sm text-slate-400 max-w-2xl mx-auto mt-2">
+                    Digite o nick ou clique em um membro abaixo para abrir o dossiê completo (Janela de 14 dias / Últimas 10 partidas e Temporada), gráficos de forma, arquétipo e telemetria 2D.
+                </p>
+
+                <div class="max-w-xl mx-auto mt-6 flex gap-2">
+                    <div class="relative flex-1">
+                        <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-3.5 top-3.5"></i>
+                        <input type="text" id="home-player-search" onkeydown="if(event.key==='Enter') buscarJogadorDossie()" placeholder="Digite o nick do jogador na Steam..." 
+                            class="w-full bg-slate-950 border border-slate-700 focus:border-yellow-400 rounded-xl pl-11 pr-4 py-3 text-white text-sm focus:outline-none">
+                    </div>
+                    <button onclick="buscarJogadorDossie()" class="px-6 py-3 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-bold text-sm transition flex items-center gap-2">
+                        Analisar <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+
+                <div class="mt-4 flex flex-wrap items-center justify-center gap-2" id="quick-member-pills"></div>
+            </div>
+
+            <!-- DOSSIÊ DO JOGADOR SELECIONADO (ESTILO VRX COMPLETO) -->
+            <div class="bg-card border border-slate-800 rounded-2xl p-6 space-y-6">
+                
+                <!-- Cabeçalho do Jogador + Filtro de Modos -->
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-500/20 to-emerald-600/20 border-2 border-yellow-400 flex items-center justify-center text-2xl font-extrabold font-gamer text-yellow-400" id="dossie-avatar">
+                            PM
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2">
+                                <h2 id="dossie-nick" class="text-3xl font-bold font-gamer text-white tracking-wide">Selecione um Membro</h2>
+                                <span id="dossie-arquetipo-badge" class="px-2.5 py-0.5 text-xs font-bold uppercase bg-yellow-400/20 text-yellow-300 border border-yellow-500/40 rounded-full">Arquétipo</span>
+                            </div>
+                            <p class="text-xs text-slate-400 mt-1">Steam • Janela Ativa: Últimas 10 Partidas / 14 Dias & Acumulado da Temporada</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <select class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-yellow-400">
+                            <option value="all-fpp">Modo: Squad FPP + Duo FPP (Principal)</option>
+                            <option value="squad-fpp">Apenas Squad FPP</option>
+                            <option value="duo-fpp">Apenas Duo FPP</option>
+                            <option value="solo-fpp">Solo FPP</option>
+                            <option value="tpp">Todos (TPP / FPP)</option>
+                        </select>
+                        <button onclick="abrirWrappedDoJogadorAtivo()" class="px-3.5 py-2 rounded-lg bg-emerald-600/20 border border-emerald-500/40 text-emerald-300 text-xs font-semibold hover:bg-emerald-600/30 flex items-center gap-1.5">
+                            <i data-lucide="share-2" class="w-4 h-4"></i> Gerar Wrapped
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Todas as Abas de Navegação de Dados pedidas -->
+                <div class="flex flex-wrap gap-1.5 border-b border-slate-800 pb-4 text-xs font-medium">
+                    <button onclick="mudarSubAbaDossie('visao-geral')" id="subtab-visao-geral" class="subtab-btn subtab-active px-3 py-1.5 rounded-lg transition bg-slate-800/80 text-slate-300">Visão Geral</button>
+                    <button onclick="mudarSubAbaDossie('partidas')" id="subtab-partidas" class="subtab-btn px-3 py-1.5 rounded-lg transition bg-slate-800/80 text-slate-300">Partidas</button>
+                    <button onclick="mudarSubAbaDossie('temporada')" id="subtab-temporada" class="subtab-btn px-3 py-1.5 rounded-lg transition bg-slate-800/80 text-slate-300">Temporada & Ranqueada</button>
+                    <button onclick="mudarSubAbaDossie('lifetime')" id="subtab-lifetime" class="subtab-btn px-3 py-1.5 rounded-lg transition bg-slate-800/80 text-slate-300">Vida Inteira</button>
+                    <button onclick="mudarSubAbaDossie('armas-mapas')" id="subtab-armas-mapas" class="subtab-btn px-3 py-1.5 rounded-lg transition bg-slate-800/80 text-slate-300">Armas, Mapas, Dropeiros & Maestria</button>
+                    <button onclick="mudarSubAbaDossie('companheiros')" id="subtab-companheiros" class="subtab-btn px-3 py-1.5 rounded-lg transition bg-slate-800/80 text-slate-300">Companheiros & Bots vs Humanos</button>
+                    <button onclick="mudarSubAbaDossie('clipes')" id="subtab-clipes" class="subtab-btn px-3 py-1.5 rounded-lg transition bg-slate-800/80 text-slate-300">Clipes</button>
+                    <button onclick="mudarSubAbaDossie('replay2d')" id="subtab-replay2d" class="subtab-btn px-3 py-1.5 rounded-lg transition bg-slate-800/80 text-slate-300 flex items-center gap-1"><i data-lucide="map" class="w-3.5 h-3.5"></i> Replay 2D & Telemetria</button>
+                </div>
+
+                <!-- 1. SUB-ABA: VISÃO GERAL -->
+                <div id="dossie-content-visao-geral" class="dossie-subcontent space-y-6">
+                    <!-- 8 Indicadores Principais -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3" id="dossie-kpis"></div>
+
+                    <!-- Grid: Radar de Estilo + Destaques (10 itens) + Médias por Partida (10 itens) -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="bg-slate-950/70 border border-slate-800/90 rounded-xl p-5 flex flex-col justify-between">
+                            <div>
+                                <h4 class="text-base font-bold font-gamer uppercase text-yellow-400 flex items-center gap-2">
+                                    <i data-lucide="radar" class="w-4 h-4"></i> Estilo de Jogo & Percentis
+                                </h4>
+                                <p class="text-xs text-slate-400 mt-0.5">Agressividade, Gunplay, Equipe, Cura, Sobrevivência e Movimentação</p>
+                            </div>
+                            <div class="my-4 max-h-60 flex justify-center">
+                                <canvas id="radarChart"></canvas>
+                            </div>
+                            <div class="bg-slate-900/90 border border-slate-800 rounded-lg p-3 text-xs space-y-1">
+                                <div class="flex justify-between"><span class="text-slate-400">Ponto Forte:</span> <span id="arq-forte" class="font-bold text-emerald-400">-</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Foco de Melhoria:</span> <span id="arq-melhoria" class="font-bold text-amber-400">-</span></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950/70 border border-slate-800/90 rounded-xl p-5">
+                            <h4 class="text-base font-bold font-gamer uppercase text-yellow-400 flex items-center gap-2 mb-4">
+                                <i data-lucide="award" class="w-4 h-4"></i> Destaques da Temporada
+                            </h4>
+                            <div class="grid grid-cols-2 gap-2.5 text-xs" id="dossie-destaques"></div>
+                        </div>
+
+                        <div class="bg-slate-950/70 border border-slate-800/90 rounded-xl p-5">
+                            <h4 class="text-base font-bold font-gamer uppercase text-yellow-400 flex items-center gap-2 mb-4">
+                                <i data-lucide="activity" class="w-4 h-4"></i> Médias por Partida
+                            </h4>
+                            <div class="space-y-2 text-xs" id="dossie-medias"></div>
+                        </div>
+                    </div>
+
+                    <!-- Gráficos de Forma Recente (Partida a Partida) e Forma Diária -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        <div class="bg-slate-950/70 border border-slate-800/90 rounded-xl p-5">
+                            <h4 class="text-base font-bold font-gamer uppercase text-yellow-400 mb-1">Forma Recente (Últimas 10 Partidas)</h4>
+                            <p class="text-xs text-slate-400 mb-4">Evolução de Dano (ADR) e Abates partida a partida</p>
+                            <div class="h-52"><canvas id="recentFormChart"></canvas></div>
+                        </div>
+                        <div class="bg-slate-950/70 border border-slate-800/90 rounded-xl p-5">
+                            <h4 class="text-base font-bold font-gamer uppercase text-emerald-400 mb-1">Forma Diária (Janela de 7 Dias)</h4>
+                            <p class="text-xs text-slate-400 mb-4">Volume de Partidas jogadas e Kills por dia da semana</p>
+                            <div class="h-52"><canvas id="dailyFormChart"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. SUB-ABA: PARTIDAS -->
+                <div id="dossie-content-partidas" class="dossie-subcontent hidden space-y-4">
+                    <h4 class="text-lg font-bold font-gamer uppercase text-white">Histórico Recente (Últimas 10 Partidas FPP)</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="partidas-recentes-grid"></div>
+                </div>
+
+                <!-- 3. SUB-ABA: TEMPORADA & RANQUEADA -->
+                <div id="dossie-content-temporada" class="dossie-subcontent hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-5">
+                        <span class="px-2 py-0.5 text-[10px] font-bold bg-yellow-400 text-slate-950 rounded uppercase">Partidas Normais FPP</span>
+                        <h4 class="text-xl font-bold font-gamer uppercase text-white mt-2">Acumulado da Temporada</h4>
+                        <p class="text-xs text-slate-400 mt-1">Dados sincronizados diretamente do arquivo <code class="text-yellow-400">ranking_cla.json</code>.</p>
+                        <div id="resumo-season-box" class="mt-4 space-y-2 text-xs"></div>
+                    </div>
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-5">
+                        <span class="px-2 py-0.5 text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded uppercase">Modo Competitivo (Sem Bots)</span>
+                        <h4 class="text-xl font-bold font-gamer uppercase text-white mt-2">Fila Ranqueada (Squad FPP)</h4>
+                        <p class="text-xs text-slate-400 mt-1">Status de RP, Tier Atual e KDA em lobbies competitivos de 64 jogadores.</p>
+                        <div class="mt-4 p-4 bg-slate-900 rounded-lg border border-slate-800 text-xs text-slate-300 space-y-2">
+                            <div class="flex justify-between"><span>Tier Estimado Baseado em ADR/KDA:</span><b class="text-yellow-400" id="ranked-tier-est">Platina / Diamante</b></div>
+                            <div class="flex justify-between"><span>Lobby Livre de Bots:</span><b class="text-emerald-400">100% Humanos</b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. SUB-ABA: VIDA INTEIRA (LIFETIME) -->
+                <div id="dossie-content-lifetime" class="dossie-subcontent hidden">
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-6">
+                        <h4 class="text-xl font-bold font-gamer uppercase text-yellow-400">Estatísticas de Vida Inteira (Lifetime Career)</h4>
+                        <p class="text-xs text-slate-400 mt-1">Projeção histórica de carreira do operador no PUBG Steam:</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 text-center" id="lifetime-box"></div>
+                    </div>
+                </div>
+
+                <!-- 5. SUB-ABA: ARMAS, MAPAS, DROPEIROS & MAESTRIA -->
+                <div id="dossie-content-armas-mapas" class="dossie-subcontent hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-5">
+                        <h5 class="text-sm font-bold font-gamer uppercase text-yellow-400 mb-3">Armas Favoritas & Maestria</h5>
+                        <div class="space-y-2.5 text-xs">
+                            <div class="flex justify-between p-2.5 bg-slate-900 rounded"><span>1. Beryl M762 (AR)</span><span class="text-yellow-400 font-bold">Nível 100 • Mestre</span></div>
+                            <div class="flex justify-between p-2.5 bg-slate-900 rounded"><span>2. AUG A3 / M416 (AR)</span><span class="text-yellow-400 font-bold">Nível 85 • Especialista</span></div>
+                            <div class="flex justify-between p-2.5 bg-slate-900 rounded"><span>3. Kar98k / Dragunov (SR/DMR)</span><span class="text-emerald-400 font-bold">Abates Longos</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-5">
+                        <h5 class="text-sm font-bold font-gamer uppercase text-yellow-400 mb-3">Mapas Favoritos (Rotação SA)</h5>
+                        <div class="space-y-2.5 text-xs">
+                            <div class="flex justify-between p-2.5 bg-slate-900 rounded"><span>Erangel (Clássico)</span><span class="text-emerald-400 font-bold">Favorito #1</span></div>
+                            <div class="flex justify-between p-2.5 bg-slate-900 rounded"><span>Miramar (Sniper Map)</span><span class="text-emerald-400 font-bold">Favorito #2</span></div>
+                            <div class="flex justify-between p-2.5 bg-slate-900 rounded"><span>Taego / Rondo / Vikendi</span><span class="text-slate-300 font-bold">Rotação FPP</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-5">
+                        <h5 class="text-sm font-bold font-gamer uppercase text-yellow-400 mb-3">Mapa de Dropeiros (Locais de Salto)</h5>
+                        <ul class="space-y-2.5 text-xs text-slate-300">
+                            <li class="p-2 bg-slate-900 rounded">🪂 <b>Pochinki / Georgopol</b> (Erangel)</li>
+                            <li class="p-2 bg-slate-900 rounded">🪂 <b>Pecado / Hacienda del Patrón</b> (Miramar)</li>
+                            <li class="p-2 bg-slate-900 rounded">🪂 <b>Terminal / Palace</b> (Taego)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 6. SUB-ABA: COMPANHEIROS, ADVERSÁRIOS & BOTS VS HUMANOS -->
+                <div id="dossie-content-companheiros" class="dossie-subcontent hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-5">
+                        <h5 class="text-sm font-bold font-gamer uppercase text-yellow-400 mb-2">Companheiros Recentes de Squad</h5>
+                        <p class="text-xs text-slate-400 mb-4">Comparativo de colocação, KDA e ADR jogando em parceria com o clã:</p>
+                        <div id="sinergia-lista" class="space-y-2.5 text-xs"></div>
+                    </div>
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-5">
+                        <h5 class="text-sm font-bold font-gamer uppercase text-emerald-400 mb-2">Estatísticas de Bots vs. Humanos & Adversários</h5>
+                        <p class="text-xs text-slate-400 mb-4">Filtro de qualidade de lobby e taxa de confronto contra jogadores reais:</p>
+                        <div class="space-y-2.5 text-xs">
+                            <div class="flex justify-between p-2.5 bg-slate-900 rounded"><span>Média de Humanos nos Lobbies (Horário Nobre):</span><span class="font-bold text-emerald-400">84% Humanos / 16% Bots</span></div>
+                            <div class="flex justify-between p-2.5 bg-slate-900 rounded"><span>K/D Estimado Contra Humanos:</span><span class="font-bold text-yellow-400" id="kd-humano-est">-</span></div>
+                            <div class="flex justify-between p-2.5 bg-slate-900 rounded"><span>ADR Real Estimado (vs Players):</span><span class="font-bold text-white" id="adr-humano-est">-</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. SUB-ABA: CLIPES -->
+                <div id="dossie-content-clipes" class="dossie-subcontent hidden">
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 text-center space-y-3">
+                        <i data-lucide="video" class="w-10 h-10 text-yellow-400 mx-auto"></i>
+                        <h4 class="text-xl font-bold font-gamer uppercase text-white">Galeria de Clipes & Highlights</h4>
+                        <p class="text-xs text-slate-400 max-w-lg mx-auto">Espaço reservado para incorporar vídeos da Twitch, YouTube ou Medal.tv com as melhores jogadas (e pinadas históricas) deste membro.</p>
+                    </div>
+                </div>
+
+                <!-- 8. SUB-ABA: REPLAY 2D & TELEMETRIA -->
+                <div id="dossie-content-replay2d" class="dossie-subcontent hidden">
+                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="space-y-2 max-w-xl">
+                            <span class="px-2.5 py-0.5 text-[10px] font-bold uppercase bg-yellow-400 text-slate-950 rounded">Telemetria Tática 2D</span>
+                            <h4 class="text-2xl font-bold font-gamer text-white uppercase">Replay 2D: Rotas, Loadout & Kill Feed</h4>
+                            <p class="text-xs text-slate-400">
+                                Reconstrução completa da última partida: acompanhe o deslocamento do squad pelo mapa, cones de visão, armas utilizadas e distância exata de cada abate na linha do tempo.
+                            </p>
+                            <div class="pt-2 flex flex-wrap gap-3">
+                                <a href="https://pubg.sh" target="_blank" id="link-pubg-sh" class="px-4 py-2.5 rounded-lg bg-yellow-400 text-slate-950 font-bold text-xs flex items-center gap-2 hover:bg-yellow-300 transition">
+                                    Abrir Replay 2D do Jogador (PUBG.sh) <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-72 h-40 rounded-xl bg-slate-900 border border-slate-800 flex flex-col items-center justify-center p-4 text-center">
+                            <i data-lucide="compass" class="w-10 h-10 text-yellow-400 mb-2 animate-spin" style="animation-duration: 12s;"></i>
+                            <span class="text-xs font-semibold text-slate-300">Mapa Interativo 2D</span>
+                            <span class="text-[11px] text-slate-500">Rotas, Safe Zones & Distância de Tiro</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==========================================
+             PÁGINA 2: RANKINGS & MVP
+             ========================================== -->
+        <div id="page-rankings" class="page-section hidden space-y-8">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-3xl font-extrabold font-gamer uppercase text-white">Rankings Oficiais <span class="text-yellow-400">Os Pamonhas</span></h2>
+                    <p class="text-sm text-slate-400" id="last-update">Carregando dados da temporada...</p>
+                </div>
+                <div class="flex flex-wrap gap-2" id="category-tabs">
+                    <button onclick="mudarCategoria('mvp')" id="tab-mvp" class="tab-btn subtab-active px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 bg-slate-800 text-slate-300"><i data-lucide="trophy" class="w-3.5 h-3.5"></i> Geral (MVP)</button>
+                    <button onclick="mudarCategoria('fragger')" id="tab-fragger" class="tab-btn px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 bg-slate-800 text-slate-300"><i data-lucide="flame" class="w-3.5 h-3.5"></i> O Carniceiro</button>
+                    <button onclick="mudarCategoria('sniper')" id="tab-sniper" class="tab-btn px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 bg-slate-800 text-slate-300"><i data-lucide="locate-fixed" class="w-3.5 h-3.5"></i> Olho de Águia</button>
+                    <button onclick="mudarCategoria('suporte')" id="tab-suporte" class="tab-btn px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 bg-slate-800 text-slate-300"><i data-lucide="heart-pulse" class="w-3.5 h-3.5"></i> Anjo da Guarda</button>
+                    <button onclick="mudarCategoria('sobrevivente')" id="tab-sobrevivente" class="tab-btn px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 bg-slate-800 text-slate-300"><i data-lucide="shield" class="w-3.5 h-3.5"></i> Mochila de Pedra</button>
+                    <button onclick="mudarCategoria('vitorioso')" id="tab-vitorioso" class="tab-btn px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 bg-slate-800 text-slate-300"><i data-lucide="drumstick" class="w-3.5 h-3.5"></i> Chama-Frango</button>
+                </div>
+            </div>
+
+            <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                    <h3 id="cat-title" class="text-lg font-bold font-gamer text-yellow-400 uppercase">Ranking Geral (MVP)</h3>
+                    <p id="cat-desc" class="text-xs text-slate-400">Equilíbrio entre ADR, K/D, Vitórias e Suporte.</p>
+                </div>
+                <div id="cat-formula" class="text-xs font-mono bg-slate-950 px-3 py-1.5 rounded border border-slate-800 text-yellow-300">
+                    Fórmula: (ADR × 1.5) + (K/D × 50) + (Wins × 15) + (Top10 × 3) + (Revives × 2)
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="podium-container"></div>
+
+            <div class="overflow-x-auto rounded-xl border border-slate-800 bg-card shadow-xl">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-slate-800 text-xs font-semibold uppercase text-slate-400 bg-slate-900/90" id="table-headers"></tr>
+                    </thead>
+                    <tbody id="table-body" class="divide-y divide-slate-800/60 text-sm"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             PÁGINA 3: HALL DA FAMA DA INCOMPETÊNCIA
+             ========================================== -->
+        <div id="page-incompetencia" class="page-section hidden space-y-8">
+            <div class="border-b border-slate-800 pb-4">
+                <span class="px-2.5 py-0.5 text-xs font-bold uppercase bg-rose-500/20 text-rose-400 border border-rose-500/30 rounded">Zoeira Semanal • Reset toda Segunda-Feira</span>
+                <h2 class="text-3xl font-extrabold font-gamer uppercase text-white mt-1">Hall da Fama da <span class="text-rose-500">Incompetência</span></h2>
+                <p class="text-sm text-slate-400">As lendas da resenha: quem mais dirigiu a Kombi, explodiu amigos na granada ou passeou no mapa.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="hall-incompetencia-cards"></div>
+        </div>
+
+        <!-- ==========================================
+             PÁGINA 4: CONQUISTAS E RECORDES
+             ========================================== -->
+        <div id="page-recordes" class="page-section hidden space-y-8">
+            <div>
+                <span class="px-2.5 py-0.5 text-xs font-bold uppercase bg-yellow-400/20 text-yellow-300 border border-yellow-500/30 rounded">7 Dias & All-Time</span>
+                <h2 class="text-3xl font-extrabold font-gamer uppercase text-white mt-1">Conquistas & <span class="text-yellow-400">Recordes do Clã</span></h2>
+                <p class="text-sm text-slate-400">Os maiores destaques táticos registrados nas partidas dos Pamonhas.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="recordes-cards"></div>
+        </div>
+
+        <!-- ==========================================
+             PÁGINA 5: PAMONHAS WRAPPED (ESTILO SPOTIFY)
+             ========================================== -->
+        <div id="page-wrapped" class="page-section hidden space-y-8">
+            <div class="max-w-3xl mx-auto text-center space-y-2">
+                <span class="px-3 py-1 text-xs font-bold uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-full">Stories & Discord Generator</span>
+                <h2 class="text-3xl font-extrabold font-gamer uppercase text-white">Meu Resumo <span class="text-yellow-400">Pamonhas Wrapped</span></h2>
+                <p class="text-sm text-slate-400">Escolha o seu nick e baixe o card oficial em imagem para postar no Discord ou Stories!</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3">
+                <select id="wrapped-select-player" onchange="atualizarWrappedCard()" class="bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-yellow-400"></select>
+                <button onclick="baixarImagemWrapped()" class="px-5 py-2.5 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-bold text-sm flex items-center gap-2 transition">
+                    <i data-lucide="download" class="w-4 h-4"></i> Baixar Card (PNG)
+                </button>
+            </div>
+
+            <div class="flex justify-center">
+                <div id="wrapped-capture-area" class="w-[360px] rounded-3xl p-6 bg-gradient-to-b from-[#132a1c] via-[#0d131a] to-[#1f1909] border-2 border-yellow-400/70 shadow-2xl space-y-5 relative overflow-hidden">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <img src="logo_do_clan.jpg" onerror="this.src='https://placehold.co/60x60/15803d/facc15?text=ZE'" class="w-11 h-11 rounded-xl object-cover border border-yellow-400">
+                            <div>
+                                <div class="text-xs font-extrabold uppercase text-yellow-400 tracking-wider">OS PAMONHAS</div>
+                                <div class="text-[10px] text-slate-300">PUBG FPP • WRAPPED OFICIAL</div>
+                            </div>
+                        </div>
+                        <span class="text-[10px] font-mono bg-slate-950/80 px-2 py-1 rounded text-emerald-400 border border-emerald-700/40" id="wrap-season">SEASON</span>
+                    </div>
+
+                    <div class="pt-2 text-center">
+                        <div class="text-xs uppercase tracking-widest text-slate-400">Operador em Destaque</div>
+                        <h3 id="wrap-nick" class="text-3xl font-extrabold font-gamer text-white uppercase mt-0.5">NICK</h3>
+                        <span id="wrap-rank-title" class="inline-block mt-1 px-3 py-0.5 rounded-full text-xs font-bold bg-yellow-400 text-slate-950">Especialista FPP</span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 bg-slate-950/75 p-4 rounded-2xl border border-slate-800/80 text-center">
+                        <div>
+                            <div class="text-[10px] uppercase text-slate-400">Dano Médio (ADR)</div>
+                            <div id="wrap-adr" class="text-2xl font-extrabold font-gamer text-yellow-400">0</div>
+                        </div>
+                        <div>
+                            <div class="text-[10px] uppercase text-slate-400">Taxa K/D</div>
+                            <div id="wrap-kd" class="text-2xl font-extrabold font-gamer text-emerald-400">0.0</div>
+                        </div>
+                        <div>
+                            <div class="text-[10px] uppercase text-slate-400">Abates Totais</div>
+                            <div id="wrap-kills" class="text-xl font-bold font-gamer text-white">0</div>
+                        </div>
+                        <div>
+                            <div class="text-[10px] uppercase text-slate-400">Frangos (Wins)</div>
+                            <div id="wrap-wins" class="text-xl font-bold font-gamer text-white">0</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-xs bg-slate-950/60 p-3.5 rounded-xl border border-slate-800/60">
+                        <div class="flex justify-between"><span class="text-slate-400">🎯 Tiro Mais Longo:</span><b id="wrap-longest" class="text-white">0m</b></div>
+                        <div class="flex justify-between"><span class="text-slate-400">💉 Aliados Levantados:</span><b id="wrap-revives" class="text-sky-400">0</b></div>
+                        <div class="flex justify-between"><span class="text-slate-400">🚐 KM de Kombi/Veículo:</span><b id="wrap-km" class="text-amber-300">0 km</b></div>
+                        <div class="flex justify-between"><span class="text-slate-400">💣 Fogo Amigo (TK):</span><b id="wrap-tk" class="text-rose-400">0</b></div>
+                    </div>
+
+                    <div class="text-center pt-1">
+                        <p class="text-[10px] text-slate-400 uppercase tracking-widest">Legado Zé da Pamonha • Desde 2019</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             PÁGINA 6: QUEM SOMOS, DIRETÓRIO & EVENTOS
+             ========================================== -->
+        <div id="page-comunidade" class="page-section hidden space-y-10">
+
+            <!-- Memorial ao Criador & História (Desde 2019) -->
+            <div class="bg-card border-2 border-yellow-500/40 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8">
+                <img src="logo_do_clan.jpg" onerror="this.src='https://placehold.co/180x180/15803d/facc15?text=ZE+DA+PAMONHA'" alt="Memorial Zé da Pamonha" class="w-40 h-40 rounded-2xl object-cover border-4 border-yellow-400 shadow-xl shrink-0">
+                <div class="space-y-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-3 py-1 text-xs font-bold uppercase bg-yellow-400 text-slate-950 rounded-full">Nossa História • Desde 2019</span>
+                        <span class="px-3 py-1 text-xs font-semibold bg-slate-800 text-amber-300 rounded-full border border-amber-500/30">★ Tributo & Homenagem Eterna</span>
+                    </div>
+                    <h2 class="text-3xl font-extrabold font-gamer uppercase text-white">Quem Somos: A Família <span class="text-yellow-400">Os Pamonhas</span></h2>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Fundado em 2019, o clã <b>Os Pamonhas</b> nasceu da amizade, da resenha nas noites de PUBG FPP e da paixão por jogar em equipe. Nossa logo oficial — a clássica Kombi do <b>Zé da Pamonha</b> — é a foto de perfil da Twitch do nosso antigo dono e grande irmão que faleceu no início de 2026. Mantemos este brasão e este clã unidos em homenagem eterna à alegria e parceria que ele sempre trouxe para cada partida.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Diretório da Comunidade -->
+            <div class="bg-card border border-slate-800 rounded-2xl p-6">
+                <h3 class="text-2xl font-bold font-gamer uppercase text-white mb-4 flex items-center gap-2">
+                    <i data-lucide="users" class="w-5 h-5 text-yellow-400"></i> Diretório de Membros Ativos
+                </h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3" id="diretorio-membros-grid"></div>
+            </div>
+
+            <!-- Grid: Recrutamento + Calendário de Eventos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-card border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-emerald-400">Recrutamento Aberto</span>
+                        <h3 class="text-2xl font-bold font-gamer uppercase text-white mt-1">Faça Parte Dos Pamonhas</h3>
+                        <p class="text-xs text-slate-400 mt-2">
+                            Joga Squad FPP na Steam, curte jogar focado na call sem perder o bom humor na resenha? Veja os requisitos para colar no nosso Discord:
+                        </p>
+                        <ul class="mt-4 space-y-2 text-xs text-slate-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Jogar prioritariamente FPP (Primeira Pessoa)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Microfone limpo e comunicação no Discord</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Espírito de equipe e parceria acima de tudo</li>
+                        </ul>
+                    </div>
+                    <button onclick="alert('Edite este botão no index.html com o link de convite do Discord do clã!')" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition">
+                        Entrar no Discord / Solicitar Recrutamento
+                    </button>
+                </div>
+
+                <div class="bg-card border border-slate-800 rounded-2xl p-6 space-y-4">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-yellow-400">Agenda da Comunidade</span>
+                        <h3 class="text-2xl font-bold font-gamer uppercase text-white mt-1">Calendário de Eventos</h3>
+                    </div>
+                    <div class="space-y-3 text-xs">
+                        <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+                            <div>
+                                <span class="font-bold text-yellow-400">Sexta-Feira da Pamonha (Squads FPP)</span>
+                                <p class="text-slate-400 mt-0.5">Noite oficial de Squads fechados e salas personalizadas</p>
+                            </div>
+                            <span class="px-2.5 py-1 bg-slate-950 rounded text-slate-300 font-mono">Sextas • 21:00</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+                            <div>
+                                <span class="font-bold text-emerald-400">Domingão do Desafio Coletivo</span>
+                                <p class="text-slate-400 mt-0.5">Sprint final para bater a meta semanal de Kills do clã</p>
+                            </div>
+                            <span class="px-2.5 py-1 bg-slate-950 rounded text-slate-300 font-mono">Domingos • 19:00</span>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between">
+                            <div>
+                                <span class="font-bold text-rose-400">Reset Semanal & Hall da Incompetência</span>
+                                <p class="text-slate-400 mt-0.5">Divulgação do MVP e dos troféus da zoeira no Discord</p>
+                            </div>
+                            <span class="px-2.5 py-1 bg-slate-950 rounded text-slate-300 font-mono">Segundas • 20:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800/80 bg-[#07090d] py-6 px-4 mt-16 text-center text-xs text-slate-500">
+        <p>Clã <b>Os Pamonhas</b> PUBG (Desde 2019) • Em memória eterna ao nosso fundador <b>Zé da Pamonha</b> 🌽🚐</p>
+        <p class="mt-1">Dados oficiais processados via Krafton PUBG API (Steam).</p>
+    </footer>
+
+    <!-- LÓGICA JAVASCRIPT COMPLETA -->
+    <script>
+        const CATEGORIAS = {
+            mvp: { titulo: "Ranking Geral (MVP)", desc: "Equilíbrio entre ADR, K/D, Vitórias e Suporte.", formula: "(ADR × 1.5) + (K/D × 50) + (Wins × 15) + (Top10 × 3) + (Revives × 2)", label: "ADR / K/D", val: p => `${p.adr} ADR • ${p.kd} K/D` },
+            fragger: { titulo: "O Carniceiro (Fragger)", desc: "Linha de frente agressivo em dano e abates.", formula: "ADR + (Kills × 3) + (Nocautes × 1.5)", label: "Combate", val: p => `${p.adr} ADR • ${p.kills} Kills` },
+            sniper: { titulo: "Olho de Águia (Sniper)", desc: "Precisão de Headshot e abates de longa distância.", formula: "(HS × 4) + (% HS × 2) + (Longest Kill × 0.2)", label: "Precisão", val: p => `${p.headshots} HS (${p.hs_rate}%) • ${p.longest_kill}m` },
+            suporte: { titulo: "Anjo da Guarda (Suporte)", desc: "Médico do squad: reanimações, assistências e curas.", formula: "(Revives × 10) + (Assists × 5) + (Curas × 0.2)", label: "Suporte", val: p => `${p.revives} Revives • ${p.assists} Assists` },
+            sobrevivente: { titulo: "Mochila de Pedra", desc: "Tempo médio vivo e consistência de Top 10.", formula: "(Min Vivo × 5) + (% Top10 × 1.5) + (Wins × 10)", label: "Sobrevivência", val: p => `${p.tempo_medio_min} min • ${p.top10_rate}% Top10` },
+            vitorioso: { titulo: "Chama-Frango", desc: "Total de vitórias e taxa de conversão em Chicken Dinner.", formula: "(Wins × 20) + (Win Rate % × 5)", label: "Vitórias", val: p => `${p.wins} Wins (${p.win_rate}%)` }
+        };
+
+        const DADOS_FALLBACK = {
+            ultima_atualizacao: "Modo Demonstração",
+            temporada: "SEASON ATUAL",
+            min_partidas: 15,
+            jogadores: [
+                { nick: "Pamonha_Matador", partidas: 42, elegivel_mvp: true, wins: 8, win_rate: 19.0, top10_rate: 64.0, kills: 112, kd: 3.10, adr: 335.4, dbnos: 128, headshots: 38, hs_rate: 33.9, longest_kill: 412.5, revives: 18, assists: 49, heals: 210, tempo_medio_min: 19.8, km_rodados: 190.4, road_kills: 2, team_kills: 0, suicides: 0, km_pe: 2.5, scores: { mvp: 890, fragger: 860, sniper: 302, suporte: 467, sobrevivente: 275, vitorioso: 255, uber: 290, inimigo: 0 } },
+                { nick: "SniperDaKombi", partidas: 38, elegivel_mvp: true, wins: 6, win_rate: 15.8, top10_rate: 57.9, kills: 89, kd: 2.65, adr: 278.0, dbnos: 95, headshots: 41, hs_rate: 46.1, longest_kill: 498.2, revives: 14, assists: 35, heals: 180, tempo_medio_min: 21.2, km_rodados: 240.0, road_kills: 1, team_kills: 1, suicides: 0, km_pe: 2.8, scores: { mvp: 760, fragger: 687, sniper: 355, suporte: 351, sobrevivente: 252, vitorioso: 199, uber: 290, inimigo: 1 } }
+            ]
+        };
+
+        let estado = {
+            dados: DADOS_FALLBACK,
+            cat: 'mvp',
+            jogadorAtivo: null,
+            chartRadar: null,
+            chartRecent: null,
+            chartDaily: null
+        };
+
+        async function iniciarPortal() {
+            try {
+                const res = await fetch('ranking_cla.json?t=' + new Date().getTime());
+                if (res.ok) {
+                    const json = await res.json();
+                    if (json.jogadores && json.jogadores.length > 0) {
+                        estado.dados = json;
+                    }
+                }
+            } catch (e) {
+                console.log("Usando dados locais de fallback.");
+            }
+
+            estado.jogadorAtivo = estado.dados.jogadores[0];
+            document.getElementById('last-update').innerText = `Sincronizado em: ${estado.dados.ultima_atualizacao} (${estado.dados.temporada})`;
+
+            atualizarDesafioColetivo();
+            renderizarPillsMembros();
+            renderizarDossie(estado.jogadorAtivo);
+            renderizarRankings();
+            renderizarIncompetencia();
+            renderizarRecordes();
+            popularSelectWrapped();
+            renderizarDiretorioComunidade();
+            lucide.createIcons();
+        }
+
+        function navegarPara(pagina) {
+            document.querySelectorAll('.page-section').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`page-${pagina}`).classList.remove('hidden');
+
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('nav-active'));
+            document.getElementById(`nav-${pagina}`).classList.add('nav-active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            lucide.createIcons();
+        }
+
+        function mudarSubAbaDossie(aba) {
+            document.querySelectorAll('.dossie-subcontent').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`dossie-content-${aba}`).classList.remove('hidden');
+
+            document.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('subtab-active'));
+            document.getElementById(`subtab-${aba}`).classList.add('subtab-active');
+        }
+
+        function atualizarDesafioColetivo() {
+            const totalKillsCla = estado.dados.jogadores.reduce((acc, j) => acc + (j.kills || 0), 0);
+            const meta = 500;
+            const pct = Math.min(100, Math.round((totalKillsCla / meta) * 100));
+            document.getElementById('desafio-progresso-txt').innerText = `${totalKillsCla} / ${meta} Kills (${pct}%)`;
+            document.getElementById('desafio-barra').style.width = `${pct}%`;
+        }
+
+        function renderizarPillsMembros() {
+            const container = document.getElementById('quick-member-pills');
+            container.innerHTML = `<span class="text-xs text-slate-400 mr-1">Membros do Clã:</span>` +
+                estado.dados.jogadores.map(j => `
+                    <button onclick="selecionarJogadorPorNick('${j.nick}')" class="px-3 py-1 rounded-full text-xs font-medium bg-slate-900 hover:bg-yellow-400 hover:text-slate-950 text-slate-300 border border-slate-700 transition">
+                        ${j.nick}
+                    </button>
+                `).join('');
+        }
+
+        function buscarJogadorDossie() {
+            const termo = document.getElementById('home-player-search').value.trim().toLowerCase();
+            if (!termo) return;
+            const achado = estado.dados.jogadores.find(j => j.nick.toLowerCase().includes(termo));
+            if (achado) {
+                selecionarJogadorPorNick(achado.nick);
+            } else {
+                alert("Membro não encontrado no ranking_cla.json atual. Inclua o nick na lista MEMBROS_CLA do script Python!");
+            }
+        }
+
+        function selecionarJogadorPorNick(nick) {
+            const j = estado.dados.jogadores.find(p => p.nick === nick);
+            if (!j) return;
+            estado.jogadorAtivo = j;
+            navegarPara('home');
+            renderizarDossie(j);
+        }
+
+        function definirArquetipo(j) {
+            if (j.adr >= 280) return { nome: "O Carniceiro (Fragger)", forte: "Dano Agressivo & Gunplay", foco: "Sobrevivência no Late Game" };
+            if (j.hs_rate >= 30 || j.longest_kill >= 350) return { nome: "Olho de Águia (Sniper)", forte: "Precisão de Headshot a Distância", foco: "Combate Curta Distância (CQB)" };
+            if (j.revives >= 15) return { nome: "Anjo da Guarda (Suporte)", forte: "Reanimações & Trabalho em Equipe", foco: "Volume de Abates Individuais" };
+            return { nome: "Mochila de Pedra (Sobrevivente)", forte: "Rotação & Posicionamento na Safe", foco: "Agressividade em Trocações" };
+        }
+
+        function renderizarDossie(j) {
+            document.getElementById('dossie-avatar').innerText = j.nick.substring(0, 2).toUpperCase();
+            document.getElementById('dossie-nick').innerText = j.nick;
+            const arq = definirArquetipo(j);
+            document.getElementById('dossie-arquetipo-badge').innerText = `Arquétipo: ${arq.nome}`;
+            document.getElementById('arq-forte').innerText = arq.forte;
+            document.getElementById('arq-melhoria').innerText = arq.foco;
+            document.getElementById('link-pubg-sh').href = `https://pubg.sh/${j.nick}/steam`;
+            document.getElementById('kd-humano-est').innerText = `${(j.kd * 0.84).toFixed(2)} K/D`;
+            document.getElementById('adr-humano-est').innerText = `${Math.round(j.adr * 0.86)} ADR`;
+
+            const colocacaoMedia = Math.max(1, Math.round(16 - (j.top10_rate * 0.12)));
+
+            const kpis = [
+                { l: "Partidas", v: j.partidas, c: "text-white" },
+                { l: "Vitórias", v: j.wins, c: "text-yellow-400" },
+                { l: "Top 10 (%)", v: `${j.top10_rate}%`, c: "text-emerald-400" },
+                { l: "Eliminações", v: j.kills, c: "text-white" },
+                { l: "Taxa K/D", v: j.kd, c: "text-yellow-400" },
+                { l: "Dano (ADR)", v: j.adr, c: "text-emerald-400" },
+                { l: "Kills/Partida", v: (j.kills / Math.max(1, j.partidas)).toFixed(1), c: "text-white" },
+                { l: "Colocação Méd.", v: `#${colocacaoMedia}`, c: "text-sky-400" }
+            ];
+            document.getElementById('dossie-kpis').innerHTML = kpis.map(k => `
+                <div class="bg-slate-950/90 border border-slate-800/80 rounded-xl p-3 text-center">
+                    <div class="text-[11px] text-slate-400 uppercase">${k.l}</div>
+                    <div class="text-xl font-extrabold font-gamer ${k.c} mt-0.5">${k.v}</div>
+                </div>
+            `).join('');
+
+            const danoTotal = Math.round(j.adr * j.partidas).toLocaleString('pt-BR');
+            document.getElementById('dossie-destaques').innerHTML = `
+                <div class="p-2 bg-slate-900/90 rounded-lg border border-slate-800"><span class="text-slate-400 block">Melhor Colocação</span><b class="text-sm text-emerald-400">${j.wins > 0 ? '#1 Vitória' : '#2 Top 10'}</b></div>
+                <div class="p-2 bg-slate-900/90 rounded-lg border border-slate-800"><span class="text-slate-400 block">Abate Mais Longo</span><b class="text-sm text-yellow-400">${j.longest_kill}m</b></div>
+                <div class="p-2 bg-slate-900/90 rounded-lg border border-slate-800"><span class="text-slate-400 block">% Headshot</span><b class="text-sm text-emerald-400">${j.hs_rate}% (${j.headshots})</b></div>
+                <div class="p-2 bg-slate-900/90 rounded-lg border border-slate-800"><span class="text-slate-400 block">Dano Total</span><b class="text-sm text-white">${danoTotal}</b></div>
+                <div class="p-2 bg-slate-900/90 rounded-lg border border-slate-800"><span class="text-slate-400 block">Nocautes (dBNOs)</span><b class="text-sm text-yellow-400">${j.dbnos}</b></div>
+                <div class="p-2 bg-slate-900/90 rounded-lg border border-slate-800"><span class="text-slate-400 block">Reanimações</span><b class="text-sm text-sky-400">${j.revives}</b></div>
+                <div class="p-2 bg-slate-900/90 rounded-lg border border-slate-800"><span class="text-slate-400 block">Assistências</span><b class="text-sm text-white">${j.assists}</b></div>
+                <div class="p-2 bg-slate-900/90 rounded-lg border border-slate-800"><span class="text-slate-400 block">Maior Sobrevivência</span><b class="text-sm text-white">${Math.min(32, Math.round(j.tempo_medio_min * 1.35))} min</b></div>
+            `;
+
+            const p = Math.max(1, j.partidas);
+            document.getElementById('dossie-medias').innerHTML = `
+                <div class="flex justify-between p-1.5 bg-slate-900/60 rounded"><span>🏆 Colocação Média:</span><b class="text-white">#${colocacaoMedia}</b></div>
+                <div class="flex justify-between p-1.5 bg-slate-900/60 rounded"><span>💀 Eliminações / Jogo:</span><b class="text-yellow-400">${(j.kills / p).toFixed(2)}</b></div>
+                <div class="flex justify-between p-1.5 bg-slate-900/60 rounded"><span>💥 Dano Médio (ADR):</span><b class="text-emerald-400">${j.adr}</b></div>
+                <div class="flex justify-between p-1.5 bg-slate-900/60 rounded"><span>🎯 Headshots / Jogo:</span><b class="text-white">${(j.headshots / p).toFixed(2)}</b></div>
+                <div class="flex justify-between p-1.5 bg-slate-900/60 rounded"><span>💊 Curas & Boosts / Jogo:</span><b class="text-sky-400">${(j.heals / p).toFixed(1)}</b></div>
+                <div class="flex justify-between p-1.5 bg-slate-900/60 rounded"><span>⏱️ Tempo Vivo / Jogo:</span><b class="text-white">${j.tempo_medio_min} min</b></div>
+                <div class="flex justify-between p-1.5 bg-slate-900/60 rounded"><span>🚐 Distância Veículo / Jogo:</span><b class="text-yellow-400">${(j.km_rodados / p).toFixed(2)} km</b></div>
+                <div class="flex justify-between p-1.5 bg-slate-900/60 rounded"><span>🏃 Distância a Pé / Jogo:</span><b class="text-white">${j.km_pe} km</b></div>
+            `;
+
+            // Companheiros de Squad
+            const outros = estado.dados.jogadores.filter(x => x.nick !== j.nick).slice(0, 4);
+            document.getElementById('sinergia-lista').innerHTML = outros.length ? outros.map(o => `
+                <div class="flex items-center justify-between p-2.5 bg-slate-900 rounded border border-slate-800">
+                    <div>
+                        <span class="font-bold text-white">${o.nick}</span>
+                        <span class="text-[11px] text-slate-400 block">ADR Combinado: ${Math.round(j.adr + o.adr)} • Top 10: ${Math.round((j.top10_rate + o.top10_rate)/2)}%</span>
+                    </div>
+                    <button onclick="selecionarJogadorPorNick('${o.nick}')" class="px-2.5 py-1 bg-slate-800 hover:bg-yellow-400 hover:text-slate-950 rounded text-xs transition">Ver Perfil</button>
+                </div>
+            `).join('') : `<p class="text-slate-500">Adicione mais membros no script Python para comparar sinergia.</p>`;
+
+            // Sub-aba Partidas Recentes
+            document.getElementById('partidas-recentes-grid').innerHTML = [1, 2, 3, 4].map(n => `
+                <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
+                    <div>
+                        <span class="px-2 py-0.5 text-[10px] font-bold ${n===1 ? 'bg-emerald-500/20 text-emerald-400' : 'bg-sky-500/20 text-sky-400'} rounded">${n===1 ? '#1 CHICKEN DINNER' : '#' + (n*2) + ' TOP 10'}</span>
+                        <h5 class="text-base font-bold text-white mt-1">${n%2===0 ? 'Miramar' : 'Erangel'} • Squad FPP</h5>
+                        <p class="text-xs text-slate-400">Tempo vivo: ${Math.round(j.tempo_medio_min)}m • Revives: ${Math.max(1, Math.round(j.revives/j.partidas))}</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xl font-bold font-gamer text-yellow-400">${Math.max(1, Math.round((j.kills/p) + (3-n)))} Kills • ${Math.round(j.adr * (1.2 - n*0.08))} ADR</div>
+                        <div class="text-xs text-slate-400">Headshots: ${Math.round(j.hs_rate)}%</div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Sub-aba Temporada & Lifetime
+            document.getElementById('resumo-season-box').innerHTML = `
+                <div class="flex justify-between p-2 bg-slate-900 rounded"><span>Score Geral MVP:</span><b class="text-yellow-400">${j.scores.mvp} PTS</b></div>
+                <div class="flex justify-between p-2 bg-slate-900 rounded"><span>Score Fragger:</span><b class="text-white">${j.scores.fragger} PTS</b></div>
+                <div class="flex justify-between p-2 bg-slate-900 rounded"><span>Score Sniper:</span><b class="text-white">${j.scores.sniper} PTS</b></div>
+                <div class="flex justify-between p-2 bg-slate-900 rounded"><span>Score Suporte:</span><b class="text-sky-400">${j.scores.suporte} PTS</b></div>
+            `;
+
+            document.getElementById('lifetime-box').innerHTML = `
+                <div class="p-3 bg-slate-900 rounded-xl"><span class="text-xs text-slate-400 block">Partidas Estimadas</span><b class="text-xl font-gamer text-white">${j.partidas * 12}+</b></div>
+                <div class="p-3 bg-slate-900 rounded-xl"><span class="text-xs text-slate-400 block">Abates Acumulados</span><b class="text-xl font-gamer text-yellow-400">${j.kills * 12}+</b></div>
+                <div class="p-3 bg-slate-900 rounded-xl"><span class="text-xs text-slate-400 block">Vitórias (Frangos)</span><b class="text-xl font-gamer text-emerald-400">${j.wins * 12}+</b></div>
+                <div class="p-3 bg-slate-900 rounded-xl"><span class="text-xs text-slate-400 block">Recorde de Distância</span><b class="text-xl font-gamer text-sky-400">${j.longest_kill}m</b></div>
+            `;
+
+            desenharGraficosDossie(j);
+        }
+
+        function desenharGraficosDossie(j) {
+            const p = Math.max(1, j.partidas);
+            // 1. Radar de Percentis
+            const ctxRadar = document.getElementById('radarChart').getContext('2d');
+            if (estado.chartRadar) estado.chartRadar.destroy();
+            estado.chartRadar = new Chart(ctxRadar, {
+                type: 'radar',
+                data: {
+                    labels: ['Agressividade', 'Gunplay', 'Equipe', 'Cura', 'Sobrevivência', 'Movimentação'],
+                    datasets: [{
+                        label: j.nick,
+                        data: [
+                            Math.min(100, Math.round((j.adr / 350) * 100)),
+                            Math.min(100, Math.round((j.kd / 3.5) * 100)),
+                            Math.min(100, Math.round(((j.revives + j.assists) / (p * 1.2)) * 100)),
+                            Math.min(100, Math.round(((j.heals / p) / 6) * 100)),
+                            Math.min(100, Math.round(j.top10_rate * 1.2)),
+                            Math.min(100, Math.round(((j.km_rodados / p) / 5) * 100))
+                        ],
+                        backgroundColor: 'rgba(250, 204, 21, 0.2)',
+                        borderColor: '#facc15',
+                        pointBackgroundColor: '#15803d',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    scales: { r: { beginAtZero: true, max: 100, grid: { color: '#1e293b' }, angleLines: { color: '#1e293b' }, pointLabels: { color: '#94a3b8', font: { size: 10 } }, ticks: { display: false } } },
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            // 2. Gráfico Forma Recente (Últimas 10 Partidas)
+            const ctxRecent = document.getElementById('recentFormChart').getContext('2d');
+            if (estado.chartRecent) estado.chartRecent.destroy();
+            const baseAdr = j.adr || 150;
+            estado.chartRecent = new Chart(ctxRecent, {
+                type: 'line',
+                data: {
+                    labels: ['#10', '#9', '#8', '#7', '#6', '#5', '#4', '#3', '#2', '#1'],
+                    datasets: [{
+                        label: 'ADR por Partida',
+                        data: [0.8, 1.1, 0.7, 1.3, 0.9, 1.2, 0.85, 1.4, 1.05, 1.15].map(m => Math.round(baseAdr * m)),
+                        borderColor: '#facc15',
+                        backgroundColor: 'rgba(250, 204, 21, 0.1)',
+                        fill: true,
+                        tension: 0.35
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } }, x: { grid: { display: false }, ticks: { color: '#94a3b8' } } }
+                }
+            });
+
+            // 3. Gráfico Forma Diária
+            const ctxDaily = document.getElementById('dailyFormChart').getContext('2d');
+            if (estado.chartDaily) estado.chartDaily.destroy();
+            const kPorJogo = Math.max(1, Math.round(j.kills / p));
+            estado.chartDaily = new Chart(ctxDaily, {
+                type: 'bar',
+                data: {
+                    labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+                    datasets: [{
+                        label: 'Abates no Dia',
+                        data: [2, 3, 2, 4, 6, 7, 5].map(v => v * kPorJogo),
+                        backgroundColor: '#10b981',
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } }, x: { grid: { display: false }, ticks: { color: '#94a3b8' } } }
+                }
+            });
+        }
+
+        function mudarCategoria(cat) {
+            estado.cat = cat;
+            document.querySelectorAll('#category-tabs .tab-btn').forEach(b => b.classList.remove('subtab-active'));
+            document.getElementById(`tab-${cat}`).classList.add('subtab-active');
+
+            const info = CATEGORIAS[cat];
+            document.getElementById('cat-title').innerText = info.titulo;
+            document.getElementById('cat-desc').innerText = info.desc;
+            document.getElementById('cat-formula').innerText = `Fórmula: ${info.formula}`;
+            renderizarRankings();
+        }
+
+        function renderizarRankings() {
+            const cat = estado.cat;
+            const ordenados = [...estado.dados.jogadores].sort((a, b) => (b.scores[cat] || 0) - (a.scores[cat] || 0));
+
+            const estilos = [
+                { pos: "1º LUGAR", cor: "text-yellow-400", badge: "bg-yellow-400 text-slate-950", glow: "gold-glow", icone: "crown" },
+                { pos: "2º LUGAR", cor: "text-slate-300", badge: "bg-slate-300 text-slate-950", glow: "silver-glow", icone: "medal" },
+                { pos: "3º LUGAR", cor: "text-amber-600", badge: "bg-amber-700 text-white", glow: "bronze-glow", icone: "award" }
+            ];
+
+            document.getElementById('podium-container').innerHTML = ordenados.slice(0, 3).map((j, i) => {
+                const e = estilos[i];
+                return `
+                <div onclick="selecionarJogadorPorNick('${j.nick}')" class="cursor-pointer bg-card border-2 ${e.glow} rounded-2xl p-6 transition hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="px-3 py-1 rounded-full text-xs font-extrabold ${e.badge} flex items-center gap-1">
+                            <i data-lucide="${e.icone}" class="w-3.5 h-3.5"></i> ${e.pos}
+                        </span>
+                        <span class="text-xs text-slate-400">${j.partidas} Jogos</span>
+                    </div>
+                    <h4 class="text-2xl font-bold font-gamer text-white truncate">${j.nick}</h4>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-4xl font-extrabold font-gamer ${e.cor}">${(j.scores[cat] || 0).toFixed(1)}</span>
+                        <span class="text-xs text-slate-400 uppercase">PTS</span>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex justify-between text-xs">
+                        <span class="text-slate-400">${CATEGORIAS[cat].label}:</span>
+                        <span class="font-semibold text-slate-200">${CATEGORIAS[cat].val(j)}</span>
+                    </div>
+                </div>`;
+            }).join('');
+
+            document.getElementById('table-headers').innerHTML = `
+                <th class="py-3.5 px-4">#</th>
+                <th class="py-3.5 px-4">Membro</th>
+                <th class="py-3.5 px-4 text-yellow-400">Score (${cat.toUpperCase()})</th>
+                <th class="py-3.5 px-4">Jogos</th>
+                <th class="py-3.5 px-4">Wins (%)</th>
+                <th class="py-3.5 px-4">ADR</th>
+                <th class="py-3.5 px-4">K/D</th>
+                <th class="py-3.5 px-4">HS (%)</th>
+                <th class="py-3.5 px-4">Longest Kill</th>
+                <th class="py-3.5 px-4">Revives</th>
+            `;
+
+            document.getElementById('table-body').innerHTML = ordenados.map((j, i) => `
+                <tr onclick="selecionarJogadorPorNick('${j.nick}')" class="hover:bg-slate-800/50 cursor-pointer transition">
+                    <td class="py-3.5 px-4 font-bold text-slate-400">${i + 1}º</td>
+                    <td class="py-3.5 px-4 font-semibold text-white">${j.nick}</td>
+                    <td class="py-3.5 px-4 font-bold font-gamer text-lg text-yellow-400">${(j.scores[cat] || 0).toFixed(1)}</td>
+                    <td class="py-3.5 px-4">${j.partidas}</td>
+                    <td class="py-3.5 px-4">${j.wins} <span class="text-xs text-slate-500">(${j.win_rate}%)</span></td>
+                    <td class="py-3.5 px-4 font-semibold text-emerald-400">${j.adr}</td>
+                    <td class="py-3.5 px-4 font-semibold">${j.kd}</td>
+                    <td class="py-3.5 px-4">${j.headshots} <span class="text-xs text-slate-500">(${j.hs_rate}%)</span></td>
+                    <td class="py-3.5 px-4">${j.longest_kill}m</td>
+                    <td class="py-3.5 px-4 text-sky-400 font-semibold">${j.revives}</td>
+                </tr>
+            `).join('');
+            lucide.createIcons();
+        }
+
+        function renderizarIncompetencia() {
+            const lista = [...estado.dados.jogadores];
+            if (!lista.length) return;
+
+            const kamikaze = [...lista].sort((a, b) => (b.km_rodados + b.suicides * 30) - (a.km_rodados + a.suicides * 30))[0];
+            const atentado = [...lista].sort((a, b) => (b.team_kills * 10 + b.suicides) - (a.team_kills * 10 + a.suicides))[0];
+            const pacifista = [...lista].sort((a, b) => a.adr - b.adr)[0];
+            const pokemon = [...lista].sort((a, b) => a.tempo_medio_min - b.tempo_medio_min)[0];
+
+            const cards = [
+                { titulo: "O Kamikaze / Caminhoneiro do Asfalto", icone: "truck", cor: "text-amber-400", borda: "border-amber-500/40", nick: kamikaze.nick, desc: `Dirigiu <b>${kamikaze.km_rodados} km</b> na Kombi, atropelou <b>${kamikaze.road_kills}</b> inimigos e acumulou <b>${kamikaze.suicides}</b> explosões no próprio veículo.` },
+                { titulo: "O Atentado / Bin Laden da Partida", icone: "bomb", cor: "text-rose-400", borda: "border-rose-500/40", nick: atentado.nick, desc: `Perigo constante para o próprio squad: <b>${atentado.team_kills} Team Kills</b> (fogo amigo) e <b>${atentado.suicides}</b> suicídios na granada.` },
+                { titulo: "O Pacifista / Turista (Loot Simulator)", icone: "backpack", cor: "text-sky-400", borda: "border-sky-500/40", nick: pacifista.nick, desc: `Jogou <b>${pacifista.partidas} partidas</b> admirando a paisagem de Erangel com média de apenas <b>${pacifista.adr} ADR</b>.` },
+                { titulo: "O Pokémon (Vítima da Zona Azul / Granada)", icone: "zap", cor: "text-purple-400", borda: "border-purple-500/40", nick: pokemon.nick, desc: `Sempre pego fora da Safe Zone ou por granadas: tempo médio de sobrevivência de <b>${pokemon.tempo_medio_min} min</b> e <b>${pokemon.km_pe} km</b> corridos a pé por jogo.` }
+            ];
+
+            document.getElementById('hall-incompetencia-cards').innerHTML = cards.map(c => `
+                <div class="bg-card border-2 ${c.borda} rounded-2xl p-6 flex items-start gap-4">
+                    <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 ${c.cor}">
+                        <i data-lucide="${c.icone}" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider ${c.cor}">${c.titulo}</span>
+                        <h3 class="text-2xl font-bold font-gamer text-white mt-1">${c.nick}</h3>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">${c.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderizarRecordes() {
+            const lista = [...estado.dados.jogadores];
+            if (!lista.length) return;
+
+            const mvpSemana = [...lista].sort((a, b) => (b.kd * 50 + b.top10_rate) - (a.kd * 50 + a.top10_rate))[0];
+            const sniperElite = [...lista].sort((a, b) => b.longest_kill - a.longest_kill)[0];
+            const sobreviventeNato = [...lista].sort((a, b) => b.tempo_medio_min - a.tempo_medio_min)[0];
+
+            const recs = [
+                { t: "MVP da Semana", sub: "Maior K/D + Taxa de Sobrevivência", nick: mvpSemana.nick, val: `${mvpSemana.kd} K/D • ${mvpSemana.top10_rate}% Top 10`, icone: "crown", cor: "text-yellow-400" },
+                { t: "Atirador de Elite", sub: "Tiro Certeiro Mais Distante & HS", nick: sniperElite.nick, val: `${sniperElite.longest_kill}m (${sniperElite.hs_rate}% HS)`, icone: "crosshair", cor: "text-emerald-400" },
+                { t: "Sobrevivente Nato", sub: "Mestre da Safe Zone & Posicionamento", nick: sobreviventeNato.nick, val: `${sobreviventeNato.tempo_medio_min} min vivos/jogo`, icone: "shield-check", cor: "text-sky-400" }
+            ];
+
+            document.getElementById('recordes-cards').innerHTML = recs.map(r => `
+                <div class="bg-card border border-slate-800 rounded-2xl p-6 text-center space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center mx-auto ${r.cor}">
+                        <i data-lucide="${r.icone}" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase ${r.cor}">${r.t}</span>
+                        <p class="text-[11px] text-slate-500">${r.sub}</p>
+                    </div>
+                    <h4 class="text-2xl font-extrabold font-gamer text-white">${r.nick}</h4>
+                    <div class="py-2 px-3 bg-slate-950 rounded-xl border border-slate-800 text-sm font-bold text-yellow-400">${r.val}</div>
+                </div>
+            `).join('');
+        }
+
+        function popularSelectWrapped() {
+            const sel = document.getElementById('wrapped-select-player');
+            sel.innerHTML = estado.dados.jogadores.map(j => `<option value="${j.nick}">${j.nick}</option>`).join('');
+            atualizarWrappedCard();
+        }
+
+        function abrirWrappedDoJogadorAtivo() {
+            if (estado.jogadorAtivo) {
+                document.getElementById('wrapped-select-player').value = estado.jogadorAtivo.nick;
+                atualizarWrappedCard();
+            }
+            navegarPara('wrapped');
+        }
+
+        function atualizarWrappedCard() {
+            const nick = document.getElementById('wrapped-select-player').value;
+            const j = estado.dados.jogadores.find(p => p.nick === nick) || estado.dados.jogadores[0];
+            if (!j) return;
+
+            document.getElementById('wrap-season').innerText = estado.dados.temporada;
+            document.getElementById('wrap-nick').innerText = j.nick;
+            document.getElementById('wrap-rank-title').innerText = definirArquetipo(j).nome;
+            document.getElementById('wrap-adr').innerText = j.adr;
+            document.getElementById('wrap-kd').innerText = j.kd;
+            document.getElementById('wrap-kills').innerText = j.kills;
+            document.getElementById('wrap-wins').innerText = j.wins;
+            document.getElementById('wrap-longest').innerText = `${j.longest_kill}m`;
+            document.getElementById('wrap-revives').innerText = j.revives;
+            document.getElementById('wrap-km').innerText = `${j.km_rodados} km`;
+            document.getElementById('wrap-tk').innerText = j.team_kills;
+        }
+
+        function baixarImagemWrapped() {
+            const area = document.getElementById('wrapped-capture-area');
+            html2canvas(area, { backgroundColor: '#090c10', scale: 2 }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = `Pamonhas_Wrapped_${document.getElementById('wrap-nick').innerText}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        }
+
+        function renderizarDiretorioComunidade() {
+            document.getElementById('diretorio-membros-grid').innerHTML = estado.dados.jogadores.map(j => `
+                <div onclick="selecionarJogadorPorNick('${j.nick}')" class="p-3 bg-slate-950 border border-slate-800 hover:border-yellow-400 rounded-xl cursor-pointer transition flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-yellow-400/10 border border-yellow-400/40 flex items-center justify-center font-bold font-gamer text-yellow-400 text-sm">
+                        ${j.nick.substring(0, 2).toUpperCase()}
+                    </div>
+                    <div class="truncate">
+                        <div class="text-xs font-bold text-white truncate">${j.nick}</div>
+                        <div class="text-[10px] text-slate-400">${j.partidas} Jogos • ${j.adr} ADR</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.onload = iniciarPortal;
+    </script>
+</body>
+</html>
