@@ -178,6 +178,7 @@ def calcular_estatisticas():
         road_kills = s["roadKills"]
         team_kills = s["teamKills"]
         suicides = s["suicides"]
+		weapons_acquired = s.get("weaponsAcquired", 0) # <--- NOVA LINHA
 
         adr = round(damage / partidas, 1)
         kd = round(kills / losses, 2)
@@ -187,7 +188,8 @@ def calcular_estatisticas():
         tempo_medio_min = round((time_survived / partidas) / 60, 1)
         km_rodados = round(ride_dist / 1000, 1)
         km_a_pe_por_partida = round((walk_dist / 1000) / partidas, 2)
-
+		armas_por_partida = round(weapons_acquired / partidas, 1) # <--- NOVA LINHA
+		
         score_mvp = round((adr * 1.5) + (kd * 50) + (wins * 15) + (top10s * 3) + (revives * 2), 1)
         score_fragger = round(adr + (kills * 3) + (dbnos * 1.5), 1)
         score_sniper = round((headshots * 4) + (hs_rate * 2) + (longest_kill * 0.2), 1)
@@ -221,6 +223,7 @@ def calcular_estatisticas():
             "team_kills": team_kills,
             "suicides": suicides,
             "km_pe": km_a_pe_por_partida,
+			"armas_loot": armas_por_partida, # <--- NOVA LINHA
             "scores": {
                 "mvp": score_mvp,
                 "fragger": score_fragger,
