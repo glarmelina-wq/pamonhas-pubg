@@ -8,9 +8,9 @@
       "inicio_semana": "2026-10-12T00:00:00-03:00",
       "de": "2026-10-12T00:00:00-03:00",
       "ate": "2026-10-18T23:59:59-03:00",
-      "atualizado_em": "2026-10-22T12:26:44+00:00",
+      "atualizado_em": "2026-10-22T12:35:18+00:00",
       "parcial": true,
-      "partidas_recuperadas": 226,
+      "partidas_recuperadas": 255,
       "grupos": {
         "todos": {
           "kombi": [
@@ -22,73 +22,58 @@
           ],
           "amigo": [
             {
-              "nick": "LAUANNA7788",
-              "valor": 1,
-              "partidas": 17
-            },
-            {
-              "nick": "crazyrock_com_br",
-              "valor": 1,
-              "partidas": 82
-            },
-            {
-              "nick": "zPaT0__",
-              "valor": 1,
-              "partidas": 5
+              "nick": "PIGzinn_30fps",
+              "valor": 2,
+              "partidas": 34
             }
           ],
           "inimigo": [
             {
-              "nick": "crazyrock_com_br",
+              "nick": "CalanguinhoFPS",
               "valor": 2,
-              "partidas": 82
+              "partidas": 92
             }
           ],
           "samu": [
             {
-              "nick": "GEMINIAKI",
-              "valor": 16,
-              "partidas": 91
+              "nick": "CalanguinhoFPS",
+              "valor": 22,
+              "partidas": 92
             }
           ],
           "lobby": [
             {
-              "nick": "julianfps",
-              "valor": 578.0,
-              "partidas": 5
+              "nick": "robo__GUERREIRO",
+              "valor": 412.0,
+              "partidas": 9
             }
           ],
           "farmacia": [
             {
-              "nick": "Pisanoslixo",
-              "valor": 8.428571428571429,
-              "partidas": 7
+              "nick": "LAUANNA7788",
+              "valor": 6.909090909090909,
+              "partidas": 11
             }
           ],
           "forrest": [
             {
-              "nick": "zPaT0__",
-              "valor": 3993.2342800000006,
-              "partidas": 5
+              "nick": "PopMeeN",
+              "valor": 2942.886708,
+              "partidas": 20
             }
           ],
           "lutinho": [
             {
-              "nick": "zPaT0__",
-              "valor": 9.0,
-              "partidas": 5
-            },
-            {
-              "nick": "julianfps",
-              "valor": 9.0,
-              "partidas": 5
+              "nick": "crazyrock_com_br",
+              "valor": 9.452830188679245,
+              "partidas": 53
             }
           ],
           "sedex": [
             {
-              "nick": "VoVoGOW",
-              "valor": 541.1611,
-              "partidas": 35
+              "nick": "M43str0_FPS",
+              "valor": 499.72556,
+              "partidas": 13
             }
           ]
         },
@@ -104,24 +89,24 @@
             {
               "nick": "LAUANNA7788",
               "valor": 1,
-              "partidas": 17
+              "partidas": 11
             },
             {
               "nick": "crazyrock_com_br",
               "valor": 1,
-              "partidas": 82
+              "partidas": 53
             },
             {
-              "nick": "zPaT0__",
+              "nick": "PIGzinn_30fps",
               "valor": 1,
-              "partidas": 5
+              "partidas": 16
             }
           ],
           "inimigo": [
             {
-              "nick": "crazyrock_com_br",
+              "nick": "CalanguinhoFPS",
               "valor": 2,
-              "partidas": 82
+              "partidas": 40
             }
           ],
           "samu": [
@@ -133,78 +118,80 @@
           ],
           "lobby": [
             {
-              "nick": "julianfps",
-              "valor": 578.0,
+              "nick": "zPaT0__",
+              "valor": 451.0,
               "partidas": 5
             }
           ],
           "farmacia": [
             {
-              "nick": "Pisanoslixo",
-              "valor": 8.428571428571429,
-              "partidas": 7
+              "nick": "LAUANNA7788",
+              "valor": 6.909090909090909,
+              "partidas": 11
             }
           ],
           "forrest": [
             {
-              "nick": "zPaT0__",
-              "valor": 3993.2342800000006,
-              "partidas": 5
+              "nick": "PopMeeN",
+              "valor": 2942.886708,
+              "partidas": 20
             }
           ],
           "lutinho": [
             {
-              "nick": "zPaT0__",
-              "valor": 9.0,
-              "partidas": 5
-            },
-            {
-              "nick": "julianfps",
-              "valor": 9.0,
-              "partidas": 5
+              "nick": "crazyrock_com_br",
+              "valor": 9.452830188679245,
+              "partidas": 53
             }
           ],
           "sedex": [
             {
-              "nick": "VoVoGOW",
-              "valor": 541.1611,
-              "partidas": 35
+              "nick": "M43str0_FPS",
+              "valor": 499.72556,
+              "partidas": 13
             }
           ]
         },
         "tpp": {
           "kombi": [
             {
-              "nick": "ROGER__BR",
-              "valor": 10455.6475,
-              "partidas": 12
+              "nick": "CalanguinhoFPS",
+              "valor": 44337.417960000006,
+              "partidas": 52
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "PIGzinn_30fps",
+              "valor": 1,
+              "partidas": 18
             }
           ],
           "samu": [
             {
-              "nick": "ROGER__BR",
-              "valor": 2,
-              "partidas": 12
+              "nick": "Pisanoslixo",
+              "valor": 13,
+              "partidas": 36
             }
           ],
           "lobby": [
             {
-              "nick": "ROGER__BR",
-              "valor": 977.3333333333334,
-              "partidas": 12
+              "nick": "robo__GUERREIRO",
+              "valor": 412.0,
+              "partidas": 9
             }
           ],
           "farmacia": [
             {
-              "nick": "ROGER__BR",
-              "valor": 3.8333333333333335,
-              "partidas": 12
+              "nick": "Pisanoslixo",
+              "valor": 6.972222222222222,
+              "partidas": 36
             }
           ],
           "forrest": [
             {
               "nick": "ROGER__BR",
-              "valor": 2549.4447966666667,
+              "valor": 2549.444796666666,
               "partidas": 12
             }
           ],
@@ -217,9 +204,9 @@
           ],
           "sedex": [
             {
-              "nick": "ROGER__BR",
-              "valor": 409.8227,
-              "partidas": 12
+              "nick": "PIGzinn_30fps",
+              "valor": 415.56168,
+              "partidas": 18
             }
           ]
         },
@@ -235,24 +222,24 @@
             {
               "nick": "LAUANNA7788",
               "valor": 1,
-              "partidas": 17
+              "partidas": 11
             },
             {
               "nick": "crazyrock_com_br",
               "valor": 1,
-              "partidas": 82
+              "partidas": 53
             },
             {
-              "nick": "zPaT0__",
+              "nick": "PIGzinn_30fps",
               "valor": 1,
-              "partidas": 5
+              "partidas": 16
             }
           ],
           "inimigo": [
             {
-              "nick": "crazyrock_com_br",
+              "nick": "CalanguinhoFPS",
               "valor": 2,
-              "partidas": 82
+              "partidas": 38
             }
           ],
           "samu": [
@@ -264,42 +251,37 @@
           ],
           "lobby": [
             {
-              "nick": "julianfps",
-              "valor": 578.0,
+              "nick": "zPaT0__",
+              "valor": 451.0,
               "partidas": 5
             }
           ],
           "farmacia": [
             {
-              "nick": "Pisanoslixo",
-              "valor": 8.428571428571429,
-              "partidas": 7
+              "nick": "LAUANNA7788",
+              "valor": 6.909090909090909,
+              "partidas": 11
             }
           ],
           "forrest": [
             {
-              "nick": "zPaT0__",
-              "valor": 3993.2342800000006,
-              "partidas": 5
+              "nick": "PopMeeN",
+              "valor": 2942.886708,
+              "partidas": 20
             }
           ],
           "lutinho": [
             {
-              "nick": "zPaT0__",
-              "valor": 9.0,
-              "partidas": 5
-            },
-            {
-              "nick": "julianfps",
-              "valor": 9.0,
-              "partidas": 5
+              "nick": "crazyrock_com_br",
+              "valor": 9.452830188679245,
+              "partidas": 53
             }
           ],
           "sedex": [
             {
-              "nick": "VoVoGOW",
-              "valor": 541.1611,
-              "partidas": 35
+              "nick": "M43str0_FPS",
+              "valor": 499.72556,
+              "partidas": 13
             }
           ]
         },
@@ -307,51 +289,58 @@
           "kombi": [
             {
               "nick": "ROGER__BR",
-              "valor": 7920.451519200001,
+              "valor": 7920.4515192,
               "partidas": 4
             }
           ],
           "sedex": [
             {
-              "nick": "ROGER__BR",
-              "valor": 50.66645,
-              "partidas": 4
+              "nick": "CalanguinhoFPS",
+              "valor": 137.74794,
+              "partidas": 2
             }
           ]
         },
         "squad": {
           "kombi": [
             {
-              "nick": "ROGER__BR",
-              "valor": 10455.6475,
-              "partidas": 12
+              "nick": "CalanguinhoFPS",
+              "valor": 44337.417960000006,
+              "partidas": 52
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "PIGzinn_30fps",
+              "valor": 1,
+              "partidas": 18
             }
           ],
           "samu": [
             {
-              "nick": "ROGER__BR",
-              "valor": 2,
-              "partidas": 12
+              "nick": "Pisanoslixo",
+              "valor": 13,
+              "partidas": 36
             }
           ],
           "lobby": [
             {
-              "nick": "ROGER__BR",
-              "valor": 977.3333333333334,
-              "partidas": 12
+              "nick": "robo__GUERREIRO",
+              "valor": 412.0,
+              "partidas": 9
             }
           ],
           "farmacia": [
             {
-              "nick": "ROGER__BR",
-              "valor": 3.8333333333333335,
-              "partidas": 12
+              "nick": "Pisanoslixo",
+              "valor": 6.972222222222222,
+              "partidas": 36
             }
           ],
           "forrest": [
             {
               "nick": "ROGER__BR",
-              "valor": 2549.4447966666667,
+              "valor": 2549.444796666666,
               "partidas": 12
             }
           ],
@@ -364,9 +353,9 @@
           ],
           "sedex": [
             {
-              "nick": "ROGER__BR",
-              "valor": 409.8227,
-              "partidas": 12
+              "nick": "PIGzinn_30fps",
+              "valor": 415.56168,
+              "partidas": 18
             }
           ]
         },
