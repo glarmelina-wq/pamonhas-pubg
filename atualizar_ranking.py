@@ -1,263 +1,199 @@
-import os
-import requests
+"""Coleta normal (Steam), sem dependências externas. Nunca grava a chave da API."""
 import json
+import math
+import os
+import sys
 import time
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
+from zoneinfo import ZoneInfo
 
-# Garante que o arquivo JSON será salvo na MESMA pasta deste script
-PASTA_ATUAL = os.path.dirname(os.path.abspath(__file__))
-CAMINHO_JSON = os.path.join(PASTA_ATUAL, "ranking_cla.json")
+BASE = Path(__file__).resolve().parent
+MODES = ['squad-fpp', 'duo-fpp', 'squad', 'duo']
+GROUPS = {'fpp': MODES[:2], 'tpp': MODES[2:], **{m: [m] for m in MODES}}
+MEMBROS_CLA = ['gerskol', 'Burallosh', 'VoVoGOW', 'lauSL', 'ROGER__BR', 'crazyrock_com_br', 'Bicaleto', 'BoLHa___', 'CalanguinhoFPS', 'GEMINIAKI', 'JBMKTB', 'julianfps', 'LAUANNA7788', 'LuleLixxooXandTB', 'M43str0_FPS', 'manolobr07', 'PIGzinn_30fps', 'Pisanoslixo', 'PopMeeN', 'Padre0027', 'Rasdroc', 'Rickzzs', 'robo__GUERREIRO', 'ShigS-08', 'robo-_G', 'tematoo', 'zPaT0__', 'Zeus_god45']
+MIN_PARTIDAS = 15
+FIELDS = ['roundsPlayed', 'kills', 'losses', 'wins', 'top10s', 'damageDealt', 'dBNOs', 'headshotKills', 'longestKill', 'revives', 'assists', 'heals', 'boosts', 'timeSurvived', 'rideDistance', 'walkDistance', 'roadKills', 'teamKills', 'suicides']
 
-# ==========================================
-# CONFIGURAÇÕES DO CLÃ PAMONHAS & API
-# ==========================================
-# Agora ele puxa a chave de forma secreta e segura!
-API_KEY = os.environ.get("PUBG_API_KEY")
-PLATFORM = "steam"
+def load_json(name, default):
+    path = BASE / name
+    if not path.exists():
+        return default
+    return json.loads(path.read_text(encoding='utf-8'))
 
-MODOS_FPP = ["squad-fpp", "duo-fpp"]
-MIN_PARTIDAS_MVP = 15
+def atomic_json(name, value):
+    path = BASE / name
+    temp = path.with_suffix(path.suffix + '.tmp')
+    options = {'separators': (',', ':')} if name == 'historico_cla.json' else {'indent': 2}
+    temp.write_text(json.dumps(value, ensure_ascii=False, allow_nan=False, **options) + '\n', encoding='utf-8')
+    temp.replace(path)
 
-# ⚠️ IMPORTANTE: Troque abaixo pelos nicks REAIS do PUBG (exatamente como no jogo, com maiúsculas e minúsculas!)
-MEMBROS_CLA = [
-"gerskol",
-    	"Burallosh",
-	"VoVoGOW",
-    	"lauSL",
-	"ROGER__BR",
-    	"crazyrock_com_br",
-	"Bicaleto",
-    	"BoLHa___",
-	"CalanguinhoFPS",
-    	"GEMINIAKI",
-	"JBMKTB",
-    	"julianfps",
-	"LAUANNA7788",
-    	"LuleLixxooXandTB",
-	"M43str0_FPS",
-    	"manolobr07",
-	"PIGzinn_30fps",
-    	"Pisanoslixo",
-	"PopMeeN",
-    	"Padre0027",
-	"Rasdroc",
-	"Rickzzs",
-    	"robo__GUERREIRO",
-	"ShigS-08",
-	"robo-_G",
-    	"tematoo",
-	"zPaT0__",
-    "Zeus_god45"
-]
+class PUBGClient:
+    def __init__(self, key):
+        if not key:
+            raise RuntimeError('PUBG_API_KEY ausente. Configure o Secret do repositório.')
+        self.key = key
+        self.last_request = 0.0
 
-HEADERS = {
-    "Authorization": f"Bearer {API_KEY}",
-    "Accept": "application/vnd.api+json"
-}
+    def get(self, path, params=None, missing_ok=False):
+        url = 'https://api.pubg.com/shards/steam/' + path
+        if params:
+            url += '?' + urlencode(params)
+        for attempt in range(4):
+            time.sleep(max(0, 6.3 - (time.monotonic() - self.last_request)))
+            self.last_request = time.monotonic()
+            req = Request(url, headers={'Authorization': 'Bearer ' + self.key, 'Accept': 'application/vnd.api+json'})
+            try:
+                with urlopen(req, timeout=30) as response:
+                    return json.load(response)
+            except HTTPError as err:
+                if err.code == 404 and missing_ok:
+                    return None
+                if err.code in (401, 403):
+                    raise RuntimeError('A API recusou a credencial. Verifique o Secret PUBG_API_KEY.') from None
+                if err.code not in (429, 500, 502, 503, 504):
+                    raise RuntimeError('Falha da API: HTTP ' + str(err.code)) from None
+                if attempt == 3:
+                    raise RuntimeError('A API continuou indisponível após 4 tentativas.') from None
+                if err.code == 429:
+                    reset = err.headers.get('X-RateLimit-Reset', '')
+                    delay = max(30, float(reset) - time.time() + 1) if reset.replace('.', '', 1).isdigit() else 60
+                    time.sleep(min(delay, 90))
+                else:
+                    time.sleep(2 ** (attempt + 1))
+            except (URLError, TimeoutError):
+                if attempt == 3:
+                    raise RuntimeError('Não foi possível conectar à API após 4 tentativas.') from None
+                time.sleep(2 ** (attempt + 1))
+        raise RuntimeError('Coleta não concluída.')
 
-DELAY_RPM = 6.2
+def aggregate(stats, modes):
+    result = {field: 0 for field in FIELDS}
+    for mode in modes:
+        item = stats.get(mode)
+        if not isinstance(item, dict):
+            raise ValueError('Resposta sem estatísticas do modo ' + mode)
+        for field in FIELDS:
+            value = item.get(field, 0)
+            if not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+                raise ValueError('Valor inválido na métrica ' + field)
+            result[field] = max(result[field], value) if field == 'longestKill' else result[field] + value
+    # Ausência da métrica não deve ser confundida com zero real.
+    values = [stats[m].get('weaponsAcquired') for m in modes]
+    result['weaponsAcquired'] = sum(values) if all(isinstance(v, (int, float)) and math.isfinite(v) and v >= 0 for v in values) else None
+    return result
 
-def dividir_em_lotes(lista, tamanho=10):
-    for i in range(0, len(lista), tamanho):
-        yield lista[i:i + tamanho]
+def metrics(nick, account_id, stats, modes):
+    s = aggregate(stats, modes)
+    rounds = s['roundsPlayed']
+    def rate(value, factor=1):
+        return value / rounds * factor if rounds else 0
+    adr = rate(s['damageDealt'])
+    winrate = rate(s['wins'], 100)
+    top10rate = rate(s['top10s'], 100)
+    kills_per_game = rate(s['kills'])
+    revives_per_game = rate(s['revives'])
+    return {
+        'nick': nick, 'account_id': account_id, 'partidas': rounds,
+        'elegivel_mvp': rounds >= MIN_PARTIDAS,
+        'wins': s['wins'], 'win_rate': round(winrate, 1), 'top10s': s['top10s'],
+        'top10_rate': round(top10rate, 1), 'kills': s['kills'],
+        'kills_por_partida': round(kills_per_game, 2),
+        'adr': round(adr, 1), 'damage_total': round(s['damageDealt'], 2),
+        'dbnos': s['dBNOs'], 'headshots': s['headshotKills'],
+        'hs_rate': round(s['headshotKills'] / s['kills'] * 100, 1) if s['kills'] else 0,
+        'longest_kill': round(s['longestKill'], 1), 'revives': s['revives'],
+        'assists': s['assists'], 'heals': s['heals'] + s['boosts'],
+        'tempo_medio_min': round(rate(s['timeSurvived']) / 60, 1),
+        'km_rodados': round(s['rideDistance'] / 1000, 1),
+        'km_pe': round(rate(s['walkDistance']) / 1000, 2),
+        'road_kills': s['roadKills'], 'team_kills': s['teamKills'], 'suicides': s['suicides'],
+        'armas_loot': round(rate(s['weaponsAcquired']), 1) if s['weaponsAcquired'] is not None else None,
+        'scores': {
+            'mvp': round(adr * 1.5 + kills_per_game * 50 + winrate * 5 + top10rate * 1.5 + revives_per_game * 100, 1),
+            'participacao': s['kills'] + s['wins'] * 20 + s['revives'] * 2 + s['assists'],
+        }
+    }
 
-def requisicao_segura(url):
-    while True:
-        res = requests.get(url, headers=HEADERS)
-        if res.status_code == 429:
-            print("⏳ Limite de 10 RPM atingido! Aguardando 30 segundos...")
-            time.sleep(30)
-            continue
-        return res
+def build_snapshot(payload):
+    return {'at': payload['updated_at'], 'season_id': payload['season_id'], 'score_version': 2,
+            'grupos': {group: [{key: player[key] for key in ('nick', 'account_id', 'partidas', 'kills', 'wins', 'damage_total', 'adr', 'revives', 'assists', 'scores')} for player in players]
+                       for group, players in payload['grupos'].items()}}
 
-def buscar_ids_jogadores(nicks):
-    mapa_jogadores = {}
-    for lote in dividir_em_lotes(nicks, 10):
-        nomes_str = ",".join(lote)
-        url = f"https://api.pubg.com/shards/{PLATFORM}/players?filter[playerNames]={nomes_str}"
-        res = requisicao_segura(url)
-        
-        if res.status_code == 200:
-            for player in res.json().get("data", []):
-                nome = player["attributes"]["name"]
-                mapa_jogadores[nome] = player["id"]
-                print(f" ✔️ Jogador localizado: {nome}")
-        elif res.status_code == 404:
-            print(f" ❌ Nenhum jogador encontrado neste lote: {lote}")
-            print("    (Dica: Verifique letras MAIÚSCULAS e minúsculas exatas do nick no PUBG)")
+def update_history(history, snapshot, now):
+    snapshots = [s for s in history.get('snapshots', []) if s.get('season_id') == snapshot['season_id'] and s.get('score_version') == 2]
+    # Evita duplicar a mesma hora; conserva primeira e última coleta de cada dia.
+    # Isso mantém a referência da semana e limita o tamanho do arquivo público.
+    snapshots = [s for s in snapshots if s['at'][:13] != snapshot['at'][:13] and datetime.fromisoformat(s['at']) >= now - timedelta(days=90)]
+    snapshots.append(snapshot)
+    snapshots.sort(key=lambda s: s['at'])
+    days = {}
+    for item in snapshots:
+        day = datetime.fromisoformat(item['at']).astimezone(ZoneInfo('America/Sao_Paulo')).date().isoformat()
+        days.setdefault(day, []).append(item)
+    retained = []
+    for items in days.values():
+        retained.append(items[0])
+        if items[-1]['at'] != items[0]['at']:
+            retained.append(items[-1])
+    return {'schema_version': 2, 'snapshots': retained}
+
+def main():
+    client = PUBGClient(os.environ.get('PUBG_API_KEY'))
+    seasons = client.get('seasons')['data']
+    season = next((s['id'] for s in seasons if s['attributes'].get('isCurrentSeason')), None)
+    if not season:
+        raise RuntimeError('Não foi possível identificar a temporada atual.')
+    # IDs previamente resolvidos evitam gastar consultas repetidas por nick.
+    cache = load_json('jogadores_cache.json', {})
+    resolved = {}
+    missing = []
+    for start in range(0, len(MEMBROS_CLA), 10):
+        batch = [nick for nick in MEMBROS_CLA[start:start + 10] if nick not in cache]
+        if batch:
+            response = client.get('players', {'filter[playerNames]': ','.join(batch)}, missing_ok=True)
+            for player in (response or {}).get('data', []):
+                cache[player['attributes']['name']] = player['id']
+    for nick in MEMBROS_CLA:
+        if nick not in cache:
+            missing.append(nick)
         else:
-            print(f" ⚠️ Aviso ao buscar lote {lote}: Status {res.status_code} - {res.text}")
-        
-        time.sleep(DELAY_RPM)
-    return mapa_jogadores
-
-def buscar_temporada_atual():
-    url = f"https://api.pubg.com/shards/{PLATFORM}/seasons"
-    res = requisicao_segura(url)
-    time.sleep(DELAY_RPM)
-    
-    if res.status_code == 200:
-        for season in res.json().get("data", []):
-            if season["attributes"].get("isCurrentSeason"):
-                return season["id"]
-    return None
-
-def somar_modos(game_mode_stats, modos):
-    acumulado = {
-        "roundsPlayed": 0, "kills": 0, "losses": 0, "wins": 0, "top10s": 0,
-        "damageDealt": 0.0, "dBNOs": 0, "headshotKills": 0, "longestKill": 0.0,
-        "revives": 0, "assists": 0, "heals": 0, "boosts": 0, "timeSurvived": 0.0,
-        "rideDistance": 0.0, "walkDistance": 0.0, "roadKills": 0, "teamKills": 0, "suicides": 0
-    }
-    for modo in modos:
-        s = game_mode_stats.get(modo, {})
-        for chave in acumulado:
-            if chave == "longestKill":
-                acumulado[chave] = max(acumulado[chave], s.get(chave, 0.0))
-            else:
-                acumulado[chave] += s.get(chave, 0)
-    return acumulado
-
-def calcular_estatisticas():
-    print("==========================================")
-    print(" 🌽 PAMONHAS STATS TRACKER - INICIANDO")
-    print("==========================================")
-    print(f"📂 Pasta de destino: {PASTA_ATUAL}")
-    
-    print("\n1. Consultando temporada ativa na Krafton...")
-    season_id = buscar_temporada_atual()
-    if not season_id:
-        print("❌ Erro: Não foi possível obter a temporada atual. Verifique sua conexão ou API Key.")
-        return
-    print(f" -> Temporada ativa: {season_id}")
-
-    print("\n2. Buscando IDs dos membros na Steam...")
-    jogadores = buscar_ids_jogadores(MEMBROS_CLA)
-    if not jogadores:
-        print("❌ Nenhum jogador válido encontrado. Edite a lista MEMBROS_CLA com nicks reais.")
-        return
-
-    lista_final = []
-    total_membros = len(jogadores)
-
-    print(f"\n3. Extraindo estatísticas de {total_membros} membros...")
-    for idx, (nick, acc_id) in enumerate(jogadores.items(), 1):
-        url = f"https://api.pubg.com/shards/{PLATFORM}/players/{acc_id}/seasons/{season_id}"
-        res = requisicao_segura(url)
-
-        if res.status_code != 200:
-            print(f" [{idx}/{total_membros}] ❌ Erro ao puxar {nick}: Status {res.status_code}")
-            time.sleep(DELAY_RPM)
-            continue
-
-        todos_modos = res.json()["data"]["attributes"]["gameModeStats"]
-        s = somar_modos(todos_modos, MODOS_FPP)
-        partidas = s["roundsPlayed"]
-
-        if partidas == 0:
-            print(f" [{idx}/{total_membros}] ⚪ {nick}: 0 partidas FPP na temporada atual.")
-            # Mesmo com 0 partidas, se quiser que ele apareça zerado na tabela, podemos incluir ou pular
-            time.sleep(DELAY_RPM)
-            continue
-
-        kills = s["kills"]
-        losses = max(1, s["losses"])
-        wins = s["wins"]
-        top10s = s["top10s"]
-        damage = s["damageDealt"]
-        dbnos = s["dBNOs"]
-        headshots = s["headshotKills"]
-        longest_kill = s["longestKill"]
-        revives = s["revives"]
-        assists = s["assists"]
-        heals = s["heals"]
-        boosts = s["boosts"]
-        time_survived = s["timeSurvived"]
-        ride_dist = s["rideDistance"]
-        walk_dist = s["walkDistance"]
-        road_kills = s["roadKills"]
-        team_kills = s["teamKills"]
-        suicides = s["suicides"]
-        weapons_acquired = s.get("weaponsAcquired", 0) # <--- NOVA LINHA
-
-        adr = round(damage / partidas, 1)
-        kd = round(kills / losses, 2)
-        win_rate = round((wins / partidas) * 100, 1)
-        top10_rate = round((top10s / partidas) * 100, 1)
-        hs_rate = round((headshots / max(1, kills)) * 100, 1)
-        tempo_medio_min = round((time_survived / partidas) / 60, 1)
-        km_rodados = round(ride_dist / 1000, 1)
-        km_a_pe_por_partida = round((walk_dist / 1000) / partidas, 2)
-        armas_por_partida = round(weapons_acquired / partidas, 1) # <--- NOVA LINHA
-		
-        score_mvp = round((adr * 1.5) + (kd * 50) + (wins * 15) + (top10s * 3) + (revives * 2), 1)
-        score_fragger = round(adr + (kills * 3) + (dbnos * 1.5), 1)
-        score_sniper = round((headshots * 4) + (hs_rate * 2) + (longest_kill * 0.2), 1)
-        score_suporte = round((revives * 10) + (assists * 5) + (heals * 0.2), 1)
-        score_sobrevivente = round((tempo_medio_min * 5) + (top10_rate * 1.5) + (wins * 10), 1)
-        score_vitorioso = round((wins * 20) + (win_rate * 5), 1)
-
-        score_uber = round(km_rodados + (road_kills * 50), 1)
-        score_inimigo = team_kills + suicides
-
-        lista_final.append({
-            "nick": nick,
-            "partidas": partidas,
-            "elegivel_mvp": partidas >= MIN_PARTIDAS_MVP,
-            "wins": wins,
-            "win_rate": win_rate,
-            "top10_rate": top10_rate,
-            "kills": kills,
-            "kd": kd,
-            "adr": adr,
-            "dbnos": dbnos,
-            "headshots": headshots,
-            "hs_rate": hs_rate,
-            "longest_kill": round(longest_kill, 1),
-            "revives": revives,
-            "assists": assists,
-            "heals": heals + boosts,
-            "tempo_medio_min": tempo_medio_min,
-            "km_rodados": km_rodados,
-            "road_kills": road_kills,
-            "team_kills": team_kills,
-            "suicides": suicides,
-            "km_pe": km_a_pe_por_partida,
-	        "armas_loot": armas_por_partida, # <--- NOVA LINHA
-            "scores": {
-                "mvp": score_mvp,
-                "fragger": score_fragger,
-                "sniper": score_sniper,
-                "suporte": score_suporte,
-                "sobrevivente": score_sobrevivente,
-                "vitorioso": score_vitorioso,
-                "uber": score_uber,
-                "inimigo": score_inimigo
-            }
-        })
-
-        print(f" [{idx}/{total_membros}] 🔥 {nick}: {partidas} jogos | ADR: {adr} | K/D: {kd} | MVP: {score_mvp}")
-        
-        if idx < total_membros:
-            time.sleep(DELAY_RPM)
-
+            resolved[nick] = cache[nick]
+    if not resolved:
+        raise RuntimeError('Nenhum membro foi localizado; dados anteriores preservados.')
+    groups = {group: [] for group in GROUPS}
+    for nick, account_id in resolved.items():
+        response = client.get(f'players/{account_id}/seasons/{season}')
+        stats = response['data']['attributes']['gameModeStats']
+        for group, modes in GROUPS.items():
+            groups[group].append(metrics(nick, account_id, stats, modes))
+        print('Coleta concluída: ' + nick)
+    now = datetime.now(timezone.utc).replace(microsecond=0)
     payload = {
-        "ultima_atualizacao": datetime.now().strftime("%d/%m/%Y às %H:%M"),
-        "temporada": "SEASON " + season_id.split("-")[-1],
-        "modo": " + ".join([m.upper() for m in MODOS_FPP]),
-        "min_partidas": MIN_PARTIDAS_MVP,
-        "jogadores": lista_final
+        'schema_version': 2, 'score_version': 2, 'updated_at': now.isoformat(),
+        'ultima_atualizacao': now.astimezone(ZoneInfo('America/Sao_Paulo')).strftime('%d/%m/%Y às %H:%M'),
+        'season_id': season, 'temporada': 'SEASON ' + season.split('-')[-1],
+        'modo': 'SQUAD-FPP + DUO-FPP', 'min_partidas': MIN_PARTIDAS,
+        'fonte': 'PUBG API • Steam • partidas normais',
+        'membros_previstos': len(MEMBROS_CLA), 'nao_encontrados': missing,
+        'grupos': groups, 'jogadores': groups['fpp']
     }
+    history = update_history(load_json('historico_cla.json', {}), build_snapshot(payload), now)
+    # Valida tudo antes de substituir os arquivos. Qualquer falha de coleta aborta a execução.
+    json.dumps([payload, history, cache], allow_nan=False)
+    atomic_json('historico_cla.json', history)
+    atomic_json('jogadores_cache.json', cache)
+    atomic_json('ranking_cla.json', payload)
+    print(f'Atualizados {len(resolved)} membros; {len(missing)} não localizados.')
+    if missing:
+        print('Revise os nicks: ' + ', '.join(missing))
 
-    with open(CAMINHO_JSON, "w", encoding="utf-8") as f:
-        json.dump(payload, f, indent=4, ensure_ascii=False)
-
-    print("\n==========================================")
-    print(f" ✅ ARQUIVO SALVO EM: {CAMINHO_JSON}")
-    print("==========================================")
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     try:
-        calcular_estatisticas()
-    except Exception as e:
-        print(f"\n❌ Ocorreu um erro inesperado: {e}")
+        main()
+    except Exception as error:
+        print('ERRO: ' + str(error), file=sys.stderr)
+        sys.exit(1)
