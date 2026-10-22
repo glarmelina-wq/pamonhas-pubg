@@ -10,6 +10,8 @@ on:
       - 'index.html'
       - 'logo_do_clan.jpg'
       - 'atualizar_ranking.py'
+      - 'membros_cla.txt'
+      - 'dicas.js'
       - '.github/workflows/main.yml'
 
 concurrency:
@@ -44,7 +46,7 @@ jobs:
       - name: Preparar arquivos públicos
         run: |
           mkdir -p _site
-          cp index.html ranking_cla.json historico_cla.json _site/
+          cp index.html dicas.js ranking_cla.json historico_cla.json _site/
           if [ -f logo_do_clan.jpg ]; then cp logo_do_clan.jpg _site/; fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
