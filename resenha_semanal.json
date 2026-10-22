@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "fonte": "partidas",
-  "updated_at": "2026-10-22T12:35:18+00:00",
+  "updated_at": "2026-10-22T15:18:54+00:00",
   "inicio_semana": "2026-10-19T00:00:00-03:00",
   "parcial": true,
   "grupos": {
@@ -85,19 +85,19 @@
       {
         "nick": "Burallosh",
         "account_id": "account.7e11fc7431c84aaca529e9f96223db78",
-        "partidas": 10,
+        "partidas": 37,
         "raw": {
-          "rideDistance": 11112.34762,
+          "rideDistance": 26397.726319999998,
           "teamKills": 0,
-          "revives": 3,
-          "timeSurvived": 9283,
-          "heals": 23,
-          "boosts": 31,
-          "walkDistance": 24984.620870000006,
-          "weaponsAcquired": 61,
-          "longestKill": 204.61942,
-          "kills": 45,
-          "roundsPlayed": 10,
+          "revives": 5,
+          "timeSurvived": 25474,
+          "heals": 45,
+          "boosts": 83,
+          "walkDistance": 64949.00900000001,
+          "weaponsAcquired": 183,
+          "longestKill": 296.45822,
+          "kills": 118,
+          "roundsPlayed": 37,
           "suicides": 1
         }
       },
@@ -142,19 +142,19 @@
       {
         "nick": "Pisanoslixo",
         "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-        "partidas": 16,
+        "partidas": 22,
         "raw": {
-          "rideDistance": 5379.56437,
+          "rideDistance": 11642.09601,
           "teamKills": 0,
-          "revives": 4,
-          "timeSurvived": 9899,
-          "heals": 13,
-          "boosts": 56,
-          "walkDistance": 27063.61698,
-          "weaponsAcquired": 122,
+          "revives": 9,
+          "timeSurvived": 14379,
+          "heals": 23,
+          "boosts": 78,
+          "walkDistance": 37983.4648,
+          "weaponsAcquired": 169,
           "longestKill": 284.26685,
-          "kills": 26,
-          "roundsPlayed": 16,
+          "kills": 43,
+          "roundsPlayed": 22,
           "suicides": 0
         }
       },
@@ -199,19 +199,95 @@
       {
         "nick": "Bicaleto",
         "account_id": "account.61f0f8ebc5bd4c349e14c3b0563f7ca3",
-        "partidas": 1,
+        "partidas": 4,
         "raw": {
           "rideDistance": 3883.85,
           "teamKills": 0,
           "revives": 0,
-          "timeSurvived": 1067,
-          "heals": 2,
-          "boosts": 4,
-          "walkDistance": 2307.2783,
-          "weaponsAcquired": 11,
+          "timeSurvived": 2757,
+          "heals": 9,
+          "boosts": 11,
+          "walkDistance": 6955.802642899999,
+          "weaponsAcquired": 33,
           "longestKill": 180.94588,
-          "kills": 2,
-          "roundsPlayed": 1,
+          "kills": 11,
+          "roundsPlayed": 4,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "VoVoGOW",
+        "account_id": "account.2e97d952620847b686871c6342733de0",
+        "partidas": 10,
+        "raw": {
+          "rideDistance": 32841.72624,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 9108,
+          "heals": 27,
+          "boosts": 18,
+          "walkDistance": 16458.092239999998,
+          "weaponsAcquired": 81,
+          "longestKill": 313.4994,
+          "kills": 41,
+          "roundsPlayed": 10,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Padre0027",
+        "account_id": "account.25aff9f5cf8544a6a3e731253fd6bf6c",
+        "partidas": 20,
+        "raw": {
+          "rideDistance": 26874.692740000006,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 15488,
+          "heals": 46,
+          "boosts": 66,
+          "walkDistance": 38189.3554193,
+          "weaponsAcquired": 140,
+          "longestKill": 377.45944,
+          "kills": 81,
+          "roundsPlayed": 20,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "lauSL",
+        "account_id": "account.4629bb0f8b7947cb9d998b77d49bcac4",
+        "partidas": 15,
+        "raw": {
+          "rideDistance": 16236.5549,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 7954,
+          "heals": 12,
+          "boosts": 17,
+          "walkDistance": 20276.115219999996,
+          "weaponsAcquired": 74,
+          "longestKill": 214.57196,
+          "kills": 5,
+          "roundsPlayed": 15,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "PopMeeN",
+        "account_id": "account.65017ecdf76a41299ba4c7dbaf597755",
+        "partidas": 18,
+        "raw": {
+          "rideDistance": 15814.36476,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 9125,
+          "heals": 26,
+          "boosts": 28,
+          "walkDistance": 20146.896395999996,
+          "weaponsAcquired": 99,
+          "longestKill": 129.70082,
+          "kills": 5,
+          "roundsPlayed": 18,
           "suicides": 0
         }
       }
@@ -296,19 +372,19 @@
       {
         "nick": "Burallosh",
         "account_id": "account.7e11fc7431c84aaca529e9f96223db78",
-        "partidas": 10,
+        "partidas": 37,
         "raw": {
-          "rideDistance": 11112.34762,
+          "rideDistance": 26397.726319999998,
           "teamKills": 0,
-          "revives": 3,
-          "timeSurvived": 9283,
-          "heals": 23,
-          "boosts": 31,
-          "walkDistance": 24984.620870000006,
-          "weaponsAcquired": 61,
-          "longestKill": 204.61942,
-          "kills": 45,
-          "roundsPlayed": 10,
+          "revives": 5,
+          "timeSurvived": 25474,
+          "heals": 45,
+          "boosts": 83,
+          "walkDistance": 64949.00900000001,
+          "weaponsAcquired": 183,
+          "longestKill": 296.45822,
+          "kills": 118,
+          "roundsPlayed": 37,
           "suicides": 1
         }
       },
@@ -425,6 +501,82 @@
           "roundsPlayed": 1,
           "suicides": 0
         }
+      },
+      {
+        "nick": "VoVoGOW",
+        "account_id": "account.2e97d952620847b686871c6342733de0",
+        "partidas": 10,
+        "raw": {
+          "rideDistance": 32841.72624,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 9108,
+          "heals": 27,
+          "boosts": 18,
+          "walkDistance": 16458.092239999998,
+          "weaponsAcquired": 81,
+          "longestKill": 313.4994,
+          "kills": 41,
+          "roundsPlayed": 10,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Padre0027",
+        "account_id": "account.25aff9f5cf8544a6a3e731253fd6bf6c",
+        "partidas": 20,
+        "raw": {
+          "rideDistance": 26874.692740000006,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 15488,
+          "heals": 46,
+          "boosts": 66,
+          "walkDistance": 38189.3554193,
+          "weaponsAcquired": 140,
+          "longestKill": 377.45944,
+          "kills": 81,
+          "roundsPlayed": 20,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "lauSL",
+        "account_id": "account.4629bb0f8b7947cb9d998b77d49bcac4",
+        "partidas": 15,
+        "raw": {
+          "rideDistance": 16236.5549,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 7954,
+          "heals": 12,
+          "boosts": 17,
+          "walkDistance": 20276.115219999996,
+          "weaponsAcquired": 74,
+          "longestKill": 214.57196,
+          "kills": 5,
+          "roundsPlayed": 15,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "PopMeeN",
+        "account_id": "account.65017ecdf76a41299ba4c7dbaf597755",
+        "partidas": 18,
+        "raw": {
+          "rideDistance": 15814.36476,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 9125,
+          "heals": 26,
+          "boosts": 28,
+          "walkDistance": 20146.896395999996,
+          "weaponsAcquired": 99,
+          "longestKill": 129.70082,
+          "kills": 5,
+          "roundsPlayed": 18,
+          "suicides": 0
+        }
       }
     ],
     "tpp": [
@@ -450,19 +602,19 @@
       {
         "nick": "Pisanoslixo",
         "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-        "partidas": 10,
+        "partidas": 16,
         "raw": {
-          "rideDistance": 4546.18022,
+          "rideDistance": 10808.71186,
           "teamKills": 0,
-          "revives": 2,
-          "timeSurvived": 6526,
-          "heals": 10,
-          "boosts": 40,
-          "walkDistance": 16717.01141,
-          "weaponsAcquired": 79,
+          "revives": 7,
+          "timeSurvived": 11006,
+          "heals": 20,
+          "boosts": 62,
+          "walkDistance": 27636.859230000002,
+          "weaponsAcquired": 126,
           "longestKill": 284.26685,
-          "kills": 14,
-          "roundsPlayed": 10,
+          "kills": 31,
+          "roundsPlayed": 16,
           "suicides": 0
         }
       },
@@ -585,19 +737,19 @@
       {
         "nick": "Burallosh",
         "account_id": "account.7e11fc7431c84aaca529e9f96223db78",
-        "partidas": 10,
+        "partidas": 37,
         "raw": {
-          "rideDistance": 11112.34762,
+          "rideDistance": 26397.726319999998,
           "teamKills": 0,
-          "revives": 3,
-          "timeSurvived": 9283,
-          "heals": 23,
-          "boosts": 31,
-          "walkDistance": 24984.620870000006,
-          "weaponsAcquired": 61,
-          "longestKill": 204.61942,
-          "kills": 45,
-          "roundsPlayed": 10,
+          "revives": 5,
+          "timeSurvived": 25474,
+          "heals": 45,
+          "boosts": 83,
+          "walkDistance": 64949.00900000001,
+          "weaponsAcquired": 183,
+          "longestKill": 296.45822,
+          "kills": 118,
+          "roundsPlayed": 37,
           "suicides": 1
         }
       },
@@ -714,6 +866,82 @@
           "roundsPlayed": 1,
           "suicides": 0
         }
+      },
+      {
+        "nick": "VoVoGOW",
+        "account_id": "account.2e97d952620847b686871c6342733de0",
+        "partidas": 10,
+        "raw": {
+          "rideDistance": 32841.72624,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 9108,
+          "heals": 27,
+          "boosts": 18,
+          "walkDistance": 16458.092239999998,
+          "weaponsAcquired": 81,
+          "longestKill": 313.4994,
+          "kills": 41,
+          "roundsPlayed": 10,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Padre0027",
+        "account_id": "account.25aff9f5cf8544a6a3e731253fd6bf6c",
+        "partidas": 7,
+        "raw": {
+          "rideDistance": 9905.318440000001,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 6965,
+          "heals": 26,
+          "boosts": 30,
+          "walkDistance": 19789.8018,
+          "weaponsAcquired": 61,
+          "longestKill": 377.45944,
+          "kills": 58,
+          "roundsPlayed": 7,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "lauSL",
+        "account_id": "account.4629bb0f8b7947cb9d998b77d49bcac4",
+        "partidas": 15,
+        "raw": {
+          "rideDistance": 16236.5549,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 7954,
+          "heals": 12,
+          "boosts": 17,
+          "walkDistance": 20276.115219999996,
+          "weaponsAcquired": 74,
+          "longestKill": 214.57196,
+          "kills": 5,
+          "roundsPlayed": 15,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "PopMeeN",
+        "account_id": "account.65017ecdf76a41299ba4c7dbaf597755",
+        "partidas": 18,
+        "raw": {
+          "rideDistance": 15814.36476,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 9125,
+          "heals": 26,
+          "boosts": 28,
+          "walkDistance": 20146.896395999996,
+          "weaponsAcquired": 99,
+          "longestKill": 129.70082,
+          "kills": 5,
+          "roundsPlayed": 18,
+          "suicides": 0
+        }
       }
     ],
     "duo-fpp": [
@@ -773,6 +1001,25 @@
           "roundsPlayed": 6,
           "suicides": 0
         }
+      },
+      {
+        "nick": "Padre0027",
+        "account_id": "account.25aff9f5cf8544a6a3e731253fd6bf6c",
+        "partidas": 13,
+        "raw": {
+          "rideDistance": 16969.374300000003,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 8523,
+          "heals": 20,
+          "boosts": 36,
+          "walkDistance": 18399.5536193,
+          "weaponsAcquired": 79,
+          "longestKill": 253.13654,
+          "kills": 23,
+          "roundsPlayed": 13,
+          "suicides": 0
+        }
       }
     ],
     "squad": [
@@ -798,19 +1045,19 @@
       {
         "nick": "Pisanoslixo",
         "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-        "partidas": 10,
+        "partidas": 16,
         "raw": {
-          "rideDistance": 4546.18022,
+          "rideDistance": 10808.71186,
           "teamKills": 0,
-          "revives": 2,
-          "timeSurvived": 6526,
-          "heals": 10,
-          "boosts": 40,
-          "walkDistance": 16717.01141,
-          "weaponsAcquired": 79,
+          "revives": 7,
+          "timeSurvived": 11006,
+          "heals": 20,
+          "boosts": 62,
+          "walkDistance": 27636.859230000002,
+          "weaponsAcquired": 126,
           "longestKill": 284.26685,
-          "kills": 14,
-          "roundsPlayed": 10,
+          "kills": 31,
+          "roundsPlayed": 16,
           "suicides": 0
         }
       },
@@ -855,12 +1102,32 @@
     ],
     "duo": [],
     "solo-fpp": [],
-    "solo": []
+    "solo": [
+      {
+        "nick": "Bicaleto",
+        "account_id": "account.61f0f8ebc5bd4c349e14c3b0563f7ca3",
+        "partidas": 3,
+        "raw": {
+          "rideDistance": 0,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 1690,
+          "heals": 7,
+          "boosts": 7,
+          "walkDistance": 4648.524342899999,
+          "weaponsAcquired": 22,
+          "longestKill": 180.83139,
+          "kills": 9,
+          "roundsPlayed": 3,
+          "suicides": 0
+        }
+      }
+    ]
   },
-  "partidas_semana": 93,
-  "partidas_em_cache": 397,
+  "partidas_semana": 164,
+  "partidas_em_cache": 768,
   "recuperadas_agora": 400,
-  "pendentes": 676,
+  "pendentes": 293,
   "falhas_partidas": 0,
   "membros_sem_lista": [],
   "indisponiveis": 0,
