@@ -27,6 +27,9 @@ jobs:
       pages: read
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
@@ -41,8 +44,17 @@ jobs:
           git add ranking_cla.json historico_cla.json jogadores_cache.json
           if ! git diff --cached --quiet; then
             git commit -m "Atualizar estatísticas e histórico do clã"
-            git push
           fi
+          # A coleta demora alguns minutos: alguém pode ter enviado um commit nesse intervalo.
+          # Reaplica somente o commit do bot sobre a versão atual, sem force push.
+          for tentativa in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then
+              exit 0
+            fi
+          done
+          echo "A branch continuou mudando. Execute novamente a coleta completa."
+          exit 1
       - name: Preparar arquivos públicos
         run: |
           mkdir -p _site
