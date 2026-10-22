@@ -12,6 +12,8 @@ on:
       - 'atualizar_ranking.py'
       - 'membros_cla.txt'
       - 'dicas.js'
+      - 'resenha.js'
+      - 'trofeus.py'
       - '.github/workflows/main.yml'
 
 concurrency:
@@ -41,7 +43,7 @@ jobs:
         run: |
           git config user.name "Pamonhas Bot"
           git config user.email "bot@pamonhas.pubg"
-          git add ranking_cla.json historico_cla.json jogadores_cache.json
+          git add ranking_cla.json historico_cla.json jogadores_cache.json trofeus_cla.json
           if ! git diff --cached --quiet; then
             git commit -m "Atualizar estatísticas e histórico do clã"
           fi
@@ -58,7 +60,7 @@ jobs:
       - name: Preparar arquivos públicos
         run: |
           mkdir -p _site
-          cp index.html dicas.js ranking_cla.json historico_cla.json _site/
+          cp index.html dicas.js resenha.js ranking_cla.json historico_cla.json trofeus_cla.json _site/
           if [ -f logo_do_clan.jpg ]; then cp logo_do_clan.jpg _site/; fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
