@@ -1,36 +1,65 @@
-name: Atualizar Ranking PUBG
+name: Atualizar e publicar Pamonhas
 
 on:
   schedule:
-    - cron: '0 * * * *' # Roda sozinho de hora em hora
-  workflow_dispatch: # Cria um botão para você rodar manualmente quando quiser
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'logo_do_clan.jpg'
+      - 'atualizar_ranking.py'
+      - '.github/workflows/main.yml'
+
+concurrency:
+  group: pamonhas-pages
+  cancel-in-progress: false
 
 jobs:
-  atualizar-dados:
+  preparar:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write
-
+      pages: read
     steps:
-      - name: 1. Baixar código do repositório
-        uses: actions/checkout@v4
-
-      - name: 2. Preparar Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
-          python-version: '3.10'
-
-      - name: 3. Instalar Biblioteca Requests
-        run: pip install requests
-
-      - name: 4. Rodar o Script de Coleta da API do PUBG
+          python-version: '3.12'
+      - name: Atualizar dados (mantém publicação anterior se houver falha)
         env:
           PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
         run: python atualizar_ranking.py
-
-      - name: 5. Salvar o novo JSON no site
+      - name: Guardar dados e histórico
         run: |
-          git config --global user.name "Pamonhas Bot"
-          git config --global user.email "bot@pamonhas.pubg"
-          git add ranking_cla.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Atualização automática do ranking" && git push)
+          git config user.name "Pamonhas Bot"
+          git config user.email "bot@pamonhas.pubg"
+          git add ranking_cla.json historico_cla.json jogadores_cache.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualizar estatísticas e histórico do clã"
+            git push
+          fi
+      - name: Preparar arquivos públicos
+        run: |
+          mkdir -p _site
+          cp index.html ranking_cla.json historico_cla.json _site/
+          if [ -f logo_do_clan.jpg ]; then cp logo_do_clan.jpg _site/; fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  publicar:
+    needs: preparar
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar o site atualizado
+        id: deployment
+        uses: actions/deploy-pages@v4
