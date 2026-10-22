@@ -12,11 +12,30 @@ from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 BASE = Path(__file__).resolve().parent
-MODES = ['squad-fpp', 'duo-fpp', 'squad', 'duo']
-GROUPS = {'fpp': MODES[:2], 'tpp': MODES[2:], **{m: [m] for m in MODES}}
+MODES = ['squad-fpp', 'duo-fpp', 'squad', 'duo', 'solo-fpp', 'solo']
+GROUPS = {'todos': MODES, 'fpp': MODES[:2], 'tpp': MODES[2:4], **{m: [m] for m in MODES}}
 MEMBROS_CLA = ['gerskol', 'Burallosh', 'VoVoGOW', 'lauSL', 'ROGER__BR', 'crazyrock_com_br', 'Bicaleto', 'BoLHa___', 'CalanguinhoFPS', 'GEMINIAKI', 'JBMKTB', 'julianfps', 'LAUANNA7788', 'LuleLixxooXandTB', 'M43str0_FPS', 'manolobr07', 'PIGzinn_30fps', 'Pisanoslixo', 'PopMeeN', 'Padre0027', 'Rasdroc', 'Rickzzs', 'robo__GUERREIRO', 'ShigS-08', 'robo-_G', 'tematoo', 'zPaT0__', 'Zeus_god45']
 MIN_PARTIDAS = 15
 FIELDS = ['roundsPlayed', 'kills', 'losses', 'wins', 'top10s', 'damageDealt', 'dBNOs', 'headshotKills', 'longestKill', 'revives', 'assists', 'heals', 'boosts', 'timeSurvived', 'rideDistance', 'walkDistance', 'roadKills', 'teamKills', 'suicides']
+
+def load_members():
+    path = BASE / 'membros_cla.txt'
+    if not path.exists():
+        return MEMBROS_CLA  # Compatibilidade durante a instalação.
+    members = []
+    seen = set()
+    for line in path.read_text(encoding='utf-8-sig').splitlines():
+        nick = line.strip()
+        if not nick or nick.startswith('#'):
+            continue
+        if any(char.isspace() for char in nick) or len(nick) > 40:
+            raise ValueError('Nick inválido em membros_cla.txt: use um nick por linha, sem espaços.')
+        if nick.casefold() not in seen:
+            members.append(nick)
+            seen.add(nick.casefold())
+    if not members:
+        raise ValueError('A lista membros_cla.txt está vazia. Os dados anteriores foram preservados.')
+    return members
 
 def load_json(name, default):
     path = BASE / name
@@ -142,6 +161,7 @@ def update_history(history, snapshot, now):
     return {'schema_version': 2, 'snapshots': retained}
 
 def main():
+    members = load_members()
     client = PUBGClient(os.environ.get('PUBG_API_KEY'))
     seasons = client.get('seasons')['data']
     season = next((s['id'] for s in seasons if s['attributes'].get('isCurrentSeason')), None)
@@ -151,13 +171,13 @@ def main():
     cache = load_json('jogadores_cache.json', {})
     resolved = {}
     missing = []
-    for start in range(0, len(MEMBROS_CLA), 10):
-        batch = [nick for nick in MEMBROS_CLA[start:start + 10] if nick not in cache]
+    for start in range(0, len(members), 10):
+        batch = [nick for nick in members[start:start + 10] if nick not in cache]
         if batch:
             response = client.get('players', {'filter[playerNames]': ','.join(batch)}, missing_ok=True)
             for player in (response or {}).get('data', []):
                 cache[player['attributes']['name']] = player['id']
-    for nick in MEMBROS_CLA:
+    for nick in members:
         if nick not in cache:
             missing.append(nick)
         else:
@@ -178,7 +198,7 @@ def main():
         'season_id': season, 'temporada': 'SEASON ' + season.split('-')[-1],
         'modo': 'SQUAD-FPP + DUO-FPP', 'min_partidas': MIN_PARTIDAS,
         'fonte': 'PUBG API • Steam • partidas normais',
-        'membros_previstos': len(MEMBROS_CLA), 'nao_encontrados': missing,
+        'membros_previstos': len(members), 'nao_encontrados': missing,
         'grupos': groups, 'jogadores': groups['fpp']
     }
     history = update_history(load_json('historico_cla.json', {}), build_snapshot(payload), now)

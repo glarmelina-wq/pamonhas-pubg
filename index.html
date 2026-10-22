@@ -20,7 +20,7 @@
 <div id="global-notice" class="notice" role="status" hidden></div>
 <div id="load-error" class="notice error" role="alert" hidden>Não foi possível carregar o ranking. Confira se <strong>ranking_cla.json</strong> está na mesma pasta do site. <button id="retry">Tentar novamente</button></div>
 <div id="app" hidden>
-<div class="mode-bar"><p id="source-status"></p><label>Estatísticas exibidas<select id="mode-select" aria-label="Modalidade"><option value="fpp">Duo + Squad • FPP</option><option value="squad-fpp">Squad • FPP</option><option value="duo-fpp">Duo • FPP</option><option value="tpp">Duo + Squad • TPP</option><option value="squad">Squad • TPP</option><option value="duo">Duo • TPP</option></select></label></div>
+<div class="mode-bar"><p id="source-status"></p><label>Estatísticas exibidas<select id="mode-select" aria-label="Modalidade"><option value="todos">Todos • Solo, Duo e Squad (FPP + TPP)</option><option value="fpp">Duo + Squad • FPP</option><option value="squad-fpp">Squad • FPP</option><option value="duo-fpp">Duo • FPP</option><option value="tpp">Duo + Squad • TPP</option><option value="squad">Squad • TPP</option><option value="duo">Duo • TPP</option><option value="solo-fpp">Solo • FPP</option><option value="solo">Solo • TPP</option></select></label></div>
 <section id="page-inicio" class="page active" aria-label="Início">
 <div class="hero"><div class="hero-copy"><span class="eyebrow">Nossa resenha. Nosso ranking.</span><h1>A próxima safe é <span class="yellow">com os Pamonhas.</span></h1><p class="muted">Os números da temporada, a parceria de sempre. Acompanhe o clã, compare suas partidas e leve seu card para a resenha.</p><div class="actions"><button class="primary" data-page="ranking">Ver ranking do clã ↗</button><button data-page="jogadores">Encontrar meu perfil</button></div></div><img class="hero-emblem" src="logo_do_clan.jpg" alt="Mascote do clã, a Kombi do Zé"></div>
 <div class="sync" id="sync-status"></div><div class="stats" id="home-stats"></div>
@@ -38,13 +38,14 @@
 </div>
 </main>
 <footer><div class="wrap footer-inner"><p>🌽 Os Pamonhas • Em memória do Zé da Pamonha.</p><p>Projeto da comunidade. Sem vínculo oficial com PUBG / KRAFTON.</p></div></footer>
+<script src="dicas.js"></script>
 <script>
 'use strict';
 const $ = id => document.getElementById(id);
 const fmt = (value,digits=0) => Number(value||0).toLocaleString('pt-BR',{maximumFractionDigits:digits,minimumFractionDigits:digits});
 const esc = value => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const MODE_LABELS = {fpp:'Duo + Squad • FPP',tpp:'Duo + Squad • TPP','squad-fpp':'Squad • FPP','duo-fpp':'Duo • FPP',squad:'Squad • TPP',duo:'Duo • TPP'};
-const state = {data:null,history:[],mode:'fpp',rank:'mvp',player:null,page:'inicio',logo:null};
+const MODE_LABELS = {todos:'Todos • Solo, Duo e Squad (FPP + TPP)','solo-fpp':'Solo • FPP',solo:'Solo • TPP',fpp:'Duo + Squad • FPP',tpp:'Duo + Squad • TPP','squad-fpp':'Squad • FPP','duo-fpp':'Duo • FPP',squad:'Squad • TPP',duo:'Duo • TPP'};
+const state = {data:null,history:[],mode:'fpp',rank:'mvp',player:null,page:'inicio',logo:null,adviceRound:0};
 const value = (p,k) => Number(p[k]||0);
 const games = p => Math.max(1,value(p,'partidas'));
 const perGame = (p,k) => value(p,k)/games(p);
@@ -91,6 +92,7 @@ function renderStatus(){
  let messages=[];
  if(legacy)messages.push('Dados da versão anterior: somente Duo + Squad FPP. Execute o novo coletor para habilitar os outros modos, a nova fórmula de MVP e o histórico. O horário antigo não informa fuso.');
  if(d.updated_at&&Date.now()-new Date(d.updated_at).getTime()>3*3600000)messages.push('Os dados estão há mais de 3 horas sem atualização. Exibindo a última coleta válida.');
+ if(!legacy&&!d.grupos?.todos)messages.push('O modo Todos será liberado na primeira coleta com o novo script. Até lá, exibindo Duo + Squad FPP.');
  if(d.nao_encontrados?.length)messages.push('Nicks não localizados: '+d.nao_encontrados.join(', ')+'.');
  showNotice(messages.join(' '));
  for(const option of $('mode-select').options)option.disabled=option.value!=='fpp'&&!d.grupos?.[option.value];
@@ -160,6 +162,45 @@ function renderProfile(){
  if(before){const diff=p.adr-before.adr;delta=`ADR acumulado: ${diff>=0?'+':''}${fmt(diff,1)} desde ${dateLabel(ref.snapshot.at,true)}. ${fmt(Math.max(0,p.partidas-before.partidas))} partidas adicionais.`;}
  const stats=[['Partidas',fmt(p.partidas)],['Vitórias',fmt(p.wins)],['Dano médio',fmt(p.adr,1)],['Abates/jogo',fmt(perGame(p,'kills'),2)],['Abates',fmt(p.kills)],['Taxa de vitória',fmt(p.win_rate,1)+'%'],['Top 10',fmt(p.top10_rate,1)+'%'],['Abate mais longo',fmt(p.longest_kill,1)+' m']];
  $('profile').innerHTML=`<div class="profile-head"><div class="avatar" aria-hidden="true">${esc(p.nick.slice(0,2).toUpperCase())}</div><div><span class="eyebrow">Dossiê Pamonhas</span><h2>${esc(p.nick)}</h2><p class="small muted">${esc(state.data.temporada)} · ${MODE_LABELS[state.mode]} · ${position(p)}</p></div><div class="actions"><button data-compare-player="${esc(p.nick)}">Comparar ↔</button><button class="primary" data-card-player="${esc(p.nick)}">Gerar meu card ↗</button></div></div><div class="profile-metrics">${stats.map(([l,v])=>metricCard(l,v)).join('')}</div><div class="grid2"><article class="card"><span class="eyebrow">Contribuição para o time</span><h3 style="margin-top:9px">Parceria em números</h3><div class="list">${[['Reanimações',`${fmt(p.revives)} · ${fmt(perGame(p,'revives'),2)}/jogo`],['Assistências',`${fmt(p.assists)} · ${fmt(perGame(p,'assists'),2)}/jogo`],['Nocautes',fmt(p.dbnos)],['Abates de headshot',`${fmt(p.headshots)} (${fmt(p.hs_rate,1)}% dos abates)`],['Tempo médio vivo',`${fmt(p.tempo_medio_min,1)} min`]].map(([l,v])=>`<div class="list-row"><span class="muted small">${l}</span><b class="small">${v}</b></div>`).join('')}</div></article><article class="card"><span class="eyebrow">Evolução observada</span><h3 style="margin-top:9px">Seu ADR ao longo dos dias</h3><p class="muted small" style="margin-top:10px">${esc(delta)}</p>${historyChart(p)}</article></div><details><summary>Como interpretar os números</summary><p>ADR é dano médio por partida. Abates/jogo mede eliminações por partida, sem estimar mortes a partir de derrotas. Os números incluem partidas normais na modalidade selecionada, mesmo quando o membro joga sem o clã. Não inferimos habilidade de 1×1, morte no gás ou função tática a partir desses agregados.</p></details>`;
+ $('profile').innerHTML += `<section class="card" style="margin-top:20px"><div class="section-head" style="margin-top:0"><div><span class="eyebrow">Treino & resenha</span><h3>Dicas para ${esc(p.nick)}</h3></div><button data-more-advice="true">Outras dicas ↻</button></div><p class="muted small">Sugestões editoriais escolhidas pelos seus indicadores nesta modalidade. Não são uma análise de replay. A zoeira é opcional.</p><div id="player-advice"></div></section>`;
+ $('player-advice').innerHTML=adviceContent(p);
+}
+function adviceChoices(p){
+ const n=value(p,'partidas'),choices=[];
+ const add=(key,evidence)=>choices.push({key,evidence});
+ if(n<minimum()){
+  add('amostra',`${fmt(n)} partidas; mínimo de ${minimum()} para o MVP.`);
+  add('geral','Com poucos jogos, é melhor testar rotinas do que diagnosticar pontos fracos.');
+  return choices;
+ }
+ if(value(p,'team_kills')>0)add('controle',`${fmt(p.team_kills)} eliminações de aliados. O número não informa intenção.`);
+ if(value(p,'adr')<180)add('combate',`ADR de ${fmt(p.adr,1)}. Dano médio é um ponto de partida para escolher um treino, não uma nota de mira.`);
+ if(value(p,'tempo_medio_min')>0&&value(p,'tempo_medio_min')<10)add('sobrevivencia',`${fmt(p.tempo_medio_min,1)} minutos vivos por partida. A causa das mortes não está no agregado.`);
+ if(value(p,'top10_rate')<35)add('consistencia',`${fmt(p.top10_rate,1)}% de Top 10 na seleção atual. Modalidades e mapas mudam o contexto.`);
+ if(value(p,'top10_rate')>=40&&value(p,'win_rate')<10)add('conversao',`${fmt(p.top10_rate,1)}% de Top 10 e ${fmt(p.win_rate,1)}% de vitórias. Vale revisar decisões de partidas que chegaram ao final.`);
+ if(value(p,'kills')>=30&&value(p,'hs_rate')<15)add('precisao',`${fmt(p.hs_rate,1)}% dos ${fmt(p.kills)} abates foram de headshot. Isso não mede a precisão de todos os tiros.`);
+ let teamGames=n;
+ if(state.mode==='todos')teamGames=['fpp','tpp'].reduce((sum,group)=>sum+value(state.data.grupos?.[group]?.find(x=>x.nick===p.nick)||{},'partidas'),0);
+ if(!['solo','solo-fpp'].includes(state.mode)&&teamGames>=minimum()&&value(p,'revives')/teamGames<0.1)add('suporte',`${fmt(value(p,'revives')/teamGames,2)} reanimações por partida de equipe. A função de cada jogador também conta.`);
+ if(value(p,'km_pe')>0&&value(p,'km_pe')<1&&value(p,'top10_rate')<40)add('mobilidade',`${fmt(p.km_pe,2)} km a pé por partida. Menos distância não é necessariamente um problema; teste o planejamento de rotas.`);
+ if(perGame(p,'heals')>=5)add('recursos',`${fmt(perGame(p,'heals'),1)} itens de cura/boost consumidos por partida. Consumo não informa quanto você carregava nem a causa do dano.`);
+ if(choices.length<3)add('manter',`ADR ${fmt(p.adr,1)} · ${fmt(p.win_rate,1)}% de vitórias. Procure decisões repetíveis nas suas boas partidas.`);
+ if(choices.length<3)add('geral','Uma mudança observável por sessão ajuda a comparar resultados.');
+ return choices;
+}
+function adviceContent(p){
+ const catalog=globalThis.PAMONHAS_DICAS;
+ if(!catalog)return '<p class="notice" style="margin-top:15px">O catálogo não carregou. Confira se dicas.js foi enviado junto com a página.</p>';
+ const seed=[...p.nick+state.mode+saoDate(state.data.updated_at||new Date())].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,0);
+ const choices=adviceChoices(p).slice(0,3);
+ const cards=choices.map(({key,evidence},i)=>{
+  const category=catalog[key],index=(seed+i+state.adviceRound*2)%category.dicas.length;
+  const tip=category.dicas[index],next=category.dicas[(index+1)%category.dicas.length];
+  const joke=category.zoeira[(seed+i+state.adviceRound)%category.zoeira.length];
+  return `<article style="padding:18px;background:#101712;border:1px solid var(--line);border-radius:14px"><h3 style="font-size:17px">${esc(category.titulo)}</h3><p class="muted small" style="margin-top:8px">${esc(evidence)}</p><ul class="small" style="padding-left:18px"><li>${esc(tip)}</li><li style="margin-top:9px">${esc(next)}</li></ul><details><summary class="yellow small">🌽 Abrir a resenha</summary><p>${esc(p.nick)}, ${esc(joke.charAt(0).toLowerCase()+joke.slice(1))}</p><p class="muted small">Brincadeira do catálogo, não uma conclusão sobre como você joga.</p></details></article>`;
+ }).join('');
+ const count=Object.values(catalog).reduce((n,c)=>n+c.dicas.length,0),jokes=Object.values(catalog).reduce((n,c)=>n+c.zoeira.length,0);
+ return `<div class="grid3" style="margin-top:18px">${cards}</div><p class="small muted" style="margin-top:14px">Catálogo: ${count} dicas e ${jokes} frases de resenha. As opções variam por nick, modalidade e dia. “Outras dicas” alterna os textos, mantendo os mesmos indicadores.</p>`;
 }
 function populateSelect(id,preferred){
  const el=$(id),old=preferred||el.value,list=players();el.innerHTML=list.map(p=>`<option value="${esc(p.nick)}">${esc(p.nick)}</option>`).join('');if(list.some(p=>p.nick===old))el.value=old;
@@ -196,7 +237,7 @@ function navigate(page,focus=true){
  if(page==='wrapped')renderWrapped();
  if(focus){$('main').focus({preventScroll:true});window.scrollTo({top:0,behavior:'auto'});}
 }
-function openPlayer(nick){state.player=nick;renderProfile();navigate('perfil');}
+function openPlayer(nick){state.adviceRound=0;state.player=nick;renderProfile();navigate('perfil');}
 async function readJSON(url,optional=false){
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
  try{const res=await fetch(url,{cache:'no-cache',signal:controller.signal});if(!res.ok)throw Error('HTTP '+res.status);return await res.json();}catch(e){if(optional)return null;throw e;}finally{clearTimeout(timer);}
@@ -213,7 +254,7 @@ async function init(){
  try{
   const d=await readJSON('ranking_cla.json');if(!validateData(d))throw Error('Formato de dados inválido');state.data=d;
   const h=await readJSON('historico_cla.json',true);state.history=(h?.snapshots||[]).filter(s=>s&&Number.isFinite(Date.parse(s.at))&&s.grupos).sort((a,b)=>Date.parse(a.at)-Date.parse(b.at));
-  state.mode='fpp';$('mode-select').value='fpp';state.player=players()[0]?.nick;
+  state.mode=d.grupos?.todos?'todos':'fpp';$('mode-select').value=state.mode;state.player=players()[0]?.nick;
   populateSelect('compare-a');populateSelect('compare-b',players()[1]?.nick);populateSelect('wrapped-player');
   $('app').hidden=false;renderAll();navigate('inicio',false);
   if(!h&&d.schema_version===2)showNotice(($('global-notice').textContent+' Histórico indisponível nesta consulta; os dados atuais continuam disponíveis.').trim());
@@ -222,6 +263,7 @@ async function init(){
 function bind(){
  document.addEventListener('click',event=>{
   const btn=event.target.closest('button');if(!btn)return;
+  if(btn.dataset.moreAdvice){state.adviceRound++;const p=players().find(p=>p.nick===state.player);if(p)$('player-advice').innerHTML=adviceContent(p);}
   if(btn.dataset.page)navigate(btn.dataset.page);
   if(btn.dataset.player)openPlayer(btn.dataset.player);
   if(btn.dataset.rank){state.rank=btn.dataset.rank;renderRanking();}

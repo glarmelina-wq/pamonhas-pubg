@@ -1,0 +1,31 @@
+# Um nick do PUBG por linha, exatamente como aparece no jogo.
+# Para adicionar alguém, escreva o nick em uma nova linha e salve o commit.
+# Para remover alguém, apague a linha correspondente.
+gerskol
+Burallosh
+VoVoGOW
+lauSL
+ROGER__BR
+crazyrock_com_br
+Bicaleto
+BoLHa___
+CalanguinhoFPS
+GEMINIAKI
+JBMKTB
+julianfps
+LAUANNA7788
+LuleLixxooXandTB
+M43str0_FPS
+manolobr07
+PIGzinn_30fps
+Pisanoslixo
+PopMeeN
+Padre0027
+Rasdroc
+Rickzzs
+robo__GUERREIRO
+ShigS-08
+robo-_G
+tematoo
+zPaT0__
+Zeus_god45
