@@ -1,4 +1,638 @@
 {
   "schema_version": 1,
-  "semanas": []
+  "semanas": [
+    {
+      "id": "semana:2026-10-12",
+      "fonte": "partidas",
+      "season_id": "partidas-recuperadas",
+      "inicio_semana": "2026-10-12T00:00:00-03:00",
+      "de": "2026-10-12T00:00:00-03:00",
+      "ate": "2026-10-18T23:59:59-03:00",
+      "atualizado_em": "2026-10-22T12:26:44+00:00",
+      "parcial": true,
+      "partidas_recuperadas": 226,
+      "grupos": {
+        "todos": {
+          "kombi": [
+            {
+              "nick": "GEMINIAKI",
+              "valor": 106741.40086999998,
+              "partidas": 91
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 1,
+              "partidas": 17
+            },
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 1,
+              "partidas": 82
+            },
+            {
+              "nick": "zPaT0__",
+              "valor": 1,
+              "partidas": 5
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 2,
+              "partidas": 82
+            }
+          ],
+          "samu": [
+            {
+              "nick": "GEMINIAKI",
+              "valor": 16,
+              "partidas": 91
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "julianfps",
+              "valor": 578.0,
+              "partidas": 5
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 8.428571428571429,
+              "partidas": 7
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "zPaT0__",
+              "valor": 3993.2342800000006,
+              "partidas": 5
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "zPaT0__",
+              "valor": 9.0,
+              "partidas": 5
+            },
+            {
+              "nick": "julianfps",
+              "valor": 9.0,
+              "partidas": 5
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 541.1611,
+              "partidas": 35
+            }
+          ]
+        },
+        "fpp": {
+          "kombi": [
+            {
+              "nick": "GEMINIAKI",
+              "valor": 106638.07924999998,
+              "partidas": 88
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 1,
+              "partidas": 17
+            },
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 1,
+              "partidas": 82
+            },
+            {
+              "nick": "zPaT0__",
+              "valor": 1,
+              "partidas": 5
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 2,
+              "partidas": 82
+            }
+          ],
+          "samu": [
+            {
+              "nick": "GEMINIAKI",
+              "valor": 16,
+              "partidas": 88
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "julianfps",
+              "valor": 578.0,
+              "partidas": 5
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 8.428571428571429,
+              "partidas": 7
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "zPaT0__",
+              "valor": 3993.2342800000006,
+              "partidas": 5
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "zPaT0__",
+              "valor": 9.0,
+              "partidas": 5
+            },
+            {
+              "nick": "julianfps",
+              "valor": 9.0,
+              "partidas": 5
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 541.1611,
+              "partidas": 35
+            }
+          ]
+        },
+        "tpp": {
+          "kombi": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 10455.6475,
+              "partidas": 12
+            }
+          ],
+          "samu": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 2,
+              "partidas": 12
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 977.3333333333334,
+              "partidas": 12
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 3.8333333333333335,
+              "partidas": 12
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 2549.4447966666667,
+              "partidas": 12
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 8.25,
+              "partidas": 12
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 409.8227,
+              "partidas": 12
+            }
+          ]
+        },
+        "squad-fpp": {
+          "kombi": [
+            {
+              "nick": "GEMINIAKI",
+              "valor": 106638.07924999998,
+              "partidas": 88
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 1,
+              "partidas": 17
+            },
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 1,
+              "partidas": 82
+            },
+            {
+              "nick": "zPaT0__",
+              "valor": 1,
+              "partidas": 5
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 2,
+              "partidas": 82
+            }
+          ],
+          "samu": [
+            {
+              "nick": "GEMINIAKI",
+              "valor": 16,
+              "partidas": 88
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "julianfps",
+              "valor": 578.0,
+              "partidas": 5
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 8.428571428571429,
+              "partidas": 7
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "zPaT0__",
+              "valor": 3993.2342800000006,
+              "partidas": 5
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "zPaT0__",
+              "valor": 9.0,
+              "partidas": 5
+            },
+            {
+              "nick": "julianfps",
+              "valor": 9.0,
+              "partidas": 5
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 541.1611,
+              "partidas": 35
+            }
+          ]
+        },
+        "duo-fpp": {
+          "kombi": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 7920.451519200001,
+              "partidas": 4
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 50.66645,
+              "partidas": 4
+            }
+          ]
+        },
+        "squad": {
+          "kombi": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 10455.6475,
+              "partidas": 12
+            }
+          ],
+          "samu": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 2,
+              "partidas": 12
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 977.3333333333334,
+              "partidas": 12
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 3.8333333333333335,
+              "partidas": 12
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 2549.4447966666667,
+              "partidas": 12
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 8.25,
+              "partidas": 12
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 409.8227,
+              "partidas": 12
+            }
+          ]
+        },
+        "duo": {},
+        "solo-fpp": {},
+        "solo": {
+          "inimigo": [
+            {
+              "nick": "gerskol",
+              "valor": 1,
+              "partidas": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "semana:2026-10-05",
+      "fonte": "partidas",
+      "season_id": "partidas-recuperadas",
+      "inicio_semana": "2026-10-05T00:00:00-03:00",
+      "de": "2026-10-05T00:00:00-03:00",
+      "ate": "2026-10-11T23:59:59-03:00",
+      "atualizado_em": "2026-10-22T12:26:44+00:00",
+      "parcial": true,
+      "partidas_recuperadas": 93,
+      "grupos": {
+        "todos": {
+          "kombi": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 45364.23877599999,
+              "partidas": 23
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "gerskol",
+              "valor": 1,
+              "partidas": 18
+            },
+            {
+              "nick": "manolobr07",
+              "valor": 1,
+              "partidas": 14
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 3,
+              "partidas": 23
+            }
+          ],
+          "samu": [
+            {
+              "nick": "BoLHa___",
+              "valor": 11,
+              "partidas": 33
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "GEMINIAKI",
+              "valor": 451.3333333333333,
+              "partidas": 9
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 6.857142857142857,
+              "partidas": 7
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "PIGzinn_30fps",
+              "valor": 2618.1303874999994,
+              "partidas": 8
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 9.238095238095237,
+              "partidas": 21
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "PIGzinn_30fps",
+              "valor": 574.6469,
+              "partidas": 8
+            }
+          ]
+        },
+        "fpp": {
+          "kombi": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 45364.23877599999,
+              "partidas": 23
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "gerskol",
+              "valor": 1,
+              "partidas": 18
+            },
+            {
+              "nick": "manolobr07",
+              "valor": 1,
+              "partidas": 14
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 3,
+              "partidas": 23
+            }
+          ],
+          "samu": [
+            {
+              "nick": "BoLHa___",
+              "valor": 11,
+              "partidas": 33
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "GEMINIAKI",
+              "valor": 451.3333333333333,
+              "partidas": 9
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 6.857142857142857,
+              "partidas": 7
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "PIGzinn_30fps",
+              "valor": 2618.1303874999994,
+              "partidas": 8
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 9.238095238095237,
+              "partidas": 21
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "PIGzinn_30fps",
+              "valor": 574.6469,
+              "partidas": 8
+            }
+          ]
+        },
+        "tpp": {},
+        "squad-fpp": {
+          "kombi": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 42132.23477599999,
+              "partidas": 19
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "gerskol",
+              "valor": 1,
+              "partidas": 17
+            },
+            {
+              "nick": "manolobr07",
+              "valor": 1,
+              "partidas": 13
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 3,
+              "partidas": 19
+            }
+          ],
+          "samu": [
+            {
+              "nick": "BoLHa___",
+              "valor": 11,
+              "partidas": 33
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "GEMINIAKI",
+              "valor": 451.3333333333333,
+              "partidas": 9
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 6.857142857142857,
+              "partidas": 7
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "PIGzinn_30fps",
+              "valor": 2618.1303874999994,
+              "partidas": 8
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 9.238095238095237,
+              "partidas": 21
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "PIGzinn_30fps",
+              "valor": 574.6469,
+              "partidas": 8
+            }
+          ]
+        },
+        "duo-fpp": {
+          "kombi": [
+            {
+              "nick": "gerskol",
+              "valor": 4280.509,
+              "partidas": 1
+            }
+          ],
+          "samu": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 1,
+              "partidas": 4
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "gerskol",
+              "valor": 114.36705,
+              "partidas": 1
+            }
+          ]
+        },
+        "squad": {},
+        "duo": {},
+        "solo-fpp": {},
+        "solo": {}
+      }
+    }
+  ]
 }
