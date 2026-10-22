@@ -10,7 +10,7 @@ const PARTY_AWARDS = {
  sedex:{nome:'Entrega por Sedex',emoji:'🎯',campo:'longestKill',unidade:'m',soTemporada:true,frase:'Mandou a encomenda para outro CEP.',descricao:'Maior distância de um abate na temporada. Não é possível obter o máximo semanal subtraindo recordes.'},
  lutinho:{nome:'Zé Lutinho',emoji:'🧳',campo:'weaponsAcquired',unidade:'armas/jogo',media:true,frase:'Entrou para o combate, ficou pelo shopping.',descricao:'Mais armas coletadas por partida. Não conta todo tipo de loot e não significa tempo gasto looteando.'}
 };
-const partyState={period:'semana',award:'kombi',archive:[],card:null};
+const partyState={period:'temporada',award:'kombi',archive:[],card:null,manual:false,autoFallback:false};
 function partyRaw(p){
  if(p.resenha)return p.resenha;
  return {roundsPlayed:value(p,'partidas'),rideDistance:value(p,'km_rodados')*1000,teamKills:value(p,'team_kills'),suicides:value(p,'suicides'),revives:value(p,'revives'),timeSurvived:value(p,'tempo_medio_min')*60*value(p,'partidas'),heals:value(p,'heals'),boosts:0,walkDistance:value(p,'km_pe')*1000*value(p,'partidas'),longestKill:value(p,'longest_kill'),weaponsAcquired:null};
@@ -21,6 +21,11 @@ function partyContext(period=partyState.period){
  if(period==='temporada')return {period,rows:players().map(p=>({nick:p.nick,account_id:p.account_id,partidas:p.partidas,raw:partyRaw(p)})),de:null,ate:updated};
  if(!updated)return {period,rows:[],reason:'O novo coletor ainda não registrou a referência da semana.'};
  const start=weekStart(updated),end=new Date(start.getTime()+7*86400000);
+ const recovered=state.recovered;
+ if(recovered?.fonte==='partidas'&&Date.parse(recovered.inicio_semana)===start.getTime()&&Array.isArray(recovered.grupos?.[state.mode])&&recovered.grupos[state.mode].length){
+  const rows=recovered.grupos[state.mode].filter(p=>typeof p.nick==='string'&&p.partidas>0&&p.raw);
+  return {period,rows,de:recovered.inicio_semana,ate:recovered.updated_at,start,partial:true,byMatch:true,recovered,reason:rows.length?'':'Nenhuma partida recuperada nesta modalidade.'};
+ }
  const baseline=validHistory().find(s=>s.resenha_version===1&&new Date(s.at)>=start&&new Date(s.at)<end);
  if(!baseline)return {period,rows:[],reason:'A primeira coleta desta versão vai iniciar a contagem semanal. Os troféus da temporada já podem ser consultados.'};
  const before=new Map(baseline.grupos[state.mode].map(p=>[p.account_id||p.nick,p]));
@@ -35,7 +40,7 @@ function partyContext(period=partyState.period){
 }
 function partyResults(key,period=partyState.period){
  const award=PARTY_AWARDS[key],context=partyContext(period),minimum=award.media?(period==='semana'?5:minimumForParty()):0;
- if(award.soTemporada&&period==='semana')return {award,context,minimum,rows:[],winners:[],reason:'Disponível na temporada. O recorde semanal exige dados por partida.'};
+ if(award.soTemporada&&period==='semana'&&!context.byMatch)return {award,context,minimum,rows:[],winners:[],reason:'O recorde semanal será liberado quando houver partidas recuperadas.'};
  const rows=context.rows.map(p=>({...p,valor:partyField(p.raw,award.campo)})).filter(p=>Number.isFinite(p.valor)&&p.valor>0&&p.partidas>0&&p.partidas>=minimum).map(p=>({...p,valor:award.media?p.valor/p.partidas:p.valor})).sort((a,b)=>(award.menor?a.valor-b.valor:b.valor-a.valor)||a.nick.localeCompare(b.nick));
  const winners=rows.filter(p=>Math.abs(p.valor-rows[0].valor)<1e-9);
  let reason=context.reason||'Sem registro positivo neste período.';
@@ -50,9 +55,21 @@ function partyCards(period=partyState.period){return Object.entries(PARTY_AWARDS
  const result=partyResults(key,period),win=result.winners[0];
  return `<button class="podium-card party-card ${win?'champion':''}" data-party-award="${key}"><span class="place">${a.emoji} ${esc(a.nome)}</span><h3>${win?esc(partyNames(result.winners)):'Sem vencedor'}</h3>${win?`<strong class="yellow" style="font-size:24px">${esc(partyFormat(key,win.valor))}</strong><p class="small muted">${esc(a.frase)}</p>${result.winners.length>1?'<span class="badge">Troféu compartilhado</span>':''}`:`<p class="small muted">${esc(result.reason)}</p>`}<span class="open">Ver ranking e regra →</span></button>`;
 }).join('');}
-function partyPeriodLabel(){const c=partyContext();if(partyState.period==='temporada')return `${state.data.temporada} · ${MODE_LABELS[state.mode]}. Métricas por média exigem ${minimum()} partidas.`;if(!c.de)return c.reason;return `Semana: dados de ${dateLabel(c.de,true)} até ${dateLabel(c.ate,true)}, horário de Brasília. Contagem parcial entre coletas; não inclui o intervalo anterior à primeira referência. Médias exigem 5 partidas novas. Todos os modos normais selecionados contam, mesmo jogando sem o clã.`;}
+function partyPeriodLabel(){
+ const c=partyContext();
+ if(partyState.period==='temporada')return `${state.data.temporada} · ${MODE_LABELS[state.mode]}. Métricas por média exigem ${minimum()} partidas.`;
+ if(!c.de)return c.reason;
+ if(c.byMatch){const r=c.recovered;return `Semana desde ${dateLabel(c.de,true)} até a coleta de ${dateLabel(c.ate,true)} (Brasília). Partidas oficiais recuperadas, agrupadas pela data de início. ${r.partidas_semana} partidas distintas na semana, somando as modalidades. A cobertura pode ser parcial por limites das listas da API.${r.pendentes?' Há '+r.pendentes+' referências pendentes; a recuperação continua nas próximas execuções.':''}${r.membros_sem_lista?.length?' Alguns membros estão sem lista de partidas nesta consulta.':''}${r.falhas_partidas||r.falha_recuperacao?' Houve falhas temporárias na recuperação.':''} Médias exigem 5 partidas por jogador na seleção.`;}
+ return `Semana: dados de ${dateLabel(c.de,true)} até ${dateLabel(c.ate,true)}, horário de Brasília. Contagem parcial entre coletas; não inclui o intervalo anterior à primeira referência. Médias exigem 5 partidas novas. Todos os modos normais selecionados contam, mesmo jogando sem o clã.`;
+}
+function partyAutoPeriod(){
+ if(partyState.manual)return;
+ const hasWeekly=Object.keys(PARTY_AWARDS).some(key=>partyResults(key,'semana').winners.length);
+ partyState.period=hasWeekly?'semana':'temporada';partyState.autoFallback=!hasWeekly;
+}
 function renderResenha(){
  const period=partyState.period;
+ for(const id of ['party-auto-home','party-auto-full'])if($(id)){$(id).hidden=!partyState.autoFallback;$(id).textContent='Mostrando a temporada enquanto a semana ainda não tem vencedores. Você já pode consultar os troféus; a semana será escolhida automaticamente na abertura da página quando houver resultados.'+(state.recovered?.pendentes?' Recuperação em andamento: '+state.recovered.pendentes+' referências pendentes para as próximas execuções.':'')+(state.recovered?.falha_recuperacao||state.recovered?.membros_sem_lista?.length?' A API não retornou todas as listas nesta consulta. A temporada continua disponível.':'');}
  for(const id of ['party-home','party-cards'])if($(id))$(id).innerHTML=partyCards(period);
  for(const id of ['party-home-context','party-context'])if($(id))$(id).textContent=partyPeriodLabel();
  document.querySelectorAll('[data-party-period]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.partyPeriod===period)));
@@ -63,12 +80,12 @@ function renderPartyTable(){
  if(!$('party-ranking'))return;
  const key=partyState.award,{award,rows,winners,minimum,reason}=partyResults(key);
  let position=0,last=null;
- $('party-ranking').innerHTML=`<div class="section-head"><div><span class="eyebrow">${esc(award.emoji)} Ranking da brincadeira</span><h2>${esc(award.nome)}</h2><p class="muted small">${esc(award.descricao)}${minimum?` Mínimo aplicado: ${minimum} partidas.`:''}</p></div>${winners.length?`<button class="primary" data-party-share="${key}">Baixar troféu PNG ↓</button>`:''}</div>${rows.length?`<div class="table-wrap"><table><caption class="small muted" style="padding:12px;text-align:left">${partyState.period==='semana'?'Semana entre coletas':'Temporada'} · ${MODE_LABELS[state.mode]} · Empates dividem posição e troféu.</caption><thead><tr><th scope="col">Posição</th><th scope="col">Pamonha</th><th scope="col">${esc(award.nome)}</th><th scope="col">Partidas no período</th></tr></thead><tbody>${rows.map((p,i)=>{if(last===null||Math.abs(p.valor-last)>1e-9)position=i+1;last=p.valor;return `<tr><td>${position}º</td><td><button data-player="${esc(p.nick)}">${esc(p.nick)}</button></td><td class="yellow"><strong>${esc(partyFormat(key,p.valor))}</strong></td><td>${fmt(p.partidas)}</td></tr>`;}).join('')}</tbody></table></div>`:`<div class="empty">${esc(reason)}</div>`}`;
+ $('party-ranking').innerHTML=`<div class="section-head"><div><span class="eyebrow">${esc(award.emoji)} Ranking da brincadeira</span><h2>${esc(award.nome)}</h2><p class="muted small">${esc(award.soTemporada&&partyState.period==='semana'&&partyContext().byMatch?'Maior distância de um abate nas partidas recuperadas desta semana.':award.descricao)}${minimum?` Mínimo aplicado: ${minimum} partidas.`:''}</p></div>${winners.length?`<button class="primary" data-party-share="${key}">Baixar troféu PNG ↓</button>`:''}</div>${rows.length?`<div class="table-wrap"><table><caption class="small muted" style="padding:12px;text-align:left">${partyState.period==='semana'?(partyContext().byMatch?'Semana · partidas recuperadas':'Semana entre coletas'):'Temporada'} · ${MODE_LABELS[state.mode]} · Empates dividem posição e troféu.</caption><thead><tr><th scope="col">Posição</th><th scope="col">Pamonha</th><th scope="col">${esc(award.nome)}</th><th scope="col">Partidas no período</th></tr></thead><tbody>${rows.map((p,i)=>{if(last===null||Math.abs(p.valor-last)>1e-9)position=i+1;last=p.valor;return `<tr><td>${position}º</td><td><button data-player="${esc(p.nick)}">${esc(p.nick)}</button></td><td class="yellow"><strong>${esc(partyFormat(key,p.valor))}</strong></td><td>${fmt(p.partidas)}</td></tr>`;}).join('')}</tbody></table></div>`:`<div class="empty">${esc(reason)}</div>`}`;
 }
 function renderPartyArchive(){
  if(!$('party-archive'))return;
  const weeks=partyState.archive.filter(w=>w.grupos?.[state.mode]&&Object.keys(w.grupos[state.mode]).length);
- $('party-archive').innerHTML=weeks.length?weeks.slice(0,8).map(w=>`<details class="card" style="margin-top:12px"><summary>🌽 Semana de ${dateLabel(w.inicio_semana)} · ${esc(w.season_id.split('-').at(-1))}</summary><p>Apuração parcial de ${dateLabel(w.de,true)} a ${dateLabel(w.ate,true)}. Modalidade: ${MODE_LABELS[state.mode]}.</p><div class="list">${Object.entries(w.grupos[state.mode]).filter(([key])=>PARTY_AWARDS[key]).map(([key,winners])=>`<div class="list-row"><span class="small">${PARTY_AWARDS[key].emoji} ${esc(PARTY_AWARDS[key].nome)}<br><strong>${esc(winners.map(p=>p.nick).join(' + '))}</strong></span><b class="small">${esc(partyFormat(key,winners[0].valor))}</b></div>`).join('')}</div></details>`).join(''):'<div class="empty">A galeria vai guardar os vencedores quando uma semana acompanhada terminar. Não há troféus históricos inventados.</div>';
+ $('party-archive').innerHTML=weeks.length?weeks.slice(0,8).map(w=>`<details class="card" style="margin-top:12px"><summary>🌽 Semana de ${dateLabel(w.inicio_semana)} · ${w.fonte==='partidas'?'partidas recuperadas':esc(w.season_id.split('-').at(-1))}</summary><p>Apuração parcial de ${dateLabel(w.de,true)} a ${dateLabel(w.ate,true)}${w.fonte==='partidas'?' · somente partidas recuperadas':''}. Modalidade: ${MODE_LABELS[state.mode]}.</p><div class="list">${Object.entries(w.grupos[state.mode]).filter(([key])=>PARTY_AWARDS[key]).map(([key,winners])=>`<div class="list-row"><span class="small">${PARTY_AWARDS[key].emoji} ${esc(PARTY_AWARDS[key].nome)}<br><strong>${esc(winners.map(p=>p.nick).join(' + '))}</strong></span><b class="small">${esc(partyFormat(key,winners[0].valor))}</b></div>`).join('')}</div></details>`).join(''):'<div class="empty">A galeria vai guardar os vencedores quando uma semana acompanhada terminar. Não há troféus históricos inventados.</div>';
 }
 function renderProfileTrophies(p){
  const target=$('profile-trophies');if(!target)return;
@@ -83,12 +100,12 @@ function downloadPartyCard(key){
  const line=(text,y,size=40,color='#f1f5ed')=>{c.fillStyle=color;let fontSize=size;do{c.font=`800 ${fontSize}px system-ui`;if(c.measureText(text).width<930)break;fontSize-=2;}while(fontSize>18);c.fillText(text,540,y);};
  line('OS PAMONHAS',125,42,'#f2cc55');line('TROFÉU DA RESENHA',188,26,'#9bd3a5');line(award.emoji,355,110);line(award.nome.toUpperCase(),465,64,'#f2cc55');
  winners.slice(0,5).forEach((p,i)=>line(p.nick,590+i*62,56));if(winners.length>5)line(`+ ${winners.length-5} campeões empatados`,905,25,'#9bd3a5');
- line(partyFormat(key,winners[0].valor),1015,47,'#f2cc55');line(partyState.period==='semana'?'SEMANA • ENTRE COLETAS':state.data.temporada,1090,27,'#9bd3a5');line(MODE_LABELS[state.mode],1138,24);line(context.de?`${dateLabel(context.de,true)} a ${dateLabel(context.ate,true)} · Brasília`:`Coleta: ${state.data.ultima_atualizacao}`,1190,22,'#b8c9b9');line('O frango é raro. A resenha é garantida.',1255,26,'#f2cc55');
+ line(partyFormat(key,winners[0].valor),1015,47,'#f2cc55');line(partyState.period==='semana'?(context.byMatch?'SEMANA • PARTIDAS RECUPERADAS':'SEMANA • ENTRE COLETAS'):state.data.temporada,1090,27,'#9bd3a5');line(MODE_LABELS[state.mode],1138,24);line(context.de?`${dateLabel(context.de,true)} a ${dateLabel(context.ate,true)} · Brasília`:`Coleta: ${state.data.ultima_atualizacao}`,1190,22,'#b8c9b9');line('O frango é raro. A resenha é garantida.',1255,26,'#f2cc55');
  try{canvas.toBlob(blob=>{if(!blob){$('party-download-status').textContent='Não foi possível gerar o card.';return;}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`Pamonhas_${key}_${partyState.period}.png`;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);$('party-download-status').textContent='Troféu gerado. Confira os downloads e envie no grupo.';},'image/png');}catch(e){$('party-download-status').textContent='Não foi possível baixar o troféu neste navegador.';}
 }
 document.addEventListener('click',event=>{
  const button=event.target.closest('button');if(!button)return;
- if(button.dataset.partyPeriod){partyState.period=button.dataset.partyPeriod;renderResenha();}
+ if(button.dataset.partyPeriod){partyState.manual=true;partyState.autoFallback=false;partyState.period=button.dataset.partyPeriod;renderResenha();}
  if(button.dataset.partyAward){partyState.award=button.dataset.partyAward;renderResenha();navigate('resenha');$('party-ranking').scrollIntoView({behavior:'auto',block:'start'});}
  if(button.dataset.partyShare)downloadPartyCard(button.dataset.partyShare);
 });

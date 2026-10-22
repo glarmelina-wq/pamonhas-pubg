@@ -11,6 +11,7 @@ AWARDS = {
     'farmacia': ('heals_boosts', 5, True, False),
     'forrest': ('walkDistance', 5, True, False),
     'lutinho': ('weaponsAcquired', 5, True, False),
+    'sedex': ('longestKill', 0, False, False),
 }
 
 def raw_value(raw, key):

@@ -10,7 +10,8 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
-from trofeus import archive_weeks
+from trofeus import AWARDS, archive_weeks
+from recuperar_partidas import collect_recent, archive_matches
 
 BASE = Path(__file__).resolve().parent
 MODES = ['squad-fpp', 'duo-fpp', 'squad', 'duo', 'solo-fpp', 'solo']
@@ -47,7 +48,7 @@ def load_json(name, default):
 def atomic_json(name, value):
     path = BASE / name
     temp = path.with_suffix(path.suffix + '.tmp')
-    options = {'separators': (',', ':')} if name == 'historico_cla.json' else {'indent': 2}
+    options = {'separators': (',', ':')} if name in ('historico_cla.json', 'partidas_cache.json') else {'indent': 2}
     temp.write_text(json.dumps(value, ensure_ascii=False, allow_nan=False, **options) + '\n', encoding='utf-8')
     temp.replace(path)
 
@@ -205,11 +206,25 @@ def main():
     }
     history = update_history(load_json('historico_cla.json', {}), build_snapshot(payload), now)
     trophies = archive_weeks(history, load_json('trofeus_cla.json', {}), now)
+    old_matches = load_json('partidas_cache.json', {})
+    try:
+        match_cache, weekly = collect_recent(client, resolved, old_matches, now)
+        trophies = archive_matches(match_cache, trophies, resolved, now, AWARDS)
+        print(f"Partidas recentes: {weekly['partidas_semana']} na semana; {weekly['pendentes']} pendentes; cobertura pode ser parcial.")
+    except Exception:
+        # Estatísticas da temporada não devem desaparecer por uma falha no backfill.
+        match_cache = old_matches
+        weekly = load_json('resenha_semanal.json', {'schema_version': 1, 'fonte': 'partidas', 'grupos': {}})
+        weekly['aviso'] = 'Falha temporária na recuperação de partidas. Exibindo os últimos dados disponíveis.'
+        weekly['falha_recuperacao'] = True
+        print('Aviso: recuperação de partidas incompleta; temporada preservada.')
     # Valida tudo antes de substituir os arquivos. Qualquer falha de coleta aborta a execução.
-    json.dumps([payload, history, cache, trophies], allow_nan=False)
+    json.dumps([payload, history, cache, trophies, match_cache, weekly], allow_nan=False)
     atomic_json('historico_cla.json', history)
     atomic_json('jogadores_cache.json', cache)
     atomic_json('trofeus_cla.json', trophies)
+    atomic_json('partidas_cache.json', match_cache)
+    atomic_json('resenha_semanal.json', weekly)
     atomic_json('ranking_cla.json', payload)
     print(f'Atualizados {len(resolved)} membros; {len(missing)} não localizados.')
     if missing:

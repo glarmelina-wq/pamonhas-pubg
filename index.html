@@ -26,17 +26,17 @@
 <div class="sync" id="sync-status"></div>
 <div class="section-head"><div><span class="eyebrow">O que vai render no grupo</span><h2>Os troféus da resenha</h2><p class="muted small">Sem juiz, sem peneira. Só os números e a zoeira entre amigos.</p></div></div>
 <div class="tabs"><button data-party-period="semana" aria-pressed="true">Resenha da semana</button><button data-party-period="temporada" aria-pressed="false">Temporada inteira</button></div>
-<p class="muted small" id="party-home-context" style="margin-bottom:18px"></p><div class="grid3" id="party-home"></div>
+<div id="party-auto-home" class="notice" role="status" hidden></div><p class="muted small" id="party-home-context" style="margin-bottom:18px"></p><div class="grid3" id="party-home"></div>
 <div class="stats" id="home-stats"></div>
 <div class="grid2" style="margin-top:25px"><article class="card"><span class="eyebrow">Operação Pamonha Quente</span><h3 style="margin-top:9px">500 abates na semana</h3><div id="weekly"></div></article><article class="card"><span class="eyebrow">Acompanhando a turma</span><h3 style="margin-top:9px">Movimento no ranking técnico</h3><div id="evolution"></div><p class="small" style="margin-top:15px"><button class="link" data-page="ranking">Consultar estatísticas →</button></p></article></div>
 </section>
 <section id="page-resenha" class="page" aria-label="Hall da zoeira">
 <div class="section-head" style="margin-top:5px"><div><span class="eyebrow">O campeonato que ninguém pediu para ganhar</span><h2>Hall da Zoeira</h2><p class="muted">Nove troféus para levar ao grupo. A regra aparece junto do resultado.</p></div></div>
 <div class="tabs"><button data-party-period="semana" aria-pressed="true">Resenha da semana</button><button data-party-period="temporada" aria-pressed="false">Temporada inteira</button></div>
-<p class="muted small" id="party-context" style="margin-bottom:18px"></p><div class="grid3" id="party-cards"></div>
+<div id="party-auto-full" class="notice" role="status" hidden></div><p class="muted small" id="party-context" style="margin-bottom:18px"></p><div class="grid3" id="party-cards"></div>
 <div class="section-head"><label style="width:min(100%,450px)">Escolha uma brincadeira<select id="party-award-select"></select></label></div><div id="party-ranking" style="scroll-margin-top:110px"></div><p id="party-download-status" class="status-message" role="status"></p>
 <div class="section-head"><div><span class="eyebrow">Para não deixar esquecer</span><h2>Galeria dos troféus</h2><p class="muted small">Vencedores dos períodos encerrados. Os atuais ainda podem mudar.</p></div></div><div id="party-archive"></div>
-<details><summary>Como a zoeira é apurada</summary><p>Totais premiam a quantidade registrada. Médias exigem pelo menos 5 partidas novas na semana ou 15 na temporada. Empates compartilham a conquista. Ninguém recebe prêmio por um zero ou por dado ausente. A semana é medida entre a primeira referência disponível e a última coleta: podem faltar partidas antes da referência ou depois da última coleta. Quem entra no clã durante o período começa a disputar na próxima referência comparável.</p><p>O Zé Lutinho conta armas coletadas, sem dizer quanto tempo alguém passou looteando. O abate mais distante fica somente na temporada: não é possível calcular a maior distância semanal pela diferença entre recordes. Os nomes e as frases são brincadeiras, não avaliações da pessoa.</p></details>
+<details><summary>Como a zoeira é apurada</summary><p>Totais premiam a quantidade registrada. Médias exigem pelo menos 5 partidas recuperadas na semana (ou novas, quando usadas diferenças de coletas) e 15 na temporada. Empates compartilham a conquista. Ninguém recebe prêmio por um zero ou por dado ausente. A semana usa partidas oficiais recentes recuperadas e a data de início de cada partida. A API pode limitar as listas; a tela informa cobertura potencialmente parcial. Se essa recuperação não estiver disponível, usamos as diferenças entre coletas e explicamos o intervalo. Novos membros podem aparecer com as partidas recentes recuperadas. No método por diferenças, precisam de uma referência anterior comparável.</p><p>O Zé Lutinho conta armas coletadas, sem dizer quanto tempo alguém passou looteando. O abate mais distante também disputa a semana quando há partidas recuperadas. Sem elas, fica restrito à temporada: não calculamos um recorde semanal pela diferença entre recordes. Os nomes e as frases são brincadeiras, não avaliações da pessoa.</p></details>
 </section>
 <section id="page-ranking" class="page" aria-label="Ranking"><div class="section-head" style="margin-top:5px"><div><span class="eyebrow">Na mesma modalidade</span><h2>Ranking dos Pamonhas</h2><p class="muted">Desempenho e participação têm suas próprias disputas.</p></div></div><div class="tabs" id="rank-tabs"><button data-rank="mvp" aria-pressed="true">MVP · desempenho</button><button data-rank="participacao" aria-pressed="false">Participação</button><button data-rank="adr" aria-pressed="false">Dano médio</button><button data-rank="suporte" aria-pressed="false">Suporte</button><button data-rank="longest_kill" aria-pressed="false">Abate distante</button></div><div id="rank-formula" class="formula"></div><div class="toolbar" style="margin-top:20px"><label class="grow">Encontrar membro<input id="ranking-search" type="search" placeholder="Filtrar pelo nick…"></label><span class="muted small" id="ranking-count"></span></div><div class="table-wrap"><table><caption class="small muted" style="text-align:left;padding:14px" id="ranking-caption"></caption><thead><tr><th scope="col">Posição</th><th scope="col">Jogador</th><th scope="col" id="score-heading">Pontos</th><th scope="col">Partidas</th><th scope="col">ADR</th><th scope="col">Abates/jogo</th><th scope="col">Vitórias</th><th scope="col">Status</th></tr></thead><tbody id="ranking-body"></tbody></table></div></section>
 <section id="page-jogadores" class="page" aria-label="Jogadores"><div class="section-head" style="margin-top:5px"><div><span class="eyebrow">Cada pamonha tem seu estilo</span><h2>Encontre seu perfil</h2><p class="muted">Estatísticas dos membros cadastrados no clã.</p></div></div><form id="player-search-form" class="toolbar"><label class="grow" for="player-search">Nick do jogador<input type="search" id="player-search" placeholder="Buscar um membro…" autocomplete="off"></label><button type="submit" class="primary">Abrir perfil</button></form><p id="search-feedback" class="status-message" aria-live="polite"></p><div class="member-grid" id="members"></div><details><summary>E a busca por qualquer jogador?</summary><p>Esta versão consulta os membros do arquivo do clã. A consulta pública à API do PUBG será conectada em uma próxima etapa por um serviço seguro, sem expor a chave. Nenhum jogador de fora é consultado nesta versão.</p></details></section>
@@ -55,7 +55,7 @@ const $ = id => document.getElementById(id);
 const fmt = (value,digits=0) => Number(value||0).toLocaleString('pt-BR',{maximumFractionDigits:digits,minimumFractionDigits:digits});
 const esc = value => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const MODE_LABELS = {todos:'Todos • Solo, Duo e Squad (FPP + TPP)','solo-fpp':'Solo • FPP',solo:'Solo • TPP',fpp:'Duo + Squad • FPP',tpp:'Duo + Squad • TPP','squad-fpp':'Squad • FPP','duo-fpp':'Duo • FPP',squad:'Squad • TPP',duo:'Duo • TPP'};
-const state = {data:null,history:[],mode:'fpp',rank:'mvp',player:null,page:'inicio',logo:null,adviceRound:0};
+const state = {data:null,history:[],mode:'fpp',rank:'mvp',player:null,page:'inicio',logo:null,adviceRound:0,recovered:null};
 const value = (p,k) => Number(p[k]||0);
 const games = p => Math.max(1,value(p,'partidas'));
 const perGame = (p,k) => value(p,k)/games(p);
@@ -84,8 +84,12 @@ function weekStart(date){
 function dateLabel(at,withTime=false){return new Date(at).toLocaleString('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',...(withTime?{hour:'2-digit',minute:'2-digit'}:{})});}
 function weeklyProgress(){
  const history=validHistory(),updated=state.data.updated_at;
- if(!updated||!history.length)return null;
+ if(!updated)return null;
  const start=weekStart(updated),end=new Date(start.getTime()+7*86400000);
+ const recovered=state.recovered;
+ if(recovered?.fonte==='partidas'&&Date.parse(recovered.inicio_semana)===start.getTime()&&recovered.grupos?.[state.mode]?.length){
+  const rows=recovered.grupos[state.mode];return {kills:rows.reduce((sum,p)=>sum+(Number.isFinite(p.raw?.kills)?p.raw.kills:0),0),at:recovered.inicio_semana,start,end,partial:true,byMatch:true,coverage:rows.length,total:players().length};
+ }
  const baseline=history.find(s=>new Date(s.at)>=start&&new Date(s.at)<end);
  if(!baseline)return null;
  const byId=new Map(baseline.grupos[state.mode].map(p=>[p.account_id||p.nick,p]));
@@ -109,9 +113,9 @@ function renderStatus(){
 }
 function renderHome(){
  const list=players();
- $('home-stats').innerHTML=[metricCard('Pamonhas acompanhados',fmt(list.length),'Na modalidade selecionada'),metricCard('Troféus em disputa','9','Temporada · 8 também na semana'),metricCard('Chamados do SAMU',fmt(list.reduce((n,p)=>n+value(p,'revives'),0)),'Reanimações na temporada'),metricCard('Resenha com bagagem',fmt(list.reduce((n,p)=>n+value(p,'partidas'),0)),'Partidas individuais somadas')].join('');
+ $('home-stats').innerHTML=[metricCard('Pamonhas acompanhados',fmt(list.length),'Na modalidade selecionada'),metricCard('Troféus em disputa','9','9 na semana quando há partidas'),metricCard('Chamados do SAMU',fmt(list.reduce((n,p)=>n+value(p,'revives'),0)),'Reanimações na temporada'),metricCard('Resenha com bagagem',fmt(list.reduce((n,p)=>n+value(p,'partidas'),0)),'Partidas individuais somadas')].join('');
  const w=weeklyProgress();
- $('weekly').innerHTML=w?`<div class="big-number">${fmt(w.kills)} <span class="muted" style="font-size:19px">/ 500</span></div><div class="progress"><i style="width:${Math.min(100,w.kills/5)}%"></i></div><p class="small muted">Abates registrados desde ${dateLabel(w.at,true)}. Semana de ${dateLabel(w.start)} a ${dateLabel(new Date(w.end-1))}, horário de Brasília.</p><p class="small muted" style="margin-top:10px">Contagem entre coletas. Inclui partidas dos membros mesmo jogando separados. Novos integrantes entram quando houver referência comparável.</p>`:'<div class="big-number muted">Aguardando coleta</div><p class="small muted" style="margin-top:10px">A contagem começa na primeira referência da semana, sem usar o total da temporada como resultado semanal.</p>';
+ $('weekly').innerHTML=w?`<div class="big-number">${fmt(w.kills)} <span class="muted" style="font-size:19px">/ 500</span></div><div class="progress"><i style="width:${Math.min(100,w.kills/5)}%"></i></div><p class="small muted">Abates registrados desde ${dateLabel(w.at,true)}. Semana de ${dateLabel(w.start)} a ${dateLabel(new Date(w.end-1))}, horário de Brasília.</p><p class="small muted" style="margin-top:10px">${w.byMatch?'Partidas recentes recuperadas; cobertura pode ser parcial.':'Contagem entre coletas. Novos integrantes entram quando houver referência comparável.'} Inclui partidas dos membros mesmo jogando separados.</p>`:'<div class="big-number muted">Aguardando coleta</div><p class="small muted" style="margin-top:10px">A contagem começa na primeira referência da semana, sem usar o total da temporada como resultado semanal.</p>';
  renderEvolution();renderResenha();
 }
 function evolutionReference(){
@@ -259,7 +263,8 @@ async function init(){
   const d=await readJSON('ranking_cla.json');if(!validateData(d))throw Error('Formato de dados inválido');state.data=d;
   const h=await readJSON('historico_cla.json',true);state.history=(h?.snapshots||[]).filter(s=>s&&Number.isFinite(Date.parse(s.at))&&s.grupos).sort((a,b)=>Date.parse(a.at)-Date.parse(b.at));
   const trophies=await readJSON('trofeus_cla.json',true);partyState.archive=Array.isArray(trophies?.semanas)?trophies.semanas:[];
-  state.mode=d.grupos?.todos?'todos':'fpp';$('mode-select').value=state.mode;state.player=players()[0]?.nick;
+  state.recovered=await readJSON('resenha_semanal.json',true);
+  state.mode=d.grupos?.todos?'todos':'fpp';$('mode-select').value=state.mode;state.player=players()[0]?.nick;partyState.manual=false;partyAutoPeriod();
   populateSelect('compare-a');populateSelect('compare-b',players()[1]?.nick);populateSelect('wrapped-player');
   $('app').hidden=false;renderAll();navigate('inicio',false);
   if(!h&&d.schema_version===2)showNotice(($('global-notice').textContent+' Histórico indisponível nesta consulta; os dados atuais continuam disponíveis.').trim());
@@ -276,7 +281,7 @@ function bind(){
   if(btn.dataset.cardPlayer){$('wrapped-player').value=btn.dataset.cardPlayer;navigate('wrapped');}
  });
  $('menu-toggle').addEventListener('click',()=>{const open=$('nav').classList.toggle('open');$('menu-toggle').setAttribute('aria-expanded',String(open));});
- $('mode-select').addEventListener('change',()=>{state.mode=$('mode-select').value;renderAll();});
+ $('mode-select').addEventListener('change',()=>{state.mode=$('mode-select').value;partyAutoPeriod();renderAll();});
  $('ranking-search').addEventListener('input',renderRanking);
  $('player-search').addEventListener('input',()=>{$('search-feedback').textContent='';renderMembers();});
  $('player-search-form').addEventListener('submit',e=>{e.preventDefault();const term=$('player-search').value.trim().toLowerCase();if(!term){$('search-feedback').textContent='Digite um nick ou selecione um membro abaixo.';return;}const matches=players().filter(p=>p.nick.toLowerCase().includes(term));const exact=matches.find(p=>p.nick.toLowerCase()===term);if(exact||matches.length===1)openPlayer((exact||matches[0]).nick);else $('search-feedback').textContent=matches.length?'Há mais de um resultado. Escolha o membro na lista.':'Esse nick não está no clã cadastrado. A busca pública ainda não foi conectada.';});
