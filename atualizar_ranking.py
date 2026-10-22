@@ -10,6 +10,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
+from trofeus import archive_weeks
 
 BASE = Path(__file__).resolve().parent
 MODES = ['squad-fpp', 'duo-fpp', 'squad', 'duo', 'solo-fpp', 'solo']
@@ -131,6 +132,7 @@ def metrics(nick, account_id, stats, modes):
         'km_pe': round(rate(s['walkDistance']) / 1000, 2),
         'road_kills': s['roadKills'], 'team_kills': s['teamKills'], 'suicides': s['suicides'],
         'armas_loot': round(rate(s['weaponsAcquired']), 1) if s['weaponsAcquired'] is not None else None,
+        'resenha': {key: s[key] for key in ('roundsPlayed', 'rideDistance', 'teamKills', 'suicides', 'revives', 'timeSurvived', 'heals', 'boosts', 'walkDistance', 'weaponsAcquired', 'longestKill')},
         'scores': {
             'mvp': round(adr * 1.5 + kills_per_game * 50 + winrate * 5 + top10rate * 1.5 + revives_per_game * 100, 1),
             'participacao': s['kills'] + s['wins'] * 20 + s['revives'] * 2 + s['assists'],
@@ -138,8 +140,8 @@ def metrics(nick, account_id, stats, modes):
     }
 
 def build_snapshot(payload):
-    return {'at': payload['updated_at'], 'season_id': payload['season_id'], 'score_version': 2,
-            'grupos': {group: [{key: player[key] for key in ('nick', 'account_id', 'partidas', 'kills', 'wins', 'damage_total', 'adr', 'revives', 'assists', 'scores')} for player in players]
+    return {'at': payload['updated_at'], 'season_id': payload['season_id'], 'score_version': 2, 'resenha_version': 1,
+            'grupos': {group: [{key: player[key] for key in ('nick', 'account_id', 'partidas', 'kills', 'wins', 'damage_total', 'adr', 'revives', 'assists', 'scores', 'resenha')} for player in players]
                        for group, players in payload['grupos'].items()}}
 
 def update_history(history, snapshot, now):
@@ -202,10 +204,12 @@ def main():
         'grupos': groups, 'jogadores': groups['fpp']
     }
     history = update_history(load_json('historico_cla.json', {}), build_snapshot(payload), now)
+    trophies = archive_weeks(history, load_json('trofeus_cla.json', {}), now)
     # Valida tudo antes de substituir os arquivos. Qualquer falha de coleta aborta a execução.
-    json.dumps([payload, history, cache], allow_nan=False)
+    json.dumps([payload, history, cache, trophies], allow_nan=False)
     atomic_json('historico_cla.json', history)
     atomic_json('jogadores_cache.json', cache)
+    atomic_json('trofeus_cla.json', trophies)
     atomic_json('ranking_cla.json', payload)
     print(f'Atualizados {len(resolved)} membros; {len(missing)} não localizados.')
     if missing:
