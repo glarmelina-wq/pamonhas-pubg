@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "fonte": "partidas",
-  "updated_at": "2026-10-23T21:50:23+00:00",
+  "updated_at": "2026-10-23T22:03:04+00:00",
   "inicio_semana": "2026-10-19T00:00:00-03:00",
   "parcial": true,
   "grupos": {
@@ -180,19 +180,19 @@
       {
         "nick": "Pisanoslixo",
         "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-        "partidas": 37,
+        "partidas": 39,
         "raw": {
           "rideDistance": 23276.284509999998,
           "teamKills": 0,
           "revives": 11,
-          "timeSurvived": 23877,
+          "timeSurvived": 24783,
           "heals": 51,
-          "boosts": 140,
-          "walkDistance": 62202.566052,
-          "weaponsAcquired": 269,
+          "boosts": 142,
+          "walkDistance": 63398.144292,
+          "weaponsAcquired": 280,
           "longestKill": 288.7812,
           "kills": 79,
-          "roundsPlayed": 37,
+          "roundsPlayed": 39,
           "suicides": 0
         }
       },
@@ -830,19 +830,19 @@
       {
         "nick": "Pisanoslixo",
         "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-        "partidas": 27,
+        "partidas": 29,
         "raw": {
           "rideDistance": 13914.96256,
           "teamKills": 0,
           "revives": 8,
-          "timeSurvived": 16244,
+          "timeSurvived": 17150,
           "heals": 36,
-          "boosts": 93,
-          "walkDistance": 39573.985212,
-          "weaponsAcquired": 193,
+          "boosts": 95,
+          "walkDistance": 40769.563451999995,
+          "weaponsAcquired": 204,
           "longestKill": 284.26685,
           "kills": 54,
-          "roundsPlayed": 27,
+          "roundsPlayed": 29,
           "suicides": 0
         }
       },
@@ -1501,19 +1501,19 @@
       {
         "nick": "Pisanoslixo",
         "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-        "partidas": 27,
+        "partidas": 29,
         "raw": {
           "rideDistance": 13914.96256,
           "teamKills": 0,
           "revives": 8,
-          "timeSurvived": 16244,
+          "timeSurvived": 17150,
           "heals": 36,
-          "boosts": 93,
-          "walkDistance": 39573.985212,
-          "weaponsAcquired": 193,
+          "boosts": 95,
+          "walkDistance": 40769.563451999995,
+          "weaponsAcquired": 204,
           "longestKill": 284.26685,
           "kills": 54,
-          "roundsPlayed": 27,
+          "roundsPlayed": 29,
           "suicides": 0
         }
       },
@@ -1637,9 +1637,9 @@
       }
     ]
   },
-  "partidas_semana": 314,
-  "partidas_em_cache": 1240,
-  "recuperadas_agora": 1,
+  "partidas_semana": 316,
+  "partidas_em_cache": 1242,
+  "recuperadas_agora": 2,
   "pendentes": 0,
   "falhas_partidas": 0,
   "membros_sem_lista": [],
