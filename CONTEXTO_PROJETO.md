@@ -76,3 +76,20 @@ Publicação confirmada: https://github.com/glarmelina-wq/pamonhas-pubg/actions/
 Na conferência após publicar: semana 150 partidas e 94 abates de HS;
 mês 200 partidas e 129 abates de HS, incluindo 50 partidas anteriores à semana.
 A cobertura mensal permanece parcial; não representa o mês completo.
+
+
+## Troféu Caneta azul e dicas diretas — 23/10/2026
+Adicionado Caneta azul, azul caneta ao Hall (dez troféus): maior soma de dano recebido da
+zona azul na semana ou temporada, sem média ou mínimo de partidas, com empates compartilhados.
+Inclui ranking, badges dos perfis, card PNG e arquivo semanal. O total usa apenas partidas
+já analisadas e mostra que a cobertura é parcial.
+A temporada é confirmada pelos IDs retornados em relationships.matches* da consulta de
+estatísticas da temporada, reaproveitando as consultas existentes. tag_season_matches mantém
+essa confirmação no cache; partidas de temporada desconhecida ficam fora do total sazonal.
+telemetria_cla.json agora contém periodos.temporada e season_id. A mudança de temporada não
+herda os números da anterior. archive_blue_awards acrescenta o troféu às semanas arquivadas.
+As 72 dicas em dicas.js, os textos de headshots.js e as explicações de index.html foram
+simplificados: frases curtas, item ou ação explícitos, aviso breve sobre estimativas de mochila.
+Doze testes passaram, incluindo temporada, isolamento entre temporadas e empates no arquivo.
+Teste de interface: dez troféus, contagem por soma e alternância entre semana e temporada.
+Publicação confirmada: https://github.com/glarmelina-wq/pamonhas-pubg/actions/runs/40029236801
