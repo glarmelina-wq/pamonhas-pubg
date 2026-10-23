@@ -11,6 +11,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 from trofeus import AWARDS, archive_weeks
+from telemetria import collect_telemetry, build_report
 from recuperar_partidas import collect_recent, archive_matches
 
 BASE = Path(__file__).resolve().parent
@@ -218,13 +219,19 @@ def main():
         weekly['aviso'] = 'Falha temporária na recuperação de partidas. Exibindo os últimos dados disponíveis.'
         weekly['falha_recuperacao'] = True
         print('Aviso: recuperação de partidas incompleta; temporada preservada.')
+    try:
+        telemetry = collect_telemetry(match_cache, resolved, now)
+    except Exception:
+        telemetry = build_report(match_cache, resolved, now)
+        telemetry['aviso'] += ' Coleta de telemetria com falha temporária.'
     # Valida tudo antes de substituir os arquivos. Qualquer falha de coleta aborta a execução.
-    json.dumps([payload, history, cache, trophies, match_cache, weekly], allow_nan=False)
+    json.dumps([payload, history, cache, trophies, match_cache, weekly, telemetry], allow_nan=False)
     atomic_json('historico_cla.json', history)
     atomic_json('jogadores_cache.json', cache)
     atomic_json('trofeus_cla.json', trophies)
     atomic_json('partidas_cache.json', match_cache)
     atomic_json('resenha_semanal.json', weekly)
+    atomic_json('telemetria_cla.json', telemetry)
     atomic_json('ranking_cla.json', payload)
     print(f'Atualizados {len(resolved)} membros; {len(missing)} não localizados.')
     if missing:

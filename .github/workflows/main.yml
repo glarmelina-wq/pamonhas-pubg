@@ -8,6 +8,12 @@ on:
     branches: [main]
     paths:
       - 'index.html'
+      - 'headshots.html'
+      - 'headshots.js'
+      - 'telemetria.py'
+      - 'medalhas/**'
+      - 'test_telemetria.py'
+      - 'jogadores_cache.json'
       - 'logo_do_clan.jpg'
       - 'atualizar_ranking.py'
       - 'membros_cla.txt'
@@ -36,6 +42,8 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+      - name: Validar telemetria e cadastro
+        run: python -m unittest test_telemetria -v
       - name: Atualizar dados (mantém publicação anterior se houver falha)
         env:
           PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
@@ -44,7 +52,7 @@ jobs:
         run: |
           git config user.name "Pamonhas Bot"
           git config user.email "bot@pamonhas.pubg"
-          git add ranking_cla.json historico_cla.json jogadores_cache.json trofeus_cla.json partidas_cache.json resenha_semanal.json
+          git add ranking_cla.json historico_cla.json jogadores_cache.json trofeus_cla.json partidas_cache.json resenha_semanal.json telemetria_cla.json
           if ! git diff --cached --quiet; then
             git commit -m "Atualizar estatísticas e histórico do clã"
           fi
@@ -61,7 +69,8 @@ jobs:
       - name: Preparar arquivos públicos
         run: |
           mkdir -p _site
-          cp index.html dicas.js resenha.js ranking_cla.json historico_cla.json trofeus_cla.json resenha_semanal.json _site/
+          cp index.html headshots.html headshots.js dicas.js resenha.js ranking_cla.json historico_cla.json trofeus_cla.json resenha_semanal.json telemetria_cla.json _site/
+          cp -r medalhas _site/
           if [ -f logo_do_clan.jpg ]; then cp logo_do_clan.jpg _site/; fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4

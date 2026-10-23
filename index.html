@@ -14,7 +14,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Ir para o conteúdo</a>
-<header><div class="wrap header-inner"><button class="brand" data-page="inicio" aria-label="Os Pamonhas, início"><img class="logo" src="logo_do_clan.jpg" alt="Kombi do Zé da Pamonha"><span><strong>OS <span class="yellow">PAMONHAS</span></strong><small>CLÃ PUBG • LEGADO DO ZÉ</small></span></button><button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav">Menu ☰</button><nav class="nav" id="nav" aria-label="Navegação principal"><button data-page="inicio" aria-current="page">Início</button><button data-page="resenha">Resenha 🌽</button><button data-page="ranking">Estatísticas</button><button data-page="jogadores">Jogadores</button><button data-page="comparar">Comparar</button><button data-page="wrapped">Meu card</button><button data-page="ze">O Zé</button></nav></div></header>
+<header><div class="wrap header-inner"><button class="brand" data-page="inicio" aria-label="Os Pamonhas, início"><img class="logo" src="logo_do_clan.jpg" alt="Kombi do Zé da Pamonha"><span><strong>OS <span class="yellow">PAMONHAS</span></strong><small>CLÃ PUBG • LEGADO DO ZÉ</small></span></button><button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav">Menu ☰</button><nav class="nav" id="nav" aria-label="Navegação principal"><button data-page="inicio" aria-current="page">Início</button><button data-page="resenha">Resenha 🌽</button><a href="headshots.html" style="align-self:center;padding:9px 12px">Headshots</a><button data-page="ranking">Estatísticas</button><button data-page="jogadores">Jogadores</button><button data-page="comparar">Comparar</button><button data-page="wrapped">Meu card</button><button data-page="ze">O Zé</button></nav></div></header>
 <main class="wrap" id="main" tabindex="-1">
 <div id="loading" class="loading" role="status">Carregando a central dos Pamonhas…</div>
 <div id="global-notice" class="notice" role="status" hidden></div>
@@ -48,6 +48,7 @@
 </main>
 <footer><div class="wrap footer-inner"><p>🌽 Os Pamonhas • Em memória do Zé da Pamonha.</p><p>Projeto da comunidade. Sem vínculo oficial com PUBG / KRAFTON.</p></div></footer>
 <script src="dicas.js"></script>
+<script src="headshots.js"></script>
 <script src="resenha.js"></script>
 <script>
 'use strict';
@@ -171,6 +172,7 @@ function renderProfile(){
  $('profile').innerHTML=`<div class="profile-head"><div class="avatar" aria-hidden="true">${esc(p.nick.slice(0,2).toUpperCase())}</div><div><span class="eyebrow">Dossiê Pamonhas</span><h2>${esc(p.nick)}</h2><p class="small muted">${esc(state.data.temporada)} · ${MODE_LABELS[state.mode]} · ${position(p)}</p></div><div class="actions"><button data-compare-player="${esc(p.nick)}">Comparar ↔</button><button class="primary" data-card-player="${esc(p.nick)}">Gerar meu card ↗</button></div></div><div class="profile-metrics">${stats.map(([l,v])=>metricCard(l,v)).join('')}</div><div class="grid2"><article class="card"><span class="eyebrow">Contribuição para o time</span><h3 style="margin-top:9px">Parceria em números</h3><div class="list">${[['Reanimações',`${fmt(p.revives)} · ${fmt(perGame(p,'revives'),2)}/jogo`],['Assistências',`${fmt(p.assists)} · ${fmt(perGame(p,'assists'),2)}/jogo`],['Nocautes',fmt(p.dbnos)],['Abates de headshot',`${fmt(p.headshots)} (${fmt(p.hs_rate,1)}% dos abates)`],['Tempo médio vivo',`${fmt(p.tempo_medio_min,1)} min`]].map(([l,v])=>`<div class="list-row"><span class="muted small">${l}</span><b class="small">${v}</b></div>`).join('')}</div></article><article class="card"><span class="eyebrow">Evolução observada</span><h3 style="margin-top:9px">Seu ADR ao longo dos dias</h3><p class="muted small" style="margin-top:10px">${esc(delta)}</p>${historyChart(p)}</article></div><details><summary>Como interpretar os números</summary><p>ADR é dano médio por partida. Abates/jogo mede eliminações por partida, sem estimar mortes a partir de derrotas. Os números incluem partidas normais na modalidade selecionada, mesmo quando o membro joga sem o clã. Não inferimos habilidade de 1×1, morte no gás ou função tática a partir desses agregados.</p></details>`;
  $('profile').innerHTML += `<section class="card" style="margin-top:20px"><div class="section-head" style="margin-top:0"><div><span class="eyebrow">Treino & resenha</span><h3>Dicas para ${esc(p.nick)}</h3></div><button data-more-advice="true">Outras dicas ↻</button></div><p class="muted small">Sugestões editoriais escolhidas pelos seus indicadores nesta modalidade. Não são uma análise de replay. A zoeira é opcional.</p><div id="player-advice"></div></section>`;
  $('player-advice').innerHTML=adviceContent(p);
+ if(globalThis.PamonhasTelemetry) $('profile').innerHTML += globalThis.PamonhasTelemetry.profile(p.nick,state.mode);
  $('profile').innerHTML += '<section id="profile-trophies" class="card" style="margin-top:20px"></section>';renderProfileTrophies(p);
 }
 function adviceChoices(p){
@@ -264,6 +266,7 @@ async function init(){
   const h=await readJSON('historico_cla.json',true);state.history=(h?.snapshots||[]).filter(s=>s&&Number.isFinite(Date.parse(s.at))&&s.grupos).sort((a,b)=>Date.parse(a.at)-Date.parse(b.at));
   const trophies=await readJSON('trofeus_cla.json',true);partyState.archive=Array.isArray(trophies?.semanas)?trophies.semanas:[];
   state.recovered=await readJSON('resenha_semanal.json',true);
+  globalThis.PAMONHAS_TELEMETRIA=await readJSON('telemetria_cla.json',true);
   state.mode=d.grupos?.todos?'todos':'fpp';$('mode-select').value=state.mode;state.player=players()[0]?.nick;partyState.manual=false;partyAutoPeriod();
   populateSelect('compare-a');populateSelect('compare-b',players()[1]?.nick);populateSelect('wrapped-player');
   $('app').hidden=false;renderAll();navigate('inicio',false);
