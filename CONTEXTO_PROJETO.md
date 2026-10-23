@@ -63,3 +63,16 @@ Commit de implementação: 5a7d86644241b6d27ddd6176a17bd3c507801ebd.
 Execução inicial: https://github.com/glarmelina-wq/pamonhas-pubg/actions/runs/40017391659
 A primeira coleta recuperou telemetria de 100 partidas, com 311 partidas conhecidas na semana e 1237 no mês. Cobertura cresce nas próximas atualizações. Alien foi localizado. O envio inicial grande foi substituído com sucesso por SVGs leves. Publicação da correção final confirmada com sucesso na execução https://github.com/glarmelina-wq/pamonhas-pubg/actions/runs/40018218758 (nove testes aprovados). Dano de queda já foi observado nos dados reais. A página está em https://glarmelina-wq.github.io/pamonhas-pubg/headshots.html .
 O histórico das conversas foi recuperado parcialmente; a transcrição integral não estava disponível.
+
+
+## Correção do filtro de mês — 23/10/2026
+O botão trocava o período, mas as primeiras 100 partidas com telemetria eram todas da semana atual;
+por isso, mês e semana tinham totais idênticos. A coleta passou a intercalar partidas de semanas
+anteriores do mês com as da semana corrente. A interface destaca Ranking do mês/Ranking da semana,
+explica a cobertura disponível e atualiza a versão do script para evitar cache antigo.
+Dez testes passaram, incluindo a distribuição do backfill e o limite por execução. O teste da
+interface confirmou alternância de totais, título e aviso de cobertura.
+Publicação confirmada: https://github.com/glarmelina-wq/pamonhas-pubg/actions/runs/40027682260
+Na conferência após publicar: semana 150 partidas e 94 abates de HS;
+mês 200 partidas e 129 abates de HS, incluindo 50 partidas anteriores à semana.
+A cobertura mensal permanece parcial; não representa o mês completo.
