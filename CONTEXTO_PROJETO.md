@@ -61,5 +61,5 @@ A telemetria usa Damage_Instant_Fall (identificador oficial de queda), e conta o
 Conferir estado atual da branch main e execuções do GitHub Actions, não apenas esta nota.
 Commit de implementação: 5a7d86644241b6d27ddd6176a17bd3c507801ebd.
 Execução inicial: https://github.com/glarmelina-wq/pamonhas-pubg/actions/runs/40017391659
-A primeira coleta recuperou telemetria de 100 partidas, com 311 partidas conhecidas na semana e 1237 no mês. Cobertura cresce nas próximas atualizações. Alien foi localizado. O envio inicial grande foi substituído com sucesso por SVGs leves. A publicação da correção final ainda estava sendo verificada ao escrever esta nota.
+A primeira coleta recuperou telemetria de 100 partidas, com 311 partidas conhecidas na semana e 1237 no mês. Cobertura cresce nas próximas atualizações. Alien foi localizado. O envio inicial grande foi substituído com sucesso por SVGs leves. Publicação da correção final confirmada com sucesso na execução https://github.com/glarmelina-wq/pamonhas-pubg/actions/runs/40018218758 (nove testes aprovados). Dano de queda já foi observado nos dados reais. A página está em https://glarmelina-wq.github.io/pamonhas-pubg/headshots.html .
 O histórico das conversas foi recuperado parcialmente; a transcrição integral não estava disponível.
