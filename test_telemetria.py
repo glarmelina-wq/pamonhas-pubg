@@ -93,6 +93,26 @@ class TelemetryTests(unittest.TestCase):
         throw=event('LogPlayerUseThrowable',3,attacker=char(A),weapon={'itemId':'Item_Weapon_Grenade_C'},attackId=1)
         p=t.parse_events(frame([pickup,use,throw,throw]),{A})[A]
         self.assertEqual(p['usados']['granada'],1)
+    def test_backfill_balances_month_and_week(self):
+        now=datetime(2026,10,23,16,tzinfo=timezone.utc)
+        def match(mid,at):
+            return {'id':mid,'at':at,'mode':'squad-fpp','status':'normal','players':{A:{}}}
+        records=[match('week1','2026-10-23T12:00:00Z'),
+                 match('week2','2026-10-22T12:00:00Z'),
+                 match('prior','2026-10-15T12:00:00Z')]
+        cache={'partidas':{m['id']:m for m in records}}
+        def fetch(m,roster):
+            raw=t.empty_player()
+            raw['hs']['sniper']=1 if m['id'].startswith('week') else 3
+            return {'version':t.VERSION,'players':{A:raw}}
+        report=t.collect_telemetry(cache,{'Alpha':A},now,max_matches=2,fetch=fetch)
+        month=report['periodos']['mes']['grupos']['todos']
+        week=report['periodos']['semana']['grupos']['todos']
+        self.assertEqual(month['partidas_analisadas'],2)
+        self.assertEqual(week['partidas_analisadas'],1)
+        self.assertEqual(month['partidas_anteriores_semana'],1)
+        self.assertEqual(month['jogadores'][0]['hs']['sniper'],4)
+        self.assertEqual(week['jogadores'][0]['hs']['sniper'],1)
     def test_registration_json(self):
         cache=json.loads(Path('jogadores_cache.json').read_text(encoding='utf-8'))
         self.assertTrue(all(isinstance(v,str) and v.startswith('account.') for v in cache.values()))

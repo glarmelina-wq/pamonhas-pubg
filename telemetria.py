@@ -196,9 +196,25 @@ def collect_telemetry(cache, resolved, now, max_matches=100, budget_seconds=160,
                   and (m.get('telemetria',{}).get('version') != VERSION
                        or not (set(m['players']) & set(roster)).issubset(m.get('telemetria',{}).get('players',{})))]
     candidates.sort(key=lambda m:m['at'], reverse=True)
+    # Reserva trabalho para semanas anteriores: o mês não deve esperar toda a semana.
+    local = now.astimezone(week_start(now).tzinfo)
+    month_start = local.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+    start_week = week_start(now)
+    monthly_backfill = sorted(
+        (m for m in candidates if month_start <= moment(m['at']) < start_week),
+        key=lambda m: m['at'])
+    current = [m for m in candidates if moment(m['at']) >= start_week]
+    other = [m for m in candidates if moment(m['at']) < month_start]
+    balanced = []
+    for index in range(max(len(monthly_backfill), len(current))):
+        if index < len(monthly_backfill):
+            balanced.append(monthly_backfill[index])
+        if index < len(current):
+            balanced.append(current[index])
+    candidates = (balanced + other)[:max_matches]
     started = time.monotonic()
     with ThreadPoolExecutor(max_workers=4) as pool:
-        for i in range(0,min(max_matches,len(candidates)),4):
+        for i in range(0,len(candidates),4):
             if time.monotonic()-started >= budget_seconds:
                 break
             futures = {pool.submit(fetch,m,roster):m for m in candidates[i:i+4]}
@@ -222,6 +238,8 @@ def build_report(cache, resolved, now):
         for group,modes in GROUPS.items():
             totals = {}
             known,covered = 0,0
+            before_week = 0
+            analyzed_dates = []
             for m in cache.get('partidas',{}).values():
                 if m.get('status') != 'normal' or m.get('mode') not in modes or not start <= moment(m['at']) <= now:
                     continue
@@ -235,6 +253,8 @@ def build_report(cache, resolved, now):
                 data = tele.get('players', {})
                 if members.issubset(data):
                     covered += 1
+                    before_week += int(moment(m['at']) < current_week)
+                    analyzed_dates.append(m['at'])
                 for aid in members & set(data):
                     p = totals.setdefault(aid, {'nick':roster[aid], 'account_id':aid,'partidas':0,
                         'hs':dict.fromkeys(CATEGORIES,0), 'recorde_hs':0, 'recorde_partida':None,
@@ -268,6 +288,9 @@ def build_report(cache, resolved, now):
                 best = max((p['hs'][cat] for p in rows),default=0)
                 medals[cat] = [p['nick'] for p in rows if best > 0 and p['hs'][cat] == best]
             groups[group] = {'partidas_conhecidas':known,'partidas_analisadas':covered,
-                             'jogadores':rows,'medalhas':medals}
+                             'jogadores':rows,'medalhas':medals,
+                             'partidas_anteriores_semana':before_week,
+                             'primeira_partida_analisada':min(analyzed_dates, default=None),
+                             'ultima_partida_analisada':max(analyzed_dates, default=None)}
         result['periodos'][label] = {'inicio':start.isoformat(),'ate':now.isoformat(),'grupos':groups}
     return result

@@ -31,11 +31,24 @@ document.addEventListener('DOMContentLoaded',async()=>{
  const content=document.getElementById('hs-content'),status=document.getElementById('hs-status');
  let data,period='semana',mode='todos',category='sniper',selected='';
  const render=()=>{
+  document.querySelectorAll('[data-period]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.period===period)));
+  document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===category)));
   const g=group(data,period,mode),periodData=data?.periodos?.[period];
   if(!g){content.innerHTML='<p class="notice">Ainda não há dados de telemetria para este período e modalidade.</p>';return;}
+  const periodName=period==='mes'?'Ranking do mês':'Ranking da semana';
+  document.getElementById('hs-period-title').textContent=periodName;
+  const note=document.getElementById('hs-coverage');
+  if(period==='mes'){
+   const prior=g.partidas_anteriores_semana||0;
+   note.textContent=prior
+    ? 'O mês inclui '+num(prior)+' partidas analisadas de semanas anteriores, além das partidas desta semana. A cobertura ainda é parcial.'
+    : 'Mês em formação: ainda não há partidas analisadas de semanas anteriores neste recorte. Por isso, os números podem coincidir com os da semana. A coleta está recuperando o histórico disponível.';
+  }else{
+   note.textContent='Semana de segunda a domingo. Os totais consideram somente as partidas com telemetria recuperada.';
+  }
   const rows=g.jogadores||[],sorted=[...rows].sort((a,b)=>b.hs[category]-a.hs[category]||a.nick.localeCompare(b.nick));
   const date=s=>new Date(s).toLocaleDateString('pt-BR',{timeZone:'America/Sao_Paulo'});
-  status.textContent=date(periodData.inicio)+' até '+date(periodData.ate)+' · '+g.partidas_analisadas+' de '+g.partidas_conhecidas+' partidas conhecidas com telemetria completa. A lista de partidas conhecidas também pode ser parcial.';
+  status.textContent=periodName+' · '+date(periodData.inicio)+' até '+date(periodData.ate)+' · '+g.partidas_analisadas+' de '+g.partidas_conhecidas+' partidas conhecidas com telemetria completa. A lista de partidas conhecidas também pode ser parcial.';
   document.querySelectorAll('[data-period]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.period===period)));
   document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===category)));
   const awards=Object.entries(medals).map(([key,[name,label,img]])=>{
@@ -43,7 +56,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
    return '<article class="card medal"><img src="medalhas/'+img+'" alt="Medalha '+esc(name)+'" width="132" height="132"><span class="eyebrow">'+label+'</span><h2>'+name+'</h2><p class="winner">'+(winners.length?winners.map(esc).join(' · '):'Aguardando headshots')+'</p><p class="muted small">'+(best?num(best)+' abates de headshot · liderança provisória':'Ninguém com abate de headshot registrado')+'</p></article>';
   }).join('');
   const bestMatch=Math.max(0,...rows.map(p=>p.recorde_hs||0)),recordHolders=rows.filter(p=>bestMatch>0&&p.recorde_hs===bestMatch).map(p=>p.nick);
-  content.innerHTML='<div class="grid3">'+awards+'</div><div class="section-head"><div><span class="eyebrow">Disputa aberta</span><h2>'+esc(medals[category][1])+'</h2><p class="muted">Abates creditados na cabeça. Empates compartilham posição e medalha.</p></div></div>'+
+  content.innerHTML='<div class="grid3" aria-label="'+periodName+'">'+awards+'</div><div class="section-head"><div><span class="eyebrow">Disputa aberta</span><h2>'+esc(medals[category][1])+'</h2><p class="muted">Abates creditados na cabeça. Empates compartilham posição e medalha.</p></div></div>'+
    (rows.length?'<div class="table-wrap"><table><thead><tr><th>Posição</th><th>Jogador</th><th>Headshots</th><th>HS/jogo</th><th>Jogos analisados</th></tr></thead><tbody>'+sorted.map((p,i)=>'<tr><td>'+(p.hs[category]>0?(sorted.findIndex(x=>x.hs[category]===p.hs[category])+1)+'º':'—')+'</td><td>'+esc(p.nick)+'</td><td>'+num(p.hs[category])+'</td><td>'+num(p.hs[category]/p.partidas,2)+'</td><td>'+num(p.partidas)+'</td></tr>').join('')+'</tbody></table></div>':'<p class="notice">A coleta está em andamento. Nenhum jogador com telemetria recuperada neste recorte.</p>')+
    '<div class="grid2" style="margin-top:22px"><article class="card"><span class="eyebrow">Capacete de papel</span><h3>Recorde numa partida</h3><p>'+(bestMatch?num(bestMatch)+' headshots · '+recordHolders.map(esc).join(' · '):'Aguardando partidas analisadas.')+'</p><p class="small muted">Soma das três categorias em uma única partida recuperada.</p></article><article class="card"><span class="eyebrow">Contagem transparente</span><h3>O que entra na disputa?</h3><p>Partidas normais oficiais de Steam, na modalidade selecionada. Sem treino, personalizado ou competitivo. Armas desconhecidas ficam fora das categorias: '+num(rows.reduce((n,p)=>n+p.hs_nao_classificados,0))+' abates de HS não classificados neste recorte.</p></article></div>'+
    '<div class="section-head"><div><span class="eyebrow">Preparar a próxima partida</span><h2>Mochila e sobrevivência</h2><p class="muted">Eventos do jogo antes da morte, analisados depois da partida.</p></div></div><label>Escolha um Pamonha <select id="hs-player"><option value="">Selecione um jogador</option>'+rows.map(p=>'<option value="'+esc(p.nick)+'">'+esc(p.nick)+'</option>').join('')+'</select></label><div id="hs-advice" style="margin-top:18px"></div>';
