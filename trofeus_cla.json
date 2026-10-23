@@ -8,7 +8,7 @@
       "inicio_semana": "2026-10-12T00:00:00-03:00",
       "de": "2026-10-12T00:00:00-03:00",
       "ate": "2026-10-18T23:59:59-03:00",
-      "atualizado_em": "2026-10-23T22:22:36+00:00",
+      "atualizado_em": "2026-10-23T22:30:33+00:00",
       "parcial": true,
       "partidas_recuperadas": 628,
       "grupos": {
@@ -93,9 +93,9 @@
           ],
           "caneta": [
             {
-              "nick": "crazyrock_com_br",
-              "valor": 2120.7737258151174,
-              "partidas": 58
+              "nick": "Pisanoslixo",
+              "valor": 4618.886549383402,
+              "partidas": 114
             }
           ]
         },
@@ -175,9 +175,9 @@
           ],
           "caneta": [
             {
-              "nick": "crazyrock_com_br",
-              "valor": 2120.7737258151174,
-              "partidas": 58
+              "nick": "Burallosh",
+              "valor": 3185.5091304611415,
+              "partidas": 95
             }
           ]
         },
@@ -248,8 +248,8 @@
           "caneta": [
             {
               "nick": "Pisanoslixo",
-              "valor": 1238.482118755579,
-              "partidas": 40
+              "valor": 3048.7205526530743,
+              "partidas": 73
             }
           ]
         },
@@ -324,9 +324,9 @@
           ],
           "caneta": [
             {
-              "nick": "crazyrock_com_br",
-              "valor": 2120.7737258151174,
-              "partidas": 58
+              "nick": "Burallosh",
+              "valor": 3133.2703231405467,
+              "partidas": 93
             }
           ]
         },
@@ -400,8 +400,8 @@
           "caneta": [
             {
               "nick": "Alien--__--",
-              "valor": 333.9699732065201,
-              "partidas": 1
+              "valor": 550.8978108763695,
+              "partidas": 4
             }
           ]
         },
@@ -472,12 +472,20 @@
           "caneta": [
             {
               "nick": "Pisanoslixo",
-              "valor": 1238.482118755579,
-              "partidas": 40
+              "valor": 3048.7205526530743,
+              "partidas": 73
             }
           ]
         },
-        "duo": {},
+        "duo": {
+          "caneta": [
+            {
+              "nick": "Alien--__--",
+              "valor": 17.010800272226334,
+              "partidas": 1
+            }
+          ]
+        },
         "solo-fpp": {},
         "solo": {
           "kombi": [
