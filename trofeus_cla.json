@@ -8,9 +8,9 @@
       "inicio_semana": "2026-10-12T00:00:00-03:00",
       "de": "2026-10-12T00:00:00-03:00",
       "ate": "2026-10-18T23:59:59-03:00",
-      "atualizado_em": "2026-10-23T13:27:48+00:00",
+      "atualizado_em": "2026-10-23T20:15:40+00:00",
       "parcial": true,
-      "partidas_recuperadas": 552,
+      "partidas_recuperadas": 628,
       "grupos": {
         "todos": {
           "kombi": [
@@ -65,9 +65,9 @@
           ],
           "farmacia": [
             {
-              "nick": "Padre0027",
-              "valor": 7.181818181818182,
-              "partidas": 11
+              "nick": "Alien--__--",
+              "valor": 8.0,
+              "partidas": 12
             }
           ],
           "forrest": [
@@ -124,6 +124,11 @@
               "nick": "Burallosh",
               "valor": 21,
               "partidas": 95
+            },
+            {
+              "nick": "TODDNH0",
+              "valor": 21,
+              "partidas": 76
             }
           ],
           "lobby": [
@@ -135,8 +140,8 @@
           ],
           "farmacia": [
             {
-              "nick": "Padre0027",
-              "valor": 7.181818181818182,
+              "nick": "Alien--__--",
+              "valor": 8.727272727272727,
               "partidas": 11
             }
           ],
@@ -149,9 +154,9 @@
           ],
           "lutinho": [
             {
-              "nick": "crazyrock_com_br",
-              "valor": 8.890243902439025,
-              "partidas": 82
+              "nick": "Alien--__--",
+              "valor": 9.0,
+              "partidas": 11
             }
           ],
           "sedex": [
@@ -256,9 +261,9 @@
           ],
           "samu": [
             {
-              "nick": "Burallosh",
-              "valor": 20,
-              "partidas": 93
+              "nick": "TODDNH0",
+              "valor": 21,
+              "partidas": 73
             }
           ],
           "lobby": [
@@ -300,8 +305,8 @@
         "duo-fpp": {
           "kombi": [
             {
-              "nick": "ROGER__BR",
-              "valor": 7920.4515192,
+              "nick": "Alien--__--",
+              "valor": 16649.583899999998,
               "partidas": 4
             }
           ],
@@ -320,6 +325,11 @@
             },
             {
               "nick": "zPaT0__",
+              "valor": 1,
+              "partidas": 4
+            },
+            {
+              "nick": "Alien--__--",
               "valor": 1,
               "partidas": 4
             }
