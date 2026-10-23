@@ -187,7 +187,7 @@ def enrich_match(record, roster):
         raise ValueError('Telemetria sem todos os participantes esperados.')
     return {'version': VERSION, 'players':result}
 
-def collect_telemetry(cache, resolved, now, max_matches=100, budget_seconds=160, fetch=None):
+def collect_telemetry(cache, resolved, now, max_matches=100, budget_seconds=160, fetch=None, season_id=None):
     roster = {aid:nick for nick,aid in resolved.items()}
     fetch = fetch or enrich_match
     candidates = [m for m in cache.get('partidas',{}).values()
@@ -204,7 +204,7 @@ def collect_telemetry(cache, resolved, now, max_matches=100, budget_seconds=160,
         (m for m in candidates if month_start <= moment(m['at']) < start_week),
         key=lambda m: m['at'])
     current = [m for m in candidates if moment(m['at']) >= start_week]
-    other = [m for m in candidates if moment(m['at']) < month_start]
+    other = [m for m in candidates if moment(m['at']) < min(month_start, start_week)]
     balanced = []
     for index in range(max(len(monthly_backfill), len(current))):
         if index < len(monthly_backfill):
@@ -223,15 +223,17 @@ def collect_telemetry(cache, resolved, now, max_matches=100, budget_seconds=160,
                     futures[future]['telemetria'] = future.result()
                 except Exception:
                     pass  # Not success: remains pending and is excluded from rankings.
-    return build_report(cache, resolved, now)
+    return build_report(cache, resolved, now, season_id=season_id)
 
-def build_report(cache, resolved, now):
+def build_report(cache, resolved, now, season_id=None):
     roster = {aid:nick for nick,aid in resolved.items()}
     local = now.astimezone(week_start(now).tzinfo)
     current_week = week_start(now)
     month = local.replace(day=1,hour=0,minute=0,second=0,microsecond=0)
     periods = [('semana', current_week), ('mes', month)]
-    result = {'schema_version':2,'updated_at':now.isoformat(),'periodos':{},
+    if season_id:
+        periods.append(('temporada', None))
+    result = {'schema_version':2,'season_id':season_id,'updated_at':now.isoformat(),'periodos':{},
               'aviso':'Somente partidas oficiais com telemetria recuperada. Cobertura parcial; sem dados não significa zero. Semana de segunda a domingo e mês civil no horário de Brasília. Headshots são abates creditados na cabeça, não todos os tiros na cabeça. Saldos de itens são estimativas, sem certeza de mochila vazia. Munição: coleta observada, sem saldo confiável.'}
     for label,start in periods:
         groups = {}
@@ -240,13 +242,19 @@ def build_report(cache, resolved, now):
             known,covered = 0,0
             before_week = 0
             analyzed_dates = []
+            known_dates = []
             for m in cache.get('partidas',{}).values():
-                if m.get('status') != 'normal' or m.get('mode') not in modes or not start <= moment(m['at']) <= now:
+                if m.get('status') != 'normal' or m.get('mode') not in modes or moment(m['at']) > now:
+                    continue
+                if label == 'temporada' and m.get('season_id') != season_id:
+                    continue
+                if start is not None and moment(m['at']) < start:
                     continue
                 members = set(m['players']) & set(roster)
                 if not members:
                     continue
                 known += 1
+                known_dates.append(m['at'])
                 tele = m.get('telemetria', {})
                 if tele.get('version') != VERSION:
                     continue
@@ -292,5 +300,42 @@ def build_report(cache, resolved, now):
                              'partidas_anteriores_semana':before_week,
                              'primeira_partida_analisada':min(analyzed_dates, default=None),
                              'ultima_partida_analisada':max(analyzed_dates, default=None)}
-        result['periodos'][label] = {'inicio':start.isoformat(),'ate':now.isoformat(),'grupos':groups}
+        result['periodos'][label] = {'inicio':start.isoformat() if start else min((m['at'] for m in cache.get('partidas', {}).values() if m.get('season_id') == season_id and m.get('status') == 'normal'), default=None),'ate':now.isoformat(),'grupos':groups}
     return result
+
+def tag_season_matches(cache, season_id, match_ids):
+    """A API de estatísticas da temporada confirma a qual temporada cada partida pertence."""
+    seasons = cache.setdefault('temporadas', {})
+    ids = set(seasons.get(season_id, [])) | set(match_ids)
+    seasons[season_id] = sorted(ids)
+    for mid, record in cache.get('partidas', {}).items():
+        if mid in ids:
+            record['season_id'] = season_id
+
+def archive_blue_awards(cache, archive, resolved, now):
+    """Acrescenta o troféu azul às semanas já arquivadas, usando somente telemetria."""
+    roster = {aid:nick for nick,aid in resolved.items()}
+    for week in archive.get('semanas', []):
+        start = week_start(moment(week['inicio_semana']))
+        end = start + timedelta(days=7)
+        if end > now:
+            continue
+        for group, modes in GROUPS.items():
+            totals = {}
+            for record in cache.get('partidas', {}).values():
+                if record.get('status') != 'normal' or record.get('mode') not in modes or not start <= moment(record['at']) < end:
+                    continue
+                tele = record.get('telemetria', {})
+                if tele.get('version') != VERSION:
+                    continue
+                for aid, raw in tele.get('players', {}).items():
+                    if aid not in roster:
+                        continue
+                    p = totals.setdefault(aid, {'nick':roster[aid], 'valor':0, 'partidas':0})
+                    p['valor'] += raw['dano_azul']
+                    p['partidas'] += 1
+            best = max((p['valor'] for p in totals.values()), default=0)
+            if best > 0:
+                week.setdefault('grupos', {}).setdefault(group, {})['caneta'] = sorted(
+                    [p for p in totals.values() if p['valor'] == best], key=lambda p:p['nick'].casefold())
+    return archive

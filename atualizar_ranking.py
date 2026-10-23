@@ -11,7 +11,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 from trofeus import AWARDS, archive_weeks
-from telemetria import collect_telemetry, build_report
+from telemetria import collect_telemetry, build_report, tag_season_matches, archive_blue_awards
 from recuperar_partidas import collect_recent, archive_matches
 
 BASE = Path(__file__).resolve().parent
@@ -189,9 +189,13 @@ def main():
     if not resolved:
         raise RuntimeError('Nenhum membro foi localizado; dados anteriores preservados.')
     groups = {group: [] for group in GROUPS}
+    season_match_ids = set()
     for nick, account_id in resolved.items():
         response = client.get(f'players/{account_id}/seasons/{season}')
         stats = response['data']['attributes']['gameModeStats']
+        for key, relation in response['data'].get('relationships', {}).items():
+            if key.startswith('matches') and isinstance(relation.get('data'), list):
+                season_match_ids.update(item['id'] for item in relation['data'] if isinstance(item.get('id'), str))
         for group, modes in GROUPS.items():
             groups[group].append(metrics(nick, account_id, stats, modes))
         print('Coleta concluída: ' + nick)
@@ -219,11 +223,14 @@ def main():
         weekly['aviso'] = 'Falha temporária na recuperação de partidas. Exibindo os últimos dados disponíveis.'
         weekly['falha_recuperacao'] = True
         print('Aviso: recuperação de partidas incompleta; temporada preservada.')
+    match_cache['temporadas'] = old_matches.get('temporadas', {})
+    tag_season_matches(match_cache, season, season_match_ids)
     try:
-        telemetry = collect_telemetry(match_cache, resolved, now)
+        telemetry = collect_telemetry(match_cache, resolved, now, season_id=season)
     except Exception:
-        telemetry = build_report(match_cache, resolved, now)
+        telemetry = build_report(match_cache, resolved, now, season_id=season)
         telemetry['aviso'] += ' Coleta de telemetria com falha temporária.'
+    trophies = archive_blue_awards(match_cache, trophies, resolved, now)
     # Valida tudo antes de substituir os arquivos. Qualquer falha de coleta aborta a execução.
     json.dumps([payload, history, cache, trophies, match_cache, weekly, telemetry], allow_nan=False)
     atomic_json('historico_cla.json', history)

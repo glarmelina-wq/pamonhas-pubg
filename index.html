@@ -31,7 +31,7 @@
 <div class="grid2" style="margin-top:25px"><article class="card"><span class="eyebrow">Operação Pamonha Quente</span><h3 style="margin-top:9px">500 abates na semana</h3><div id="weekly"></div></article><article class="card"><span class="eyebrow">Acompanhando a turma</span><h3 style="margin-top:9px">Movimento no ranking técnico</h3><div id="evolution"></div><p class="small" style="margin-top:15px"><button class="link" data-page="ranking">Consultar estatísticas →</button></p></article></div>
 </section>
 <section id="page-resenha" class="page" aria-label="Hall da zoeira">
-<div class="section-head" style="margin-top:5px"><div><span class="eyebrow">O campeonato que ninguém pediu para ganhar</span><h2>Hall da Zoeira</h2><p class="muted">Nove troféus para levar ao grupo. A regra aparece junto do resultado.</p></div></div>
+<div class="section-head" style="margin-top:5px"><div><span class="eyebrow">O campeonato que ninguém pediu para ganhar</span><h2>Hall da Zoeira</h2><p class="muted">Dez troféus para levar ao grupo. A regra aparece junto do resultado.</p></div></div>
 <div class="tabs"><button data-party-period="semana" aria-pressed="true">Resenha da semana</button><button data-party-period="temporada" aria-pressed="false">Temporada inteira</button></div>
 <div id="party-auto-full" class="notice" role="status" hidden></div><p class="muted small" id="party-context" style="margin-bottom:18px"></p><div class="grid3" id="party-cards"></div>
 <div class="section-head"><label style="width:min(100%,450px)">Escolha uma brincadeira<select id="party-award-select"></select></label></div><div id="party-ranking" style="scroll-margin-top:110px"></div><p id="party-download-status" class="status-message" role="status"></p>
@@ -47,9 +47,9 @@
 </div>
 </main>
 <footer><div class="wrap footer-inner"><p>🌽 Os Pamonhas • Em memória do Zé da Pamonha.</p><p>Projeto da comunidade. Sem vínculo oficial com PUBG / KRAFTON.</p></div></footer>
-<script src="dicas.js"></script>
-<script src="headshots.js"></script>
-<script src="resenha.js"></script>
+<script src="dicas.js?v=20261023-caneta1"></script>
+<script src="headshots.js?v=20261023-caneta1"></script>
+<script src="resenha.js?v=20261023-caneta1"></script>
 <script>
 'use strict';
 const $ = id => document.getElementById(id);
@@ -170,7 +170,7 @@ function renderProfile(){
  if(before){const diff=p.adr-before.adr;delta=`ADR acumulado: ${diff>=0?'+':''}${fmt(diff,1)} desde ${dateLabel(ref.snapshot.at,true)}. ${fmt(Math.max(0,p.partidas-before.partidas))} partidas adicionais.`;}
  const stats=[['Partidas',fmt(p.partidas)],['Vitórias',fmt(p.wins)],['Dano médio',fmt(p.adr,1)],['Abates/jogo',fmt(perGame(p,'kills'),2)],['Abates',fmt(p.kills)],['Taxa de vitória',fmt(p.win_rate,1)+'%'],['Top 10',fmt(p.top10_rate,1)+'%'],['Abate mais longo',fmt(p.longest_kill,1)+' m']];
  $('profile').innerHTML=`<div class="profile-head"><div class="avatar" aria-hidden="true">${esc(p.nick.slice(0,2).toUpperCase())}</div><div><span class="eyebrow">Dossiê Pamonhas</span><h2>${esc(p.nick)}</h2><p class="small muted">${esc(state.data.temporada)} · ${MODE_LABELS[state.mode]} · ${position(p)}</p></div><div class="actions"><button data-compare-player="${esc(p.nick)}">Comparar ↔</button><button class="primary" data-card-player="${esc(p.nick)}">Gerar meu card ↗</button></div></div><div class="profile-metrics">${stats.map(([l,v])=>metricCard(l,v)).join('')}</div><div class="grid2"><article class="card"><span class="eyebrow">Contribuição para o time</span><h3 style="margin-top:9px">Parceria em números</h3><div class="list">${[['Reanimações',`${fmt(p.revives)} · ${fmt(perGame(p,'revives'),2)}/jogo`],['Assistências',`${fmt(p.assists)} · ${fmt(perGame(p,'assists'),2)}/jogo`],['Nocautes',fmt(p.dbnos)],['Abates de headshot',`${fmt(p.headshots)} (${fmt(p.hs_rate,1)}% dos abates)`],['Tempo médio vivo',`${fmt(p.tempo_medio_min,1)} min`]].map(([l,v])=>`<div class="list-row"><span class="muted small">${l}</span><b class="small">${v}</b></div>`).join('')}</div></article><article class="card"><span class="eyebrow">Evolução observada</span><h3 style="margin-top:9px">Seu ADR ao longo dos dias</h3><p class="muted small" style="margin-top:10px">${esc(delta)}</p>${historyChart(p)}</article></div><details><summary>Como interpretar os números</summary><p>ADR é dano médio por partida. Abates/jogo mede eliminações por partida, sem estimar mortes a partir de derrotas. Os números incluem partidas normais na modalidade selecionada, mesmo quando o membro joga sem o clã. Não inferimos habilidade de 1×1, morte no gás ou função tática a partir desses agregados.</p></details>`;
- $('profile').innerHTML += `<section class="card" style="margin-top:20px"><div class="section-head" style="margin-top:0"><div><span class="eyebrow">Treino & resenha</span><h3>Dicas para ${esc(p.nick)}</h3></div><button data-more-advice="true">Outras dicas ↻</button></div><p class="muted small">Sugestões editoriais escolhidas pelos seus indicadores nesta modalidade. Não são uma análise de replay. A zoeira é opcional.</p><div id="player-advice"></div></section>`;
+ $('profile').innerHTML += `<section class="card" style="margin-top:20px"><div class="section-head" style="margin-top:0"><div><span class="eyebrow">Treino & resenha</span><h3>Dicas para ${esc(p.nick)}</h3></div><button data-more-advice="true">Outras dicas ↻</button></div><p class="muted small">Dicas escolhidas pelos seus números neste modo. Use o replay para conferir o motivo de cada resultado.</p><div id="player-advice"></div></section>`;
  $('player-advice').innerHTML=adviceContent(p);
  if(globalThis.PamonhasTelemetry) $('profile').innerHTML += globalThis.PamonhasTelemetry.profile(p.nick,state.mode);
  $('profile').innerHTML += '<section id="profile-trophies" class="card" style="margin-top:20px"></section>';renderProfileTrophies(p);
@@ -180,22 +180,22 @@ function adviceChoices(p){
  const add=(key,evidence)=>choices.push({key,evidence});
  if(n<minimum()){
   add('amostra',`${fmt(n)} partidas; mínimo de ${minimum()} para o MVP.`);
-  add('geral','Com poucos jogos, é melhor testar rotinas do que diagnosticar pontos fracos.');
+  add('geral','Jogue mais para ter uma comparação melhor.');
   return choices;
  }
- if(value(p,'team_kills')>0)add('controle',`${fmt(p.team_kills)} eliminações de aliados. O número não informa intenção.`);
- if(value(p,'adr')<180)add('combate',`ADR de ${fmt(p.adr,1)}. Dano médio é um ponto de partida para escolher um treino, não uma nota de mira.`);
- if(value(p,'tempo_medio_min')>0&&value(p,'tempo_medio_min')<10)add('sobrevivencia',`${fmt(p.tempo_medio_min,1)} minutos vivos por partida. A causa das mortes não está no agregado.`);
- if(value(p,'top10_rate')<35)add('consistencia',`${fmt(p.top10_rate,1)}% de Top 10 na seleção atual. Modalidades e mapas mudam o contexto.`);
- if(value(p,'top10_rate')>=40&&value(p,'win_rate')<10)add('conversao',`${fmt(p.top10_rate,1)}% de Top 10 e ${fmt(p.win_rate,1)}% de vitórias. Vale revisar decisões de partidas que chegaram ao final.`);
- if(value(p,'kills')>=30&&value(p,'hs_rate')<15)add('precisao',`${fmt(p.hs_rate,1)}% dos ${fmt(p.kills)} abates foram de headshot. Isso não mede a precisão de todos os tiros.`);
+ if(value(p,'team_kills')>0)add('controle',`${fmt(p.team_kills)} eliminações de aliados. Pode ter sido acidente.`);
+ if(value(p,'adr')<180)add('combate',`ADR de ${fmt(p.adr,1)}. Essa é sua média de dano por jogo.`);
+ if(value(p,'tempo_medio_min')>0&&value(p,'tempo_medio_min')<10)add('sobrevivencia',`${fmt(p.tempo_medio_min,1)} minutos vivos por partida. Veja no replay por que morreu cedo.`);
+ if(value(p,'top10_rate')<35)add('consistencia',`${fmt(p.top10_rate,1)}% de Top 10 na seleção atual. Compare jogos do mesmo modo.`);
+ if(value(p,'top10_rate')>=40&&value(p,'win_rate')<10)add('conversao',`${fmt(p.top10_rate,1)}% de Top 10 e ${fmt(p.win_rate,1)}% de vitórias. Reveja suas últimas lutas.`);
+ if(value(p,'kills')>=30&&value(p,'hs_rate')<15)add('precisao',`${fmt(p.hs_rate,1)}% dos ${fmt(p.kills)} abates foram de headshot. Conta abates na cabeça, não todos os tiros acertados.`);
  let teamGames=n;
  if(state.mode==='todos')teamGames=['fpp','tpp'].reduce((sum,group)=>sum+value(state.data.grupos?.[group]?.find(x=>x.nick===p.nick)||{},'partidas'),0);
- if(!['solo','solo-fpp'].includes(state.mode)&&teamGames>=minimum()&&value(p,'revives')/teamGames<0.1)add('suporte',`${fmt(value(p,'revives')/teamGames,2)} reanimações por partida de equipe. A função de cada jogador também conta.`);
- if(value(p,'km_pe')>0&&value(p,'km_pe')<1&&value(p,'top10_rate')<40)add('mobilidade',`${fmt(p.km_pe,2)} km a pé por partida. Menos distância não é necessariamente um problema; teste o planejamento de rotas.`);
- if(perGame(p,'heals')>=5)add('recursos',`${fmt(perGame(p,'heals'),1)} itens de cura/boost consumidos por partida. Consumo não informa quanto você carregava nem a causa do dano.`);
- if(choices.length<3)add('manter',`ADR ${fmt(p.adr,1)} · ${fmt(p.win_rate,1)}% de vitórias. Procure decisões repetíveis nas suas boas partidas.`);
- if(choices.length<3)add('geral','Uma mudança observável por sessão ajuda a comparar resultados.');
+ if(!['solo','solo-fpp'].includes(state.mode)&&teamGames>=minimum()&&value(p,'revives')/teamGames<0.1)add('suporte',`${fmt(value(p,'revives')/teamGames,2)} reanimações por partida de equipe. Ajude quando houver chance segura.`);
+ if(value(p,'km_pe')>0&&value(p,'km_pe')<1&&value(p,'top10_rate')<40)add('mobilidade',`${fmt(p.km_pe,2)} km a pé por partida. Confira se está saindo para a safe a tempo.`);
+ if(perGame(p,'heals')>=5)add('recursos',`${fmt(perGame(p,'heals'),1)} itens de cura/boost consumidos por partida. Confira o que precisa repor na mochila.`);
+ if(choices.length<3)add('manter',`ADR ${fmt(p.adr,1)} · ${fmt(p.win_rate,1)}% de vitórias. Repita o que funcionou nas boas partidas.`);
+ if(choices.length<3)add('geral','Treine uma coisa de cada vez.');
  return choices;
 }
 function adviceContent(p){

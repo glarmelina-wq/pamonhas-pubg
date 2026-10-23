@@ -7,23 +7,23 @@ const medals={sniper:['Cata-piolho','Snipers','sniper.svg'],dmr:['Dipirona ocula
 const group=(data,period,mode)=>data?.periodos?.[period]?.grupos?.[mode];
 function advice(p){
  const tips=[];
- if(p.dano_azul>0)tips.push(['De olho na próxima safe',num(p.dano_azul,1)+' de dano azul em '+num(p.partidas)+' partidas analisadas ('+num(p.dano_azul/p.partidas,1)+'/jogo). '+num(p.mortes_azul)+' mortes finalizadas pelo gás.','Planeje a rotação antes de a zona fechar e combine veículo e rota com o squad. O dano pode vir de uma decisão tática; reveja as partidas antes de concluir.']);
- if(p.dano_queda>0)tips.push(['O chão também atira',num(p.dano_queda,1)+' de dano de queda observado.','Revise saltos de telhados e encostas. Procure uma descida com cobertura para preservar vida antes da troca.']);
- const labels={boost:['Boost em falta?','energético ou analgésico'],cura:['Revisar as curas','kit, primeiros socorros ou bandagem'],fumaca:['Cadê a cortina?','fumaça'],granada:['Pressão na mochila','granada ofensiva']};
- for(const [cat,[title,item]] of Object.entries(labels)){
-  const count=p.mortes_saldo_zero?.[cat]||0, denominator=p.mortes_validas||0;
-  if(denominator>=3 && count/denominator>=.5) tips.push([title,count+' de '+denominator+' mortes com saldo estimado zero de '+item+' nos eventos consistentes.','Teste conferir esse recurso após o loot e depois de cada luta. É uma estimativa anterior à morte, não prova de mochila vazia ou da causa da derrota.']);
+ if(p.dano_azul>0)tips.push(['Entre na safe mais cedo',num(p.dano_azul,1)+' de dano azul em '+num(p.partidas)+' jogos: '+num(p.dano_azul/p.partidas,1)+' por jogo. '+num(p.mortes_azul)+' mortes na zona azul.','Olhe o tempo da safe e saia antes de o gás chegar. Combine o caminho e um veículo com o squad.']);
+ if(p.dano_queda>0)tips.push(['Cuidado com as quedas',num(p.dano_queda,1)+' de dano por queda.','Evite pular de telhados altos e barrancos. Procure um caminho para descer sem perder vida.']);
+ const labels={boost:['Reponha energético e analgésico','energético ou analgésico','Pegue energético ou analgésico ao repor a mochila depois das lutas.'],cura:['Reponha as curas','kits ou bandagens','Reponha os kits e as bandagens depois de cada luta. Se faltar, peça ao squad.'],fumaca:['Leve mais fumaça','fumaça','Reponha as fumaças. Use para atravessar lugares abertos ou proteger um aliado caído.'],granada:['Confira suas granadas','granadas','Confira se tem granadas antes da próxima luta. Elas ajudam a tirar o inimigo da cobertura.']};
+ for(const [cat,[title,item,tip]] of Object.entries(labels)){
+  const count=p.mortes_saldo_zero?.[cat]||0, total=p.mortes_validas||0;
+  if(total>=3 && count/total>=.5)tips.push([title,'Em '+count+' de '+total+' mortes avaliadas, o saldo estimado de '+item+' era zero.',tip]);
  }
- if((p.coletados?.fumaca||0)>0 && (p.usados?.fumaca||0)===0)tips.push(['Fumaça também é para usar',num(p.coletados.fumaca)+' fumaças coletadas e nenhum uso observado.','Experimente usar para cruzar áreas abertas, reposicionar e ajudar um aliado. Ausência de uso registrado não garante que o item ficou guardado.']);
- if((p.coletados?.boost||0)>0 && (p.usados?.boost||0)===0)tips.push(['Boost ficou para depois?',num(p.coletados.boost)+' boosts coletados e nenhum uso observado.','Revise se houve uma janela segura para usar energético ou analgésico antes de uma rotação.']);
- if(!tips.length) tips.push(['Construindo seu diagnóstico',num(p.partidas)+' partidas analisadas; '+num(p.mortes_validas)+' mortes com eventos consistentes para estimar itens.','Ainda não há um padrão suficiente para uma dica específica. Observe curas, boosts e utilitários após cada combate.']);
- return tips.map(([title,evidence,tip])=>'<article class="card"><span class="eyebrow">Dica pós-partida</span><h3>'+esc(title)+'</h3><p class="small muted">'+esc(evidence)+'</p><p>'+esc(tip)+'</p></article>').join('');
+ if((p.coletados?.fumaca||0)>0 && (p.usados?.fumaca||0)===0)tips.push(['Lembre de usar a fumaça',num(p.coletados.fumaca)+' fumaças coletadas, sem uso registrado.','Use fumaça para cruzar áreas abertas, mudar de posição ou ajudar um aliado caído.']);
+ if((p.coletados?.boost||0)>0 && (p.usados?.boost||0)===0)tips.push(['Use o energético e o analgésico',num(p.coletados.boost)+' energéticos ou analgésicos coletados, sem uso registrado.','Quando estiver em segurança, use um antes de uma caminhada longa ou da próxima luta.']);
+ if(!tips.length)tips.push(['Ainda faltam jogos para dar uma dica',num(p.partidas)+' jogos analisados.','Por enquanto, confira curas, munição e fumaças depois de cada luta.']);
+ return tips.map(([title,evidence,tip])=>'<article class="card"><span class="eyebrow">Depois da partida</span><h3>'+esc(title)+'</h3><p class="small muted">'+esc(evidence)+'</p><p>'+esc(tip)+'</p></article>').join('');
 }
 function profile(nick,mode){
  const p=group(globalThis.PAMONHAS_TELEMETRIA,'semana',mode)?.jogadores?.find(p=>p.nick===nick);
  return '<section class="card" style="margin-top:20px"><span class="eyebrow">Partidas da semana</span><h3>Mochila, safe e recursos</h3>'+
  (p?'<div class="grid2" style="margin-top:16px">'+advice(p)+'</div>':'<p class="muted">Telemetria ainda não disponível para este jogador nesta modalidade. Sem dados não significa zero.</p>')+
- '<p class="small muted">Análise após o fim da partida, sem mochila ao vivo. Saldos estimados por coleta, uso e descarte; eventos inconsistentes são excluídos das dicas de saldo zero. Munição mostra coleta, sem saldo confiável.</p><a href="headshots.html">Abrir headshots e diagnóstico completo →</a></section>';
+ '<p class="small muted">As dicas usam registros de partidas já encerradas. Os itens na mochila são uma estimativa e podem faltar registros. Não sabemos quanto de munição restou.</p><a href="headshots.html">Abrir headshots e diagnóstico completo →</a></section>';
 }
 globalThis.PamonhasTelemetry={profile,advice};
 document.addEventListener('DOMContentLoaded',async()=>{
@@ -59,13 +59,13 @@ document.addEventListener('DOMContentLoaded',async()=>{
   content.innerHTML='<div class="grid3" aria-label="'+periodName+'">'+awards+'</div><div class="section-head"><div><span class="eyebrow">Disputa aberta</span><h2>'+esc(medals[category][1])+'</h2><p class="muted">Abates creditados na cabeça. Empates compartilham posição e medalha.</p></div></div>'+
    (rows.length?'<div class="table-wrap"><table><thead><tr><th>Posição</th><th>Jogador</th><th>Headshots</th><th>HS/jogo</th><th>Jogos analisados</th></tr></thead><tbody>'+sorted.map((p,i)=>'<tr><td>'+(p.hs[category]>0?(sorted.findIndex(x=>x.hs[category]===p.hs[category])+1)+'º':'—')+'</td><td>'+esc(p.nick)+'</td><td>'+num(p.hs[category])+'</td><td>'+num(p.hs[category]/p.partidas,2)+'</td><td>'+num(p.partidas)+'</td></tr>').join('')+'</tbody></table></div>':'<p class="notice">A coleta está em andamento. Nenhum jogador com telemetria recuperada neste recorte.</p>')+
    '<div class="grid2" style="margin-top:22px"><article class="card"><span class="eyebrow">Capacete de papel</span><h3>Recorde numa partida</h3><p>'+(bestMatch?num(bestMatch)+' headshots · '+recordHolders.map(esc).join(' · '):'Aguardando partidas analisadas.')+'</p><p class="small muted">Soma das três categorias em uma única partida recuperada.</p></article><article class="card"><span class="eyebrow">Contagem transparente</span><h3>O que entra na disputa?</h3><p>Partidas normais oficiais de Steam, na modalidade selecionada. Sem treino, personalizado ou competitivo. Armas desconhecidas ficam fora das categorias: '+num(rows.reduce((n,p)=>n+p.hs_nao_classificados,0))+' abates de HS não classificados neste recorte.</p></article></div>'+
-   '<div class="section-head"><div><span class="eyebrow">Preparar a próxima partida</span><h2>Mochila e sobrevivência</h2><p class="muted">Eventos do jogo antes da morte, analisados depois da partida.</p></div></div><label>Escolha um Pamonha <select id="hs-player"><option value="">Selecione um jogador</option>'+rows.map(p=>'<option value="'+esc(p.nick)+'">'+esc(p.nick)+'</option>').join('')+'</select></label><div id="hs-advice" style="margin-top:18px"></div>';
+   '<div class="section-head"><div><span class="eyebrow">Preparar a próxima partida</span><h2>Mochila e sobrevivência</h2><p class="muted">Veja o que levar e o que mudar no próximo jogo.</p></div></div><label>Escolha um Pamonha <select id="hs-player"><option value="">Selecione um jogador</option>'+rows.map(p=>'<option value="'+esc(p.nick)+'">'+esc(p.nick)+'</option>').join('')+'</select></label><div id="hs-advice" style="margin-top:18px"></div>';
   const select=document.getElementById('hs-player');
   if(!rows.some(p=>p.nick===selected))selected=rows[0]?.nick||'';
   select.value=selected;
   const show=()=>{
    selected=select.value;const p=rows.find(p=>p.nick===selected);
-   document.getElementById('hs-advice').innerHTML=p?'<div class="grid3">'+advice(p)+'</div><p class="small muted">Coleta observada: '+num(p.coletados.municao)+' unidades de munição; isso não é saldo nem indica falta. '+num(p.eventos_inconsistentes)+' partidas com inconsistências de inventário. '+num(p.mortes_validas)+' de '+num(p.mortes)+' mortes permitem avaliar saldo estimado.</p>':'';
+   document.getElementById('hs-advice').innerHTML=p?'<div class="grid3">'+advice(p)+'</div><p class="small muted">Munição coletada: '+num(p.coletados.municao)+' unidades. Não sabemos quanto restou. '+num(p.eventos_inconsistentes)+' jogos com registros incompletos da mochila. '+num(p.mortes_validas)+' de '+num(p.mortes)+' mortes com dados para estimar os itens.</p>':'';
   };select.addEventListener('change',show);show();
  };
  document.querySelectorAll('[data-period]').forEach(b=>b.addEventListener('click',()=>{period=b.dataset.period;render();}));

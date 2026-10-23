@@ -1,5 +1,6 @@
 /* Troféus calculados sobre dados reais. Não infere causas de morte ou direção de veículos. */
 const PARTY_AWARDS = {
+ caneta:{nome:'Caneta azul, azul caneta',emoji:'🖊️',campo:'dano_azul',unidade:'pontos de dano',telemetria:true,frase:'A safe chamou. Ele ficou para terminar a música.',descricao:'Quem mais recebeu dano da zona azul. Vale a soma do dano nas partidas analisadas.'},
  kombi:{nome:'Kombi sem Freio',emoji:'🚐',campo:'rideDistance',unidade:'km',frase:'O hodômetro pediu férias.',descricao:'Maior distância em veículos. Inclui motorista e passageiros.'},
  amigo:{nome:'Amigo da Onça',emoji:'🤝',campo:'teamKills',unidade:'eventos',frase:'O inimigo agradeceu a ajuda.',descricao:'Mais eliminações de aliados registradas. Não indica intenção.'},
  inimigo:{nome:'Inimigo de Si Mesmo',emoji:'💥',campo:'suicides',unidade:'eventos',frase:'Resolveu o próprio problema antes do adversário.',descricao:'Mais mortes autoinfligidas. A estatística não identifica granada, queda ou outra causa.'},
@@ -38,8 +39,15 @@ function partyContext(period=partyState.period){
  }
  return {period,rows,de:baseline.at,ate:updated,start,partial:true,reason:rows.length?'':'Ainda não há partidas novas entre a referência e a última coleta.'};
 }
+function bluePartyContext(period){
+ const data=globalThis.PAMONHAS_TELEMETRIA;
+ const selected=data?.periodos?.[period];
+ const g=selected?.grupos?.[state.mode];
+ if(period==='temporada'&&data?.season_id!==state.data.season_id)return {period,rows:[],reason:'Aguardando os dados desta temporada.'};
+ return {period,rows:(g?.jogadores||[]).map(p=>({nick:p.nick,account_id:p.account_id,partidas:p.partidas,raw:{dano_azul:p.dano_azul}})),de:selected?.inicio,ate:selected?.ate,partial:true,byMatch:true,telemetry:true,reason:'Ainda não há dano azul registrado neste período.'};
+}
 function partyResults(key,period=partyState.period){
- const award=PARTY_AWARDS[key],context=partyContext(period),minimum=award.media?(period==='semana'?5:minimumForParty()):0;
+ const award=PARTY_AWARDS[key],context=award.telemetria?bluePartyContext(period):partyContext(period),minimum=award.media?(period==='semana'?5:minimumForParty()):0;
  if(award.soTemporada&&period==='semana'&&!context.byMatch)return {award,context,minimum,rows:[],winners:[],reason:'O recorde semanal será liberado quando houver partidas recuperadas.'};
  const rows=context.rows.map(p=>({...p,valor:partyField(p.raw,award.campo)})).filter(p=>Number.isFinite(p.valor)&&p.valor>0&&p.partidas>0&&p.partidas>=minimum).map(p=>({...p,valor:award.media?p.valor/p.partidas:p.valor})).sort((a,b)=>(award.menor?a.valor-b.valor:b.valor-a.valor)||a.nick.localeCompare(b.nick));
  const winners=rows.filter(p=>Math.abs(p.valor-rows[0].valor)<1e-9);
@@ -49,11 +57,11 @@ function partyResults(key,period=partyState.period){
  return {award,context,minimum,rows,winners,reason};
 }
 function minimumForParty(){return minimum();}
-function partyFormat(key,v){const a=PARTY_AWARDS[key];if(a.unidade.startsWith('km'))return fmt(v/1000,2)+' '+a.unidade;if(a.unidade==='min/jogo')return fmt(v/60,1)+' min/jogo';if(a.unidade==='eventos')return fmt(v)+' '+({amigo:'eliminações de aliados',inimigo:'mortes autoinfligidas',samu:'reanimações'}[key]||'registros');if(a.unidade==='m')return fmt(v,1)+' m';return fmt(v,2)+' '+a.unidade;}
+function partyFormat(key,v){const a=PARTY_AWARDS[key];if(a.unidade.startsWith('km'))return fmt(v/1000,2)+' '+a.unidade;if(a.unidade==='min/jogo')return fmt(v/60,1)+' min/jogo';if(a.unidade==='eventos')return fmt(v)+' '+({amigo:'eliminações de aliados',inimigo:'mortes autoinfligidas',samu:'reanimações'}[key]||'registros');if(key==='caneta')return fmt(v,1)+' de dano azul';if(a.unidade==='m')return fmt(v,1)+' m';return fmt(v,2)+' '+a.unidade;}
 function partyNames(winners){return winners.length>2?winners.slice(0,2).map(p=>p.nick).join(' + ')+` e mais ${winners.length-2}`:winners.map(p=>p.nick).join(' + ');}
 function partyCards(period=partyState.period){return Object.entries(PARTY_AWARDS).map(([key,a])=>{
  const result=partyResults(key,period),win=result.winners[0];
- return `<button class="podium-card party-card ${win?'champion':''}" data-party-award="${key}"><span class="place">${a.emoji} ${esc(a.nome)}</span><h3>${win?esc(partyNames(result.winners)):'Sem vencedor'}</h3>${win?`<strong class="yellow" style="font-size:24px">${esc(partyFormat(key,win.valor))}</strong><p class="small muted">${esc(a.frase)}</p>${result.winners.length>1?'<span class="badge">Troféu compartilhado</span>':''}`:`<p class="small muted">${esc(result.reason)}</p>`}<span class="open">Ver ranking e regra →</span></button>`;
+ return `<button class="podium-card party-card ${win?'champion':''}" data-party-award="${key}"><span class="place">${a.emoji} ${esc(a.nome)}</span><h3>${win?esc(partyNames(result.winners)):'Sem vencedor'}</h3>${win?`<strong class="yellow" style="font-size:24px">${esc(partyFormat(key,win.valor))}</strong><p class="small muted">${esc(a.frase)}</p>${a.telemetria?'<p class="small muted">Dados parciais das partidas analisadas.</p>':''}${result.winners.length>1?'<span class="badge">Troféu compartilhado</span>':''}`:`<p class="small muted">${esc(result.reason)}</p>`}<span class="open">Ver ranking e regra →</span></button>`;
 }).join('');}
 function partyPeriodLabel(){
  const c=partyContext();
@@ -78,9 +86,9 @@ function renderResenha(){
 }
 function renderPartyTable(){
  if(!$('party-ranking'))return;
- const key=partyState.award,{award,rows,winners,minimum,reason}=partyResults(key);
+ const key=partyState.award,{award,context,rows,winners,minimum,reason}=partyResults(key);
  let position=0,last=null;
- $('party-ranking').innerHTML=`<div class="section-head"><div><span class="eyebrow">${esc(award.emoji)} Ranking da brincadeira</span><h2>${esc(award.nome)}</h2><p class="muted small">${esc(award.soTemporada&&partyState.period==='semana'&&partyContext().byMatch?'Maior distância de um abate nas partidas recuperadas desta semana.':award.descricao)}${minimum?` Mínimo aplicado: ${minimum} partidas.`:''}</p></div>${winners.length?`<button class="primary" data-party-share="${key}">Baixar troféu PNG ↓</button>`:''}</div>${rows.length?`<div class="table-wrap"><table><caption class="small muted" style="padding:12px;text-align:left">${partyState.period==='semana'?(partyContext().byMatch?'Semana · partidas recuperadas':'Semana entre coletas'):'Temporada'} · ${MODE_LABELS[state.mode]} · Empates dividem posição e troféu.</caption><thead><tr><th scope="col">Posição</th><th scope="col">Pamonha</th><th scope="col">${esc(award.nome)}</th><th scope="col">Partidas no período</th></tr></thead><tbody>${rows.map((p,i)=>{if(last===null||Math.abs(p.valor-last)>1e-9)position=i+1;last=p.valor;return `<tr><td>${position}º</td><td><button data-player="${esc(p.nick)}">${esc(p.nick)}</button></td><td class="yellow"><strong>${esc(partyFormat(key,p.valor))}</strong></td><td>${fmt(p.partidas)}</td></tr>`;}).join('')}</tbody></table></div>`:`<div class="empty">${esc(reason)}</div>`}`;
+ $('party-ranking').innerHTML=`<div class="section-head"><div><span class="eyebrow">${esc(award.emoji)} Ranking da brincadeira</span><h2>${esc(award.nome)}</h2><p class="muted small">${esc(award.soTemporada&&partyState.period==='semana'&&partyContext().byMatch?'Maior distância de um abate nas partidas recuperadas desta semana.':award.descricao)}${award.telemetria?' Dados parciais: só entram partidas já analisadas.':''}${minimum?` Mínimo aplicado: ${minimum} partidas.`:''}</p></div>${winners.length?`<button class="primary" data-party-share="${key}">Baixar troféu PNG ↓</button>`:''}</div>${rows.length?`<div class="table-wrap"><table><caption class="small muted" style="padding:12px;text-align:left">${partyState.period==='semana'?(partyContext().byMatch?'Semana · partidas recuperadas':'Semana entre coletas'):'Temporada'} · ${MODE_LABELS[state.mode]} · Empates dividem posição e troféu.</caption><thead><tr><th scope="col">Posição</th><th scope="col">Pamonha</th><th scope="col">${esc(award.nome)}</th><th scope="col">Partidas no período</th></tr></thead><tbody>${rows.map((p,i)=>{if(last===null||Math.abs(p.valor-last)>1e-9)position=i+1;last=p.valor;return `<tr><td>${position}º</td><td><button data-player="${esc(p.nick)}">${esc(p.nick)}</button></td><td class="yellow"><strong>${esc(partyFormat(key,p.valor))}</strong></td><td>${fmt(p.partidas)}</td></tr>`;}).join('')}</tbody></table></div>`:`<div class="empty">${esc(reason)}</div>`}`;
 }
 function renderPartyArchive(){
  if(!$('party-archive'))return;

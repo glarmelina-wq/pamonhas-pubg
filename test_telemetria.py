@@ -113,6 +113,33 @@ class TelemetryTests(unittest.TestCase):
         self.assertEqual(month['partidas_anteriores_semana'],1)
         self.assertEqual(month['jogadores'][0]['hs']['sniper'],4)
         self.assertEqual(week['jogadores'][0]['hs']['sniper'],1)
+    def test_season_scope_and_reset(self):
+        now=datetime(2026,10,23,16,tzinfo=timezone.utc)
+        def match(mid,damage,season=None):
+            raw=t.empty_player();raw['dano_azul']=damage
+            return {'id':mid,'at':'2026-10-22T12:00:00Z','mode':'squad-fpp','status':'normal',
+                'season_id':season,'players':{A:{}},'telemetria':{'version':t.VERSION,'players':{A:raw}}}
+        cache={'partidas':{'current':match('current',25),'old':match('old',200,'s42'),'unknown':match('unknown',500)}}
+        t.tag_season_matches(cache,'s43',['current'])
+        report=t.build_report(cache,{'Alpha':A},now,season_id='s43')
+        row=report['periodos']['temporada']['grupos']['todos']['jogadores'][0]
+        self.assertEqual(row['dano_azul'],25)
+        self.assertEqual(row['partidas'],1)
+        self.assertEqual(cache['temporadas']['s43'],['current'])
+        self.assertEqual(report['periodos']['semana']['grupos']['todos']['jogadores'][0]['dano_azul'],725)
+        fresh=t.build_report(cache,{'Alpha':A},now,season_id='s44')
+        self.assertEqual(fresh['periodos']['temporada']['grupos']['todos']['jogadores'],[])
+    def test_blue_week_archive_ties(self):
+        now=datetime(2026,10,23,16,tzinfo=timezone.utc)
+        raw=t.empty_player();raw['dano_azul']=20
+        record={'id':'m','at':'2026-10-15T12:00:00Z','mode':'squad-fpp','status':'normal','players':{A:{},B:{}},
+                'telemetria':{'version':t.VERSION,'players':{A:raw,B:raw}}}
+        archive={'semanas':[{'inicio_semana':'2026-10-12T00:00:00-03:00','grupos':{}}]}
+        t.archive_blue_awards({'partidas':{'m':record}},archive,{'Alpha':A,'Beta':B},now)
+        winners=archive['semanas'][0]['grupos']['todos']['caneta']
+        self.assertEqual([p['nick'] for p in winners],['Alpha','Beta'])
+        self.assertEqual(winners[0]['valor'],20)
+        self.assertNotIn('tpp',archive['semanas'][0]['grupos'])
     def test_registration_json(self):
         cache=json.loads(Path('jogadores_cache.json').read_text(encoding='utf-8'))
         self.assertTrue(all(isinstance(v,str) and v.startswith('account.') for v in cache.values()))
