@@ -55,8 +55,10 @@ class TelemetryTests(unittest.TestCase):
             t.parse_events([kill()],{A})
     def test_damage_and_redeploy(self):
         dmg=event('LogPlayerTakeDamage',3,victim=char(B,2),damage=37.5,damageTypeCategory='Damage_BlueZone')
-        p=t.parse_events(frame([dmg,kill(),event('LogPlayerRedeploy',25,character=char(B,2)),kill(sec=30)]),{B})[B]
+        fall=event('LogPlayerTakeDamage',4,victim=char(B,2),damage=12,damageTypeCategory='Damage_Instant_Fall')
+        p=t.parse_events(frame([dmg,fall,kill(),event('LogPlayerRedeploy',25,character=char(B,2)),kill(sec=30)]),{B})[B]
         self.assertEqual(p['dano_azul'],37.5)
+        self.assertEqual(p['dano_queda'],12)
         self.assertEqual(len(p['mortes']),2)
     def test_period_boundaries_ties_and_coverage(self):
         now=datetime(2026,10,23,16,tzinfo=timezone.utc)
@@ -85,6 +87,12 @@ class TelemetryTests(unittest.TestCase):
         def fail(*a): raise AssertionError('cache should avoid fetch')
         report=t.collect_telemetry(cache,{'Alpha':A},now,fetch=fail)
         self.assertEqual(report['periodos']['semana']['grupos']['todos']['partidas_analisadas'],1)
+    def test_throwable_use_not_counted_twice(self):
+        pickup=event('LogItemPickup',1,character=char(A),item={'itemId':'Item_Weapon_Grenade_C','stackCount':2})
+        use=event('LogItemUse',2,character=char(A),item={'itemId':'Item_Weapon_Grenade_C','stackCount':2})
+        throw=event('LogPlayerUseThrowable',3,attacker=char(A),weapon={'itemId':'Item_Weapon_Grenade_C'},attackId=1)
+        p=t.parse_events(frame([pickup,use,throw,throw]),{A})[A]
+        self.assertEqual(p['usados']['granada'],1)
     def test_registration_json(self):
         cache=json.loads(Path('jogadores_cache.json').read_text(encoding='utf-8'))
         self.assertTrue(all(isinstance(v,str) and v.startswith('account.') for v in cache.values()))

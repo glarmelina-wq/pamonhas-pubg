@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 from recuperar_partidas import download_match, moment, week_start, GROUPS
 
-VERSION = 2
+VERSION = 3
 SNIPERS = {'AWM', 'M24', 'Kar98k', 'Win94', 'Winchester', 'MosinNagant', 'L6', 'LynxAMR'}
 DMRS = {'SKS', 'Mini14', 'Mk14', 'FNFal', 'QBU88', 'VSS', 'Mk12', 'Dragunov'}
 CATEGORIES = ('sniper', 'dmr', 'outras')
@@ -97,7 +97,7 @@ def parse_events(events, allowed):
                 damage = max(0, damage) if isinstance(damage, (int,float)) else 0
                 if e.get('damageTypeCategory') == 'Damage_BlueZone':
                     rows[vid]['dano_azul'] += damage
-                elif e.get('damageTypeCategory') == 'Damage_Fall':
+                elif e.get('damageTypeCategory') in ('Damage_Instant_Fall', 'Damage_Fall'):
                     rows[vid]['dano_queda'] += damage
         if aid in rows and kind in ('LogItemPickup','LogItemPickupFromLootbox',
                 'LogItemPickupFromCarepackage','LogItemPickupFromCustomPackage',
@@ -120,7 +120,7 @@ def parse_events(events, allowed):
                     if bag.get(item_id, 0) < count:
                         warnings.add(aid)
                     bag[item_id] = max(0, bag.get(item_id, 0) - count)
-                    if kind == 'LogItemUse' and category:
+                    if kind == 'LogItemUse' and category in ('boost', 'cura'):
                         rows[aid]['usados'][category] += count
         if kind == 'LogPlayerPosition' and aid in rows:
             health = (e.get('character') or {}).get('health')
@@ -140,7 +140,7 @@ def parse_events(events, allowed):
             if kid in rows and vid and kid != vid:
                 seen_players.add(kid)
                 team_kill = (killer.get('teamId') is not None and killer.get('teamId') == victim.get('teamId'))
-                if not team_kill and kid not in e.get('teamKillers_AccountId', []) and not e.get('isSuicide') and info.get('damageReason') == 'HeadShot':
+                if not team_kill and kid not in (e.get('teamKillers_AccountId') or []) and not e.get('isSuicide') and info.get('damageReason') == 'HeadShot':
                     cat = weapon_category(info.get('damageCauserName'))
                     if cat:
                         rows[kid]['hs'][cat] += 1
