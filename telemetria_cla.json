@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-23T20:15:40+00:00",
+  "updated_at": "2026-10-23T20:21:56+00:00",
   "periodos": {
     "semana": {
       "inicio": "2026-10-19T00:00:00-03:00",
-      "ate": "2026-10-23T20:15:40+00:00",
+      "ate": "2026-10-23T20:21:56+00:00",
       "grupos": {
         "todos": {
           "partidas_conhecidas": 311,
@@ -23,7 +23,7 @@
               "recorde_partida": "607c661e-e8b8-4a5b-829b-102199a66c89",
               "hs_nao_classificados": 0,
               "dano_azul": 663.8287036120892,
-              "dano_queda": 0,
+              "dano_queda": 4.157910346984863,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 53,
@@ -62,7 +62,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 1,
               "dano_azul": 210.8874289393425,
-              "dano_queda": 0,
+              "dano_queda": 18.653103590011597,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 99,
@@ -140,7 +140,7 @@
               "recorde_partida": "d7a7ab0f-b4c7-48b6-a2b2-5e12b14906d1",
               "hs_nao_classificados": 0,
               "dano_azul": 415.43426951766014,
-              "dano_queda": 0,
+              "dano_queda": 101.88947820663452,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 111,
@@ -179,7 +179,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 0,
               "dano_azul": 748.4034644365311,
-              "dano_queda": 0,
+              "dano_queda": 116.34460592269897,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 148,
@@ -218,7 +218,7 @@
               "recorde_partida": "d7a7ab0f-b4c7-48b6-a2b2-5e12b14906d1",
               "hs_nao_classificados": 0,
               "dano_azul": 972.2474919259548,
-              "dano_queda": 0,
+              "dano_queda": 7.250698089599609,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 124,
@@ -335,7 +335,7 @@
               "recorde_partida": "d55b1ba9-c11e-490d-b47b-b3b71c1a5617",
               "hs_nao_classificados": 0,
               "dano_azul": 536.5055992901325,
-              "dano_queda": 0,
+              "dano_queda": 8.429938197135925,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 53,
@@ -374,7 +374,7 @@
               "recorde_partida": "0e8fad17-2eff-4b39-818a-4d24ae797692",
               "hs_nao_classificados": 1,
               "dano_azul": 222.7115812599659,
-              "dano_queda": 0,
+              "dano_queda": 41.990838408470154,
               "mortes_azul": 2,
               "coletados": {
                 "boost": 53,
@@ -491,7 +491,7 @@
               "recorde_partida": "d55df2dc-743b-44e2-b65c-0c7a4f4e626c",
               "hs_nao_classificados": 0,
               "dano_azul": 214.12578183412552,
-              "dano_queda": 0,
+              "dano_queda": 29.200037002563477,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 69,
@@ -530,7 +530,7 @@
               "recorde_partida": "0ad00a87-0e01-4e9a-9a17-3360a4b63d6e",
               "hs_nao_classificados": 0,
               "dano_azul": 160.45190793275833,
-              "dano_queda": 0,
+              "dano_queda": 3.249865770339966,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 136,
@@ -569,7 +569,7 @@
               "recorde_partida": "0cf78a8f-792a-4c13-8b70-7ef221193ac8",
               "hs_nao_classificados": 0,
               "dano_azul": 187.30010670423508,
-              "dano_queda": 0,
+              "dano_queda": 2.5182857662439346,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 66,
@@ -664,7 +664,7 @@
               "recorde_partida": "607c661e-e8b8-4a5b-829b-102199a66c89",
               "hs_nao_classificados": 0,
               "dano_azul": 663.8287036120892,
-              "dano_queda": 0,
+              "dano_queda": 4.157910346984863,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 53,
@@ -703,7 +703,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 1,
               "dano_azul": 210.8874289393425,
-              "dano_queda": 0,
+              "dano_queda": 18.653103590011597,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 99,
@@ -742,7 +742,7 @@
               "recorde_partida": "d7a7ab0f-b4c7-48b6-a2b2-5e12b14906d1",
               "hs_nao_classificados": 0,
               "dano_azul": 415.43426951766014,
-              "dano_queda": 0,
+              "dano_queda": 101.88947820663452,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 111,
@@ -781,7 +781,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 0,
               "dano_azul": 748.4034644365311,
-              "dano_queda": 0,
+              "dano_queda": 116.34460592269897,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 148,
@@ -820,7 +820,7 @@
               "recorde_partida": "d7a7ab0f-b4c7-48b6-a2b2-5e12b14906d1",
               "hs_nao_classificados": 0,
               "dano_azul": 972.2474919259548,
-              "dano_queda": 0,
+              "dano_queda": 7.250698089599609,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 124,
@@ -937,7 +937,7 @@
               "recorde_partida": "d55b1ba9-c11e-490d-b47b-b3b71c1a5617",
               "hs_nao_classificados": 0,
               "dano_azul": 536.5055992901325,
-              "dano_queda": 0,
+              "dano_queda": 8.429938197135925,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 53,
@@ -976,7 +976,7 @@
               "recorde_partida": "0e8fad17-2eff-4b39-818a-4d24ae797692",
               "hs_nao_classificados": 1,
               "dano_azul": 222.7115812599659,
-              "dano_queda": 0,
+              "dano_queda": 41.990838408470154,
               "mortes_azul": 2,
               "coletados": {
                 "boost": 53,
@@ -1093,7 +1093,7 @@
               "recorde_partida": "d55df2dc-743b-44e2-b65c-0c7a4f4e626c",
               "hs_nao_classificados": 0,
               "dano_azul": 214.12578183412552,
-              "dano_queda": 0,
+              "dano_queda": 29.200037002563477,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 69,
@@ -1132,7 +1132,7 @@
               "recorde_partida": "0ad00a87-0e01-4e9a-9a17-3360a4b63d6e",
               "hs_nao_classificados": 0,
               "dano_azul": 160.45190793275833,
-              "dano_queda": 0,
+              "dano_queda": 3.249865770339966,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 136,
@@ -1171,7 +1171,7 @@
               "recorde_partida": "0cf78a8f-792a-4c13-8b70-7ef221193ac8",
               "hs_nao_classificados": 0,
               "dano_azul": 187.30010670423508,
-              "dano_queda": 0,
+              "dano_queda": 2.5182857662439346,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 66,
@@ -1357,7 +1357,7 @@
               "recorde_partida": "607c661e-e8b8-4a5b-829b-102199a66c89",
               "hs_nao_classificados": 0,
               "dano_azul": 472.4132810533047,
-              "dano_queda": 0,
+              "dano_queda": 4.157910346984863,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 31,
@@ -1396,7 +1396,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 1,
               "dano_azul": 210.8874289393425,
-              "dano_queda": 0,
+              "dano_queda": 18.653103590011597,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 99,
@@ -1435,7 +1435,7 @@
               "recorde_partida": "d7a7ab0f-b4c7-48b6-a2b2-5e12b14906d1",
               "hs_nao_classificados": 0,
               "dano_azul": 415.43426951766014,
-              "dano_queda": 0,
+              "dano_queda": 101.88947820663452,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 111,
@@ -1474,7 +1474,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 0,
               "dano_azul": 748.4034644365311,
-              "dano_queda": 0,
+              "dano_queda": 116.34460592269897,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 148,
@@ -1591,7 +1591,7 @@
               "recorde_partida": "d55b1ba9-c11e-490d-b47b-b3b71c1a5617",
               "hs_nao_classificados": 0,
               "dano_azul": 356.54635789990425,
-              "dano_queda": 0,
+              "dano_queda": 8.429938197135925,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 42,
@@ -1630,7 +1630,7 @@
               "recorde_partida": null,
               "hs_nao_classificados": 1,
               "dano_azul": 115.90767389535904,
-              "dano_queda": 0,
+              "dano_queda": 41.990838408470154,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 19,
@@ -1747,7 +1747,7 @@
               "recorde_partida": "d55df2dc-743b-44e2-b65c-0c7a4f4e626c",
               "hs_nao_classificados": 0,
               "dano_azul": 214.12578183412552,
-              "dano_queda": 0,
+              "dano_queda": 29.200037002563477,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 69,
@@ -1786,7 +1786,7 @@
               "recorde_partida": "0ad00a87-0e01-4e9a-9a17-3360a4b63d6e",
               "hs_nao_classificados": 0,
               "dano_azul": 160.45190793275833,
-              "dano_queda": 0,
+              "dano_queda": 3.249865770339966,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 118,
@@ -1825,7 +1825,7 @@
               "recorde_partida": "0cf78a8f-792a-4c13-8b70-7ef221193ac8",
               "hs_nao_classificados": 0,
               "dano_azul": 185.97050219774246,
-              "dano_queda": 0,
+              "dano_queda": 2.4172847867012024,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 44,
@@ -1959,7 +1959,7 @@
               "recorde_partida": "bb05a263-a24d-41fd-b520-24ea660c98ac",
               "hs_nao_classificados": 0,
               "dano_azul": 74.86324727535248,
-              "dano_queda": 0,
+              "dano_queda": 7.250698089599609,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 11,
@@ -2154,7 +2154,7 @@
               "recorde_partida": "095bfe90-53bf-4232-a807-53387d345e1e",
               "hs_nao_classificados": 0,
               "dano_azul": 1.3296045064926147,
-              "dano_queda": 0,
+              "dano_queda": 0.10100097954273224,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 22,
@@ -2358,7 +2358,7 @@
     },
     "mes": {
       "inicio": "2026-10-01T00:00:00-03:00",
-      "ate": "2026-10-23T20:15:40+00:00",
+      "ate": "2026-10-23T20:21:56+00:00",
       "grupos": {
         "todos": {
           "partidas_conhecidas": 1237,
@@ -2377,7 +2377,7 @@
               "recorde_partida": "607c661e-e8b8-4a5b-829b-102199a66c89",
               "hs_nao_classificados": 0,
               "dano_azul": 663.8287036120892,
-              "dano_queda": 0,
+              "dano_queda": 4.157910346984863,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 53,
@@ -2416,7 +2416,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 1,
               "dano_azul": 210.8874289393425,
-              "dano_queda": 0,
+              "dano_queda": 18.653103590011597,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 99,
@@ -2494,7 +2494,7 @@
               "recorde_partida": "d7a7ab0f-b4c7-48b6-a2b2-5e12b14906d1",
               "hs_nao_classificados": 0,
               "dano_azul": 415.43426951766014,
-              "dano_queda": 0,
+              "dano_queda": 101.88947820663452,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 111,
@@ -2533,7 +2533,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 0,
               "dano_azul": 748.4034644365311,
-              "dano_queda": 0,
+              "dano_queda": 116.34460592269897,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 148,
@@ -2572,7 +2572,7 @@
               "recorde_partida": "d7a7ab0f-b4c7-48b6-a2b2-5e12b14906d1",
               "hs_nao_classificados": 0,
               "dano_azul": 972.2474919259548,
-              "dano_queda": 0,
+              "dano_queda": 7.250698089599609,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 124,
@@ -2689,7 +2689,7 @@
               "recorde_partida": "d55b1ba9-c11e-490d-b47b-b3b71c1a5617",
               "hs_nao_classificados": 0,
               "dano_azul": 536.5055992901325,
-              "dano_queda": 0,
+              "dano_queda": 8.429938197135925,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 53,
@@ -2728,7 +2728,7 @@
               "recorde_partida": "0e8fad17-2eff-4b39-818a-4d24ae797692",
               "hs_nao_classificados": 1,
               "dano_azul": 222.7115812599659,
-              "dano_queda": 0,
+              "dano_queda": 41.990838408470154,
               "mortes_azul": 2,
               "coletados": {
                 "boost": 53,
@@ -2845,7 +2845,7 @@
               "recorde_partida": "d55df2dc-743b-44e2-b65c-0c7a4f4e626c",
               "hs_nao_classificados": 0,
               "dano_azul": 214.12578183412552,
-              "dano_queda": 0,
+              "dano_queda": 29.200037002563477,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 69,
@@ -2884,7 +2884,7 @@
               "recorde_partida": "0ad00a87-0e01-4e9a-9a17-3360a4b63d6e",
               "hs_nao_classificados": 0,
               "dano_azul": 160.45190793275833,
-              "dano_queda": 0,
+              "dano_queda": 3.249865770339966,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 136,
@@ -2923,7 +2923,7 @@
               "recorde_partida": "0cf78a8f-792a-4c13-8b70-7ef221193ac8",
               "hs_nao_classificados": 0,
               "dano_azul": 187.30010670423508,
-              "dano_queda": 0,
+              "dano_queda": 2.5182857662439346,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 66,
@@ -3018,7 +3018,7 @@
               "recorde_partida": "607c661e-e8b8-4a5b-829b-102199a66c89",
               "hs_nao_classificados": 0,
               "dano_azul": 663.8287036120892,
-              "dano_queda": 0,
+              "dano_queda": 4.157910346984863,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 53,
@@ -3057,7 +3057,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 1,
               "dano_azul": 210.8874289393425,
-              "dano_queda": 0,
+              "dano_queda": 18.653103590011597,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 99,
@@ -3096,7 +3096,7 @@
               "recorde_partida": "d7a7ab0f-b4c7-48b6-a2b2-5e12b14906d1",
               "hs_nao_classificados": 0,
               "dano_azul": 415.43426951766014,
-              "dano_queda": 0,
+              "dano_queda": 101.88947820663452,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 111,
@@ -3135,7 +3135,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 0,
               "dano_azul": 748.4034644365311,
-              "dano_queda": 0,
+              "dano_queda": 116.34460592269897,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 148,
@@ -3174,7 +3174,7 @@
               "recorde_partida": "d7a7ab0f-b4c7-48b6-a2b2-5e12b14906d1",
               "hs_nao_classificados": 0,
               "dano_azul": 972.2474919259548,
-              "dano_queda": 0,
+              "dano_queda": 7.250698089599609,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 124,
@@ -3291,7 +3291,7 @@
               "recorde_partida": "d55b1ba9-c11e-490d-b47b-b3b71c1a5617",
               "hs_nao_classificados": 0,
               "dano_azul": 536.5055992901325,
-              "dano_queda": 0,
+              "dano_queda": 8.429938197135925,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 53,
@@ -3330,7 +3330,7 @@
               "recorde_partida": "0e8fad17-2eff-4b39-818a-4d24ae797692",
               "hs_nao_classificados": 1,
               "dano_azul": 222.7115812599659,
-              "dano_queda": 0,
+              "dano_queda": 41.990838408470154,
               "mortes_azul": 2,
               "coletados": {
                 "boost": 53,
@@ -3447,7 +3447,7 @@
               "recorde_partida": "d55df2dc-743b-44e2-b65c-0c7a4f4e626c",
               "hs_nao_classificados": 0,
               "dano_azul": 214.12578183412552,
-              "dano_queda": 0,
+              "dano_queda": 29.200037002563477,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 69,
@@ -3486,7 +3486,7 @@
               "recorde_partida": "0ad00a87-0e01-4e9a-9a17-3360a4b63d6e",
               "hs_nao_classificados": 0,
               "dano_azul": 160.45190793275833,
-              "dano_queda": 0,
+              "dano_queda": 3.249865770339966,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 136,
@@ -3525,7 +3525,7 @@
               "recorde_partida": "0cf78a8f-792a-4c13-8b70-7ef221193ac8",
               "hs_nao_classificados": 0,
               "dano_azul": 187.30010670423508,
-              "dano_queda": 0,
+              "dano_queda": 2.5182857662439346,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 66,
@@ -3711,7 +3711,7 @@
               "recorde_partida": "607c661e-e8b8-4a5b-829b-102199a66c89",
               "hs_nao_classificados": 0,
               "dano_azul": 472.4132810533047,
-              "dano_queda": 0,
+              "dano_queda": 4.157910346984863,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 31,
@@ -3750,7 +3750,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 1,
               "dano_azul": 210.8874289393425,
-              "dano_queda": 0,
+              "dano_queda": 18.653103590011597,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 99,
@@ -3789,7 +3789,7 @@
               "recorde_partida": "d7a7ab0f-b4c7-48b6-a2b2-5e12b14906d1",
               "hs_nao_classificados": 0,
               "dano_azul": 415.43426951766014,
-              "dano_queda": 0,
+              "dano_queda": 101.88947820663452,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 111,
@@ -3828,7 +3828,7 @@
               "recorde_partida": "5a2cee1e-e8fc-4b87-a6fa-40d627f805eb",
               "hs_nao_classificados": 0,
               "dano_azul": 748.4034644365311,
-              "dano_queda": 0,
+              "dano_queda": 116.34460592269897,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 148,
@@ -3945,7 +3945,7 @@
               "recorde_partida": "d55b1ba9-c11e-490d-b47b-b3b71c1a5617",
               "hs_nao_classificados": 0,
               "dano_azul": 356.54635789990425,
-              "dano_queda": 0,
+              "dano_queda": 8.429938197135925,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 42,
@@ -3984,7 +3984,7 @@
               "recorde_partida": null,
               "hs_nao_classificados": 1,
               "dano_azul": 115.90767389535904,
-              "dano_queda": 0,
+              "dano_queda": 41.990838408470154,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 19,
@@ -4101,7 +4101,7 @@
               "recorde_partida": "d55df2dc-743b-44e2-b65c-0c7a4f4e626c",
               "hs_nao_classificados": 0,
               "dano_azul": 214.12578183412552,
-              "dano_queda": 0,
+              "dano_queda": 29.200037002563477,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 69,
@@ -4140,7 +4140,7 @@
               "recorde_partida": "0ad00a87-0e01-4e9a-9a17-3360a4b63d6e",
               "hs_nao_classificados": 0,
               "dano_azul": 160.45190793275833,
-              "dano_queda": 0,
+              "dano_queda": 3.249865770339966,
               "mortes_azul": 1,
               "coletados": {
                 "boost": 118,
@@ -4179,7 +4179,7 @@
               "recorde_partida": "0cf78a8f-792a-4c13-8b70-7ef221193ac8",
               "hs_nao_classificados": 0,
               "dano_azul": 185.97050219774246,
-              "dano_queda": 0,
+              "dano_queda": 2.4172847867012024,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 44,
@@ -4313,7 +4313,7 @@
               "recorde_partida": "bb05a263-a24d-41fd-b520-24ea660c98ac",
               "hs_nao_classificados": 0,
               "dano_azul": 74.86324727535248,
-              "dano_queda": 0,
+              "dano_queda": 7.250698089599609,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 11,
@@ -4508,7 +4508,7 @@
               "recorde_partida": "095bfe90-53bf-4232-a807-53387d345e1e",
               "hs_nao_classificados": 0,
               "dano_azul": 1.3296045064926147,
-              "dano_queda": 0,
+              "dano_queda": 0.10100097954273224,
               "mortes_azul": 0,
               "coletados": {
                 "boost": 22,
