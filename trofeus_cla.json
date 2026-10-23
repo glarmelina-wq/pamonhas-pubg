@@ -8,7 +8,7 @@
       "inicio_semana": "2026-10-12T00:00:00-03:00",
       "de": "2026-10-12T00:00:00-03:00",
       "ate": "2026-10-18T23:59:59-03:00",
-      "atualizado_em": "2026-10-23T21:37:07+00:00",
+      "atualizado_em": "2026-10-23T21:50:23+00:00",
       "parcial": true,
       "partidas_recuperadas": 628,
       "grupos": {
@@ -541,6 +541,13 @@
               "valor": 574.6469,
               "partidas": 8
             }
+          ],
+          "caneta": [
+            {
+              "nick": "Alien--__--",
+              "valor": 586.0122411847115,
+              "partidas": 7
+            }
           ]
         },
         "fpp": {
@@ -611,9 +618,24 @@
               "valor": 574.6469,
               "partidas": 8
             }
+          ],
+          "caneta": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 294.5474800169468,
+              "partidas": 14
+            }
           ]
         },
-        "tpp": {},
+        "tpp": {
+          "caneta": [
+            {
+              "nick": "Alien--__--",
+              "valor": 405.45961475372314,
+              "partidas": 5
+            }
+          ]
+        },
         "squad-fpp": {
           "kombi": [
             {
@@ -682,6 +704,13 @@
               "valor": 574.6469,
               "partidas": 8
             }
+          ],
+          "caneta": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 294.5474800169468,
+              "partidas": 14
+            }
           ]
         },
         "duo-fpp": {
@@ -705,9 +734,24 @@
               "valor": 114.36705,
               "partidas": 1
             }
+          ],
+          "caneta": [
+            {
+              "nick": "Alien--__--",
+              "valor": 50.973825573921204,
+              "partidas": 1
+            }
           ]
         },
-        "squad": {},
+        "squad": {
+          "caneta": [
+            {
+              "nick": "Alien--__--",
+              "valor": 405.45961475372314,
+              "partidas": 5
+            }
+          ]
+        },
         "duo": {},
         "solo-fpp": {},
         "solo": {}
