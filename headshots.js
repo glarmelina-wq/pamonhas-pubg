@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
   document.getElementById('hs-period-title').textContent=periodName;
   const note=document.getElementById('hs-coverage');
   if(period==='temporada'){
-   note.textContent='Temporada oficial atual. '+num(g.partidas_analisadas)+' partidas analisadas de '+num(g.partidas_conhecidas)+' conhecidas pela coleta. A cobertura é parcial; a data inicial mostra o primeiro registro recuperado, não o início da temporada.';
+   note.textContent='Atualização automática a cada hora. '+num(g.partidas_analisadas)+' de '+num(g.partidas_conhecidas)+' partidas conhecidas têm telemetria completa. A coleta segue tentando recuperar o restante, mas a API pode não fornecer todos os registros.';
   }else if(period==='mes'){
    const prior=g.partidas_anteriores_semana||0;
    note.textContent=prior
