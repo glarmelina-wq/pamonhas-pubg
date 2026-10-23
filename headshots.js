@@ -35,10 +35,12 @@ document.addEventListener('DOMContentLoaded',async()=>{
   document.querySelectorAll('[data-category]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.category===category)));
   const g=group(data,period,mode),periodData=data?.periodos?.[period];
   if(!g){content.innerHTML='<p class="notice">Ainda não há dados de telemetria para este período e modalidade.</p>';return;}
-  const periodName=period==='mes'?'Ranking do mês':'Ranking da semana';
+  const periodName={semana:'Ranking da semana',mes:'Ranking do mês',temporada:'Ranking da temporada'}[period];
   document.getElementById('hs-period-title').textContent=periodName;
   const note=document.getElementById('hs-coverage');
-  if(period==='mes'){
+  if(period==='temporada'){
+   note.textContent='Temporada oficial atual. '+num(g.partidas_analisadas)+' partidas analisadas de '+num(g.partidas_conhecidas)+' conhecidas pela coleta. A cobertura é parcial; a data inicial mostra o primeiro registro recuperado, não o início da temporada.';
+  }else if(period==='mes'){
    const prior=g.partidas_anteriores_semana||0;
    note.textContent=prior
     ? 'O mês inclui '+num(prior)+' partidas analisadas de semanas anteriores, além das partidas desta semana. A cobertura ainda é parcial.'
