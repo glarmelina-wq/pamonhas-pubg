@@ -93,3 +93,14 @@ simplificados: frases curtas, item ou ação explícitos, aviso breve sobre esti
 Doze testes passaram, incluindo temporada, isolamento entre temporadas e empates no arquivo.
 Teste de interface: dez troféus, contagem por soma e alternância entre semana e temporada.
 Publicação confirmada: https://github.com/glarmelina-wq/pamonhas-pubg/actions/runs/40029236801
+
+## Filtro de temporada no ranking de headshots — 23/10/2026
+A página Caça ao capacete agora oferece semana, mês e temporada. O período sazonal usa
+periodos.temporada do relatório, que filtra somente partidas com ID de temporada oficial
+confirmado; não reutiliza jogos de temporadas anteriores. Modalidades, medalhas e empates
+funcionam com o mesmo recorte. O aviso informa que a cobertura é parcial e que a data inicial
+é o primeiro registro recuperado, não o começo oficial da temporada.
+A página também atualiza o título, a cobertura e o status ao trocar o período; botão Nesta
+temporada e cachebust headshots.js?v=20261023-temporada incluídos.
+Doze testes de telemetria passaram e headshots.js passou em node --check.
+Publicação confirmada: https://github.com/glarmelina-wq/pamonhas-pubg/actions/runs/40030664880
