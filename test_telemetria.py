@@ -33,6 +33,19 @@ class TelemetryTests(unittest.TestCase):
         p=t.parse_events(events,{A,B})[A]
         self.assertEqual(p['hs'],{'sniper':1,'dmr':1,'outras':1})
         self.assertEqual(p['hs_nao_classificados'],1)
+    def test_bot_and_player_kill_counts(self):
+        bot=kill(sec=10,reason='TorsoShot')
+        bot['victim']=char('ai.bot-123',2)
+        player=kill(sec=11,reason='TorsoShot')
+        team=kill(sec=12,reason='TorsoShot',team=1)
+        suicide=event('LogPlayerKillV2',13,killer=char(A),victim=char(A),
+            killerDamageInfo={},finishDamageInfo={},attackId=13,isSuicide=True)
+        unknown=kill(sec=14,reason='TorsoShot')
+        unknown['victim']=char('unknown.1',2)
+        parsed=t.parse_events(frame([bot,player,team,suicide,unknown,player]),{A})[A]
+        self.assertEqual(parsed['kills_bot'],1)
+        self.assertEqual(parsed['kills_player'],1)
+
     def test_no_teamkill_bodyshot_or_duplicate(self):
         k=kill()
         p=t.parse_events(frame([k,k,kill(sec=21,team=1),kill(sec=22,reason='TorsoShot')]),{A})[A]
@@ -64,6 +77,7 @@ class TelemetryTests(unittest.TestCase):
         now=datetime(2026,10,23,16,tzinfo=timezone.utc)
         def m(mid,at,hs=1,covered=True):
             raw=t.empty_player();raw['hs']['sniper']=hs
+            raw['kills_bot']=1;raw['kills_player']=2
             return {'id':mid,'at':at,'mode':'squad-fpp','status':'normal','players':{A:{},B:{}},
               **({'telemetria':{'version':t.VERSION,'players':{A:raw,B:raw}}} if covered else {})}
         cache={'partidas':{x['id']:x for x in [
@@ -78,6 +92,8 @@ class TelemetryTests(unittest.TestCase):
         self.assertEqual(g['medalhas']['sniper'],['Alpha','Beta'])
         self.assertEqual(g['jogadores'][0]['hs']['sniper'],1)
         self.assertEqual(r['periodos']['mes']['grupos']['todos']['jogadores'][0]['hs']['sniper'],10)
+        self.assertEqual(r['periodos']['mes']['grupos']['todos']['jogadores'][0]['kills_bot'],2)
+        self.assertEqual(r['periodos']['mes']['grupos']['todos']['jogadores'][0]['kills_player'],4)
         self.assertEqual(r['periodos']['semana']['grupos']['solo']['jogadores'],[])
     def test_retry_and_cache_idempotency(self):
         now=datetime(2026,10,23,16,tzinfo=timezone.utc)
@@ -117,6 +133,8 @@ class TelemetryTests(unittest.TestCase):
         now=datetime(2026,10,23,16,tzinfo=timezone.utc)
         def match(mid,damage,season=None):
             raw=t.empty_player();raw['dano_azul']=damage
+            raw['kills_bot']=7 if mid=='current' else 0
+            raw['kills_player']=3 if mid=='current' else 0
             return {'id':mid,'at':'2026-10-22T12:00:00Z','mode':'squad-fpp','status':'normal',
                 'season_id':season,'players':{A:{}},'telemetria':{'version':t.VERSION,'players':{A:raw}}}
         cache={'partidas':{'current':match('current',25),'old':match('old',200,'s42'),'unknown':match('unknown',500)}}
@@ -124,6 +142,8 @@ class TelemetryTests(unittest.TestCase):
         report=t.build_report(cache,{'Alpha':A},now,season_id='s43')
         row=report['periodos']['temporada']['grupos']['todos']['jogadores'][0]
         self.assertEqual(row['dano_azul'],25)
+        self.assertEqual(row['kills_bot'],7)
+        self.assertEqual(row['kills_player'],3)
         self.assertEqual(row['partidas'],1)
         self.assertEqual(cache['temporadas']['s43'],['current'])
         self.assertEqual(report['periodos']['semana']['grupos']['todos']['jogadores'][0]['dano_azul'],725)
@@ -131,7 +151,7 @@ class TelemetryTests(unittest.TestCase):
         self.assertEqual(fresh['periodos']['temporada']['grupos']['todos']['jogadores'],[])
     def test_blue_week_archive_ties(self):
         now=datetime(2026,10,23,16,tzinfo=timezone.utc)
-        raw=t.empty_player();raw['dano_azul']=20
+        raw=t.empty_player();raw['dano_azul']=20;raw['kills_bot']=3;raw['kills_player']=2
         record={'id':'m','at':'2026-10-15T12:00:00Z','mode':'squad-fpp','status':'normal','players':{A:{},B:{}},
                 'telemetria':{'version':t.VERSION,'players':{A:raw,B:raw}}}
         archive={'semanas':[{'inicio_semana':'2026-10-12T00:00:00-03:00','grupos':{}}]}
@@ -139,6 +159,8 @@ class TelemetryTests(unittest.TestCase):
         winners=archive['semanas'][0]['grupos']['todos']['caneta']
         self.assertEqual([p['nick'] for p in winners],['Alpha','Beta'])
         self.assertEqual(winners[0]['valor'],20)
+        self.assertEqual(archive['semanas'][0]['grupos']['todos']['botkiller'][0]['valor'],3)
+        self.assertEqual(archive['semanas'][0]['grupos']['todos']['playerkiller'][0]['valor'],2)
         self.assertNotIn('tpp',archive['semanas'][0]['grupos'])
     def test_registration_json(self):
         cache=json.loads(Path('jogadores_cache.json').read_text(encoding='utf-8'))

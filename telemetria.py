@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 from recuperar_partidas import download_match, moment, week_start, GROUPS
 
-VERSION = 3
+VERSION = 4
 SNIPERS = {'AWM', 'M24', 'Kar98k', 'Win94', 'Winchester', 'MosinNagant', 'L6', 'LynxAMR'}
 DMRS = {'SKS', 'Mini14', 'Mk14', 'FNFal', 'QBU88', 'VSS', 'Mk12', 'Dragunov'}
 CATEGORIES = ('sniper', 'dmr', 'outras')
@@ -41,8 +41,19 @@ def weapon_category(name):
               'Sawnoff','Crossbow','Pan','Machete','Cowbar','Sickle','Mortar','PanzerFaust100M'}
     return 'outras' if weapon in others else None
 
+def kill_target_type(account_id):
+    if not isinstance(account_id, str):
+        return None
+    normalized = account_id.casefold()
+    if normalized.startswith('ai.'):
+        return 'bot'
+    if normalized.startswith('account.'):
+        return 'player'
+    return None
+
 def empty_player():
     return {'hs': dict.fromkeys(CATEGORIES, 0), 'hs_nao_classificados': 0,
+            'kills_bot': 0, 'kills_player': 0,
             'dano_azul': 0, 'dano_queda': 0, 'mortes_azul': 0,
             'coletados': dict.fromkeys(('boost','cura','fumaca','granada','municao'), 0),
             'usados': dict.fromkeys(('boost','cura','fumaca','granada'), 0),
@@ -140,12 +151,16 @@ def parse_events(events, allowed):
             if kid in rows and vid and kid != vid:
                 seen_players.add(kid)
                 team_kill = (killer.get('teamId') is not None and killer.get('teamId') == victim.get('teamId'))
-                if not team_kill and kid not in (e.get('teamKillers_AccountId') or []) and not e.get('isSuicide') and info.get('damageReason') == 'HeadShot':
-                    cat = weapon_category(info.get('damageCauserName'))
-                    if cat:
-                        rows[kid]['hs'][cat] += 1
-                    else:
-                        rows[kid]['hs_nao_classificados'] += 1
+                valid_kill = not team_kill and kid not in (e.get('teamKillers_AccountId') or []) and not e.get('isSuicide')
+                target_type = kill_target_type(vid) if valid_kill else None
+                if target_type:
+                    rows[kid]['kills_' + target_type] += 1
+                    if info.get('damageReason') == 'HeadShot':
+                        cat = weapon_category(info.get('damageCauserName'))
+                        if cat:
+                            rows[kid]['hs'][cat] += 1
+                        else:
+                            rows[kid]['hs_nao_classificados'] += 1
             if vid in rows:
                 seen_players.add(vid)
                 finish = (e.get('finishDamageInfo') or {}) if kind == 'LogPlayerKillV2' else e
@@ -192,7 +207,7 @@ def collect_telemetry(cache, resolved, now, max_matches=400, budget_seconds=420,
     fetch = fetch or enrich_match
     candidates = [m for m in cache.get('partidas',{}).values()
                   if m.get('status') == 'normal'
-                  and moment(m['at']) >= now - timedelta(days=14)
+                  and moment(m['at']) >= now - timedelta(days=30)
                   and (m.get('telemetria',{}).get('version') != VERSION
                        or not (set(m['players']) & set(roster)).issubset(m.get('telemetria',{}).get('players',{})))]
     candidates.sort(key=lambda m:m['at'], reverse=True)
@@ -233,7 +248,7 @@ def build_report(cache, resolved, now, season_id=None):
     periods = [('semana', current_week), ('mes', month)]
     if season_id:
         periods.append(('temporada', None))
-    result = {'schema_version':2,'season_id':season_id,'updated_at':now.isoformat(),'periodos':{},
+    result = {'schema_version':3,'season_id':season_id,'updated_at':now.isoformat(),'periodos':{},
               'aviso':'Somente partidas oficiais com telemetria recuperada. Cobertura parcial; sem dados não significa zero. Semana de segunda a domingo e mês civil no horário de Brasília. Headshots são abates creditados na cabeça, não todos os tiros na cabeça. Saldos de itens são estimativas, sem certeza de mochila vazia. Munição: coleta observada, sem saldo confiável.'}
     for label,start in periods:
         groups = {}
@@ -266,7 +281,7 @@ def build_report(cache, resolved, now, season_id=None):
                 for aid in members & set(data):
                     p = totals.setdefault(aid, {'nick':roster[aid], 'account_id':aid,'partidas':0,
                         'hs':dict.fromkeys(CATEGORIES,0), 'recorde_hs':0, 'recorde_partida':None,
-                        'hs_nao_classificados':0,'dano_azul':0,'dano_queda':0,'mortes_azul':0,
+                        'hs_nao_classificados':0,'kills_bot':0,'kills_player':0,'dano_azul':0,'dano_queda':0,'mortes_azul':0,
                         'coletados':dict.fromkeys(('boost','cura','fumaca','granada','municao'),0),
                         'usados':dict.fromkeys(('boost','cura','fumaca','granada'),0),
                         'mortes':0,'mortes_validas':0,'mortes_saldo_zero':dict.fromkeys(('boost','cura','fumaca','granada'),0),
@@ -278,7 +293,7 @@ def build_report(cache, resolved, now, season_id=None):
                     hs = sum(raw['hs'].values())
                     if hs > p['recorde_hs']:
                         p['recorde_hs'],p['recorde_partida'] = hs,m['id']
-                    for key in ('hs_nao_classificados','dano_azul','dano_queda','mortes_azul','vida_baixa_sem_cura_estimada'):
+                    for key in ('hs_nao_classificados','kills_bot','kills_player','dano_azul','dano_queda','mortes_azul','vida_baixa_sem_cura_estimada'):
                         p[key] += raw[key]
                     for key in ('coletados','usados'):
                         for cat,v in raw[key].items():
@@ -313,8 +328,9 @@ def tag_season_matches(cache, season_id, match_ids):
             record['season_id'] = season_id
 
 def archive_blue_awards(cache, archive, resolved, now):
-    """Acrescenta o troféu azul às semanas já arquivadas, usando somente telemetria."""
+    """Acrescenta troféus de telemetria às semanas encerradas."""
     roster = {aid:nick for nick,aid in resolved.items()}
+    trophy_fields = {'caneta':'dano_azul', 'botkiller':'kills_bot', 'playerkiller':'kills_player'}
     for week in archive.get('semanas', []):
         start = week_start(moment(week['inicio_semana']))
         end = start + timedelta(days=7)
@@ -331,11 +347,16 @@ def archive_blue_awards(cache, archive, resolved, now):
                 for aid, raw in tele.get('players', {}).items():
                     if aid not in roster:
                         continue
-                    p = totals.setdefault(aid, {'nick':roster[aid], 'valor':0, 'partidas':0})
-                    p['valor'] += raw['dano_azul']
+                    p = totals.setdefault(aid, {'nick':roster[aid], 'partidas':0, **dict.fromkeys(trophy_fields,0)})
                     p['partidas'] += 1
-            best = max((p['valor'] for p in totals.values()), default=0)
-            if best > 0:
-                week.setdefault('grupos', {}).setdefault(group, {})['caneta'] = sorted(
-                    [p for p in totals.values() if p['valor'] == best], key=lambda p:p['nick'].casefold())
+                    for trophy, field in trophy_fields.items():
+                        p[trophy] += raw.get(field, 0)
+            for trophy in trophy_fields:
+                best = max((p[trophy] for p in totals.values()), default=0)
+                if best > 0:
+                    winners = sorted(
+                        [dict(nick=p['nick'], valor=p[trophy], partidas=p['partidas'])
+                         for p in totals.values() if p[trophy] == best],
+                        key=lambda p:p['nick'].casefold())
+                    week.setdefault('grupos', {}).setdefault(group, {})[trophy] = winners
     return archive

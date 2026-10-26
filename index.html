@@ -25,14 +25,14 @@
 <div class="hero"><div class="hero-copy"><span class="eyebrow">Clã de amigos. Ranking de histórias.</span><h1>O frango é raro.<br><span class="yellow">A resenha é garantida.</span></h1><p class="muted">Aqui tem quem carregue o squad, quem carregue a mochila e quem volte primeiro para o lobby. Todo Pamonha tem sua chance de virar assunto no grupo.</p><div class="actions"><button class="primary" data-page="resenha">Ver os troféus da zoeira 🌽</button><button data-page="jogadores">Qual é a minha fama?</button></div></div><img class="hero-emblem" src="logo_do_clan.jpg" alt="Mascote do clã, a Kombi do Zé"></div>
 <div class="sync" id="sync-status"></div>
 <div class="section-head"><div><span class="eyebrow">O que vai render no grupo</span><h2>Os troféus da resenha</h2><p class="muted small">Sem juiz, sem peneira. Só os números e a zoeira entre amigos.</p></div></div>
-<div class="tabs"><button data-party-period="semana" aria-pressed="true">Resenha da semana</button><button data-party-period="temporada" aria-pressed="false">Temporada inteira</button></div>
+<div class="tabs" aria-label="Período dos troféus"><button data-party-period="semana" aria-pressed="true">Esta semana</button><button data-party-period="mes" aria-pressed="false">Este mês</button><button data-party-period="temporada" aria-pressed="false">Temporada</button></div>
 <div id="party-auto-home" class="notice" role="status" hidden></div><p class="muted small" id="party-home-context" style="margin-bottom:18px"></p><div class="grid3" id="party-home"></div>
 <div class="stats" id="home-stats"></div>
 <div class="grid2" style="margin-top:25px"><article class="card"><span class="eyebrow">Operação Pamonha Quente</span><h3 style="margin-top:9px">500 abates na semana</h3><div id="weekly"></div></article><article class="card"><span class="eyebrow">Acompanhando a turma</span><h3 style="margin-top:9px">Movimento no ranking técnico</h3><div id="evolution"></div><p class="small" style="margin-top:15px"><button class="link" data-page="ranking">Consultar estatísticas →</button></p></article></div>
 </section>
 <section id="page-resenha" class="page" aria-label="Hall da zoeira">
 <div class="section-head" style="margin-top:5px"><div><span class="eyebrow">O campeonato que ninguém pediu para ganhar</span><h2>Hall da Zoeira</h2><p class="muted">Dez troféus para levar ao grupo. A regra aparece junto do resultado.</p></div></div>
-<div class="tabs"><button data-party-period="semana" aria-pressed="true">Resenha da semana</button><button data-party-period="temporada" aria-pressed="false">Temporada inteira</button></div>
+<div class="tabs" aria-label="Período dos troféus"><button data-party-period="semana" aria-pressed="true">Esta semana</button><button data-party-period="mes" aria-pressed="false">Este mês</button><button data-party-period="temporada" aria-pressed="false">Temporada</button></div>
 <div id="party-auto-full" class="notice" role="status" hidden></div><p class="muted small" id="party-context" style="margin-bottom:18px"></p><div class="grid3" id="party-cards"></div>
 <div class="section-head"><label style="width:min(100%,450px)">Escolha uma brincadeira<select id="party-award-select"></select></label></div><div id="party-ranking" style="scroll-margin-top:110px"></div><p id="party-download-status" class="status-message" role="status"></p>
 <div class="section-head"><div><span class="eyebrow">Para não deixar esquecer</span><h2>Galeria dos troféus</h2><p class="muted small">Vencedores dos períodos encerrados. Os atuais ainda podem mudar.</p></div></div><div id="party-archive"></div>
@@ -49,7 +49,7 @@
 <footer><div class="wrap footer-inner"><p>🌽 Os Pamonhas • Em memória do Zé da Pamonha.</p><p>Projeto da comunidade. Sem vínculo oficial com PUBG / KRAFTON.</p></div></footer>
 <script src="dicas.js?v=20261023-caneta1"></script>
 <script src="headshots.js?v=20261023-caneta1"></script>
-<script src="resenha.js?v=20261023-caneta1"></script>
+<script src="resenha.js?v=20261026-botkill"></script>
 <script>
 'use strict';
 const $ = id => document.getElementById(id);
