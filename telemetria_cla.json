@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "season_id": "division.bro.official.pc-2018-43",
-  "updated_at": "2026-10-26T13:44:54+00:00",
+  "updated_at": "2026-10-26T13:48:54+00:00",
   "periodos": {
     "semana": {
       "inicio": "2026-10-26T00:00:00-03:00",
-      "ate": "2026-10-26T13:44:54+00:00",
+      "ate": "2026-10-26T13:48:54+00:00",
       "grupos": {
         "todos": {
           "partidas_conhecidas": 27,
@@ -1354,7 +1354,7 @@
     },
     "mes": {
       "inicio": "2026-10-01T00:00:00-03:00",
-      "ate": "2026-10-26T13:44:54+00:00",
+      "ate": "2026-10-26T13:48:54+00:00",
       "grupos": {
         "todos": {
           "partidas_conhecidas": 1580,
@@ -7104,7 +7104,7 @@
     },
     "temporada": {
       "inicio": "2026-10-10T00:11:56+00:00",
-      "ate": "2026-10-26T13:44:54+00:00",
+      "ate": "2026-10-26T13:48:54+00:00",
       "grupos": {
         "todos": {
           "partidas_conhecidas": 1055,
