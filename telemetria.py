@@ -202,7 +202,7 @@ def enrich_match(record, roster):
         raise ValueError('Telemetria sem todos os participantes esperados.')
     return {'version': VERSION, 'players':result}
 
-def collect_telemetry(cache, resolved, now, max_matches=400, budget_seconds=420, fetch=None, season_id=None):
+def collect_telemetry(cache, resolved, now, max_matches=2000, budget_seconds=600, fetch=None, season_id=None):
     roster = {aid:nick for nick,aid in resolved.items()}
     fetch = fetch or enrich_match
     candidates = [m for m in cache.get('partidas',{}).values()
