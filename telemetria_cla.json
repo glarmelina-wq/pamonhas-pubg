@@ -1,15 +1,15 @@
 {
   "schema_version": 2,
   "season_id": "division.bro.official.pc-2018-43",
-  "updated_at": "2026-10-25T21:49:13+00:00",
+  "updated_at": "2026-10-26T00:25:21+00:00",
   "periodos": {
     "semana": {
       "inicio": "2026-10-19T00:00:00-03:00",
-      "ate": "2026-10-25T21:49:13+00:00",
+      "ate": "2026-10-26T00:25:21+00:00",
       "grupos": {
         "todos": {
-          "partidas_conhecidas": 616,
-          "partidas_analisadas": 616,
+          "partidas_conhecidas": 617,
+          "partidas_analisadas": 617,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -755,7 +755,7 @@
             {
               "nick": "robo__GUERREIRO",
               "account_id": "account.60abf90f3d6a446fad78cdcd9bb70b88",
-              "partidas": 13,
+              "partidas": 14,
               "hs": {
                 "sniper": 2,
                 "dmr": 0,
@@ -780,13 +780,13 @@
                 "fumaca": 10,
                 "granada": 15
               },
-              "mortes": 12,
-              "mortes_validas": 1,
+              "mortes": 13,
+              "mortes_validas": 2,
               "mortes_saldo_zero": {
-                "boost": 0,
-                "cura": 1,
-                "fumaca": 1,
-                "granada": 1
+                "boost": 1,
+                "cura": 2,
+                "fumaca": 2,
+                "granada": 2
               },
               "eventos_inconsistentes": 12,
               "vida_baixa_sem_cura_estimada": 20
@@ -1078,7 +1078,7 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-10-19T05:48:44+00:00",
-          "ultima_partida_analisada": "2026-10-25T21:01:50+00:00"
+          "ultima_partida_analisada": "2026-10-25T23:56:16+00:00"
         },
         "fpp": {
           "partidas_conhecidas": 504,
@@ -2115,8 +2115,8 @@
           "ultima_partida_analisada": "2026-10-25T21:01:50+00:00"
         },
         "tpp": {
-          "partidas_conhecidas": 107,
-          "partidas_analisadas": 107,
+          "partidas_conhecidas": 108,
+          "partidas_analisadas": 108,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -2394,7 +2394,7 @@
             {
               "nick": "robo__GUERREIRO",
               "account_id": "account.60abf90f3d6a446fad78cdcd9bb70b88",
-              "partidas": 12,
+              "partidas": 13,
               "hs": {
                 "sniper": 0,
                 "dmr": 0,
@@ -2419,13 +2419,13 @@
                 "fumaca": 10,
                 "granada": 14
               },
-              "mortes": 12,
-              "mortes_validas": 1,
+              "mortes": 13,
+              "mortes_validas": 2,
               "mortes_saldo_zero": {
-                "boost": 0,
-                "cura": 1,
-                "fumaca": 1,
-                "granada": 1
+                "boost": 1,
+                "cura": 2,
+                "fumaca": 2,
+                "granada": 2
               },
               "eventos_inconsistentes": 11,
               "vida_baixa_sem_cura_estimada": 19
@@ -2522,7 +2522,7 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-10-19T09:23:58+00:00",
-          "ultima_partida_analisada": "2026-10-25T20:43:48+00:00"
+          "ultima_partida_analisada": "2026-10-25T23:56:16+00:00"
         },
         "squad-fpp": {
           "partidas_conhecidas": 429,
@@ -3893,8 +3893,8 @@
           "ultima_partida_analisada": "2026-10-25T04:40:29+00:00"
         },
         "squad": {
-          "partidas_conhecidas": 107,
-          "partidas_analisadas": 107,
+          "partidas_conhecidas": 108,
+          "partidas_analisadas": 108,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -4172,7 +4172,7 @@
             {
               "nick": "robo__GUERREIRO",
               "account_id": "account.60abf90f3d6a446fad78cdcd9bb70b88",
-              "partidas": 12,
+              "partidas": 13,
               "hs": {
                 "sniper": 0,
                 "dmr": 0,
@@ -4197,13 +4197,13 @@
                 "fumaca": 10,
                 "granada": 14
               },
-              "mortes": 12,
-              "mortes_validas": 1,
+              "mortes": 13,
+              "mortes_validas": 2,
               "mortes_saldo_zero": {
-                "boost": 0,
-                "cura": 1,
-                "fumaca": 1,
-                "granada": 1
+                "boost": 1,
+                "cura": 2,
+                "fumaca": 2,
+                "granada": 2
               },
               "eventos_inconsistentes": 11,
               "vida_baixa_sem_cura_estimada": 19
@@ -4300,7 +4300,7 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-10-19T09:23:58+00:00",
-          "ultima_partida_analisada": "2026-10-25T20:43:48+00:00"
+          "ultima_partida_analisada": "2026-10-25T23:56:16+00:00"
         },
         "duo": {
           "partidas_conhecidas": 0,
@@ -4469,11 +4469,11 @@
     },
     "mes": {
       "inicio": "2026-10-01T00:00:00-03:00",
-      "ate": "2026-10-25T21:49:13+00:00",
+      "ate": "2026-10-26T00:25:21+00:00",
       "grupos": {
         "todos": {
-          "partidas_conhecidas": 1542,
-          "partidas_analisadas": 1461,
+          "partidas_conhecidas": 1543,
+          "partidas_analisadas": 1462,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -5297,7 +5297,7 @@
             {
               "nick": "robo__GUERREIRO",
               "account_id": "account.60abf90f3d6a446fad78cdcd9bb70b88",
-              "partidas": 38,
+              "partidas": 39,
               "hs": {
                 "sniper": 4,
                 "dmr": 2,
@@ -5322,13 +5322,13 @@
                 "fumaca": 17,
                 "granada": 26
               },
-              "mortes": 39,
-              "mortes_validas": 8,
+              "mortes": 40,
+              "mortes_validas": 9,
               "mortes_saldo_zero": {
-                "boost": 2,
-                "cura": 6,
-                "fumaca": 6,
-                "granada": 4
+                "boost": 3,
+                "cura": 7,
+                "fumaca": 7,
+                "granada": 5
               },
               "eventos_inconsistentes": 29,
               "vida_baixa_sem_cura_estimada": 48
@@ -5620,7 +5620,7 @@
           },
           "partidas_anteriores_semana": 845,
           "primeira_partida_analisada": "2026-10-09T23:33:18+00:00",
-          "ultima_partida_analisada": "2026-10-25T21:01:50+00:00"
+          "ultima_partida_analisada": "2026-10-25T23:56:16+00:00"
         },
         "fpp": {
           "partidas_conhecidas": 1272,
@@ -6774,8 +6774,8 @@
           "ultima_partida_analisada": "2026-10-25T21:01:50+00:00"
         },
         "tpp": {
-          "partidas_conhecidas": 262,
-          "partidas_analisadas": 251,
+          "partidas_conhecidas": 263,
+          "partidas_analisadas": 252,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -7209,7 +7209,7 @@
             {
               "nick": "robo__GUERREIRO",
               "account_id": "account.60abf90f3d6a446fad78cdcd9bb70b88",
-              "partidas": 25,
+              "partidas": 26,
               "hs": {
                 "sniper": 1,
                 "dmr": 0,
@@ -7234,13 +7234,13 @@
                 "fumaca": 13,
                 "granada": 16
               },
-              "mortes": 29,
-              "mortes_validas": 6,
+              "mortes": 30,
+              "mortes_validas": 7,
               "mortes_saldo_zero": {
-                "boost": 1,
-                "cura": 5,
-                "fumaca": 5,
-                "granada": 4
+                "boost": 2,
+                "cura": 6,
+                "fumaca": 6,
+                "granada": 5
               },
               "eventos_inconsistentes": 20,
               "vida_baixa_sem_cura_estimada": 36
@@ -7337,7 +7337,7 @@
           },
           "partidas_anteriores_semana": 144,
           "primeira_partida_analisada": "2026-10-10T09:18:10+00:00",
-          "ultima_partida_analisada": "2026-10-25T20:43:48+00:00"
+          "ultima_partida_analisada": "2026-10-25T23:56:16+00:00"
         },
         "squad-fpp": {
           "partidas_conhecidas": 1113,
@@ -9018,8 +9018,8 @@
           "ultima_partida_analisada": "2026-10-25T04:40:29+00:00"
         },
         "squad": {
-          "partidas_conhecidas": 261,
-          "partidas_analisadas": 250,
+          "partidas_conhecidas": 262,
+          "partidas_analisadas": 251,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -9453,7 +9453,7 @@
             {
               "nick": "robo__GUERREIRO",
               "account_id": "account.60abf90f3d6a446fad78cdcd9bb70b88",
-              "partidas": 25,
+              "partidas": 26,
               "hs": {
                 "sniper": 1,
                 "dmr": 0,
@@ -9478,13 +9478,13 @@
                 "fumaca": 13,
                 "granada": 16
               },
-              "mortes": 29,
-              "mortes_validas": 6,
+              "mortes": 30,
+              "mortes_validas": 7,
               "mortes_saldo_zero": {
-                "boost": 1,
-                "cura": 5,
-                "fumaca": 5,
-                "granada": 4
+                "boost": 2,
+                "cura": 6,
+                "fumaca": 6,
+                "granada": 5
               },
               "eventos_inconsistentes": 20,
               "vida_baixa_sem_cura_estimada": 36
@@ -9581,7 +9581,7 @@
           },
           "partidas_anteriores_semana": 143,
           "primeira_partida_analisada": "2026-10-10T09:18:10+00:00",
-          "ultima_partida_analisada": "2026-10-25T20:43:48+00:00"
+          "ultima_partida_analisada": "2026-10-25T23:56:16+00:00"
         },
         "duo": {
           "partidas_conhecidas": 1,
@@ -9908,7 +9908,7 @@
     },
     "temporada": {
       "inicio": "2026-10-10T00:11:56+00:00",
-      "ate": "2026-10-25T21:49:13+00:00",
+      "ate": "2026-10-26T00:25:21+00:00",
       "grupos": {
         "todos": {
           "partidas_conhecidas": 1017,
