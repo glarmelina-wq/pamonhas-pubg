@@ -1,23 +1,580 @@
 {
   "schema_version": 1,
   "fonte": "partidas",
-  "updated_at": "2026-10-26T06:14:44+00:00",
+  "updated_at": "2026-10-26T12:49:54+00:00",
   "inicio_semana": "2026-10-26T00:00:00-03:00",
   "parcial": true,
   "grupos": {
-    "todos": [],
-    "fpp": [],
-    "tpp": [],
-    "squad-fpp": [],
-    "duo-fpp": [],
-    "squad": [],
+    "todos": [
+      {
+        "nick": "Burallosh",
+        "account_id": "account.7e11fc7431c84aaca529e9f96223db78",
+        "partidas": 7,
+        "raw": {
+          "rideDistance": 8462.0144,
+          "teamKills": 0,
+          "revives": 3,
+          "timeSurvived": 7261,
+          "heals": 8,
+          "boosts": 25,
+          "walkDistance": 18630.4448,
+          "weaponsAcquired": 54,
+          "longestKill": 383.63562,
+          "kills": 44,
+          "roundsPlayed": 7,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "crazyrock_com_br",
+        "account_id": "account.fde9d506ba354c4392fc4cebe499a26c",
+        "partidas": 8,
+        "raw": {
+          "rideDistance": 10254.3925,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 7819,
+          "heals": 31,
+          "boosts": 8,
+          "walkDistance": 18955.6615,
+          "weaponsAcquired": 66,
+          "longestKill": 217.62297,
+          "kills": 26,
+          "roundsPlayed": 8,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "LuleLixxooXandTB",
+        "account_id": "account.98b99c51da8b488a8b84d701d3e67c79",
+        "partidas": 1,
+        "raw": {
+          "rideDistance": 0,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 886,
+          "heals": 3,
+          "boosts": 4,
+          "walkDistance": 2138.4067,
+          "weaponsAcquired": 13,
+          "longestKill": 186.98889,
+          "kills": 5,
+          "roundsPlayed": 1,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "gerskol",
+        "account_id": "account.d68bf8c53c4f452396a565e681498b3b",
+        "partidas": 1,
+        "raw": {
+          "rideDistance": 2.8242035,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 663,
+          "heals": 1,
+          "boosts": 1,
+          "walkDistance": 1560.6759,
+          "weaponsAcquired": 6,
+          "longestKill": 0,
+          "kills": 0,
+          "roundsPlayed": 1,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "LAUANNA7788",
+        "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
+        "partidas": 9,
+        "raw": {
+          "rideDistance": 3033.5269,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 8038,
+          "heals": 20,
+          "boosts": 41,
+          "walkDistance": 18167.7282346,
+          "weaponsAcquired": 65,
+          "longestKill": 265.2624,
+          "kills": 62,
+          "roundsPlayed": 9,
+          "suicides": 1
+        }
+      },
+      {
+        "nick": "Padre0027",
+        "account_id": "account.25aff9f5cf8544a6a3e731253fd6bf6c",
+        "partidas": 2,
+        "raw": {
+          "rideDistance": 3381.6328,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 1514,
+          "heals": 6,
+          "boosts": 6,
+          "walkDistance": 3574.79437,
+          "weaponsAcquired": 14,
+          "longestKill": 469.70413,
+          "kills": 11,
+          "roundsPlayed": 2,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Rickzzs",
+        "account_id": "account.ff7463c00ce64dcfa653ae08bbd33207",
+        "partidas": 2,
+        "raw": {
+          "rideDistance": 4620.1914,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 1865,
+          "heals": 0,
+          "boosts": 6,
+          "walkDistance": 6158.0238,
+          "weaponsAcquired": 16,
+          "longestKill": 154.59322,
+          "kills": 20,
+          "roundsPlayed": 2,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Alien--__--",
+        "account_id": "account.3113f7d216874e83906ee9a1c4489c6c",
+        "partidas": 1,
+        "raw": {
+          "rideDistance": 0,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 1458,
+          "heals": 3,
+          "boosts": 5,
+          "walkDistance": 3609.9675,
+          "weaponsAcquired": 21,
+          "longestKill": 394.12152,
+          "kills": 22,
+          "roundsPlayed": 1,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Pisanoslixo",
+        "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
+        "partidas": 4,
+        "raw": {
+          "rideDistance": 21081.689400000003,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 3523,
+          "heals": 10,
+          "boosts": 18,
+          "walkDistance": 7510.8894,
+          "weaponsAcquired": 36,
+          "longestKill": 88.45801,
+          "kills": 15,
+          "roundsPlayed": 4,
+          "suicides": 0
+        }
+      }
+    ],
+    "fpp": [
+      {
+        "nick": "Burallosh",
+        "account_id": "account.7e11fc7431c84aaca529e9f96223db78",
+        "partidas": 7,
+        "raw": {
+          "rideDistance": 8462.0144,
+          "teamKills": 0,
+          "revives": 3,
+          "timeSurvived": 7261,
+          "heals": 8,
+          "boosts": 25,
+          "walkDistance": 18630.4448,
+          "weaponsAcquired": 54,
+          "longestKill": 383.63562,
+          "kills": 44,
+          "roundsPlayed": 7,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "crazyrock_com_br",
+        "account_id": "account.fde9d506ba354c4392fc4cebe499a26c",
+        "partidas": 8,
+        "raw": {
+          "rideDistance": 10254.3925,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 7819,
+          "heals": 31,
+          "boosts": 8,
+          "walkDistance": 18955.6615,
+          "weaponsAcquired": 66,
+          "longestKill": 217.62297,
+          "kills": 26,
+          "roundsPlayed": 8,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "LuleLixxooXandTB",
+        "account_id": "account.98b99c51da8b488a8b84d701d3e67c79",
+        "partidas": 1,
+        "raw": {
+          "rideDistance": 0,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 886,
+          "heals": 3,
+          "boosts": 4,
+          "walkDistance": 2138.4067,
+          "weaponsAcquired": 13,
+          "longestKill": 186.98889,
+          "kills": 5,
+          "roundsPlayed": 1,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "gerskol",
+        "account_id": "account.d68bf8c53c4f452396a565e681498b3b",
+        "partidas": 1,
+        "raw": {
+          "rideDistance": 2.8242035,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 663,
+          "heals": 1,
+          "boosts": 1,
+          "walkDistance": 1560.6759,
+          "weaponsAcquired": 6,
+          "longestKill": 0,
+          "kills": 0,
+          "roundsPlayed": 1,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "LAUANNA7788",
+        "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
+        "partidas": 7,
+        "raw": {
+          "rideDistance": 3033.5269,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 6919,
+          "heals": 19,
+          "boosts": 40,
+          "walkDistance": 16678.3560646,
+          "weaponsAcquired": 51,
+          "longestKill": 265.2624,
+          "kills": 62,
+          "roundsPlayed": 7,
+          "suicides": 1
+        }
+      },
+      {
+        "nick": "Padre0027",
+        "account_id": "account.25aff9f5cf8544a6a3e731253fd6bf6c",
+        "partidas": 2,
+        "raw": {
+          "rideDistance": 3381.6328,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 1514,
+          "heals": 6,
+          "boosts": 6,
+          "walkDistance": 3574.79437,
+          "weaponsAcquired": 14,
+          "longestKill": 469.70413,
+          "kills": 11,
+          "roundsPlayed": 2,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Rickzzs",
+        "account_id": "account.ff7463c00ce64dcfa653ae08bbd33207",
+        "partidas": 2,
+        "raw": {
+          "rideDistance": 4620.1914,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 1865,
+          "heals": 0,
+          "boosts": 6,
+          "walkDistance": 6158.0238,
+          "weaponsAcquired": 16,
+          "longestKill": 154.59322,
+          "kills": 20,
+          "roundsPlayed": 2,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Alien--__--",
+        "account_id": "account.3113f7d216874e83906ee9a1c4489c6c",
+        "partidas": 1,
+        "raw": {
+          "rideDistance": 0,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 1458,
+          "heals": 3,
+          "boosts": 5,
+          "walkDistance": 3609.9675,
+          "weaponsAcquired": 21,
+          "longestKill": 394.12152,
+          "kills": 22,
+          "roundsPlayed": 1,
+          "suicides": 0
+        }
+      }
+    ],
+    "tpp": [
+      {
+        "nick": "LAUANNA7788",
+        "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
+        "partidas": 2,
+        "raw": {
+          "rideDistance": 0,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 1119,
+          "heals": 1,
+          "boosts": 1,
+          "walkDistance": 1489.37217,
+          "weaponsAcquired": 14,
+          "longestKill": 0,
+          "kills": 0,
+          "roundsPlayed": 2,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Pisanoslixo",
+        "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
+        "partidas": 4,
+        "raw": {
+          "rideDistance": 21081.689400000003,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 3523,
+          "heals": 10,
+          "boosts": 18,
+          "walkDistance": 7510.8894,
+          "weaponsAcquired": 36,
+          "longestKill": 88.45801,
+          "kills": 15,
+          "roundsPlayed": 4,
+          "suicides": 0
+        }
+      }
+    ],
+    "squad-fpp": [
+      {
+        "nick": "Burallosh",
+        "account_id": "account.7e11fc7431c84aaca529e9f96223db78",
+        "partidas": 7,
+        "raw": {
+          "rideDistance": 8462.0144,
+          "teamKills": 0,
+          "revives": 3,
+          "timeSurvived": 7261,
+          "heals": 8,
+          "boosts": 25,
+          "walkDistance": 18630.4448,
+          "weaponsAcquired": 54,
+          "longestKill": 383.63562,
+          "kills": 44,
+          "roundsPlayed": 7,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "crazyrock_com_br",
+        "account_id": "account.fde9d506ba354c4392fc4cebe499a26c",
+        "partidas": 8,
+        "raw": {
+          "rideDistance": 10254.3925,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 7819,
+          "heals": 31,
+          "boosts": 8,
+          "walkDistance": 18955.6615,
+          "weaponsAcquired": 66,
+          "longestKill": 217.62297,
+          "kills": 26,
+          "roundsPlayed": 8,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "LuleLixxooXandTB",
+        "account_id": "account.98b99c51da8b488a8b84d701d3e67c79",
+        "partidas": 1,
+        "raw": {
+          "rideDistance": 0,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 886,
+          "heals": 3,
+          "boosts": 4,
+          "walkDistance": 2138.4067,
+          "weaponsAcquired": 13,
+          "longestKill": 186.98889,
+          "kills": 5,
+          "roundsPlayed": 1,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "gerskol",
+        "account_id": "account.d68bf8c53c4f452396a565e681498b3b",
+        "partidas": 1,
+        "raw": {
+          "rideDistance": 2.8242035,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 663,
+          "heals": 1,
+          "boosts": 1,
+          "walkDistance": 1560.6759,
+          "weaponsAcquired": 6,
+          "longestKill": 0,
+          "kills": 0,
+          "roundsPlayed": 1,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "LAUANNA7788",
+        "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
+        "partidas": 7,
+        "raw": {
+          "rideDistance": 3033.5269,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 6919,
+          "heals": 19,
+          "boosts": 40,
+          "walkDistance": 16678.3560646,
+          "weaponsAcquired": 51,
+          "longestKill": 265.2624,
+          "kills": 62,
+          "roundsPlayed": 7,
+          "suicides": 1
+        }
+      },
+      {
+        "nick": "Padre0027",
+        "account_id": "account.25aff9f5cf8544a6a3e731253fd6bf6c",
+        "partidas": 2,
+        "raw": {
+          "rideDistance": 3381.6328,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 1514,
+          "heals": 6,
+          "boosts": 6,
+          "walkDistance": 3574.79437,
+          "weaponsAcquired": 14,
+          "longestKill": 469.70413,
+          "kills": 11,
+          "roundsPlayed": 2,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Rickzzs",
+        "account_id": "account.ff7463c00ce64dcfa653ae08bbd33207",
+        "partidas": 2,
+        "raw": {
+          "rideDistance": 4620.1914,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 1865,
+          "heals": 0,
+          "boosts": 6,
+          "walkDistance": 6158.0238,
+          "weaponsAcquired": 16,
+          "longestKill": 154.59322,
+          "kills": 20,
+          "roundsPlayed": 2,
+          "suicides": 0
+        }
+      }
+    ],
+    "duo-fpp": [
+      {
+        "nick": "Alien--__--",
+        "account_id": "account.3113f7d216874e83906ee9a1c4489c6c",
+        "partidas": 1,
+        "raw": {
+          "rideDistance": 0,
+          "teamKills": 0,
+          "revives": 0,
+          "timeSurvived": 1458,
+          "heals": 3,
+          "boosts": 5,
+          "walkDistance": 3609.9675,
+          "weaponsAcquired": 21,
+          "longestKill": 394.12152,
+          "kills": 22,
+          "roundsPlayed": 1,
+          "suicides": 0
+        }
+      }
+    ],
+    "squad": [
+      {
+        "nick": "LAUANNA7788",
+        "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
+        "partidas": 2,
+        "raw": {
+          "rideDistance": 0,
+          "teamKills": 0,
+          "revives": 1,
+          "timeSurvived": 1119,
+          "heals": 1,
+          "boosts": 1,
+          "walkDistance": 1489.37217,
+          "weaponsAcquired": 14,
+          "longestKill": 0,
+          "kills": 0,
+          "roundsPlayed": 2,
+          "suicides": 0
+        }
+      },
+      {
+        "nick": "Pisanoslixo",
+        "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
+        "partidas": 4,
+        "raw": {
+          "rideDistance": 21081.689400000003,
+          "teamKills": 0,
+          "revives": 2,
+          "timeSurvived": 3523,
+          "heals": 10,
+          "boosts": 18,
+          "walkDistance": 7510.8894,
+          "weaponsAcquired": 36,
+          "longestKill": 88.45801,
+          "kills": 15,
+          "roundsPlayed": 4,
+          "suicides": 0
+        }
+      }
+    ],
     "duo": [],
     "solo-fpp": [],
     "solo": []
   },
-  "partidas_semana": 0,
-  "partidas_em_cache": 1553,
-  "recuperadas_agora": 15,
+  "partidas_semana": 22,
+  "partidas_em_cache": 1575,
+  "recuperadas_agora": 23,
   "pendentes": 0,
   "falhas_partidas": 0,
   "membros_sem_lista": [],
