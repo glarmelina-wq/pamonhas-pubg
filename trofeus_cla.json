@@ -8,7 +8,7 @@
       "inicio_semana": "2026-10-19T00:00:00-03:00",
       "de": "2026-10-19T00:00:00-03:00",
       "ate": "2026-10-25T23:59:59-03:00",
-      "atualizado_em": "2026-10-26T12:49:54+00:00",
+      "atualizado_em": "2026-10-26T13:00:59+00:00",
       "parcial": true,
       "partidas_recuperadas": 627,
       "grupos": {
@@ -100,6 +100,27 @@
               "valor": 537.12036,
               "partidas": 58
             }
+          ],
+          "caneta": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 3462.8888308405876,
+              "partidas": 73
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 198,
+              "partidas": 58
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "CalanguinhoFPS",
+              "valor": 95,
+              "partidas": 83
+            }
           ]
         },
         "fpp": {
@@ -185,6 +206,27 @@
               "valor": 537.12036,
               "partidas": 57
             }
+          ],
+          "caneta": [
+            {
+              "nick": "gerskol",
+              "valor": 2962.264740794897,
+              "partidas": 58
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 198,
+              "partidas": 57
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "TODDNH0",
+              "valor": 86,
+              "partidas": 60
+            }
           ]
         },
         "tpp": {
@@ -249,6 +291,27 @@
               "nick": "ROGER__BR",
               "valor": 385.11652,
               "partidas": 13
+            }
+          ],
+          "caneta": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 2798.523469209671,
+              "partidas": 57
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 34,
+              "partidas": 13
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "CalanguinhoFPS",
+              "valor": 72,
+              "partidas": 57
             }
           ]
         },
@@ -330,6 +393,27 @@
               "valor": 537.12036,
               "partidas": 57
             }
+          ],
+          "caneta": [
+            {
+              "nick": "gerskol",
+              "valor": 2583.40344029665,
+              "partidas": 54
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 198,
+              "partidas": 57
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "TODDNH0",
+              "valor": 82,
+              "partidas": 58
+            }
           ]
         },
         "duo-fpp": {
@@ -387,6 +471,27 @@
               "nick": "VoVoGOW",
               "valor": 351.7801,
               "partidas": 7
+            }
+          ],
+          "caneta": [
+            {
+              "nick": "zPaT0__",
+              "valor": 633.9566169679165,
+              "partidas": 18
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "Padre0027",
+              "valor": 30,
+              "partidas": 21
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "zPaT0__",
+              "valor": 24,
+              "partidas": 18
             }
           ]
         },
@@ -453,6 +558,27 @@
               "valor": 385.11652,
               "partidas": 13
             }
+          ],
+          "caneta": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 2798.523469209671,
+              "partidas": 57
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 34,
+              "partidas": 13
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "CalanguinhoFPS",
+              "valor": 72,
+              "partidas": 57
+            }
           ]
         },
         "duo": {},
@@ -462,6 +588,27 @@
             {
               "nick": "robo__GUERREIRO",
               "valor": 261.85608,
+              "partidas": 1
+            }
+          ],
+          "caneta": [
+            {
+              "nick": "Bicaleto",
+              "valor": 208.69388496875763,
+              "partidas": 3
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "robo__GUERREIRO",
+              "valor": 12,
+              "partidas": 1
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "robo__GUERREIRO",
+              "valor": 4,
               "partidas": 1
             }
           ]
@@ -560,23 +707,23 @@
           ],
           "caneta": [
             {
-              "nick": "manolobr07",
-              "valor": 966.6454057097435,
-              "partidas": 6
+              "nick": "Pisanoslixo",
+              "valor": 4618.886549383402,
+              "partidas": 114
             }
           ],
           "botkiller": [
             {
               "nick": "Burallosh",
-              "valor": 45,
-              "partidas": 12
+              "valor": 270,
+              "partidas": 95
             }
           ],
           "playerkiller": [
             {
-              "nick": "TODDNH0",
-              "valor": 16,
-              "partidas": 12
+              "nick": "Pisanoslixo",
+              "valor": 126,
+              "partidas": 114
             }
           ]
         },
@@ -656,23 +803,23 @@
           ],
           "caneta": [
             {
-              "nick": "manolobr07",
-              "valor": 966.6454057097435,
-              "partidas": 6
+              "nick": "Burallosh",
+              "valor": 3185.5091304611415,
+              "partidas": 95
             }
           ],
           "botkiller": [
             {
               "nick": "Burallosh",
-              "valor": 45,
-              "partidas": 12
+              "valor": 270,
+              "partidas": 95
             }
           ],
           "playerkiller": [
             {
               "nick": "TODDNH0",
-              "valor": 16,
-              "partidas": 12
+              "valor": 101,
+              "partidas": 76
             }
           ]
         },
@@ -743,22 +890,22 @@
           "caneta": [
             {
               "nick": "Pisanoslixo",
-              "valor": 248.04897198081017,
-              "partidas": 5
+              "valor": 3048.7205526530743,
+              "partidas": 73
             }
           ],
           "botkiller": [
             {
-              "nick": "PIGzinn_30fps",
-              "valor": 1,
-              "partidas": 1
+              "nick": "Pisanoslixo",
+              "valor": 57,
+              "partidas": 73
             }
           ],
           "playerkiller": [
             {
               "nick": "Pisanoslixo",
-              "valor": 6,
-              "partidas": 5
+              "valor": 89,
+              "partidas": 73
             }
           ]
         },
@@ -833,23 +980,23 @@
           ],
           "caneta": [
             {
-              "nick": "manolobr07",
-              "valor": 966.6454057097435,
-              "partidas": 6
+              "nick": "Burallosh",
+              "valor": 3133.2703231405467,
+              "partidas": 93
             }
           ],
           "botkiller": [
             {
               "nick": "Burallosh",
-              "valor": 45,
-              "partidas": 12
+              "valor": 270,
+              "partidas": 93
             }
           ],
           "playerkiller": [
             {
               "nick": "TODDNH0",
-              "valor": 16,
-              "partidas": 12
+              "valor": 88,
+              "partidas": 73
             }
           ]
         },
@@ -923,15 +1070,27 @@
           "caneta": [
             {
               "nick": "Alien--__--",
-              "valor": 333.9699732065201,
-              "partidas": 1
+              "valor": 550.8978108763695,
+              "partidas": 4
             }
           ],
           "playerkiller": [
             {
               "nick": "Alien--__--",
-              "valor": 7,
-              "partidas": 1
+              "valor": 13,
+              "partidas": 4
+            },
+            {
+              "nick": "TODDNH0",
+              "valor": 13,
+              "partidas": 3
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "Alien--__--",
+              "valor": 21,
+              "partidas": 4
             }
           ]
         },
@@ -1002,22 +1161,22 @@
           "caneta": [
             {
               "nick": "Pisanoslixo",
-              "valor": 248.04897198081017,
-              "partidas": 5
+              "valor": 3048.7205526530743,
+              "partidas": 73
             }
           ],
           "botkiller": [
             {
-              "nick": "PIGzinn_30fps",
-              "valor": 1,
-              "partidas": 1
+              "nick": "Pisanoslixo",
+              "valor": 57,
+              "partidas": 73
             }
           ],
           "playerkiller": [
             {
               "nick": "Pisanoslixo",
-              "valor": 6,
-              "partidas": 5
+              "valor": 89,
+              "partidas": 73
             }
           ]
         },
@@ -1057,6 +1216,20 @@
             {
               "nick": "Zeus_god45",
               "valor": 60.32577380537987,
+              "partidas": 1
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "Zeus_god45",
+              "valor": 12,
+              "partidas": 1
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "Rasdroc",
+              "valor": 1,
               "partidas": 1
             }
           ]
