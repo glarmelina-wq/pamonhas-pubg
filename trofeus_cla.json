@@ -8,9 +8,9 @@
       "inicio_semana": "2026-10-19T00:00:00-03:00",
       "de": "2026-10-19T00:00:00-03:00",
       "ate": "2026-10-25T23:59:59-03:00",
-      "atualizado_em": "2026-10-26T13:48:54+00:00",
+      "atualizado_em": "2026-10-26T14:22:20+00:00",
       "parcial": true,
-      "partidas_recuperadas": 627,
+      "partidas_recuperadas": 800,
       "grupos": {
         "todos": {
           "kombi": [
@@ -68,9 +68,9 @@
           ],
           "lobby": [
             {
-              "nick": "tematoo",
-              "valor": 407.1111111111111,
-              "partidas": 27
+              "nick": "Pedrinhuu",
+              "valor": 400.27027027027026,
+              "partidas": 37
             }
           ],
           "farmacia": [
@@ -82,16 +82,16 @@
           ],
           "forrest": [
             {
-              "nick": "Alien--__--",
-              "valor": 2663.291005357143,
-              "partidas": 28
+              "nick": "Sazon_de_Frango",
+              "valor": 2979.608988235294,
+              "partidas": 17
             }
           ],
           "lutinho": [
             {
-              "nick": "crazyrock_com_br",
-              "valor": 9.362068965517242,
-              "partidas": 58
+              "nick": "Sazon_de_Frango",
+              "valor": 9.470588235294118,
+              "partidas": 17
             }
           ],
           "sedex": [
@@ -174,9 +174,9 @@
           ],
           "lobby": [
             {
-              "nick": "tematoo",
-              "valor": 407.1111111111111,
-              "partidas": 27
+              "nick": "Pedrinhuu",
+              "valor": 400.27027027027026,
+              "partidas": 37
             }
           ],
           "farmacia": [
@@ -188,16 +188,16 @@
           ],
           "forrest": [
             {
-              "nick": "Alien--__--",
-              "valor": 2809.1879153846157,
-              "partidas": 26
+              "nick": "Sazon_de_Frango",
+              "valor": 2979.608988235294,
+              "partidas": 17
             }
           ],
           "lutinho": [
             {
-              "nick": "Alien--__--",
-              "valor": 9.307692307692308,
-              "partidas": 26
+              "nick": "Sazon_de_Frango",
+              "valor": 9.470588235294118,
+              "partidas": 17
             }
           ],
           "sedex": [
@@ -375,9 +375,9 @@
           ],
           "forrest": [
             {
-              "nick": "Alien--__--",
-              "valor": 2945.618077272727,
-              "partidas": 22
+              "nick": "Sazon_de_Frango",
+              "valor": 2979.608988235294,
+              "partidas": 17
             }
           ],
           "lutinho": [
@@ -410,18 +410,18 @@
           ],
           "playerkiller": [
             {
-              "nick": "TODDNH0",
-              "valor": 82,
-              "partidas": 58
+              "nick": "BrtHunt3r_",
+              "valor": 84,
+              "partidas": 50
             }
           ]
         },
         "duo-fpp": {
           "kombi": [
             {
-              "nick": "zPaT0__",
-              "valor": 20343.76256,
-              "partidas": 18
+              "nick": "BRABOHEBERTE",
+              "valor": 32870.1405,
+              "partidas": 13
             }
           ],
           "amigo": [
@@ -431,18 +431,30 @@
               "partidas": 4
             }
           ],
+          "inimigo": [
+            {
+              "nick": "BRABOHEBERTE",
+              "valor": 1,
+              "partidas": 13
+            }
+          ],
           "samu": [
             {
               "nick": "CalanguinhoFPS",
               "valor": 4,
               "partidas": 15
+            },
+            {
+              "nick": "BRABOHEBERTE",
+              "valor": 4,
+              "partidas": 13
             }
           ],
           "lobby": [
             {
-              "nick": "CalanguinhoFPS",
-              "valor": 475.4,
-              "partidas": 15
+              "nick": "Pedrinhuu",
+              "valor": 375.6666666666667,
+              "partidas": 30
             }
           ],
           "farmacia": [
@@ -461,9 +473,9 @@
           ],
           "lutinho": [
             {
-              "nick": "zPaT0__",
-              "valor": 7.888888888888889,
-              "partidas": 18
+              "nick": "BRABOHEBERTE",
+              "valor": 8.0,
+              "partidas": 13
             }
           ],
           "sedex": [
@@ -475,9 +487,9 @@
           ],
           "caneta": [
             {
-              "nick": "zPaT0__",
-              "valor": 633.9566169679165,
-              "partidas": 18
+              "nick": "BRABOHEBERTE",
+              "valor": 666.0718334317207,
+              "partidas": 13
             }
           ],
           "botkiller": [
