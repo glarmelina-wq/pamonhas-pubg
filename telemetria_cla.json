@@ -1,15 +1,15 @@
 {
   "schema_version": 3,
   "season_id": "division.bro.official.pc-2018-43",
-  "updated_at": "2026-10-26T23:55:33+00:00",
+  "updated_at": "2026-10-27T05:05:13+00:00",
   "periodos": {
     "semana": {
       "inicio": "2026-10-26T00:00:00-03:00",
-      "ate": "2026-10-26T23:55:33+00:00",
+      "ate": "2026-10-27T05:05:13+00:00",
       "grupos": {
         "todos": {
-          "partidas_conhecidas": 94,
-          "partidas_analisadas": 94,
+          "partidas_conhecidas": 96,
+          "partidas_analisadas": 96,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -424,7 +424,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 6,
+              "partidas": 8,
               "hs": {
                 "sniper": 1,
                 "dmr": 0,
@@ -432,26 +432,26 @@
               },
               "recorde_hs": 4,
               "recorde_partida": "fc4f035c-70c5-4afd-baa9-9b97a763f7bf",
-              "hs_nao_classificados": 0,
+              "hs_nao_classificados": 1,
               "kills_bot": 11,
-              "kills_player": 5,
-              "dano_azul": 413.30364775657654,
+              "kills_player": 8,
+              "dano_azul": 547.114509165287,
               "dano_queda": 0,
               "mortes_azul": 0,
               "coletados": {
-                "boost": 29,
-                "cura": 58,
-                "fumaca": 9,
-                "granada": 19,
-                "municao": 2479
+                "boost": 42,
+                "cura": 67,
+                "fumaca": 12,
+                "granada": 26,
+                "municao": 3035
               },
               "usados": {
-                "boost": 25,
-                "cura": 12,
-                "fumaca": 0,
-                "granada": 11
+                "boost": 36,
+                "cura": 15,
+                "fumaca": 2,
+                "granada": 14
               },
-              "mortes": 6,
+              "mortes": 8,
               "mortes_validas": 0,
               "mortes_saldo_zero": {
                 "boost": 0,
@@ -459,8 +459,8 @@
                 "fumaca": 0,
                 "granada": 0
               },
-              "eventos_inconsistentes": 6,
-              "vida_baixa_sem_cura_estimada": 0
+              "eventos_inconsistentes": 8,
+              "vida_baixa_sem_cura_estimada": 2
             },
             {
               "nick": "Rickzzs",
@@ -600,7 +600,7 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-10-26T04:11:47+00:00",
-          "ultima_partida_analisada": "2026-10-26T23:05:02+00:00"
+          "ultima_partida_analisada": "2026-10-26T23:47:22+00:00"
         },
         "fpp": {
           "partidas_conhecidas": 75,
@@ -1157,8 +1157,8 @@
           "ultima_partida_analisada": "2026-10-26T21:37:09+00:00"
         },
         "tpp": {
-          "partidas_conhecidas": 19,
-          "partidas_analisadas": 19,
+          "partidas_conhecidas": 21,
+          "partidas_analisadas": 21,
           "jogadores": [
             {
               "nick": "LAUANNA7788",
@@ -1204,7 +1204,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 6,
+              "partidas": 8,
               "hs": {
                 "sniper": 1,
                 "dmr": 0,
@@ -1212,26 +1212,26 @@
               },
               "recorde_hs": 4,
               "recorde_partida": "fc4f035c-70c5-4afd-baa9-9b97a763f7bf",
-              "hs_nao_classificados": 0,
+              "hs_nao_classificados": 1,
               "kills_bot": 11,
-              "kills_player": 5,
-              "dano_azul": 413.30364775657654,
+              "kills_player": 8,
+              "dano_azul": 547.114509165287,
               "dano_queda": 0,
               "mortes_azul": 0,
               "coletados": {
-                "boost": 29,
-                "cura": 58,
-                "fumaca": 9,
-                "granada": 19,
-                "municao": 2479
+                "boost": 42,
+                "cura": 67,
+                "fumaca": 12,
+                "granada": 26,
+                "municao": 3035
               },
               "usados": {
-                "boost": 25,
-                "cura": 12,
-                "fumaca": 0,
-                "granada": 11
+                "boost": 36,
+                "cura": 15,
+                "fumaca": 2,
+                "granada": 14
               },
-              "mortes": 6,
+              "mortes": 8,
               "mortes_validas": 0,
               "mortes_saldo_zero": {
                 "boost": 0,
@@ -1239,8 +1239,8 @@
                 "fumaca": 0,
                 "granada": 0
               },
-              "eventos_inconsistentes": 6,
-              "vida_baixa_sem_cura_estimada": 0
+              "eventos_inconsistentes": 8,
+              "vida_baixa_sem_cura_estimada": 2
             }
           ],
           "medalhas": {
@@ -1254,7 +1254,7 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-10-26T09:17:15+00:00",
-          "ultima_partida_analisada": "2026-10-26T23:05:02+00:00"
+          "ultima_partida_analisada": "2026-10-26T23:47:22+00:00"
         },
         "squad-fpp": {
           "partidas_conhecidas": 70,
@@ -1914,8 +1914,8 @@
           "ultima_partida_analisada": "2026-10-26T14:22:00+00:00"
         },
         "squad": {
-          "partidas_conhecidas": 19,
-          "partidas_analisadas": 19,
+          "partidas_conhecidas": 21,
+          "partidas_analisadas": 21,
           "jogadores": [
             {
               "nick": "LAUANNA7788",
@@ -1961,7 +1961,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 6,
+              "partidas": 8,
               "hs": {
                 "sniper": 1,
                 "dmr": 0,
@@ -1969,26 +1969,26 @@
               },
               "recorde_hs": 4,
               "recorde_partida": "fc4f035c-70c5-4afd-baa9-9b97a763f7bf",
-              "hs_nao_classificados": 0,
+              "hs_nao_classificados": 1,
               "kills_bot": 11,
-              "kills_player": 5,
-              "dano_azul": 413.30364775657654,
+              "kills_player": 8,
+              "dano_azul": 547.114509165287,
               "dano_queda": 0,
               "mortes_azul": 0,
               "coletados": {
-                "boost": 29,
-                "cura": 58,
-                "fumaca": 9,
-                "granada": 19,
-                "municao": 2479
+                "boost": 42,
+                "cura": 67,
+                "fumaca": 12,
+                "granada": 26,
+                "municao": 3035
               },
               "usados": {
-                "boost": 25,
-                "cura": 12,
-                "fumaca": 0,
-                "granada": 11
+                "boost": 36,
+                "cura": 15,
+                "fumaca": 2,
+                "granada": 14
               },
-              "mortes": 6,
+              "mortes": 8,
               "mortes_validas": 0,
               "mortes_saldo_zero": {
                 "boost": 0,
@@ -1996,8 +1996,8 @@
                 "fumaca": 0,
                 "granada": 0
               },
-              "eventos_inconsistentes": 6,
-              "vida_baixa_sem_cura_estimada": 0
+              "eventos_inconsistentes": 8,
+              "vida_baixa_sem_cura_estimada": 2
             }
           ],
           "medalhas": {
@@ -2011,7 +2011,7 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-10-26T09:17:15+00:00",
-          "ultima_partida_analisada": "2026-10-26T23:05:02+00:00"
+          "ultima_partida_analisada": "2026-10-26T23:47:22+00:00"
         },
         "duo": {
           "partidas_conhecidas": 0,
@@ -2056,11 +2056,11 @@
     },
     "mes": {
       "inicio": "2026-10-01T00:00:00-03:00",
-      "ate": "2026-10-26T23:55:33+00:00",
+      "ate": "2026-10-27T05:05:13+00:00",
       "grupos": {
         "todos": {
-          "partidas_conhecidas": 1856,
-          "partidas_analisadas": 1809,
+          "partidas_conhecidas": 1858,
+          "partidas_analisadas": 1811,
           "jogadores": [
             {
               "nick": "99_C4IO",
@@ -2926,7 +2926,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 213,
+              "partidas": 215,
               "hs": {
                 "sniper": 33,
                 "dmr": 10,
@@ -2934,26 +2934,26 @@
               },
               "recorde_hs": 8,
               "recorde_partida": "eb17a4c6-6fee-4c24-bbc1-3ad7a5ba3f21",
-              "hs_nao_classificados": 5,
+              "hs_nao_classificados": 6,
               "kills_bot": 228,
-              "kills_player": 219,
-              "dano_azul": 9457.696316152811,
+              "kills_player": 222,
+              "dano_azul": 9591.507177561522,
               "dano_queda": 174.66367504000664,
               "mortes_azul": 9,
               "coletados": {
-                "boost": 1244,
-                "cura": 1834,
-                "fumaca": 281,
-                "granada": 608,
-                "municao": 72937
+                "boost": 1257,
+                "cura": 1843,
+                "fumaca": 284,
+                "granada": 615,
+                "municao": 73493
               },
               "usados": {
-                "boost": 866,
-                "cura": 450,
-                "fumaca": 94,
-                "granada": 309
+                "boost": 877,
+                "cura": 453,
+                "fumaca": 96,
+                "granada": 312
               },
-              "mortes": 195,
+              "mortes": 197,
               "mortes_validas": 22,
               "mortes_saldo_zero": {
                 "boost": 17,
@@ -2961,8 +2961,8 @@
                 "fumaca": 19,
                 "granada": 18
               },
-              "eventos_inconsistentes": 190,
-              "vida_baixa_sem_cura_estimada": 68
+              "eventos_inconsistentes": 192,
+              "vida_baixa_sem_cura_estimada": 70
             },
             {
               "nick": "PopMeeN",
@@ -3470,7 +3470,7 @@
           },
           "partidas_anteriores_semana": 1715,
           "primeira_partida_analisada": "2026-10-09T01:59:41+00:00",
-          "ultima_partida_analisada": "2026-10-26T23:05:02+00:00"
+          "ultima_partida_analisada": "2026-10-26T23:47:22+00:00"
         },
         "fpp": {
           "partidas_conhecidas": 1563,
@@ -4846,8 +4846,8 @@
           "ultima_partida_analisada": "2026-10-26T21:37:09+00:00"
         },
         "tpp": {
-          "partidas_conhecidas": 285,
-          "partidas_analisadas": 277,
+          "partidas_conhecidas": 287,
+          "partidas_analisadas": 279,
           "jogadores": [
             {
               "nick": "99_C4IO",
@@ -5303,7 +5303,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 145,
+              "partidas": 147,
               "hs": {
                 "sniper": 25,
                 "dmr": 2,
@@ -5311,26 +5311,26 @@
               },
               "recorde_hs": 8,
               "recorde_partida": "eb17a4c6-6fee-4c24-bbc1-3ad7a5ba3f21",
-              "hs_nao_classificados": 2,
+              "hs_nao_classificados": 3,
               "kills_bot": 130,
-              "kills_player": 161,
-              "dano_azul": 6661.499508708715,
+              "kills_player": 164,
+              "dano_azul": 6795.310370117426,
               "dano_queda": 162.3382440507412,
               "mortes_azul": 6,
               "coletados": {
-                "boost": 846,
-                "cura": 1313,
-                "fumaca": 187,
-                "granada": 401,
-                "municao": 47896
+                "boost": 859,
+                "cura": 1322,
+                "fumaca": 190,
+                "granada": 408,
+                "municao": 48452
               },
               "usados": {
-                "boost": 564,
-                "cura": 330,
-                "fumaca": 75,
-                "granada": 219
+                "boost": 575,
+                "cura": 333,
+                "fumaca": 77,
+                "granada": 222
               },
-              "mortes": 140,
+              "mortes": 142,
               "mortes_validas": 16,
               "mortes_saldo_zero": {
                 "boost": 11,
@@ -5338,8 +5338,8 @@
                 "fumaca": 13,
                 "granada": 12
               },
-              "eventos_inconsistentes": 129,
-              "vida_baixa_sem_cura_estimada": 52
+              "eventos_inconsistentes": 131,
+              "vida_baixa_sem_cura_estimada": 54
             },
             {
               "nick": "Rickzzs",
@@ -5519,7 +5519,7 @@
           },
           "partidas_anteriores_semana": 258,
           "primeira_partida_analisada": "2026-10-09T09:25:48+00:00",
-          "ultima_partida_analisada": "2026-10-26T23:05:02+00:00"
+          "ultima_partida_analisada": "2026-10-26T23:47:22+00:00"
         },
         "squad-fpp": {
           "partidas_conhecidas": 1355,
@@ -7571,8 +7571,8 @@
           "ultima_partida_analisada": "2026-10-26T14:22:00+00:00"
         },
         "squad": {
-          "partidas_conhecidas": 284,
-          "partidas_analisadas": 276,
+          "partidas_conhecidas": 286,
+          "partidas_analisadas": 278,
           "jogadores": [
             {
               "nick": "99_C4IO",
@@ -8028,7 +8028,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 145,
+              "partidas": 147,
               "hs": {
                 "sniper": 25,
                 "dmr": 2,
@@ -8036,26 +8036,26 @@
               },
               "recorde_hs": 8,
               "recorde_partida": "eb17a4c6-6fee-4c24-bbc1-3ad7a5ba3f21",
-              "hs_nao_classificados": 2,
+              "hs_nao_classificados": 3,
               "kills_bot": 130,
-              "kills_player": 161,
-              "dano_azul": 6661.499508708715,
+              "kills_player": 164,
+              "dano_azul": 6795.310370117426,
               "dano_queda": 162.3382440507412,
               "mortes_azul": 6,
               "coletados": {
-                "boost": 846,
-                "cura": 1313,
-                "fumaca": 187,
-                "granada": 401,
-                "municao": 47896
+                "boost": 859,
+                "cura": 1322,
+                "fumaca": 190,
+                "granada": 408,
+                "municao": 48452
               },
               "usados": {
-                "boost": 564,
-                "cura": 330,
-                "fumaca": 75,
-                "granada": 219
+                "boost": 575,
+                "cura": 333,
+                "fumaca": 77,
+                "granada": 222
               },
-              "mortes": 140,
+              "mortes": 142,
               "mortes_validas": 16,
               "mortes_saldo_zero": {
                 "boost": 11,
@@ -8063,8 +8063,8 @@
                 "fumaca": 13,
                 "granada": 12
               },
-              "eventos_inconsistentes": 129,
-              "vida_baixa_sem_cura_estimada": 52
+              "eventos_inconsistentes": 131,
+              "vida_baixa_sem_cura_estimada": 54
             },
             {
               "nick": "Rickzzs",
@@ -8244,7 +8244,7 @@
           },
           "partidas_anteriores_semana": 257,
           "primeira_partida_analisada": "2026-10-09T09:25:48+00:00",
-          "ultima_partida_analisada": "2026-10-26T23:05:02+00:00"
+          "ultima_partida_analisada": "2026-10-26T23:47:22+00:00"
         },
         "duo": {
           "partidas_conhecidas": 1,
@@ -8585,11 +8585,11 @@
     },
     "temporada": {
       "inicio": "2026-10-10T00:11:56+00:00",
-      "ate": "2026-10-26T23:55:33+00:00",
+      "ate": "2026-10-27T05:05:13+00:00",
       "grupos": {
         "todos": {
-          "partidas_conhecidas": 1251,
-          "partidas_analisadas": 1251,
+          "partidas_conhecidas": 1253,
+          "partidas_analisadas": 1253,
           "jogadores": [
             {
               "nick": "99_C4IO",
@@ -9455,7 +9455,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 149,
+              "partidas": 151,
               "hs": {
                 "sniper": 16,
                 "dmr": 8,
@@ -9463,26 +9463,26 @@
               },
               "recorde_hs": 4,
               "recorde_partida": "5a0a9bb9-5ee5-4a41-b97b-b0fc513641c2",
-              "hs_nao_classificados": 4,
+              "hs_nao_classificados": 5,
               "kills_bot": 145,
-              "kills_player": 143,
-              "dano_azul": 7558.510754793882,
+              "kills_player": 146,
+              "dano_azul": 7692.321616202593,
               "dano_queda": 80.08125934004784,
               "mortes_azul": 7,
               "coletados": {
-                "boost": 883,
-                "cura": 1347,
-                "fumaca": 198,
-                "granada": 440,
-                "municao": 52374
+                "boost": 896,
+                "cura": 1356,
+                "fumaca": 201,
+                "granada": 447,
+                "municao": 52930
               },
               "usados": {
-                "boost": 621,
-                "cura": 360,
-                "fumaca": 58,
-                "granada": 225
+                "boost": 632,
+                "cura": 363,
+                "fumaca": 60,
+                "granada": 228
               },
-              "mortes": 137,
+              "mortes": 139,
               "mortes_validas": 11,
               "mortes_saldo_zero": {
                 "boost": 9,
@@ -9490,8 +9490,8 @@
                 "fumaca": 8,
                 "granada": 10
               },
-              "eventos_inconsistentes": 138,
-              "vida_baixa_sem_cura_estimada": 49
+              "eventos_inconsistentes": 140,
+              "vida_baixa_sem_cura_estimada": 51
             },
             {
               "nick": "PopMeeN",
@@ -10000,7 +10000,7 @@
           },
           "partidas_anteriores_semana": 1157,
           "primeira_partida_analisada": "2026-10-10T00:11:56+00:00",
-          "ultima_partida_analisada": "2026-10-26T23:05:02+00:00"
+          "ultima_partida_analisada": "2026-10-26T23:47:22+00:00"
         },
         "fpp": {
           "partidas_conhecidas": 1032,
@@ -11376,8 +11376,8 @@
           "ultima_partida_analisada": "2026-10-26T21:37:09+00:00"
         },
         "tpp": {
-          "partidas_conhecidas": 211,
-          "partidas_analisadas": 211,
+          "partidas_conhecidas": 213,
+          "partidas_analisadas": 213,
           "jogadores": [
             {
               "nick": "99_C4IO",
@@ -11833,7 +11833,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 93,
+              "partidas": 95,
               "hs": {
                 "sniper": 10,
                 "dmr": 0,
@@ -11841,26 +11841,26 @@
               },
               "recorde_hs": 4,
               "recorde_partida": "fc4f035c-70c5-4afd-baa9-9b97a763f7bf",
-              "hs_nao_classificados": 1,
+              "hs_nao_classificados": 2,
               "kills_bot": 48,
-              "kills_player": 93,
-              "dano_azul": 5092.25775924325,
+              "kills_player": 96,
+              "dano_azul": 5226.06862065196,
               "dano_queda": 69.23256179690361,
               "mortes_azul": 4,
               "coletados": {
-                "boost": 530,
-                "cura": 891,
-                "fumaca": 111,
-                "granada": 259,
-                "municao": 30332
+                "boost": 543,
+                "cura": 900,
+                "fumaca": 114,
+                "granada": 266,
+                "municao": 30888
               },
               "usados": {
-                "boost": 356,
-                "cura": 256,
-                "fumaca": 45,
-                "granada": 149
+                "boost": 367,
+                "cura": 259,
+                "fumaca": 47,
+                "granada": 152
               },
-              "mortes": 92,
+              "mortes": 94,
               "mortes_validas": 7,
               "mortes_saldo_zero": {
                 "boost": 5,
@@ -11868,8 +11868,8 @@
                 "fumaca": 4,
                 "granada": 6
               },
-              "eventos_inconsistentes": 86,
-              "vida_baixa_sem_cura_estimada": 36
+              "eventos_inconsistentes": 88,
+              "vida_baixa_sem_cura_estimada": 38
             },
             {
               "nick": "Rickzzs",
@@ -12049,7 +12049,7 @@
           },
           "partidas_anteriores_semana": 192,
           "primeira_partida_analisada": "2026-10-10T09:21:47+00:00",
-          "ultima_partida_analisada": "2026-10-26T23:05:02+00:00"
+          "ultima_partida_analisada": "2026-10-26T23:47:22+00:00"
         },
         "squad-fpp": {
           "partidas_conhecidas": 831,
@@ -14101,8 +14101,8 @@
           "ultima_partida_analisada": "2026-10-26T14:22:00+00:00"
         },
         "squad": {
-          "partidas_conhecidas": 210,
-          "partidas_analisadas": 210,
+          "partidas_conhecidas": 212,
+          "partidas_analisadas": 212,
           "jogadores": [
             {
               "nick": "99_C4IO",
@@ -14558,7 +14558,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 93,
+              "partidas": 95,
               "hs": {
                 "sniper": 10,
                 "dmr": 0,
@@ -14566,26 +14566,26 @@
               },
               "recorde_hs": 4,
               "recorde_partida": "fc4f035c-70c5-4afd-baa9-9b97a763f7bf",
-              "hs_nao_classificados": 1,
+              "hs_nao_classificados": 2,
               "kills_bot": 48,
-              "kills_player": 93,
-              "dano_azul": 5092.25775924325,
+              "kills_player": 96,
+              "dano_azul": 5226.06862065196,
               "dano_queda": 69.23256179690361,
               "mortes_azul": 4,
               "coletados": {
-                "boost": 530,
-                "cura": 891,
-                "fumaca": 111,
-                "granada": 259,
-                "municao": 30332
+                "boost": 543,
+                "cura": 900,
+                "fumaca": 114,
+                "granada": 266,
+                "municao": 30888
               },
               "usados": {
-                "boost": 356,
-                "cura": 256,
-                "fumaca": 45,
-                "granada": 149
+                "boost": 367,
+                "cura": 259,
+                "fumaca": 47,
+                "granada": 152
               },
-              "mortes": 92,
+              "mortes": 94,
               "mortes_validas": 7,
               "mortes_saldo_zero": {
                 "boost": 5,
@@ -14593,8 +14593,8 @@
                 "fumaca": 4,
                 "granada": 6
               },
-              "eventos_inconsistentes": 86,
-              "vida_baixa_sem_cura_estimada": 36
+              "eventos_inconsistentes": 88,
+              "vida_baixa_sem_cura_estimada": 38
             },
             {
               "nick": "Rickzzs",
@@ -14774,7 +14774,7 @@
           },
           "partidas_anteriores_semana": 191,
           "primeira_partida_analisada": "2026-10-10T09:21:47+00:00",
-          "ultima_partida_analisada": "2026-10-26T23:05:02+00:00"
+          "ultima_partida_analisada": "2026-10-26T23:47:22+00:00"
         },
         "duo": {
           "partidas_conhecidas": 1,
