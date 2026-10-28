@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "fonte": "partidas",
-  "updated_at": "2026-10-28T01:23:29+00:00",
+  "updated_at": "2026-10-28T08:31:45+00:00",
   "inicio_semana": "2026-10-26T00:00:00-03:00",
   "parcial": true,
   "grupos": {
@@ -1638,7 +1638,7 @@
   },
   "partidas_semana": 177,
   "partidas_em_cache": 1939,
-  "recuperadas_agora": 18,
+  "recuperadas_agora": 0,
   "pendentes": 0,
   "falhas_partidas": 0,
   "membros_sem_lista": [],
