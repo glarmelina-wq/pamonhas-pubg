@@ -8,16 +8,16 @@
       "inicio_semana": "2026-10-19T00:00:00-03:00",
       "de": "2026-10-19T00:00:00-03:00",
       "ate": "2026-10-25T23:59:59-03:00",
-      "atualizado_em": "2026-10-28T08:31:45+00:00",
+      "atualizado_em": "2026-10-28T13:46:29+00:00",
       "parcial": true,
-      "partidas_recuperadas": 800,
+      "partidas_recuperadas": 952,
       "grupos": {
         "todos": {
           "kombi": [
             {
-              "nick": "GEMINIAKI",
-              "valor": 136380.5432035,
-              "partidas": 97
+              "nick": "DUDUZIN1_",
+              "valor": 237331.68699860002,
+              "partidas": 158
             }
           ],
           "amigo": [
@@ -30,6 +30,11 @@
               "nick": "Burallosh",
               "valor": 1,
               "partidas": 81
+            },
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 1,
+              "partidas": 158
             },
             {
               "nick": "Alien--__--",
@@ -61,9 +66,9 @@
           ],
           "samu": [
             {
-              "nick": "CalanguinhoFPS",
-              "valor": 31,
-              "partidas": 83
+              "nick": "DUDUZIN1_",
+              "valor": 52,
+              "partidas": 158
             }
           ],
           "lobby": [
@@ -103,9 +108,9 @@
           ],
           "caneta": [
             {
-              "nick": "Pisanoslixo",
-              "valor": 3462.8888308405876,
-              "partidas": 73
+              "nick": "DUDUZIN1_",
+              "valor": 7553.408976424485,
+              "partidas": 158
             }
           ],
           "botkiller": [
@@ -117,9 +122,9 @@
           ],
           "playerkiller": [
             {
-              "nick": "CalanguinhoFPS",
-              "valor": 95,
-              "partidas": 83
+              "nick": "DUDUZIN1_",
+              "valor": 242,
+              "partidas": 158
             }
           ]
         },
@@ -167,9 +172,9 @@
           ],
           "samu": [
             {
-              "nick": "crazyrock_com_br",
-              "valor": 25,
-              "partidas": 57
+              "nick": "DUDUZIN1_",
+              "valor": 31,
+              "partidas": 105
             }
           ],
           "lobby": [
@@ -209,9 +214,9 @@
           ],
           "caneta": [
             {
-              "nick": "gerskol",
-              "valor": 2962.264740794897,
-              "partidas": 58
+              "nick": "DUDUZIN1_",
+              "valor": 5537.690029878169,
+              "partidas": 105
             }
           ],
           "botkiller": [
@@ -223,18 +228,18 @@
           ],
           "playerkiller": [
             {
-              "nick": "TODDNH0",
-              "valor": 86,
-              "partidas": 60
+              "nick": "DUDUZIN1_",
+              "valor": 153,
+              "partidas": 105
             }
           ]
         },
         "tpp": {
           "kombi": [
             {
-              "nick": "CalanguinhoFPS",
-              "valor": 63809.928570000004,
-              "partidas": 57
+              "nick": "DUDUZIN1_",
+              "valor": 120197.29382000002,
+              "partidas": 53
             }
           ],
           "amigo": [
@@ -242,6 +247,11 @@
               "nick": "Pisanoslixo",
               "valor": 1,
               "partidas": 57
+            },
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 1,
+              "partidas": 53
             }
           ],
           "inimigo": [
@@ -249,6 +259,11 @@
               "nick": "LAUANNA7788",
               "valor": 1,
               "partidas": 9
+            },
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 1,
+              "partidas": 53
             }
           ],
           "samu": [
@@ -281,9 +296,9 @@
           ],
           "lutinho": [
             {
-              "nick": "ROGER__BR",
-              "valor": 7.538461538461538,
-              "partidas": 13
+              "nick": "DUDUZIN1_",
+              "valor": 8.81132075471698,
+              "partidas": 53
             }
           ],
           "sedex": [
@@ -302,16 +317,16 @@
           ],
           "botkiller": [
             {
-              "nick": "ROGER__BR",
-              "valor": 34,
-              "partidas": 13
+              "nick": "DUDUZIN1_",
+              "valor": 65,
+              "partidas": 53
             }
           ],
           "playerkiller": [
             {
-              "nick": "CalanguinhoFPS",
-              "valor": 72,
-              "partidas": 57
+              "nick": "DUDUZIN1_",
+              "valor": 89,
+              "partidas": 53
             }
           ]
         },
@@ -354,9 +369,9 @@
           ],
           "samu": [
             {
-              "nick": "crazyrock_com_br",
-              "valor": 25,
-              "partidas": 57
+              "nick": "DUDUZIN1_",
+              "valor": 31,
+              "partidas": 72
             }
           ],
           "lobby": [
@@ -396,9 +411,9 @@
           ],
           "caneta": [
             {
-              "nick": "gerskol",
-              "valor": 2583.40344029665,
-              "partidas": 54
+              "nick": "DUDUZIN1_",
+              "valor": 4185.187797833234,
+              "partidas": 72
             }
           ],
           "botkiller": [
@@ -410,9 +425,9 @@
           ],
           "playerkiller": [
             {
-              "nick": "BrtHunt3r_",
-              "valor": 84,
-              "partidas": 50
+              "nick": "DUDUZIN1_",
+              "valor": 126,
+              "partidas": 72
             }
           ]
         },
@@ -452,9 +467,9 @@
           ],
           "lobby": [
             {
-              "nick": "Pedrinhuu",
-              "valor": 375.6666666666667,
-              "partidas": 30
+              "nick": "DUDUZIN1_",
+              "valor": 310.969696969697,
+              "partidas": 33
             }
           ],
           "farmacia": [
@@ -487,9 +502,9 @@
           ],
           "caneta": [
             {
-              "nick": "BRABOHEBERTE",
-              "valor": 666.0718334317207,
-              "partidas": 13
+              "nick": "DUDUZIN1_",
+              "valor": 1352.5022320449352,
+              "partidas": 33
             }
           ],
           "botkiller": [
@@ -501,18 +516,18 @@
           ],
           "playerkiller": [
             {
-              "nick": "zPaT0__",
-              "valor": 24,
-              "partidas": 18
+              "nick": "DUDUZIN1_",
+              "valor": 27,
+              "partidas": 33
             }
           ]
         },
         "squad": {
           "kombi": [
             {
-              "nick": "CalanguinhoFPS",
-              "valor": 63809.928570000004,
-              "partidas": 57
+              "nick": "DUDUZIN1_",
+              "valor": 120197.29382000002,
+              "partidas": 53
             }
           ],
           "amigo": [
@@ -520,6 +535,11 @@
               "nick": "Pisanoslixo",
               "valor": 1,
               "partidas": 57
+            },
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 1,
+              "partidas": 53
             }
           ],
           "inimigo": [
@@ -527,6 +547,11 @@
               "nick": "LAUANNA7788",
               "valor": 1,
               "partidas": 9
+            },
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 1,
+              "partidas": 53
             }
           ],
           "samu": [
@@ -559,9 +584,9 @@
           ],
           "lutinho": [
             {
-              "nick": "ROGER__BR",
-              "valor": 7.538461538461538,
-              "partidas": 13
+              "nick": "DUDUZIN1_",
+              "valor": 8.81132075471698,
+              "partidas": 53
             }
           ],
           "sedex": [
@@ -580,16 +605,16 @@
           ],
           "botkiller": [
             {
-              "nick": "ROGER__BR",
-              "valor": 34,
-              "partidas": 13
+              "nick": "DUDUZIN1_",
+              "valor": 65,
+              "partidas": 53
             }
           ],
           "playerkiller": [
             {
-              "nick": "CalanguinhoFPS",
-              "valor": 72,
-              "partidas": 57
+              "nick": "DUDUZIN1_",
+              "valor": 89,
+              "partidas": 53
             }
           ]
         },
@@ -1081,21 +1106,16 @@
           ],
           "caneta": [
             {
-              "nick": "Alien--__--",
-              "valor": 550.8978108763695,
-              "partidas": 4
+              "nick": "DUDUZIN1_",
+              "valor": 995.8090200424194,
+              "partidas": 58
             }
           ],
           "playerkiller": [
             {
-              "nick": "Alien--__--",
-              "valor": 13,
-              "partidas": 4
-            },
-            {
-              "nick": "TODDNH0",
-              "valor": 13,
-              "partidas": 3
+              "nick": "DUDUZIN1_",
+              "valor": 51,
+              "partidas": 58
             }
           ],
           "botkiller": [
