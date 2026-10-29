@@ -8,9 +8,9 @@
       "inicio_semana": "2026-10-19T00:00:00-03:00",
       "de": "2026-10-19T00:00:00-03:00",
       "ate": "2026-10-25T23:59:59-03:00",
-      "atualizado_em": "2026-10-29T07:07:10+00:00",
+      "atualizado_em": "2026-10-29T10:49:45+00:00",
       "parcial": true,
-      "partidas_recuperadas": 952,
+      "partidas_recuperadas": 962,
       "grupos": {
         "todos": {
           "kombi": [
@@ -474,23 +474,23 @@
           ],
           "farmacia": [
             {
-              "nick": "VoVoGOW",
-              "valor": 6.571428571428571,
-              "partidas": 7
+              "nick": "zEduHenZz",
+              "valor": 13.333333333333334,
+              "partidas": 6
             }
           ],
           "forrest": [
             {
-              "nick": "zPaT0__",
-              "valor": 2277.1828100000007,
-              "partidas": 18
+              "nick": "zEduHenZz",
+              "valor": 2541.710183333333,
+              "partidas": 6
             }
           ],
           "lutinho": [
             {
-              "nick": "BRABOHEBERTE",
-              "valor": 8.0,
-              "partidas": 13
+              "nick": "zEduHenZz",
+              "valor": 9.666666666666666,
+              "partidas": 6
             }
           ],
           "sedex": [
@@ -621,6 +621,13 @@
         "duo": {},
         "solo-fpp": {},
         "solo": {
+          "kombi": [
+            {
+              "nick": "zEduHenZz",
+              "valor": 6658.286300000001,
+              "partidas": 3
+            }
+          ],
           "sedex": [
             {
               "nick": "robo__GUERREIRO",
@@ -1246,9 +1253,9 @@
           ],
           "caneta": [
             {
-              "nick": "Zeus_god45",
-              "valor": 60.32577380537987,
-              "partidas": 1
+              "nick": "zEduHenZz",
+              "valor": 123.9842267036438,
+              "partidas": 4
             }
           ],
           "botkiller": [
@@ -1260,9 +1267,9 @@
           ],
           "playerkiller": [
             {
-              "nick": "Rasdroc",
-              "valor": 1,
-              "partidas": 1
+              "nick": "zEduHenZz",
+              "valor": 6,
+              "partidas": 4
             }
           ]
         }
