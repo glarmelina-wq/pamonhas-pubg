@@ -8,9 +8,9 @@
       "inicio_semana": "2026-10-19T00:00:00-03:00",
       "de": "2026-10-19T00:00:00-03:00",
       "ate": "2026-10-25T23:59:59-03:00",
-      "atualizado_em": "2026-10-30T12:56:47+00:00",
+      "atualizado_em": "2026-10-30T15:48:47+00:00",
       "parcial": true,
-      "partidas_recuperadas": 962,
+      "partidas_recuperadas": 999,
       "grupos": {
         "todos": {
           "kombi": [
@@ -55,6 +55,11 @@
               "nick": "zPaT0__",
               "valor": 1,
               "partidas": 29
+            },
+            {
+              "nick": "HSzin",
+              "valor": 1,
+              "partidas": 36
             }
           ],
           "inimigo": [
@@ -161,6 +166,11 @@
               "nick": "zPaT0__",
               "valor": 1,
               "partidas": 29
+            },
+            {
+              "nick": "HSzin",
+              "valor": 1,
+              "partidas": 31
             }
           ],
           "inimigo": [
@@ -358,6 +368,11 @@
               "nick": "zPaT0__",
               "valor": 1,
               "partidas": 11
+            },
+            {
+              "nick": "HSzin",
+              "valor": 1,
+              "partidas": 14
             }
           ],
           "inimigo": [
@@ -451,6 +466,11 @@
               "nick": "BRABOHEBERTE",
               "valor": 1,
               "partidas": 13
+            },
+            {
+              "nick": "HSzin",
+              "valor": 1,
+              "partidas": 17
             }
           ],
           "samu": [
@@ -619,7 +639,29 @@
           ]
         },
         "duo": {},
-        "solo-fpp": {},
+        "solo-fpp": {
+          "sedex": [
+            {
+              "nick": "Droga-eo-Mineiro",
+              "valor": 81.03401,
+              "partidas": 1
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "Droga-eo-Mineiro",
+              "valor": 1,
+              "partidas": 1
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "Droga-eo-Mineiro",
+              "valor": 1,
+              "partidas": 1
+            }
+          ]
+        },
         "solo": {
           "kombi": [
             {
@@ -1260,9 +1302,9 @@
           ],
           "botkiller": [
             {
-              "nick": "Zeus_god45",
-              "valor": 12,
-              "partidas": 1
+              "nick": "HSzin",
+              "valor": 15,
+              "partidas": 3
             }
           ],
           "playerkiller": [
