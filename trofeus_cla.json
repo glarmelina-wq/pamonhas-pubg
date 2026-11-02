@@ -2,6 +2,681 @@
   "schema_version": 1,
   "semanas": [
     {
+      "id": "semana:2026-10-26",
+      "fonte": "partidas",
+      "season_id": "partidas-recuperadas",
+      "inicio_semana": "2026-10-26T00:00:00-03:00",
+      "de": "2026-10-26T00:00:00-03:00",
+      "ate": "2026-11-01T23:59:59-03:00",
+      "atualizado_em": "2026-11-02T08:57:12+00:00",
+      "parcial": true,
+      "partidas_recuperadas": 908,
+      "grupos": {
+        "todos": {
+          "kombi": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 176670.691092,
+              "partidas": 114
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "manolobr07",
+              "valor": 3,
+              "partidas": 33
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 3,
+              "partidas": 114
+            }
+          ],
+          "samu": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 57,
+              "partidas": 114
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "julianfps",
+              "valor": 356.3636363636364,
+              "partidas": 11
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "Alien--__--",
+              "valor": 12.5,
+              "partidas": 16
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "Alien--__--",
+              "valor": 3342.266455375,
+              "partidas": 16
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "Alien--__--",
+              "valor": 10.5,
+              "partidas": 16
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "Burallosh",
+              "valor": 600.40784,
+              "partidas": 62
+            }
+          ],
+          "caneta": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 6559.194975167513,
+              "partidas": 114
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "Burallosh",
+              "valor": 207,
+              "partidas": 62
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 238,
+              "partidas": 114
+            }
+          ]
+        },
+        "fpp": {
+          "kombi": [
+            {
+              "nick": "VoVoGOW",
+              "valor": 101190.40096,
+              "partidas": 40
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "manolobr07",
+              "valor": 3,
+              "partidas": 33
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 2,
+              "partidas": 70
+            },
+            {
+              "nick": "To-Brinks",
+              "valor": 2,
+              "partidas": 32
+            },
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 2,
+              "partidas": 78
+            }
+          ],
+          "samu": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 41,
+              "partidas": 78
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "julianfps",
+              "valor": 424.875,
+              "partidas": 8
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "Alien--__--",
+              "valor": 12.5,
+              "partidas": 16
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "Alien--__--",
+              "valor": 3342.266455375,
+              "partidas": 16
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "Alien--__--",
+              "valor": 10.5,
+              "partidas": 16
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "Burallosh",
+              "valor": 600.40784,
+              "partidas": 62
+            }
+          ],
+          "caneta": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 3803.5404544770718,
+              "partidas": 78
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "Burallosh",
+              "valor": 207,
+              "partidas": 62
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 135,
+              "partidas": 78
+            }
+          ]
+        },
+        "tpp": {
+          "kombi": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 104263.64576999999,
+              "partidas": 58
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 1,
+              "partidas": 24
+            },
+            {
+              "nick": "Pisanoslixo",
+              "valor": 1,
+              "partidas": 58
+            },
+            {
+              "nick": "SailreX",
+              "valor": 1,
+              "partidas": 18
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 2,
+              "partidas": 58
+            }
+          ],
+          "samu": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 20,
+              "partidas": 58
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 417.0833333333333,
+              "partidas": 24
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 6.944444444444445,
+              "partidas": 36
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "SailreX",
+              "valor": 2601.6717577777777,
+              "partidas": 18
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 8.444444444444445,
+              "partidas": 18
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "SailreX",
+              "valor": 495.90082,
+              "partidas": 18
+            }
+          ],
+          "caneta": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 2755.654520690441,
+              "partidas": 36
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 48,
+              "partidas": 36
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 103,
+              "partidas": 36
+            }
+          ]
+        },
+        "squad-fpp": {
+          "kombi": [
+            {
+              "nick": "crazyrock_com_br",
+              "valor": 98968.0263628,
+              "partidas": 65
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "manolobr07",
+              "valor": 3,
+              "partidas": 24
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 2,
+              "partidas": 70
+            },
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 2,
+              "partidas": 76
+            }
+          ],
+          "samu": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 41,
+              "partidas": 76
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "Rickzzs",
+              "valor": 548.2,
+              "partidas": 10
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "Alien--__--",
+              "valor": 9.571428571428571,
+              "partidas": 7
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 3184.15304,
+              "partidas": 5
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "LuleLixxooXandTB",
+              "valor": 10.333333333333334,
+              "partidas": 6
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "Burallosh",
+              "valor": 600.40784,
+              "partidas": 62
+            }
+          ],
+          "caneta": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 3803.5404544770718,
+              "partidas": 76
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "Burallosh",
+              "valor": 207,
+              "partidas": 62
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 134,
+              "partidas": 76
+            }
+          ]
+        },
+        "duo-fpp": {
+          "kombi": [
+            {
+              "nick": "manolobr07",
+              "valor": 26809.896999999997,
+              "partidas": 9
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "robo__GUERREIRO",
+              "valor": 1,
+              "partidas": 2
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "Padre0027",
+              "valor": 1,
+              "partidas": 19
+            },
+            {
+              "nick": "manolobr07",
+              "valor": 1,
+              "partidas": 9
+            },
+            {
+              "nick": "To-Brinks",
+              "valor": 1,
+              "partidas": 20
+            }
+          ],
+          "samu": [
+            {
+              "nick": "BRABOHEBERTE",
+              "valor": 5,
+              "partidas": 20
+            },
+            {
+              "nick": "zEduHenZz",
+              "valor": 5,
+              "partidas": 15
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "julianfps",
+              "valor": 424.875,
+              "partidas": 8
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "Alien--__--",
+              "valor": 14.777777777777779,
+              "partidas": 9
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "Alien--__--",
+              "valor": 3585.992522222222,
+              "partidas": 9
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "Alien--__--",
+              "valor": 12.11111111111111,
+              "partidas": 9
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "Alien--__--",
+              "valor": 477.15457,
+              "partidas": 9
+            }
+          ],
+          "caneta": [
+            {
+              "nick": "Alien--__--",
+              "valor": 1474.9511869847775,
+              "partidas": 9
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "Alien--__--",
+              "valor": 94,
+              "partidas": 9
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "To-Brinks",
+              "valor": 26,
+              "partidas": 20
+            }
+          ]
+        },
+        "squad": {
+          "kombi": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 104263.64576999999,
+              "partidas": 58
+            }
+          ],
+          "amigo": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 1,
+              "partidas": 24
+            },
+            {
+              "nick": "Pisanoslixo",
+              "valor": 1,
+              "partidas": 58
+            },
+            {
+              "nick": "SailreX",
+              "valor": 1,
+              "partidas": 18
+            }
+          ],
+          "inimigo": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 2,
+              "partidas": 58
+            }
+          ],
+          "samu": [
+            {
+              "nick": "Pisanoslixo",
+              "valor": 20,
+              "partidas": 58
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "LAUANNA7788",
+              "valor": 417.0833333333333,
+              "partidas": 24
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 6.944444444444445,
+              "partidas": 36
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "SailreX",
+              "valor": 2601.6717577777777,
+              "partidas": 18
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "ROGER__BR",
+              "valor": 8.444444444444445,
+              "partidas": 18
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "SailreX",
+              "valor": 495.90082,
+              "partidas": 18
+            }
+          ],
+          "caneta": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 2755.654520690441,
+              "partidas": 36
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 48,
+              "partidas": 36
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "DUDUZIN1_",
+              "valor": 103,
+              "partidas": 36
+            }
+          ]
+        },
+        "duo": {},
+        "solo-fpp": {
+          "kombi": [
+            {
+              "nick": "Droga-eo-Mineiro",
+              "valor": 2002.2341,
+              "partidas": 2
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "Droga-eo-Mineiro",
+              "valor": 77.57013,
+              "partidas": 2
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "Droga-eo-Mineiro",
+              "valor": 2,
+              "partidas": 2
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "Droga-eo-Mineiro",
+              "valor": 1,
+              "partidas": 2
+            }
+          ]
+        },
+        "solo": {
+          "kombi": [
+            {
+              "nick": "HSzin",
+              "valor": 1319.0287,
+              "partidas": 5
+            }
+          ],
+          "lobby": [
+            {
+              "nick": "To-Brinks",
+              "valor": 334.25,
+              "partidas": 8
+            }
+          ],
+          "farmacia": [
+            {
+              "nick": "HSzin",
+              "valor": 4.6,
+              "partidas": 5
+            }
+          ],
+          "forrest": [
+            {
+              "nick": "HSzin",
+              "valor": 1635.026322,
+              "partidas": 5
+            }
+          ],
+          "lutinho": [
+            {
+              "nick": "To-Brinks",
+              "valor": 5.75,
+              "partidas": 8
+            }
+          ],
+          "sedex": [
+            {
+              "nick": "To-Brinks",
+              "valor": 313.21738,
+              "partidas": 8
+            }
+          ],
+          "caneta": [
+            {
+              "nick": "SailreX",
+              "valor": 0.4000000059604645,
+              "partidas": 1
+            }
+          ],
+          "botkiller": [
+            {
+              "nick": "HSzin",
+              "valor": 14,
+              "partidas": 5
+            }
+          ],
+          "playerkiller": [
+            {
+              "nick": "HSzin",
+              "valor": 6,
+              "partidas": 5
+            }
+          ]
+        }
+      }
+    },
+    {
       "id": "semana:2026-10-19",
       "fonte": "partidas",
       "season_id": "partidas-recuperadas",
@@ -679,23 +1354,23 @@
           ],
           "caneta": [
             {
-              "nick": "Bicaleto",
-              "valor": 208.69388496875763,
-              "partidas": 3
+              "nick": "To-Brinks",
+              "valor": 308.0157477259636,
+              "partidas": 15
             }
           ],
           "botkiller": [
             {
-              "nick": "robo__GUERREIRO",
-              "valor": 12,
-              "partidas": 1
+              "nick": "To-Brinks",
+              "valor": 30,
+              "partidas": 15
             }
           ],
           "playerkiller": [
             {
-              "nick": "robo__GUERREIRO",
-              "valor": 4,
-              "partidas": 1
+              "nick": "To-Brinks",
+              "valor": 14,
+              "partidas": 15
             }
           ]
         }
