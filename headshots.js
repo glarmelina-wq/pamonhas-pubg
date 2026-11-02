@@ -20,10 +20,27 @@ function advice(p){
  return tips.map(([title,evidence,tip])=>'<article class="card"><span class="eyebrow">Depois da partida</span><h3>'+esc(title)+'</h3><p class="small muted">'+esc(evidence)+'</p><p>'+esc(tip)+'</p></article>').join('');
 }
 function profile(nick,mode){
- const p=group(globalThis.PAMONHAS_TELEMETRIA,'semana',mode)?.jogadores?.find(p=>p.nick===nick);
- return '<section class="card" style="margin-top:20px"><span class="eyebrow">Partidas da semana</span><h3>Mochila, safe e recursos</h3>'+
- (p?'<div class="grid2" style="margin-top:16px">'+advice(p)+'</div>':'<p class="muted">Telemetria ainda não disponível para este jogador nesta modalidade. Sem dados não significa zero.</p>')+
- '<p class="small muted">As dicas usam registros de partidas já encerradas. Os itens na mochila são uma estimativa e podem faltar registros. Não sabemos quanto de munição restou.</p><a href="headshots.html">Abrir headshots e diagnóstico completo →</a></section>';
+ const data=globalThis.PAMONHAS_TELEMETRIA;
+ const p=(group(data,'temporada',mode)?.jogadores?.find(x=>x.nick===nick))||group(data,'semana',mode)?.jogadores?.find(x=>x.nick===nick);
+ let cards='';
+ if(p){
+  const weapons=Object.entries(p.armas||{}).map(([name,s])=>({name,...s}));
+  const accurate=weapons.filter(w=>w.disparos>=30&&w.partidas>=3&&w.acertos<=w.disparos)
+   .sort((a,b)=>b.acertos/b.disparos-a.acertos/a.disparos||b.disparos-a.disparos)[0];
+  const damage=weapons.filter(w=>w.dano>0&&w.partidas>=2)
+   .sort((a,b)=>b.dano-a.dano)[0];
+  const matches=Math.max(1,p.partidas||0), deaths=p.mortes_validas||0;
+  const zero=(key)=>deaths>=3&&(p.mortes_saldo_zero?.[key]||0)/deaths>=.5;
+  const clamp=n=>Math.max(3,Math.min(5,n));
+  const kits=clamp(Math.ceil((p.usados?.kits||0)/matches+1)+(zero('cura')?1:0));
+  const smokes=clamp(Math.ceil((p.usados?.fumaca||0)/matches+2)+(zero('fumaca')?1:0));
+  const accuracy=accurate?'<strong>'+num(accurate.acertos/accurate.disparos*100,1)+'%</strong><p>'+esc(accurate.name)+' · '+num(accurate.acertos)+' acertos estimados em '+num(accurate.disparos)+' disparos · '+num(accurate.partidas)+' jogos</p>':'<p>Ainda faltam dados: são necessários 30 disparos registrados em pelo menos 3 jogos.</p>';
+  const damageText=damage?'<strong>'+num(damage.dano,0)+' de dano</strong><p>'+esc(damage.name)+' · '+num(damage.partidas)+' jogos</p>':'<p>Ainda faltam registros de dano desta temporada.</p>';
+  cards='<div class="grid3" style="margin-top:16px"><article class="card"><span class="eyebrow">Mais certeira · estimativa</span>'+accuracy+'</article><article class="card"><span class="eyebrow">Maior dano causado</span>'+damageText+'</article><article class="card"><span class="eyebrow">Mochila sugerida após o loot</span><strong>'+kits+' kits de cura · '+smokes+' fumaças</strong><p>Meta prática calculada pelo uso médio e pelos saldos estimados antes das mortes.</p></article></div>';
+ }
+ return '<section class="card" style="margin-top:20px"><span class="eyebrow">Temporada · todas as partidas disponíveis</span><h3>Armas, mochila e sobrevivência</h3>'+ 
+ (p?cards+'<div class="grid2" style="margin-top:16px">'+advice(p)+'</div>':'<p class="muted">Telemetria ainda não disponível para este jogador nesta modalidade. Sem dados não significa zero.</p>')+
+ '<p class="small muted">A taxa é estimada: a API agrupa disparos em lotes de 10 e os acertos vêm dos registros de dano. Dano é o valor registrado contra adversários, sem dano de aliados. A sugestão de mochila usa partidas encerradas; não é o inventário real da largada. “Kits” considera kits de primeiros socorros e kits médicos. A cobertura pode ser parcial.</p><a href="headshots.html">Abrir headshots e diagnóstico completo →</a></section>';
 }
 globalThis.PamonhasTelemetry={profile,advice};
 document.addEventListener('DOMContentLoaded',async()=>{

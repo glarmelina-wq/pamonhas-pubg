@@ -33,6 +33,19 @@ class TelemetryTests(unittest.TestCase):
         p=t.parse_events(events,{A,B})[A]
         self.assertEqual(p['hs'],{'sniper':1,'dmr':1,'outras':1})
         self.assertEqual(p['hs_nao_classificados'],1)
+
+    def test_weapon_shots_hits_and_damage(self):
+        shots=[
+            event('LogWeaponFireCount',1,character=char(A),weaponId='WeapM416_C',fireCount=10),
+            event('LogWeaponFireCount',2,character=char(A),weaponId='WeapM416_C',fireCount=10),
+        ]
+        def damage(sec,attack_id,amount):
+            return event('LogPlayerTakeDamage',sec,attacker=char(A),victim=char(B,2),
+                attackId=attack_id,damage=amount,damageTypeCategory='Damage_Gun',
+                damageCauserName='WeapM416_C')
+        p=t.parse_events(frame(shots+[damage(3,7,50),damage(4,7,20),damage(5,8,80)]),{A})[A]
+        self.assertEqual(p['armas']['M416'],
+            {'disparos':20,'acertos':2,'dano':150.0,'partidas':1})
     def test_bot_and_player_kill_counts(self):
         bot=kill(sec=10,reason='TorsoShot')
         bot['victim']=char('ai.bot-123',2)
@@ -59,6 +72,8 @@ class TelemetryTests(unittest.TestCase):
         self.assertEqual(p['mortes'][0]['saldo_estimado']['cura'],1)
         self.assertFalse(p['mortes'][0]['eventos_inconsistentes'])
         self.assertEqual(p['coletados']['cura'],2)
+        self.assertEqual(p['coletados']['kits'],2)
+        self.assertEqual(p['usados']['kits'],1)
     def test_inconsistent_and_missing_are_not_zero(self):
         use=event('LogItemUse',2,character=char(B,2),item={'itemId':'Item_Heal_FirstAid_C','stackCount':1})
         p=t.parse_events(frame([use,kill()]),{B,'absent'})
@@ -141,10 +156,16 @@ class TelemetryTests(unittest.TestCase):
         t.tag_season_matches(cache,'s43',['current'])
         report=t.build_report(cache,{'Alpha':A},now,season_id='s43')
         row=report['periodos']['temporada']['grupos']['todos']['jogadores'][0]
+        raw=cache['partidas']['current']['telemetria']['players'][A]
+        raw['armas']={'M416':{'disparos':50,'acertos':15,'dano':350.5,'partidas':1}}
+        report=t.build_report(cache,{'Alpha':A},now,season_id='s43')
+        row=report['periodos']['temporada']['grupos']['todos']['jogadores'][0]
         self.assertEqual(row['dano_azul'],25)
         self.assertEqual(row['kills_bot'],7)
         self.assertEqual(row['kills_player'],3)
         self.assertEqual(row['partidas'],1)
+        self.assertEqual(row['armas']['M416'],
+            {'disparos':50,'acertos':15,'dano':350.5,'partidas':1})
         self.assertEqual(cache['temporadas']['s43'],['current'])
         self.assertEqual(report['periodos']['semana']['grupos']['todos']['jogadores'][0]['dano_azul'],725)
         fresh=t.build_report(cache,{'Alpha':A},now,season_id='s44')

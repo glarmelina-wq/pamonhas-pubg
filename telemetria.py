@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 from recuperar_partidas import download_match, moment, week_start, GROUPS
 
-VERSION = 4
+VERSION = 5
 SNIPERS = {'AWM', 'M24', 'Kar98k', 'Win94', 'Winchester', 'MosinNagant', 'L6', 'LynxAMR'}
 DMRS = {'SKS', 'Mini14', 'Mk14', 'FNFal', 'QBU88', 'VSS', 'Mk12', 'Dragunov'}
 CATEGORIES = ('sniper', 'dmr', 'outras')
@@ -22,6 +22,10 @@ ITEMS = {
     'Item_Weapon_Grenade_C': 'granada',
     'Item_Weapon_FlashBang_C': 'granada', 'Item_Weapon_Molotov_C': 'granada',
     'Item_Weapon_BluezoneGrenade_C': 'granada',
+}
+ITEM_DETAILS = {
+    'Item_Heal_FirstAid_C': 'kits',
+    'Item_Heal_MedKit_C': 'kits',
 }
 
 def weapon_category(name):
@@ -41,6 +45,12 @@ def weapon_category(name):
               'Sawnoff','Crossbow','Pan','Machete','Cowbar','Sickle','Mortar','PanzerFaust100M'}
     return 'outras' if weapon in others else None
 
+def weapon_name(name):
+    """Nome canônico das armas classificadas pelo coletor."""
+    if weapon_category(name) is None:
+        return None
+    return name[4:-2]
+
 def kill_target_type(account_id):
     if not isinstance(account_id, str):
         return None
@@ -55,8 +65,9 @@ def empty_player():
     return {'hs': dict.fromkeys(CATEGORIES, 0), 'hs_nao_classificados': 0,
             'kills_bot': 0, 'kills_player': 0,
             'dano_azul': 0, 'dano_queda': 0, 'mortes_azul': 0,
-            'coletados': dict.fromkeys(('boost','cura','fumaca','granada','municao'), 0),
-            'usados': dict.fromkeys(('boost','cura','fumaca','granada'), 0),
+            'armas': {},
+            'coletados': dict.fromkeys(('boost','cura','fumaca','granada','municao','kits'), 0),
+            'usados': dict.fromkeys(('boost','cura','fumaca','granada','kits'), 0),
             'mortes': [], 'vida_baixa_sem_cura_estimada': 0}
 
 def parse_events(events, allowed):
@@ -70,6 +81,8 @@ def parse_events(events, allowed):
     dead = set()
     started = set()
     thrown = set()
+    weapon_hits = set()
+    weapon_matches = set()
     def account(character):
         return (character or {}).get('accountId')
     for e in sorted(events, key=lambda x: x.get('_D', '')):
@@ -100,12 +113,39 @@ def parse_events(events, allowed):
             continue
         if aid in rows:
             seen_players.add(aid)
+        if kind == 'LogWeaponFireCount':
+            owner = account(e.get('character'))
+            weapon = weapon_name(e.get('weaponId'))
+            shots = e.get('fireCount')
+            if owner in rows and weapon and isinstance(shots, int) and shots > 0:
+                stats = rows[owner]['armas'].setdefault(
+                    weapon, {'disparos':0, 'acertos':0, 'dano':0.0, 'partidas':0})
+                stats['disparos'] += shots
+                weapon_matches.add((owner, weapon))
+                seen_players.add(owner)
         if kind == 'LogPlayerTakeDamage':
+            attacker = e.get('attacker') or {}
+            attacker_id = account(attacker)
+            victim = e.get('victim') or {}
             vid = account(e.get('victim'))
+            weapon = weapon_name(e.get('damageCauserName'))
+            damage = e.get('damage')
+            damage = max(0, damage) if isinstance(damage, (int,float)) else 0
+            same_team = (attacker.get('teamId') is not None
+                         and attacker.get('teamId') == victim.get('teamId'))
+            if attacker_id in rows and attacker_id != vid and not same_team and weapon and damage > 0:
+                stats = rows[attacker_id]['armas'].setdefault(
+                    weapon, {'disparos':0, 'acertos':0, 'dano':0.0, 'partidas':0})
+                stats['dano'] += damage
+                attack_id = e.get('attackId')
+                hit = (attacker_id, weapon, attack_id)
+                if attack_id is not None and hit not in weapon_hits:
+                    weapon_hits.add(hit)
+                    stats['acertos'] += 1
+                weapon_matches.add((attacker_id, weapon))
+                seen_players.add(attacker_id)
             if vid in rows:
                 seen_players.add(vid)
-                damage = e.get('damage')
-                damage = max(0, damage) if isinstance(damage, (int,float)) else 0
                 if e.get('damageTypeCategory') == 'Damage_BlueZone':
                     rows[vid]['dano_azul'] += damage
                 elif e.get('damageTypeCategory') in ('Damage_Instant_Fall', 'Damage_Fall'):
@@ -116,6 +156,7 @@ def parse_events(events, allowed):
             item = e.get('item') or {}
             item_id = item.get('itemId', '')
             category = ITEMS.get(item_id)
+            detail = ITEM_DETAILS.get(item_id)
             ammo = item_id.startswith('Item_Ammo_')
             if category or ammo:
                 count = item.get('stackCount')
@@ -125,6 +166,8 @@ def parse_events(events, allowed):
                 if pickup:
                     bag[item_id] = bag.get(item_id, 0) + count
                     rows[aid]['coletados'][category or 'municao'] += count
+                    if detail:
+                        rows[aid]['coletados'][detail] += count
                 else:
                     # A use consumes one item; stackCount is not necessarily consumed quantity.
                     count = 1 if kind == 'LogItemUse' else count
@@ -133,6 +176,8 @@ def parse_events(events, allowed):
                     bag[item_id] = max(0, bag.get(item_id, 0) - count)
                     if kind == 'LogItemUse' and category in ('boost', 'cura'):
                         rows[aid]['usados'][category] += count
+                        if detail:
+                            rows[aid]['usados'][detail] += count
         if kind == 'LogPlayerPosition' and aid in rows:
             health = (e.get('character') or {}).get('health')
             if isinstance(health,(int,float)) and 0 < health <= 50:
@@ -172,6 +217,8 @@ def parse_events(events, allowed):
                                            'eventos_inconsistentes': vid in warnings or vid not in started})
                 dead.add(vid)
                 bags[vid] = {}
+    for owner, weapon in weapon_matches:
+        rows[owner]['armas'][weapon]['partidas'] += 1
     # Unobserved members must be retried, never counted as all-zero observations.
     return {aid: {**r, 'eventos_inconsistentes': aid in warnings or aid not in started} for aid,r in rows.items() if aid in seen_players}
 
@@ -282,8 +329,9 @@ def build_report(cache, resolved, now, season_id=None):
                     p = totals.setdefault(aid, {'nick':roster[aid], 'account_id':aid,'partidas':0,
                         'hs':dict.fromkeys(CATEGORIES,0), 'recorde_hs':0, 'recorde_partida':None,
                         'hs_nao_classificados':0,'kills_bot':0,'kills_player':0,'dano_azul':0,'dano_queda':0,'mortes_azul':0,
-                        'coletados':dict.fromkeys(('boost','cura','fumaca','granada','municao'),0),
-                        'usados':dict.fromkeys(('boost','cura','fumaca','granada'),0),
+                        'armas':{},
+                        'coletados':dict.fromkeys(('boost','cura','fumaca','granada','municao','kits'),0),
+                        'usados':dict.fromkeys(('boost','cura','fumaca','granada','kits'),0),
                         'mortes':0,'mortes_validas':0,'mortes_saldo_zero':dict.fromkeys(('boost','cura','fumaca','granada'),0),
                         'eventos_inconsistentes':0, 'vida_baixa_sem_cura_estimada':0})
                     raw = data[aid]
@@ -298,6 +346,11 @@ def build_report(cache, resolved, now, season_id=None):
                     for key in ('coletados','usados'):
                         for cat,v in raw[key].items():
                             p[key][cat] += v
+                    for weapon,stats in raw.get('armas',{}).items():
+                        current = p['armas'].setdefault(
+                            weapon, {'disparos':0, 'acertos':0, 'dano':0.0, 'partidas':0})
+                        for metric in ('disparos','acertos','dano','partidas'):
+                            current[metric] += stats.get(metric,0)
                     p['eventos_inconsistentes'] += int(raw.get('eventos_inconsistentes',False))
                     for death in raw['mortes']:
                         p['mortes'] += 1
