@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "score_version": 2,
-  "updated_at": "2026-11-12T03:01:57+00:00",
-  "ultima_atualizacao": "12/11/2026 às 00:01",
+  "score_version": 3,
+  "updated_at": "2026-11-12T10:28:13+00:00",
+  "ultima_atualizacao": "12/11/2026 �s 07:28",
   "season_id": "division.bro.official.pc-2018-44",
   "temporada": "SEASON 44",
   "modo": "SQUAD-FPP + DUO-FPP",
   "min_partidas": 15,
-  "fonte": "PUBG API • Steam • partidas normais",
+  "fonte": "PUBG API \u0007 Steam \u0007 partidas normais",
   "membros_previstos": 43,
   "nao_encontrados": [],
   "grupos": {
@@ -53,9 +53,12 @@
           "longestKill": 392.72415
         },
         "scores": {
-          "mvp": 969.6,
-          "participacao": 657
-        }
+          "mvp": 844.1,
+          "participacao": 512
+        },
+        "kills_player": 38,
+        "kills_player_partidas": 59,
+        "kills_player_por_partida": 0.644
       },
       {
         "nick": "Burallosh",
@@ -98,9 +101,12 @@
           "longestKill": 465.80212
         },
         "scores": {
-          "mvp": 910.0,
-          "participacao": 722
-        }
+          "mvp": 778.8,
+          "participacao": 538
+        },
+        "kills_player": 39,
+        "kills_player_partidas": 70,
+        "kills_player_por_partida": 0.557
       },
       {
         "nick": "VoVoGOW",
@@ -143,9 +149,12 @@
           "longestKill": 468.9318
         },
         "scores": {
-          "mvp": 1032.1,
-          "participacao": 492
-        }
+          "mvp": 896.2,
+          "participacao": 337
+        },
+        "kills_player": 51,
+        "kills_player_partidas": 57,
+        "kills_player_por_partida": 0.895
       },
       {
         "nick": "lauSL",
@@ -188,9 +197,12 @@
           "longestKill": 188.0285
         },
         "scores": {
-          "mvp": 313.4,
-          "participacao": 74
-        }
+          "mvp": 301.5,
+          "participacao": 65
+        },
+        "kills_player": 18,
+        "kills_player_partidas": 38,
+        "kills_player_por_partida": 0.474
       },
       {
         "nick": "ROGER__BR",
@@ -233,9 +245,12 @@
           "longestKill": 441.3622
         },
         "scores": {
-          "mvp": 1131.3,
-          "participacao": 287
-        }
+          "mvp": 1004.3,
+          "participacao": 221
+        },
+        "kills_player": 34,
+        "kills_player_partidas": 26,
+        "kills_player_por_partida": 1.308
       },
       {
         "nick": "crazyrock_com_br",
@@ -278,9 +293,12 @@
           "longestKill": 536.81244
         },
         "scores": {
-          "mvp": 1069.1,
-          "participacao": 958
-        }
+          "mvp": 908.0,
+          "participacao": 742
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 67,
+        "kills_player_por_partida": 0.194
       },
       {
         "nick": "Bicaleto",
@@ -323,9 +341,12 @@
           "longestKill": 328.3199
         },
         "scores": {
-          "mvp": 1602.9,
-          "participacao": 336
-        }
+          "mvp": 1334.9,
+          "participacao": 231
+        },
+        "kills_player": 7,
+        "kills_player_partidas": 13,
+        "kills_player_por_partida": 0.538
       },
       {
         "nick": "BoLHa___",
@@ -370,7 +391,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "CalanguinhoFPS",
@@ -413,9 +437,12 @@
           "longestKill": 265.7098
         },
         "scores": {
-          "mvp": 457.5,
-          "participacao": 563
-        }
+          "mvp": 448.9,
+          "participacao": 529
+        },
+        "kills_player": 240,
+        "kills_player_partidas": 195,
+        "kills_player_por_partida": 1.231
       },
       {
         "nick": "GEMINIAKI",
@@ -458,9 +485,12 @@
           "longestKill": 409.3779
         },
         "scores": {
-          "mvp": 461.9,
-          "participacao": 561
-        }
+          "mvp": 399.0,
+          "participacao": 436
+        },
+        "kills_player": 14,
+        "kills_player_partidas": 99,
+        "kills_player_por_partida": 0.141
       },
       {
         "nick": "JBMKTB",
@@ -505,7 +535,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "julianfps",
@@ -548,9 +581,12 @@
           "longestKill": 168.13014
         },
         "scores": {
-          "mvp": 389.0,
-          "participacao": 32
-        }
+          "mvp": 330.8,
+          "participacao": 11
+        },
+        "kills_player": 10,
+        "kills_player_partidas": 18,
+        "kills_player_por_partida": 0.556
       },
       {
         "nick": "LAUANNA7788",
@@ -593,9 +629,12 @@
           "longestKill": 253.51251
         },
         "scores": {
-          "mvp": 464.9,
-          "participacao": 278
-        }
+          "mvp": 409.8,
+          "participacao": 194
+        },
+        "kills_player": 27,
+        "kills_player_partidas": 76,
+        "kills_player_por_partida": 0.355
       },
       {
         "nick": "LuleLixxooXandTB",
@@ -640,7 +679,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "M43str0_FPS",
@@ -683,9 +725,12 @@
           "longestKill": 273.95944
         },
         "scores": {
-          "mvp": 1037.0,
-          "participacao": 233
-        }
+          "mvp": 927.0,
+          "participacao": 189
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 20,
+        "kills_player_por_partida": 0.65
       },
       {
         "nick": "manolobr07",
@@ -728,9 +773,12 @@
           "longestKill": 376.1256
         },
         "scores": {
-          "mvp": 943.0,
-          "participacao": 366
-        }
+          "mvp": 795.7,
+          "participacao": 269
+        },
+        "kills_player": 8,
+        "kills_player_partidas": 33,
+        "kills_player_por_partida": 0.242
       },
       {
         "nick": "PIGzinn_30fps",
@@ -773,54 +821,60 @@
           "longestKill": 247.07701
         },
         "scores": {
-          "mvp": 363.2,
-          "participacao": 187
-        }
+          "mvp": 330.7,
+          "participacao": 150
+        },
+        "kills_player": 27,
+        "kills_player_partidas": 57,
+        "kills_player_por_partida": 0.474
       },
       {
         "nick": "Pisanoslixo",
         "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-        "partidas": 121,
+        "partidas": 123,
         "elegivel_mvp": true,
         "wins": 13,
-        "win_rate": 10.7,
-        "top10s": 41,
-        "top10_rate": 33.9,
-        "kills": 205,
-        "kills_por_partida": 1.69,
-        "adr": 230.9,
-        "damage_total": 27937.03,
-        "dbnos": 176,
+        "win_rate": 10.6,
+        "top10s": 43,
+        "top10_rate": 35.0,
+        "kills": 212,
+        "kills_por_partida": 1.72,
+        "adr": 233.0,
+        "damage_total": 28662.75,
+        "dbnos": 181,
         "headshots": 50,
-        "hs_rate": 24.4,
+        "hs_rate": 23.6,
         "longest_kill": 534.8,
         "revives": 30,
         "assists": 71,
-        "heals": 633,
-        "tempo_medio_min": 11.0,
-        "km_rodados": 152.7,
-        "km_pe": 1.65,
+        "heals": 650,
+        "tempo_medio_min": 11.1,
+        "km_rodados": 158.1,
+        "km_pe": 1.67,
         "road_kills": 1,
         "team_kills": 4,
         "suicides": 1,
         "armas_loot": 9.7,
         "resenha": {
-          "roundsPlayed": 121,
-          "rideDistance": 152718.656,
+          "roundsPlayed": 123,
+          "rideDistance": 158111.082,
           "teamKills": 4,
           "suicides": 1,
           "revives": 30,
-          "timeSurvived": 79753,
-          "heals": 171,
-          "boosts": 462,
-          "walkDistance": 199176.4,
-          "weaponsAcquired": 1171,
+          "timeSurvived": 81998,
+          "heals": 173,
+          "boosts": 477,
+          "walkDistance": 205216.65,
+          "weaponsAcquired": 1195,
           "longestKill": 534.7815
         },
         "scores": {
-          "mvp": 560.4,
-          "participacao": 596
-        }
+          "mvp": 522.1,
+          "participacao": 496
+        },
+        "kills_player": 105,
+        "kills_player_partidas": 123,
+        "kills_player_por_partida": 0.854
       },
       {
         "nick": "PopMeeN",
@@ -863,9 +917,12 @@
           "longestKill": 392.32034
         },
         "scores": {
-          "mvp": 575.8,
-          "participacao": 288
-        }
+          "mvp": 493.3,
+          "participacao": 212
+        },
+        "kills_player": 8,
+        "kills_player_partidas": 46,
+        "kills_player_por_partida": 0.174
       },
       {
         "nick": "Padre0027",
@@ -908,9 +965,12 @@
           "longestKill": 403.56018
         },
         "scores": {
-          "mvp": 1213.8,
-          "participacao": 273
-        }
+          "mvp": 973.6,
+          "participacao": 129
+        },
+        "kills_player": 11,
+        "kills_player_partidas": 30,
+        "kills_player_por_partida": 0.367
       },
       {
         "nick": "Rasdroc",
@@ -955,7 +1015,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rickzzs",
@@ -998,9 +1061,12 @@
           "longestKill": 499.82773
         },
         "scores": {
-          "mvp": 2348.5,
-          "participacao": 97
-        }
+          "mvp": 1838.4,
+          "participacao": 46
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 5,
+        "kills_player_por_partida": 0.2
       },
       {
         "nick": "robo__GUERREIRO",
@@ -1043,9 +1109,12 @@
           "longestKill": 390.27917
         },
         "scores": {
-          "mvp": 399.7,
-          "participacao": 256
-        }
+          "mvp": 378.5,
+          "participacao": 223
+        },
+        "kills_player": 44,
+        "kills_player_partidas": 78,
+        "kills_player_por_partida": 0.564
       },
       {
         "nick": "ShigS-08",
@@ -1088,9 +1157,12 @@
           "longestKill": 149.17706
         },
         "scores": {
-          "mvp": 670.6,
-          "participacao": 33
-        }
+          "mvp": 620.5,
+          "participacao": 30
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 0.333
       },
       {
         "nick": "robo-_G",
@@ -1135,7 +1207,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "tematoo",
@@ -1178,9 +1253,12 @@
           "longestKill": 228.93524
         },
         "scores": {
-          "mvp": 414.3,
-          "participacao": 41
-        }
+          "mvp": 396.5,
+          "participacao": 36
+        },
+        "kills_player": 10,
+        "kills_player_partidas": 14,
+        "kills_player_por_partida": 0.714
       },
       {
         "nick": "zPaT0__",
@@ -1223,9 +1301,12 @@
           "longestKill": 270.51602
         },
         "scores": {
-          "mvp": 565.1,
-          "participacao": 58
-        }
+          "mvp": 509.3,
+          "participacao": 39
+        },
+        "kills_player": 10,
+        "kills_player_partidas": 17,
+        "kills_player_por_partida": 0.588
       },
       {
         "nick": "Zeus_god45",
@@ -1270,7 +1351,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Alien--__--",
@@ -1313,9 +1397,12 @@
           "longestKill": 462.55948
         },
         "scores": {
-          "mvp": 1499.2,
-          "participacao": 478
-        }
+          "mvp": 1272.1,
+          "participacao": 317
+        },
+        "kills_player": 17,
+        "kills_player_partidas": 20,
+        "kills_player_por_partida": 0.85
       },
       {
         "nick": "TODDNH0",
@@ -1358,9 +1445,12 @@
           "longestKill": 406.07983
         },
         "scores": {
-          "mvp": 629.4,
-          "participacao": 245
-        }
+          "mvp": 591.4,
+          "participacao": 207
+        },
+        "kills_player": 68,
+        "kills_player_partidas": 50,
+        "kills_player_por_partida": 1.36
       },
       {
         "nick": "Sazon_de_Frango",
@@ -1405,7 +1495,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pedrinhuu",
@@ -1448,9 +1541,12 @@
           "longestKill": 454.38977
         },
         "scores": {
-          "mvp": 401.7,
-          "participacao": 251
-        }
+          "mvp": 371.1,
+          "participacao": 189
+        },
+        "kills_player": 57,
+        "kills_player_partidas": 101,
+        "kills_player_por_partida": 0.564
       },
       {
         "nick": "99_C4IO",
@@ -1495,7 +1591,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BRABOHEBERTE",
@@ -1538,54 +1637,60 @@
           "longestKill": 304.83118
         },
         "scores": {
-          "mvp": 488.2,
-          "participacao": 288
-        }
+          "mvp": 466.2,
+          "participacao": 250
+        },
+        "kills_player": 77,
+        "kills_player_partidas": 86,
+        "kills_player_por_partida": 0.895
       },
       {
         "nick": "BrtHunt3r_",
         "account_id": "account.b84690326eb54029b9f815ca138ee437",
-        "partidas": 50,
+        "partidas": 54,
         "elegivel_mvp": true,
-        "wins": 8,
-        "win_rate": 16.0,
-        "top10s": 22,
-        "top10_rate": 44.0,
-        "kills": 157,
-        "kills_por_partida": 3.14,
-        "adr": 368.8,
-        "damage_total": 18440.96,
-        "dbnos": 119,
-        "headshots": 29,
-        "hs_rate": 18.5,
-        "longest_kill": 273.7,
-        "revives": 24,
-        "assists": 28,
-        "heals": 343,
-        "tempo_medio_min": 12.9,
-        "km_rodados": 97.5,
-        "km_pe": 1.79,
-        "road_kills": 0,
+        "wins": 11,
+        "win_rate": 20.4,
+        "top10s": 25,
+        "top10_rate": 46.3,
+        "kills": 221,
+        "kills_por_partida": 4.09,
+        "adr": 436.1,
+        "damage_total": 23547.97,
+        "dbnos": 161,
+        "headshots": 36,
+        "hs_rate": 16.3,
+        "longest_kill": 306.8,
+        "revives": 26,
+        "assists": 32,
+        "heals": 385,
+        "tempo_medio_min": 13.6,
+        "km_rodados": 122.0,
+        "km_pe": 1.91,
+        "road_kills": 1,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 13.4,
+        "armas_loot": 13.6,
         "resenha": {
-          "roundsPlayed": 50,
-          "rideDistance": 97478.9077,
+          "roundsPlayed": 54,
+          "rideDistance": 121987.926,
           "teamKills": 0,
           "suicides": 0,
-          "revives": 24,
-          "timeSurvived": 38624,
-          "heals": 192,
-          "boosts": 151,
-          "walkDistance": 89649.6664,
-          "weaponsAcquired": 670,
-          "longestKill": 273.74683
+          "revives": 26,
+          "timeSurvived": 44202,
+          "heals": 209,
+          "boosts": 176,
+          "walkDistance": 103081.5674,
+          "weaponsAcquired": 734,
+          "longestKill": 306.83118
         },
         "scores": {
-          "mvp": 904.2,
-          "participacao": 393
-        }
+          "mvp": 959.8,
+          "participacao": 397
+        },
+        "kills_player": 93,
+        "kills_player_partidas": 54,
+        "kills_player_por_partida": 1.722
       },
       {
         "nick": "DUDUZIN1_",
@@ -1628,9 +1733,12 @@
           "longestKill": 376.95245
         },
         "scores": {
-          "mvp": 1236.3,
-          "participacao": 331
-        }
+          "mvp": 1059.5,
+          "participacao": 239
+        },
+        "kills_player": 24,
+        "kills_player_partidas": 26,
+        "kills_player_por_partida": 0.923
       },
       {
         "nick": "To-Brinks",
@@ -1673,9 +1781,12 @@
           "longestKill": 230.32866
         },
         "scores": {
-          "mvp": 1034.7,
-          "participacao": 85
-        }
+          "mvp": 869.4,
+          "participacao": 42
+        },
+        "kills_player": 14,
+        "kills_player_partidas": 13,
+        "kills_player_por_partida": 1.077
       },
       {
         "nick": "zEduHenZz",
@@ -1718,9 +1829,12 @@
           "longestKill": 254.67867
         },
         "scores": {
-          "mvp": 600.2,
-          "participacao": 208
-        }
+          "mvp": 566.4,
+          "participacao": 173
+        },
+        "kills_player": 56,
+        "kills_player_partidas": 52,
+        "kills_player_por_partida": 1.077
       },
       {
         "nick": "HSzin",
@@ -1763,9 +1877,12 @@
           "longestKill": 592.91187
         },
         "scores": {
-          "mvp": 628.4,
-          "participacao": 149
-        }
+          "mvp": 551.9,
+          "participacao": 100
+        },
+        "kills_player": 21,
+        "kills_player_partidas": 32,
+        "kills_player_por_partida": 0.656
       },
       {
         "nick": "Droga-eo-Mineiro",
@@ -1810,7 +1927,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Japones-Negao",
@@ -1853,9 +1973,12 @@
           "longestKill": 282.17682
         },
         "scores": {
-          "mvp": 3291.6,
-          "participacao": 36
-        }
+          "mvp": 2691.6,
+          "participacao": 24
+        },
+        "kills_player": 2,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 2.0
       },
       {
         "nick": "SailreX",
@@ -1898,54 +2021,60 @@
           "longestKill": 385.8802
         },
         "scores": {
-          "mvp": 813.1,
-          "participacao": 319
-        }
+          "mvp": 755.5,
+          "participacao": 267
+        },
+        "kills_player": 45,
+        "kills_player_partidas": 45,
+        "kills_player_por_partida": 1.0
       },
       {
         "nick": "Mrsumo00",
         "account_id": "account.eebb0703e59f4a88b30d6597fd8f4a97",
-        "partidas": 27,
+        "partidas": 29,
         "elegivel_mvp": true,
-        "wins": 9,
-        "win_rate": 33.3,
-        "top10s": 20,
-        "top10_rate": 74.1,
-        "kills": 57,
-        "kills_por_partida": 2.11,
-        "adr": 307.0,
-        "damage_total": 8289.39,
-        "dbnos": 50,
-        "headshots": 16,
-        "hs_rate": 28.1,
+        "wins": 10,
+        "win_rate": 34.5,
+        "top10s": 21,
+        "top10_rate": 72.4,
+        "kills": 78,
+        "kills_por_partida": 2.69,
+        "adr": 357.5,
+        "damage_total": 10366.62,
+        "dbnos": 68,
+        "headshots": 25,
+        "hs_rate": 32.1,
         "longest_kill": 446.0,
         "revives": 10,
-        "assists": 23,
-        "heals": 145,
-        "tempo_medio_min": 17.4,
-        "km_rodados": 61.6,
-        "km_pe": 2.41,
+        "assists": 25,
+        "heals": 156,
+        "tempo_medio_min": 17.6,
+        "km_rodados": 69.0,
+        "km_pe": 2.47,
         "road_kills": 0,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 12.3,
+        "armas_loot": 12.4,
         "resenha": {
-          "roundsPlayed": 27,
-          "rideDistance": 61621.519,
+          "roundsPlayed": 29,
+          "rideDistance": 69006.225,
           "teamKills": 0,
           "suicides": 0,
           "revives": 10,
-          "timeSurvived": 28202,
-          "heals": 49,
-          "boosts": 96,
-          "walkDistance": 65068.581999999995,
-          "weaponsAcquired": 332,
+          "timeSurvived": 30633,
+          "heals": 54,
+          "boosts": 102,
+          "walkDistance": 71498.601,
+          "weaponsAcquired": 361,
           "longestKill": 445.97644
         },
         "scores": {
-          "mvp": 880.9,
-          "participacao": 280
-        }
+          "mvp": 884.6,
+          "participacao": 264
+        },
+        "kills_player": 19,
+        "kills_player_partidas": 29,
+        "kills_player_por_partida": 0.655
       }
     ],
     "fpp": [
@@ -1990,9 +2119,12 @@
           "longestKill": 392.72415
         },
         "scores": {
-          "mvp": 1001.9,
-          "participacao": 625
-        }
+          "mvp": 870.6,
+          "participacao": 486
+        },
+        "kills_player": 33,
+        "kills_player_partidas": 53,
+        "kills_player_por_partida": 0.623
       },
       {
         "nick": "Burallosh",
@@ -2035,9 +2167,12 @@
           "longestKill": 465.80212
         },
         "scores": {
-          "mvp": 910.0,
-          "participacao": 722
-        }
+          "mvp": 778.8,
+          "participacao": 538
+        },
+        "kills_player": 39,
+        "kills_player_partidas": 70,
+        "kills_player_por_partida": 0.557
       },
       {
         "nick": "VoVoGOW",
@@ -2080,9 +2215,12 @@
           "longestKill": 468.9318
         },
         "scores": {
-          "mvp": 988.6,
-          "participacao": 449
-        }
+          "mvp": 862.6,
+          "participacao": 313
+        },
+        "kills_player": 47,
+        "kills_player_partidas": 54,
+        "kills_player_por_partida": 0.87
       },
       {
         "nick": "lauSL",
@@ -2125,9 +2263,12 @@
           "longestKill": 188.0285
         },
         "scores": {
-          "mvp": 313.4,
-          "participacao": 74
-        }
+          "mvp": 301.5,
+          "participacao": 65
+        },
+        "kills_player": 18,
+        "kills_player_partidas": 38,
+        "kills_player_por_partida": 0.474
       },
       {
         "nick": "ROGER__BR",
@@ -2170,9 +2311,12 @@
           "longestKill": 441.3622
         },
         "scores": {
-          "mvp": 1486.7,
-          "participacao": 177
-        }
+          "mvp": 1291.8,
+          "participacao": 138
+        },
+        "kills_player": 14,
+        "kills_player_partidas": 10,
+        "kills_player_por_partida": 1.4
       },
       {
         "nick": "crazyrock_com_br",
@@ -2215,9 +2359,12 @@
           "longestKill": 536.81244
         },
         "scores": {
-          "mvp": 1085.3,
-          "participacao": 958
-        }
+          "mvp": 921.9,
+          "participacao": 742
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 66,
+        "kills_player_por_partida": 0.197
       },
       {
         "nick": "Bicaleto",
@@ -2260,9 +2407,12 @@
           "longestKill": 328.3199
         },
         "scores": {
-          "mvp": 1179.0,
-          "participacao": 177
-        }
+          "mvp": 1001.5,
+          "participacao": 138
+        },
+        "kills_player": 6,
+        "kills_player_partidas": 11,
+        "kills_player_por_partida": 0.545
       },
       {
         "nick": "BoLHa___",
@@ -2307,7 +2457,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "CalanguinhoFPS",
@@ -2350,9 +2503,12 @@
           "longestKill": 232.30365
         },
         "scores": {
-          "mvp": 389.3,
-          "participacao": 117
-        }
+          "mvp": 374.9,
+          "participacao": 102
+        },
+        "kills_player": 52,
+        "kills_player_partidas": 51,
+        "kills_player_por_partida": 1.02
       },
       {
         "nick": "GEMINIAKI",
@@ -2395,9 +2551,12 @@
           "longestKill": 409.3779
         },
         "scores": {
-          "mvp": 457.6,
-          "participacao": 533
-        }
+          "mvp": 393.8,
+          "participacao": 411
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 96,
+        "kills_player_por_partida": 0.135
       },
       {
         "nick": "JBMKTB",
@@ -2442,7 +2601,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "julianfps",
@@ -2485,9 +2647,12 @@
           "longestKill": 168.13014
         },
         "scores": {
-          "mvp": 520.2,
-          "participacao": 30
-        }
+          "mvp": 432.6,
+          "participacao": 9
+        },
+        "kills_player": 8,
+        "kills_player_partidas": 12,
+        "kills_player_por_partida": 0.667
       },
       {
         "nick": "LAUANNA7788",
@@ -2530,9 +2695,12 @@
           "longestKill": 253.51251
         },
         "scores": {
-          "mvp": 473.3,
-          "participacao": 271
-        }
+          "mvp": 416.8,
+          "participacao": 189
+        },
+        "kills_player": 26,
+        "kills_player_partidas": 73,
+        "kills_player_por_partida": 0.356
       },
       {
         "nick": "LuleLixxooXandTB",
@@ -2577,7 +2745,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "M43str0_FPS",
@@ -2620,9 +2791,12 @@
           "longestKill": 273.95944
         },
         "scores": {
-          "mvp": 1037.0,
-          "participacao": 233
-        }
+          "mvp": 927.0,
+          "participacao": 189
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 20,
+        "kills_player_por_partida": 0.65
       },
       {
         "nick": "manolobr07",
@@ -2665,9 +2839,12 @@
           "longestKill": 376.1256
         },
         "scores": {
-          "mvp": 943.0,
-          "participacao": 366
-        }
+          "mvp": 795.7,
+          "participacao": 269
+        },
+        "kills_player": 8,
+        "kills_player_partidas": 33,
+        "kills_player_por_partida": 0.242
       },
       {
         "nick": "PIGzinn_30fps",
@@ -2710,9 +2887,12 @@
           "longestKill": 247.07701
         },
         "scores": {
-          "mvp": 405.0,
-          "participacao": 121
-        }
+          "mvp": 367.2,
+          "participacao": 96
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 33,
+        "kills_player_por_partida": 0.394
       },
       {
         "nick": "Pisanoslixo",
@@ -2755,9 +2935,12 @@
           "longestKill": 181.17197
         },
         "scores": {
-          "mvp": 767.4,
-          "participacao": 129
-        }
+          "mvp": 684.4,
+          "participacao": 104
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 15,
+        "kills_player_por_partida": 0.867
       },
       {
         "nick": "PopMeeN",
@@ -2800,9 +2983,12 @@
           "longestKill": 392.32034
         },
         "scores": {
-          "mvp": 575.8,
-          "participacao": 288
-        }
+          "mvp": 493.3,
+          "participacao": 212
+        },
+        "kills_player": 8,
+        "kills_player_partidas": 46,
+        "kills_player_por_partida": 0.174
       },
       {
         "nick": "Padre0027",
@@ -2845,9 +3031,12 @@
           "longestKill": 403.56018
         },
         "scores": {
-          "mvp": 1213.8,
-          "participacao": 273
-        }
+          "mvp": 973.6,
+          "participacao": 129
+        },
+        "kills_player": 11,
+        "kills_player_partidas": 30,
+        "kills_player_por_partida": 0.367
       },
       {
         "nick": "Rasdroc",
@@ -2892,7 +3081,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rickzzs",
@@ -2935,9 +3127,12 @@
           "longestKill": 499.82773
         },
         "scores": {
-          "mvp": 2348.5,
-          "participacao": 97
-        }
+          "mvp": 1838.4,
+          "participacao": 46
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 5,
+        "kills_player_por_partida": 0.2
       },
       {
         "nick": "robo__GUERREIRO",
@@ -2980,9 +3175,12 @@
           "longestKill": 390.27917
         },
         "scores": {
-          "mvp": 489.7,
-          "participacao": 183
-        }
+          "mvp": 451.5,
+          "participacao": 151
+        },
+        "kills_player": 23,
+        "kills_player_partidas": 42,
+        "kills_player_por_partida": 0.548
       },
       {
         "nick": "ShigS-08",
@@ -3025,9 +3223,12 @@
           "longestKill": 149.17706
         },
         "scores": {
-          "mvp": 670.6,
-          "participacao": 33
-        }
+          "mvp": 620.5,
+          "participacao": 30
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 0.333
       },
       {
         "nick": "robo-_G",
@@ -3072,7 +3273,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "tematoo",
@@ -3115,9 +3319,12 @@
           "longestKill": 228.93524
         },
         "scores": {
-          "mvp": 414.3,
-          "participacao": 41
-        }
+          "mvp": 396.5,
+          "participacao": 36
+        },
+        "kills_player": 10,
+        "kills_player_partidas": 14,
+        "kills_player_por_partida": 0.714
       },
       {
         "nick": "zPaT0__",
@@ -3160,9 +3367,12 @@
           "longestKill": 270.51602
         },
         "scores": {
-          "mvp": 565.1,
-          "participacao": 58
-        }
+          "mvp": 509.3,
+          "participacao": 39
+        },
+        "kills_player": 10,
+        "kills_player_partidas": 17,
+        "kills_player_por_partida": 0.588
       },
       {
         "nick": "Zeus_god45",
@@ -3207,7 +3417,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Alien--__--",
@@ -3250,9 +3463,12 @@
           "longestKill": 462.55948
         },
         "scores": {
-          "mvp": 1722.8,
-          "participacao": 210
-        }
+          "mvp": 1426.7,
+          "participacao": 133
+        },
+        "kills_player": 10,
+        "kills_player_partidas": 13,
+        "kills_player_por_partida": 0.769
       },
       {
         "nick": "TODDNH0",
@@ -3295,9 +3511,12 @@
           "longestKill": 406.07983
         },
         "scores": {
-          "mvp": 629.4,
-          "participacao": 245
-        }
+          "mvp": 591.4,
+          "participacao": 207
+        },
+        "kills_player": 68,
+        "kills_player_partidas": 50,
+        "kills_player_por_partida": 1.36
       },
       {
         "nick": "Sazon_de_Frango",
@@ -3342,7 +3561,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pedrinhuu",
@@ -3385,9 +3607,12 @@
           "longestKill": 454.38977
         },
         "scores": {
-          "mvp": 401.1,
-          "participacao": 247
-        }
+          "mvp": 370.1,
+          "participacao": 185
+        },
+        "kills_player": 56,
+        "kills_player_partidas": 100,
+        "kills_player_por_partida": 0.56
       },
       {
         "nick": "99_C4IO",
@@ -3432,7 +3657,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BRABOHEBERTE",
@@ -3475,54 +3703,60 @@
           "longestKill": 304.83118
         },
         "scores": {
-          "mvp": 488.2,
-          "participacao": 288
-        }
+          "mvp": 466.2,
+          "participacao": 250
+        },
+        "kills_player": 77,
+        "kills_player_partidas": 86,
+        "kills_player_por_partida": 0.895
       },
       {
         "nick": "BrtHunt3r_",
         "account_id": "account.b84690326eb54029b9f815ca138ee437",
-        "partidas": 48,
+        "partidas": 51,
         "elegivel_mvp": true,
-        "wins": 8,
-        "win_rate": 16.7,
-        "top10s": 21,
-        "top10_rate": 43.8,
-        "kills": 153,
-        "kills_por_partida": 3.19,
-        "adr": 373.4,
-        "damage_total": 17922.12,
-        "dbnos": 117,
-        "headshots": 29,
-        "hs_rate": 19.0,
-        "longest_kill": 273.7,
+        "wins": 11,
+        "win_rate": 21.6,
+        "top10s": 24,
+        "top10_rate": 47.1,
+        "kills": 213,
+        "kills_por_partida": 4.18,
+        "adr": 443.6,
+        "damage_total": 22622.69,
+        "dbnos": 155,
+        "headshots": 36,
+        "hs_rate": 16.9,
+        "longest_kill": 306.8,
         "revives": 24,
-        "assists": 28,
-        "heals": 316,
-        "tempo_medio_min": 12.9,
-        "km_rodados": 95.7,
-        "km_pe": 1.8,
+        "assists": 30,
+        "heals": 353,
+        "tempo_medio_min": 13.6,
+        "km_rodados": 116.0,
+        "km_pe": 1.91,
         "road_kills": 0,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 13.4,
+        "armas_loot": 13.6,
         "resenha": {
-          "roundsPlayed": 48,
-          "rideDistance": 95721.28,
+          "roundsPlayed": 51,
+          "rideDistance": 115950,
           "teamKills": 0,
           "suicides": 0,
           "revives": 24,
-          "timeSurvived": 37134,
-          "heals": 170,
-          "boosts": 146,
-          "walkDistance": 86501.664,
-          "weaponsAcquired": 643,
-          "longestKill": 273.74683
+          "timeSurvived": 41597,
+          "heals": 185,
+          "boosts": 168,
+          "walkDistance": 97229.836,
+          "weaponsAcquired": 695,
+          "longestKill": 306.83118
         },
         "scores": {
-          "mvp": 918.4,
-          "participacao": 389
-        }
+          "mvp": 976.4,
+          "participacao": 385
+        },
+        "kills_player": 87,
+        "kills_player_partidas": 51,
+        "kills_player_por_partida": 1.706
       },
       {
         "nick": "DUDUZIN1_",
@@ -3565,9 +3799,12 @@
           "longestKill": 376.95245
         },
         "scores": {
-          "mvp": 1293.5,
-          "participacao": 241
-        }
+          "mvp": 1093.3,
+          "participacao": 169
+        },
+        "kills_player": 14,
+        "kills_player_partidas": 18,
+        "kills_player_por_partida": 0.778
       },
       {
         "nick": "To-Brinks",
@@ -3610,9 +3847,12 @@
           "longestKill": 230.32866
         },
         "scores": {
-          "mvp": 1212.4,
-          "participacao": 85
-        }
+          "mvp": 1017.1,
+          "participacao": 42
+        },
+        "kills_player": 14,
+        "kills_player_partidas": 11,
+        "kills_player_por_partida": 1.273
       },
       {
         "nick": "zEduHenZz",
@@ -3655,9 +3895,12 @@
           "longestKill": 252.47519
         },
         "scores": {
-          "mvp": 599.4,
-          "participacao": 196
-        }
+          "mvp": 567.7,
+          "participacao": 166
+        },
+        "kills_player": 51,
+        "kills_player_partidas": 47,
+        "kills_player_por_partida": 1.085
       },
       {
         "nick": "HSzin",
@@ -3700,9 +3943,12 @@
           "longestKill": 592.91187
         },
         "scores": {
-          "mvp": 625.5,
-          "participacao": 145
-        }
+          "mvp": 542.2,
+          "participacao": 95
+        },
+        "kills_player": 16,
+        "kills_player_partidas": 30,
+        "kills_player_por_partida": 0.533
       },
       {
         "nick": "Droga-eo-Mineiro",
@@ -3747,7 +3993,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Japones-Negao",
@@ -3790,9 +4039,12 @@
           "longestKill": 282.17682
         },
         "scores": {
-          "mvp": 3291.6,
-          "participacao": 36
-        }
+          "mvp": 2691.6,
+          "participacao": 24
+        },
+        "kills_player": 2,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 2.0
       },
       {
         "nick": "SailreX",
@@ -3835,54 +4087,60 @@
           "longestKill": 350.41403
         },
         "scores": {
-          "mvp": 952.3,
-          "participacao": 206
-        }
+          "mvp": 868.3,
+          "participacao": 169
+        },
+        "kills_player": 19,
+        "kills_player_partidas": 22,
+        "kills_player_por_partida": 0.864
       },
       {
         "nick": "Mrsumo00",
         "account_id": "account.eebb0703e59f4a88b30d6597fd8f4a97",
-        "partidas": 12,
+        "partidas": 13,
         "elegivel_mvp": false,
-        "wins": 7,
-        "win_rate": 58.3,
-        "top10s": 12,
+        "wins": 8,
+        "win_rate": 61.5,
+        "top10s": 13,
         "top10_rate": 100.0,
-        "kills": 43,
-        "kills_por_partida": 3.58,
-        "adr": 467.6,
-        "damage_total": 5611.62,
-        "dbnos": 37,
-        "headshots": 11,
-        "hs_rate": 25.6,
+        "kills": 60,
+        "kills_por_partida": 4.62,
+        "adr": 543.5,
+        "damage_total": 7065.75,
+        "dbnos": 50,
+        "headshots": 18,
+        "hs_rate": 30.0,
         "longest_kill": 446.0,
         "revives": 3,
         "assists": 12,
-        "heals": 78,
-        "tempo_medio_min": 20.9,
-        "km_rodados": 42.2,
-        "km_pe": 2.88,
+        "heals": 83,
+        "tempo_medio_min": 21.0,
+        "km_rodados": 47.7,
+        "km_pe": 2.89,
         "road_kills": 0,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 13.6,
+        "armas_loot": 13.8,
         "resenha": {
-          "roundsPlayed": 12,
-          "rideDistance": 42202.992,
+          "roundsPlayed": 13,
+          "rideDistance": 47732.336,
           "teamKills": 0,
           "suicides": 0,
           "revives": 3,
-          "timeSurvived": 15072,
-          "heals": 29,
-          "boosts": 49,
-          "walkDistance": 34592.555,
-          "weaponsAcquired": 163,
+          "timeSurvived": 16349,
+          "heals": 31,
+          "boosts": 52,
+          "walkDistance": 37610.855,
+          "weaponsAcquired": 180,
           "longestKill": 445.97644
         },
         "scores": {
-          "mvp": 1347.3,
-          "participacao": 201
-        }
+          "mvp": 1326.6,
+          "participacao": 186
+        },
+        "kills_player": 8,
+        "kills_player_partidas": 13,
+        "kills_player_por_partida": 0.615
       }
     ],
     "tpp": [
@@ -3927,9 +4185,12 @@
           "longestKill": 185.88301
         },
         "scores": {
-          "mvp": 597.2,
-          "participacao": 28
-        }
+          "mvp": 519.8,
+          "participacao": 22
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 5,
+        "kills_player_por_partida": 0.2
       },
       {
         "nick": "Burallosh",
@@ -3974,7 +4235,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "VoVoGOW",
@@ -4017,9 +4281,12 @@
           "longestKill": 26.971106
         },
         "scores": {
-          "mvp": 520.3,
-          "participacao": 4
-        }
+          "mvp": 470.3,
+          "participacao": 2
+        },
+        "kills_player": 2,
+        "kills_player_partidas": 2,
+        "kills_player_por_partida": 1.0
       },
       {
         "nick": "lauSL",
@@ -4064,7 +4331,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "ROGER__BR",
@@ -4107,9 +4377,12 @@
           "longestKill": 269.16714
         },
         "scores": {
-          "mvp": 909.2,
-          "participacao": 110
-        }
+          "mvp": 824.8,
+          "participacao": 83
+        },
+        "kills_player": 20,
+        "kills_player_partidas": 16,
+        "kills_player_por_partida": 1.25
       },
       {
         "nick": "crazyrock_com_br",
@@ -4154,7 +4427,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": 0,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 0.0
       },
       {
         "nick": "Bicaleto",
@@ -4197,9 +4473,12 @@
           "longestKill": 216.47801
         },
         "scores": {
-          "mvp": 2402.6,
-          "participacao": 147
-        }
+          "mvp": 1944.4,
+          "participacao": 92
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BoLHa___",
@@ -4244,7 +4523,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "CalanguinhoFPS",
@@ -4287,9 +4569,12 @@
           "longestKill": 265.7098
         },
         "scores": {
-          "mvp": 481.6,
-          "participacao": 446
-        }
+          "mvp": 475.2,
+          "participacao": 427
+        },
+        "kills_player": 188,
+        "kills_player_partidas": 144,
+        "kills_player_por_partida": 1.306
       },
       {
         "nick": "GEMINIAKI",
@@ -4332,9 +4617,12 @@
           "longestKill": 244.51324
         },
         "scores": {
-          "mvp": 600.9,
-          "participacao": 28
-        }
+          "mvp": 550.7,
+          "participacao": 25
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 0.333
       },
       {
         "nick": "JBMKTB",
@@ -4379,7 +4667,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "julianfps",
@@ -4424,7 +4715,10 @@
         "scores": {
           "mvp": 126.8,
           "participacao": 2
-        }
+        },
+        "kills_player": 2,
+        "kills_player_partidas": 6,
+        "kills_player_por_partida": 0.333
       },
       {
         "nick": "LAUANNA7788",
@@ -4467,9 +4761,12 @@
           "longestKill": 13.401368
         },
         "scores": {
-          "mvp": 260.8,
-          "participacao": 7
-        }
+          "mvp": 227.5,
+          "participacao": 5
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 0.333
       },
       {
         "nick": "LuleLixxooXandTB",
@@ -4514,7 +4811,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "M43str0_FPS",
@@ -4559,7 +4859,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "manolobr07",
@@ -4604,7 +4907,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "PIGzinn_30fps",
@@ -4647,54 +4953,60 @@
           "longestKill": 211.57431
         },
         "scores": {
-          "mvp": 305.8,
-          "participacao": 66
-        }
+          "mvp": 280.9,
+          "participacao": 54
+        },
+        "kills_player": 14,
+        "kills_player_partidas": 24,
+        "kills_player_por_partida": 0.583
       },
       {
         "nick": "Pisanoslixo",
         "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-        "partidas": 106,
+        "partidas": 108,
         "elegivel_mvp": true,
         "wins": 9,
-        "win_rate": 8.5,
-        "top10s": 34,
-        "top10_rate": 32.1,
-        "kills": 167,
-        "kills_por_partida": 1.58,
-        "adr": 222.9,
-        "damage_total": 23629.4,
-        "dbnos": 144,
+        "win_rate": 8.3,
+        "top10s": 36,
+        "top10_rate": 33.3,
+        "kills": 174,
+        "kills_por_partida": 1.61,
+        "adr": 225.5,
+        "damage_total": 24355.12,
+        "dbnos": 149,
         "headshots": 40,
-        "hs_rate": 24.0,
+        "hs_rate": 23.0,
         "longest_kill": 534.8,
         "revives": 29,
         "assists": 62,
-        "heals": 544,
-        "tempo_medio_min": 10.5,
-        "km_rodados": 130.1,
-        "km_pe": 1.55,
+        "heals": 561,
+        "tempo_medio_min": 10.7,
+        "km_rodados": 135.5,
+        "km_pe": 1.58,
         "road_kills": 1,
         "team_kills": 3,
         "suicides": 1,
         "armas_loot": 9.3,
         "resenha": {
-          "roundsPlayed": 106,
-          "rideDistance": 130089.234,
+          "roundsPlayed": 108,
+          "rideDistance": 135481.66,
           "teamKills": 3,
           "suicides": 1,
           "revives": 29,
-          "timeSurvived": 67023,
-          "heals": 151,
-          "boosts": 393,
-          "walkDistance": 164784.97,
-          "weaponsAcquired": 981,
+          "timeSurvived": 69268,
+          "heals": 153,
+          "boosts": 408,
+          "walkDistance": 170825.22,
+          "weaponsAcquired": 1005,
           "longestKill": 534.7815
         },
         "scores": {
-          "mvp": 531.1,
-          "participacao": 467
-        }
+          "mvp": 499.2,
+          "participacao": 392
+        },
+        "kills_player": 92,
+        "kills_player_partidas": 108,
+        "kills_player_por_partida": 0.852
       },
       {
         "nick": "PopMeeN",
@@ -4739,7 +5051,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Padre0027",
@@ -4784,7 +5099,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rasdroc",
@@ -4829,7 +5147,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rickzzs",
@@ -4874,7 +5195,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo__GUERREIRO",
@@ -4917,9 +5241,12 @@
           "longestKill": 256.41193
         },
         "scores": {
-          "mvp": 294.7,
-          "participacao": 73
-        }
+          "mvp": 293.4,
+          "participacao": 72
+        },
+        "kills_player": 21,
+        "kills_player_partidas": 36,
+        "kills_player_por_partida": 0.583
       },
       {
         "nick": "ShigS-08",
@@ -4964,7 +5291,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo-_G",
@@ -5009,7 +5339,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "tematoo",
@@ -5054,7 +5387,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "zPaT0__",
@@ -5099,7 +5435,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Zeus_god45",
@@ -5144,7 +5483,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Alien--__--",
@@ -5187,9 +5529,12 @@
           "longestKill": 343.83
         },
         "scores": {
-          "mvp": 1353.9,
-          "participacao": 268
-        }
+          "mvp": 1176.3,
+          "participacao": 184
+        },
+        "kills_player": 7,
+        "kills_player_partidas": 7,
+        "kills_player_por_partida": 1.0
       },
       {
         "nick": "TODDNH0",
@@ -5234,7 +5579,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Sazon_de_Frango",
@@ -5279,7 +5627,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pedrinhuu",
@@ -5324,7 +5675,10 @@
         "scores": {
           "mvp": 457.0,
           "participacao": 4
-        }
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 1.0
       },
       {
         "nick": "99_C4IO",
@@ -5369,7 +5723,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BRABOHEBERTE",
@@ -5414,52 +5771,58 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BrtHunt3r_",
         "account_id": "account.b84690326eb54029b9f815ca138ee437",
-        "partidas": 2,
+        "partidas": 3,
         "elegivel_mvp": false,
         "wins": 0,
         "win_rate": 0.0,
         "top10s": 1,
-        "top10_rate": 50.0,
-        "kills": 4,
-        "kills_por_partida": 2.0,
-        "adr": 259.4,
-        "damage_total": 518.84,
-        "dbnos": 2,
+        "top10_rate": 33.3,
+        "kills": 8,
+        "kills_por_partida": 2.67,
+        "adr": 308.4,
+        "damage_total": 925.28,
+        "dbnos": 6,
         "headshots": 0,
         "hs_rate": 0.0,
         "longest_kill": 66.6,
-        "revives": 0,
-        "assists": 0,
-        "heals": 27,
-        "tempo_medio_min": 12.4,
-        "km_rodados": 1.8,
-        "km_pe": 1.57,
-        "road_kills": 0,
+        "revives": 2,
+        "assists": 2,
+        "heals": 32,
+        "tempo_medio_min": 14.5,
+        "km_rodados": 6.0,
+        "km_pe": 1.95,
+        "road_kills": 1,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 13.5,
+        "armas_loot": 13.0,
         "resenha": {
-          "roundsPlayed": 2,
-          "rideDistance": 1757.6277,
+          "roundsPlayed": 3,
+          "rideDistance": 6037.926,
           "teamKills": 0,
           "suicides": 0,
-          "revives": 0,
-          "timeSurvived": 1490,
-          "heals": 22,
-          "boosts": 5,
-          "walkDistance": 3148.0024,
-          "weaponsAcquired": 27,
+          "revives": 2,
+          "timeSurvived": 2605,
+          "heals": 24,
+          "boosts": 8,
+          "walkDistance": 5851.7314,
+          "weaponsAcquired": 39,
           "longestKill": 66.5859
         },
         "scores": {
-          "mvp": 564.1,
-          "participacao": 4
-        }
+          "mvp": 679.2,
+          "participacao": 12
+        },
+        "kills_player": 6,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 2.0
       },
       {
         "nick": "DUDUZIN1_",
@@ -5502,9 +5865,12 @@
           "longestKill": 363.28976
         },
         "scores": {
-          "mvp": 1107.7,
-          "participacao": 90
-        }
+          "mvp": 982.7,
+          "participacao": 70
+        },
+        "kills_player": 10,
+        "kills_player_partidas": 8,
+        "kills_player_por_partida": 1.25
       },
       {
         "nick": "To-Brinks",
@@ -5549,7 +5915,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "zEduHenZz",
@@ -5594,7 +5963,10 @@
         "scores": {
           "mvp": 100.0,
           "participacao": 2
-        }
+        },
+        "kills_player": 0,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 0.0
       },
       {
         "nick": "HSzin",
@@ -5637,9 +6009,12 @@
           "longestKill": 97.02281
         },
         "scores": {
-          "mvp": 672.1,
-          "participacao": 4
-        }
+          "mvp": 697.1,
+          "participacao": 5
+        },
+        "kills_player": 5,
+        "kills_player_partidas": 2,
+        "kills_player_por_partida": 2.5
       },
       {
         "nick": "Droga-eo-Mineiro",
@@ -5684,7 +6059,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Japones-Negao",
@@ -5729,7 +6107,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "SailreX",
@@ -5772,54 +6153,60 @@
           "longestKill": 385.8802
         },
         "scores": {
-          "mvp": 679.9,
-          "participacao": 113
-        }
+          "mvp": 647.3,
+          "participacao": 98
+        },
+        "kills_player": 26,
+        "kills_player_partidas": 23,
+        "kills_player_por_partida": 1.13
       },
       {
         "nick": "Mrsumo00",
         "account_id": "account.eebb0703e59f4a88b30d6597fd8f4a97",
-        "partidas": 15,
+        "partidas": 16,
         "elegivel_mvp": true,
         "wins": 2,
-        "win_rate": 13.3,
+        "win_rate": 12.5,
         "top10s": 8,
-        "top10_rate": 53.3,
-        "kills": 14,
-        "kills_por_partida": 0.93,
-        "adr": 178.5,
-        "damage_total": 2677.76,
-        "dbnos": 13,
-        "headshots": 5,
-        "hs_rate": 35.7,
+        "top10_rate": 50.0,
+        "kills": 18,
+        "kills_por_partida": 1.12,
+        "adr": 206.3,
+        "damage_total": 3300.87,
+        "dbnos": 18,
+        "headshots": 7,
+        "hs_rate": 38.9,
         "longest_kill": 287.7,
         "revives": 7,
-        "assists": 11,
-        "heals": 67,
-        "tempo_medio_min": 14.6,
-        "km_rodados": 19.4,
-        "km_pe": 2.03,
+        "assists": 13,
+        "heals": 73,
+        "tempo_medio_min": 14.9,
+        "km_rodados": 21.3,
+        "km_pe": 2.12,
         "road_kills": 0,
         "team_kills": 0,
         "suicides": 0,
         "armas_loot": 11.3,
         "resenha": {
-          "roundsPlayed": 15,
-          "rideDistance": 19418.527,
+          "roundsPlayed": 16,
+          "rideDistance": 21273.889,
           "teamKills": 0,
           "suicides": 0,
           "revives": 7,
-          "timeSurvived": 13130,
-          "heals": 20,
-          "boosts": 47,
-          "walkDistance": 30476.027,
-          "weaponsAcquired": 169,
+          "timeSurvived": 14284,
+          "heals": 23,
+          "boosts": 50,
+          "walkDistance": 33887.746,
+          "weaponsAcquired": 181,
           "longestKill": 287.65192
         },
         "scores": {
-          "mvp": 507.8,
-          "participacao": 79
-        }
+          "mvp": 525.1,
+          "participacao": 78
+        },
+        "kills_player": 11,
+        "kills_player_partidas": 16,
+        "kills_player_por_partida": 0.688
       }
     ],
     "squad-fpp": [
@@ -5864,9 +6251,12 @@
           "longestKill": 392.72415
         },
         "scores": {
-          "mvp": 1014.5,
-          "participacao": 624
-        }
+          "mvp": 881.0,
+          "participacao": 485
+        },
+        "kills_player": 32,
+        "kills_player_partidas": 52,
+        "kills_player_por_partida": 0.615
       },
       {
         "nick": "Burallosh",
@@ -5909,9 +6299,12 @@
           "longestKill": 465.80212
         },
         "scores": {
-          "mvp": 910.0,
-          "participacao": 722
-        }
+          "mvp": 778.8,
+          "participacao": 538
+        },
+        "kills_player": 39,
+        "kills_player_partidas": 70,
+        "kills_player_por_partida": 0.557
       },
       {
         "nick": "VoVoGOW",
@@ -5954,9 +6347,12 @@
           "longestKill": 454.9379
         },
         "scores": {
-          "mvp": 1363.9,
-          "participacao": 396
-        }
+          "mvp": 1168.6,
+          "participacao": 271
+        },
+        "kills_player": 31,
+        "kills_player_partidas": 32,
+        "kills_player_por_partida": 0.969
       },
       {
         "nick": "lauSL",
@@ -5999,9 +6395,12 @@
           "longestKill": 188.0285
         },
         "scores": {
-          "mvp": 334.9,
-          "participacao": 74
-        }
+          "mvp": 321.5,
+          "participacao": 65
+        },
+        "kills_player": 18,
+        "kills_player_partidas": 34,
+        "kills_player_por_partida": 0.529
       },
       {
         "nick": "ROGER__BR",
@@ -6044,9 +6443,12 @@
           "longestKill": 441.3622
         },
         "scores": {
-          "mvp": 1486.7,
-          "participacao": 177
-        }
+          "mvp": 1291.8,
+          "participacao": 138
+        },
+        "kills_player": 14,
+        "kills_player_partidas": 10,
+        "kills_player_por_partida": 1.4
       },
       {
         "nick": "crazyrock_com_br",
@@ -6089,9 +6491,12 @@
           "longestKill": 536.81244
         },
         "scores": {
-          "mvp": 1085.3,
-          "participacao": 958
-        }
+          "mvp": 921.9,
+          "participacao": 742
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 66,
+        "kills_player_por_partida": 0.197
       },
       {
         "nick": "Bicaleto",
@@ -6134,9 +6539,12 @@
           "longestKill": 328.3199
         },
         "scores": {
-          "mvp": 1179.0,
-          "participacao": 177
-        }
+          "mvp": 1001.5,
+          "participacao": 138
+        },
+        "kills_player": 6,
+        "kills_player_partidas": 11,
+        "kills_player_por_partida": 0.545
       },
       {
         "nick": "BoLHa___",
@@ -6181,7 +6589,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "CalanguinhoFPS",
@@ -6224,9 +6635,12 @@
           "longestKill": 232.30365
         },
         "scores": {
-          "mvp": 418.0,
-          "participacao": 92
-        }
+          "mvp": 402.7,
+          "participacao": 81
+        },
+        "kills_player": 31,
+        "kills_player_partidas": 35,
+        "kills_player_por_partida": 0.886
       },
       {
         "nick": "GEMINIAKI",
@@ -6269,9 +6683,12 @@
           "longestKill": 409.3779
         },
         "scores": {
-          "mvp": 457.6,
-          "participacao": 533
-        }
+          "mvp": 393.8,
+          "participacao": 411
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 96,
+        "kills_player_por_partida": 0.135
       },
       {
         "nick": "JBMKTB",
@@ -6316,7 +6733,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "julianfps",
@@ -6359,9 +6779,12 @@
           "longestKill": 168.13014
         },
         "scores": {
-          "mvp": 1190.6,
-          "participacao": 13
-        }
+          "mvp": 865.7,
+          "participacao": 0
+        },
+        "kills_player": 0,
+        "kills_player_partidas": 2,
+        "kills_player_por_partida": 0.0
       },
       {
         "nick": "LAUANNA7788",
@@ -6404,9 +6827,12 @@
           "longestKill": 253.51251
         },
         "scores": {
-          "mvp": 473.3,
-          "participacao": 271
-        }
+          "mvp": 416.8,
+          "participacao": 189
+        },
+        "kills_player": 26,
+        "kills_player_partidas": 73,
+        "kills_player_por_partida": 0.356
       },
       {
         "nick": "LuleLixxooXandTB",
@@ -6451,7 +6877,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "M43str0_FPS",
@@ -6494,9 +6923,12 @@
           "longestKill": 273.95944
         },
         "scores": {
-          "mvp": 1037.0,
-          "participacao": 233
-        }
+          "mvp": 927.0,
+          "participacao": 189
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 20,
+        "kills_player_por_partida": 0.65
       },
       {
         "nick": "manolobr07",
@@ -6539,9 +6971,12 @@
           "longestKill": 376.1256
         },
         "scores": {
-          "mvp": 935.7,
-          "participacao": 351
-        }
+          "mvp": 790.8,
+          "participacao": 264
+        },
+        "kills_player": 6,
+        "kills_player_partidas": 30,
+        "kills_player_por_partida": 0.2
       },
       {
         "nick": "PIGzinn_30fps",
@@ -6584,9 +7019,12 @@
           "longestKill": 247.07701
         },
         "scores": {
-          "mvp": 405.0,
-          "participacao": 121
-        }
+          "mvp": 367.2,
+          "participacao": 96
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 33,
+        "kills_player_por_partida": 0.394
       },
       {
         "nick": "Pisanoslixo",
@@ -6629,9 +7067,12 @@
           "longestKill": 181.17197
         },
         "scores": {
-          "mvp": 767.4,
-          "participacao": 129
-        }
+          "mvp": 684.4,
+          "participacao": 104
+        },
+        "kills_player": 13,
+        "kills_player_partidas": 15,
+        "kills_player_por_partida": 0.867
       },
       {
         "nick": "PopMeeN",
@@ -6674,9 +7115,12 @@
           "longestKill": 392.32034
         },
         "scores": {
-          "mvp": 618.8,
-          "participacao": 286
-        }
+          "mvp": 530.6,
+          "participacao": 212
+        },
+        "kills_player": 8,
+        "kills_player_partidas": 42,
+        "kills_player_por_partida": 0.19
       },
       {
         "nick": "Padre0027",
@@ -6719,9 +7163,12 @@
           "longestKill": 403.56018
         },
         "scores": {
-          "mvp": 1586.3,
-          "participacao": 174
-        }
+          "mvp": 1250.4,
+          "participacao": 80
+        },
+        "kills_player": 2,
+        "kills_player_partidas": 14,
+        "kills_player_por_partida": 0.143
       },
       {
         "nick": "Rasdroc",
@@ -6766,7 +7213,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rickzzs",
@@ -6809,9 +7259,12 @@
           "longestKill": 499.82773
         },
         "scores": {
-          "mvp": 2348.5,
-          "participacao": 97
-        }
+          "mvp": 1838.4,
+          "participacao": 46
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 5,
+        "kills_player_por_partida": 0.2
       },
       {
         "nick": "robo__GUERREIRO",
@@ -6854,9 +7307,12 @@
           "longestKill": 390.27917
         },
         "scores": {
-          "mvp": 489.7,
-          "participacao": 183
-        }
+          "mvp": 451.5,
+          "participacao": 151
+        },
+        "kills_player": 23,
+        "kills_player_partidas": 42,
+        "kills_player_por_partida": 0.548
       },
       {
         "nick": "ShigS-08",
@@ -6899,9 +7355,12 @@
           "longestKill": 149.17706
         },
         "scores": {
-          "mvp": 670.6,
-          "participacao": 33
-        }
+          "mvp": 620.5,
+          "participacao": 30
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 0.333
       },
       {
         "nick": "robo-_G",
@@ -6946,7 +7405,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "tematoo",
@@ -6989,9 +7451,12 @@
           "longestKill": 228.93524
         },
         "scores": {
-          "mvp": 414.3,
-          "participacao": 41
-        }
+          "mvp": 396.5,
+          "participacao": 36
+        },
+        "kills_player": 10,
+        "kills_player_partidas": 14,
+        "kills_player_por_partida": 0.714
       },
       {
         "nick": "zPaT0__",
@@ -7034,9 +7499,12 @@
           "longestKill": 270.51602
         },
         "scores": {
-          "mvp": 608.9,
-          "participacao": 54
-        }
+          "mvp": 544.4,
+          "participacao": 36
+        },
+        "kills_player": 9,
+        "kills_player_partidas": 14,
+        "kills_player_por_partida": 0.643
       },
       {
         "nick": "Zeus_god45",
@@ -7081,7 +7549,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Alien--__--",
@@ -7124,9 +7595,12 @@
           "longestKill": 295.5278
         },
         "scores": {
-          "mvp": 2025.9,
-          "participacao": 157
-        }
+          "mvp": 1694.6,
+          "participacao": 104
+        },
+        "kills_player": 7,
+        "kills_player_partidas": 8,
+        "kills_player_por_partida": 0.875
       },
       {
         "nick": "TODDNH0",
@@ -7169,9 +7643,12 @@
           "longestKill": 406.07983
         },
         "scores": {
-          "mvp": 655.0,
-          "participacao": 245
-        }
+          "mvp": 615.3,
+          "participacao": 207
+        },
+        "kills_player": 68,
+        "kills_player_partidas": 48,
+        "kills_player_por_partida": 1.417
       },
       {
         "nick": "Sazon_de_Frango",
@@ -7216,7 +7693,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pedrinhuu",
@@ -7259,9 +7739,12 @@
           "longestKill": 251.10912
         },
         "scores": {
-          "mvp": 411.3,
-          "participacao": 217
-        }
+          "mvp": 380.9,
+          "participacao": 168
+        },
+        "kills_player": 45,
+        "kills_player_partidas": 80,
+        "kills_player_por_partida": 0.562
       },
       {
         "nick": "99_C4IO",
@@ -7306,7 +7789,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BRABOHEBERTE",
@@ -7349,54 +7835,60 @@
           "longestKill": 304.83118
         },
         "scores": {
-          "mvp": 431.9,
-          "participacao": 169
-        }
+          "mvp": 414.2,
+          "participacao": 148
+        },
+        "kills_player": 42,
+        "kills_player_partidas": 59,
+        "kills_player_por_partida": 0.712
       },
       {
         "nick": "BrtHunt3r_",
         "account_id": "account.b84690326eb54029b9f815ca138ee437",
-        "partidas": 48,
+        "partidas": 51,
         "elegivel_mvp": true,
-        "wins": 8,
-        "win_rate": 16.7,
-        "top10s": 21,
-        "top10_rate": 43.8,
-        "kills": 153,
-        "kills_por_partida": 3.19,
-        "adr": 373.4,
-        "damage_total": 17922.12,
-        "dbnos": 117,
-        "headshots": 29,
-        "hs_rate": 19.0,
-        "longest_kill": 273.7,
+        "wins": 11,
+        "win_rate": 21.6,
+        "top10s": 24,
+        "top10_rate": 47.1,
+        "kills": 213,
+        "kills_por_partida": 4.18,
+        "adr": 443.6,
+        "damage_total": 22622.69,
+        "dbnos": 155,
+        "headshots": 36,
+        "hs_rate": 16.9,
+        "longest_kill": 306.8,
         "revives": 24,
-        "assists": 28,
-        "heals": 316,
-        "tempo_medio_min": 12.9,
-        "km_rodados": 95.7,
-        "km_pe": 1.8,
+        "assists": 30,
+        "heals": 353,
+        "tempo_medio_min": 13.6,
+        "km_rodados": 116.0,
+        "km_pe": 1.91,
         "road_kills": 0,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 13.4,
+        "armas_loot": 13.6,
         "resenha": {
-          "roundsPlayed": 48,
-          "rideDistance": 95721.28,
+          "roundsPlayed": 51,
+          "rideDistance": 115950,
           "teamKills": 0,
           "suicides": 0,
           "revives": 24,
-          "timeSurvived": 37134,
-          "heals": 170,
-          "boosts": 146,
-          "walkDistance": 86501.664,
-          "weaponsAcquired": 643,
-          "longestKill": 273.74683
+          "timeSurvived": 41597,
+          "heals": 185,
+          "boosts": 168,
+          "walkDistance": 97229.836,
+          "weaponsAcquired": 695,
+          "longestKill": 306.83118
         },
         "scores": {
-          "mvp": 918.4,
-          "participacao": 389
-        }
+          "mvp": 976.4,
+          "participacao": 385
+        },
+        "kills_player": 87,
+        "kills_player_partidas": 51,
+        "kills_player_por_partida": 1.706
       },
       {
         "nick": "DUDUZIN1_",
@@ -7439,9 +7931,12 @@
           "longestKill": 376.95245
         },
         "scores": {
-          "mvp": 1369.5,
-          "participacao": 241
-        }
+          "mvp": 1157.8,
+          "participacao": 169
+        },
+        "kills_player": 14,
+        "kills_player_partidas": 17,
+        "kills_player_por_partida": 0.824
       },
       {
         "nick": "To-Brinks",
@@ -7484,9 +7979,12 @@
           "longestKill": 230.32866
         },
         "scores": {
-          "mvp": 2526.8,
-          "participacao": 71
-        }
+          "mvp": 2039.2,
+          "participacao": 32
+        },
+        "kills_player": 6,
+        "kills_player_partidas": 4,
+        "kills_player_por_partida": 1.5
       },
       {
         "nick": "zEduHenZz",
@@ -7529,9 +8027,12 @@
           "longestKill": 227.34673
         },
         "scores": {
-          "mvp": 505.1,
-          "participacao": 81
-        }
+          "mvp": 488.5,
+          "participacao": 71
+        },
+        "kills_player": 25,
+        "kills_player_partidas": 30,
+        "kills_player_por_partida": 0.833
       },
       {
         "nick": "HSzin",
@@ -7574,9 +8075,12 @@
           "longestKill": 592.91187
         },
         "scores": {
-          "mvp": 593.3,
-          "participacao": 138
-        }
+          "mvp": 514.6,
+          "participacao": 94
+        },
+        "kills_player": 15,
+        "kills_player_partidas": 28,
+        "kills_player_por_partida": 0.536
       },
       {
         "nick": "Droga-eo-Mineiro",
@@ -7621,7 +8125,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Japones-Negao",
@@ -7664,9 +8171,12 @@
           "longestKill": 282.17682
         },
         "scores": {
-          "mvp": 3291.6,
-          "participacao": 36
-        }
+          "mvp": 2691.6,
+          "participacao": 24
+        },
+        "kills_player": 2,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 2.0
       },
       {
         "nick": "SailreX",
@@ -7709,54 +8219,60 @@
           "longestKill": 350.41403
         },
         "scores": {
-          "mvp": 952.3,
-          "participacao": 206
-        }
+          "mvp": 868.3,
+          "participacao": 169
+        },
+        "kills_player": 19,
+        "kills_player_partidas": 22,
+        "kills_player_por_partida": 0.864
       },
       {
         "nick": "Mrsumo00",
         "account_id": "account.eebb0703e59f4a88b30d6597fd8f4a97",
-        "partidas": 12,
+        "partidas": 13,
         "elegivel_mvp": false,
-        "wins": 7,
-        "win_rate": 58.3,
-        "top10s": 12,
+        "wins": 8,
+        "win_rate": 61.5,
+        "top10s": 13,
         "top10_rate": 100.0,
-        "kills": 43,
-        "kills_por_partida": 3.58,
-        "adr": 467.6,
-        "damage_total": 5611.62,
-        "dbnos": 37,
-        "headshots": 11,
-        "hs_rate": 25.6,
+        "kills": 60,
+        "kills_por_partida": 4.62,
+        "adr": 543.5,
+        "damage_total": 7065.75,
+        "dbnos": 50,
+        "headshots": 18,
+        "hs_rate": 30.0,
         "longest_kill": 446.0,
         "revives": 3,
         "assists": 12,
-        "heals": 78,
-        "tempo_medio_min": 20.9,
-        "km_rodados": 42.2,
-        "km_pe": 2.88,
+        "heals": 83,
+        "tempo_medio_min": 21.0,
+        "km_rodados": 47.7,
+        "km_pe": 2.89,
         "road_kills": 0,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 13.6,
+        "armas_loot": 13.8,
         "resenha": {
-          "roundsPlayed": 12,
-          "rideDistance": 42202.992,
+          "roundsPlayed": 13,
+          "rideDistance": 47732.336,
           "teamKills": 0,
           "suicides": 0,
           "revives": 3,
-          "timeSurvived": 15072,
-          "heals": 29,
-          "boosts": 49,
-          "walkDistance": 34592.555,
-          "weaponsAcquired": 163,
+          "timeSurvived": 16349,
+          "heals": 31,
+          "boosts": 52,
+          "walkDistance": 37610.855,
+          "weaponsAcquired": 180,
           "longestKill": 445.97644
         },
         "scores": {
-          "mvp": 1347.3,
-          "participacao": 201
-        }
+          "mvp": 1326.6,
+          "participacao": 186
+        },
+        "kills_player": 8,
+        "kills_player_partidas": 13,
+        "kills_player_por_partida": 0.615
       }
     ],
     "duo-fpp": [
@@ -7803,7 +8319,10 @@
         "scores": {
           "mvp": 350.0,
           "participacao": 1
-        }
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 1.0
       },
       {
         "nick": "Burallosh",
@@ -7848,7 +8367,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "VoVoGOW",
@@ -7891,9 +8413,12 @@
           "longestKill": 468.9318
         },
         "scores": {
-          "mvp": 442.8,
-          "participacao": 53
-        }
+          "mvp": 417.5,
+          "participacao": 42
+        },
+        "kills_player": 16,
+        "kills_player_partidas": 22,
+        "kills_player_por_partida": 0.727
       },
       {
         "nick": "lauSL",
@@ -7936,9 +8461,12 @@
           "longestKill": 0
         },
         "scores": {
-          "mvp": 130.7,
+          "mvp": 130.6,
           "participacao": 0
-        }
+        },
+        "kills_player": 0,
+        "kills_player_partidas": 4,
+        "kills_player_por_partida": 0.0
       },
       {
         "nick": "ROGER__BR",
@@ -7983,7 +8511,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "crazyrock_com_br",
@@ -8028,7 +8559,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Bicaleto",
@@ -8073,7 +8607,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BoLHa___",
@@ -8118,7 +8655,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "CalanguinhoFPS",
@@ -8161,9 +8701,12 @@
           "longestKill": 174.3935
         },
         "scores": {
-          "mvp": 326.4,
-          "participacao": 25
-        }
+          "mvp": 313.9,
+          "participacao": 21
+        },
+        "kills_player": 21,
+        "kills_player_partidas": 16,
+        "kills_player_por_partida": 1.312
       },
       {
         "nick": "GEMINIAKI",
@@ -8208,7 +8751,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "JBMKTB",
@@ -8253,7 +8799,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "julianfps",
@@ -8296,9 +8845,12 @@
           "longestKill": 162.70709
         },
         "scores": {
-          "mvp": 386.1,
-          "participacao": 17
-        }
+          "mvp": 346.1,
+          "participacao": 9
+        },
+        "kills_player": 8,
+        "kills_player_partidas": 10,
+        "kills_player_por_partida": 0.8
       },
       {
         "nick": "LAUANNA7788",
@@ -8343,7 +8895,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "LuleLixxooXandTB",
@@ -8388,7 +8943,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "M43str0_FPS",
@@ -8433,7 +8991,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "manolobr07",
@@ -8476,9 +9037,12 @@
           "longestKill": 338.08273
         },
         "scores": {
-          "mvp": 1015.7,
-          "participacao": 15
-        }
+          "mvp": 849.1,
+          "participacao": 5
+        },
+        "kills_player": 2,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 0.667
       },
       {
         "nick": "PIGzinn_30fps",
@@ -8523,7 +9087,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pisanoslixo",
@@ -8568,7 +9135,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "PopMeeN",
@@ -8611,9 +9181,12 @@
           "longestKill": 19.539783
         },
         "scores": {
-          "mvp": 124.4,
-          "participacao": 2
-        }
+          "mvp": 99.4,
+          "participacao": 0
+        },
+        "kills_player": 0,
+        "kills_player_partidas": 4,
+        "kills_player_por_partida": 0.0
       },
       {
         "nick": "Padre0027",
@@ -8656,9 +9229,12 @@
           "longestKill": 189.06325
         },
         "scores": {
-          "mvp": 887.9,
-          "participacao": 99
-        }
+          "mvp": 731.4,
+          "participacao": 49
+        },
+        "kills_player": 9,
+        "kills_player_partidas": 16,
+        "kills_player_por_partida": 0.562
       },
       {
         "nick": "Rasdroc",
@@ -8703,7 +9279,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rickzzs",
@@ -8748,7 +9327,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo__GUERREIRO",
@@ -8793,7 +9375,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "ShigS-08",
@@ -8838,7 +9423,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo-_G",
@@ -8883,7 +9471,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "tematoo",
@@ -8928,7 +9519,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "zPaT0__",
@@ -8971,9 +9565,12 @@
           "longestKill": 31.17878
         },
         "scores": {
-          "mvp": 360.8,
-          "participacao": 4
-        }
+          "mvp": 344.1,
+          "participacao": 3
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 0.333
       },
       {
         "nick": "Zeus_god45",
@@ -9018,7 +9615,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Alien--__--",
@@ -9061,9 +9661,12 @@
           "longestKill": 462.55948
         },
         "scores": {
-          "mvp": 1237.8,
-          "participacao": 53
-        }
+          "mvp": 997.8,
+          "participacao": 29
+        },
+        "kills_player": 3,
+        "kills_player_partidas": 5,
+        "kills_player_por_partida": 0.6
       },
       {
         "nick": "TODDNH0",
@@ -9106,9 +9709,12 @@
           "longestKill": 0
         },
         "scores": {
-          "mvp": 14.6,
+          "mvp": 14.5,
           "participacao": 0
-        }
+        },
+        "kills_player": 0,
+        "kills_player_partidas": 2,
+        "kills_player_por_partida": 0.0
       },
       {
         "nick": "Sazon_de_Frango",
@@ -9153,7 +9759,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pedrinhuu",
@@ -9196,9 +9805,12 @@
           "longestKill": 454.38977
         },
         "scores": {
-          "mvp": 360.4,
-          "participacao": 30
-        }
+          "mvp": 327.8,
+          "participacao": 17
+        },
+        "kills_player": 11,
+        "kills_player_partidas": 20,
+        "kills_player_por_partida": 0.55
       },
       {
         "nick": "99_C4IO",
@@ -9243,7 +9855,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BRABOHEBERTE",
@@ -9286,9 +9901,12 @@
           "longestKill": 274.34302
         },
         "scores": {
-          "mvp": 611.3,
-          "participacao": 119
-        }
+          "mvp": 579.8,
+          "participacao": 102
+        },
+        "kills_player": 35,
+        "kills_player_partidas": 27,
+        "kills_player_por_partida": 1.296
       },
       {
         "nick": "BrtHunt3r_",
@@ -9333,7 +9951,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "DUDUZIN1_",
@@ -9378,7 +9999,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": 0,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 0.0
       },
       {
         "nick": "To-Brinks",
@@ -9421,9 +10045,12 @@
           "longestKill": 190.49489
         },
         "scores": {
-          "mvp": 461.3,
-          "participacao": 14
-        }
+          "mvp": 432.8,
+          "participacao": 10
+        },
+        "kills_player": 8,
+        "kills_player_partidas": 7,
+        "kills_player_por_partida": 1.143
       },
       {
         "nick": "zEduHenZz",
@@ -9466,9 +10093,12 @@
           "longestKill": 252.47519
         },
         "scores": {
-          "mvp": 765.8,
-          "participacao": 115
-        }
+          "mvp": 707.1,
+          "participacao": 95
+        },
+        "kills_player": 26,
+        "kills_player_partidas": 17,
+        "kills_player_por_partida": 1.529
       },
       {
         "nick": "HSzin",
@@ -9511,9 +10141,12 @@
           "longestKill": 96.765205
         },
         "scores": {
-          "mvp": 1075.5,
-          "participacao": 7
-        }
+          "mvp": 925.5,
+          "participacao": 1
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 2,
+        "kills_player_por_partida": 0.5
       },
       {
         "nick": "Droga-eo-Mineiro",
@@ -9558,7 +10191,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Japones-Negao",
@@ -9603,7 +10239,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "SailreX",
@@ -9648,7 +10287,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Mrsumo00",
@@ -9693,7 +10335,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       }
     ],
     "squad": [
@@ -9738,9 +10383,12 @@
           "longestKill": 185.88301
         },
         "scores": {
-          "mvp": 597.2,
-          "participacao": 28
-        }
+          "mvp": 519.8,
+          "participacao": 22
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 5,
+        "kills_player_por_partida": 0.2
       },
       {
         "nick": "Burallosh",
@@ -9785,7 +10433,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "VoVoGOW",
@@ -9828,9 +10479,12 @@
           "longestKill": 26.971106
         },
         "scores": {
-          "mvp": 520.3,
-          "participacao": 4
-        }
+          "mvp": 470.3,
+          "participacao": 2
+        },
+        "kills_player": 2,
+        "kills_player_partidas": 2,
+        "kills_player_por_partida": 1.0
       },
       {
         "nick": "lauSL",
@@ -9875,7 +10529,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "ROGER__BR",
@@ -9918,9 +10575,12 @@
           "longestKill": 269.16714
         },
         "scores": {
-          "mvp": 909.2,
-          "participacao": 110
-        }
+          "mvp": 824.8,
+          "participacao": 83
+        },
+        "kills_player": 20,
+        "kills_player_partidas": 16,
+        "kills_player_por_partida": 1.25
       },
       {
         "nick": "crazyrock_com_br",
@@ -9965,7 +10625,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": 0,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 0.0
       },
       {
         "nick": "Bicaleto",
@@ -10008,9 +10671,12 @@
           "longestKill": 216.47801
         },
         "scores": {
-          "mvp": 2402.6,
-          "participacao": 147
-        }
+          "mvp": 1944.4,
+          "participacao": 92
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BoLHa___",
@@ -10055,7 +10721,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "CalanguinhoFPS",
@@ -10098,9 +10767,12 @@
           "longestKill": 265.7098
         },
         "scores": {
-          "mvp": 481.6,
-          "participacao": 446
-        }
+          "mvp": 475.2,
+          "participacao": 427
+        },
+        "kills_player": 188,
+        "kills_player_partidas": 144,
+        "kills_player_por_partida": 1.306
       },
       {
         "nick": "GEMINIAKI",
@@ -10143,9 +10815,12 @@
           "longestKill": 244.51324
         },
         "scores": {
-          "mvp": 600.9,
-          "participacao": 28
-        }
+          "mvp": 550.7,
+          "participacao": 25
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 0.333
       },
       {
         "nick": "JBMKTB",
@@ -10190,7 +10865,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "julianfps",
@@ -10235,7 +10913,10 @@
         "scores": {
           "mvp": 126.8,
           "participacao": 2
-        }
+        },
+        "kills_player": 2,
+        "kills_player_partidas": 6,
+        "kills_player_por_partida": 0.333
       },
       {
         "nick": "LAUANNA7788",
@@ -10278,9 +10959,12 @@
           "longestKill": 13.401368
         },
         "scores": {
-          "mvp": 260.8,
-          "participacao": 7
-        }
+          "mvp": 227.5,
+          "participacao": 5
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 0.333
       },
       {
         "nick": "LuleLixxooXandTB",
@@ -10325,7 +11009,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "M43str0_FPS",
@@ -10370,7 +11057,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "manolobr07",
@@ -10415,7 +11105,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "PIGzinn_30fps",
@@ -10458,54 +11151,60 @@
           "longestKill": 211.57431
         },
         "scores": {
-          "mvp": 305.8,
-          "participacao": 66
-        }
+          "mvp": 280.9,
+          "participacao": 54
+        },
+        "kills_player": 14,
+        "kills_player_partidas": 24,
+        "kills_player_por_partida": 0.583
       },
       {
         "nick": "Pisanoslixo",
         "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-        "partidas": 106,
+        "partidas": 108,
         "elegivel_mvp": true,
         "wins": 9,
-        "win_rate": 8.5,
-        "top10s": 34,
-        "top10_rate": 32.1,
-        "kills": 167,
-        "kills_por_partida": 1.58,
-        "adr": 222.9,
-        "damage_total": 23629.4,
-        "dbnos": 144,
+        "win_rate": 8.3,
+        "top10s": 36,
+        "top10_rate": 33.3,
+        "kills": 174,
+        "kills_por_partida": 1.61,
+        "adr": 225.5,
+        "damage_total": 24355.12,
+        "dbnos": 149,
         "headshots": 40,
-        "hs_rate": 24.0,
+        "hs_rate": 23.0,
         "longest_kill": 534.8,
         "revives": 29,
         "assists": 62,
-        "heals": 544,
-        "tempo_medio_min": 10.5,
-        "km_rodados": 130.1,
-        "km_pe": 1.55,
+        "heals": 561,
+        "tempo_medio_min": 10.7,
+        "km_rodados": 135.5,
+        "km_pe": 1.58,
         "road_kills": 1,
         "team_kills": 3,
         "suicides": 1,
         "armas_loot": 9.3,
         "resenha": {
-          "roundsPlayed": 106,
-          "rideDistance": 130089.234,
+          "roundsPlayed": 108,
+          "rideDistance": 135481.66,
           "teamKills": 3,
           "suicides": 1,
           "revives": 29,
-          "timeSurvived": 67023,
-          "heals": 151,
-          "boosts": 393,
-          "walkDistance": 164784.97,
-          "weaponsAcquired": 981,
+          "timeSurvived": 69268,
+          "heals": 153,
+          "boosts": 408,
+          "walkDistance": 170825.22,
+          "weaponsAcquired": 1005,
           "longestKill": 534.7815
         },
         "scores": {
-          "mvp": 531.1,
-          "participacao": 467
-        }
+          "mvp": 499.2,
+          "participacao": 392
+        },
+        "kills_player": 92,
+        "kills_player_partidas": 108,
+        "kills_player_por_partida": 0.852
       },
       {
         "nick": "PopMeeN",
@@ -10550,7 +11249,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Padre0027",
@@ -10595,7 +11297,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rasdroc",
@@ -10640,7 +11345,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rickzzs",
@@ -10685,7 +11393,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo__GUERREIRO",
@@ -10728,9 +11439,12 @@
           "longestKill": 256.41193
         },
         "scores": {
-          "mvp": 294.7,
-          "participacao": 73
-        }
+          "mvp": 293.4,
+          "participacao": 72
+        },
+        "kills_player": 21,
+        "kills_player_partidas": 36,
+        "kills_player_por_partida": 0.583
       },
       {
         "nick": "ShigS-08",
@@ -10775,7 +11489,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo-_G",
@@ -10820,7 +11537,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "tematoo",
@@ -10865,7 +11585,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "zPaT0__",
@@ -10910,7 +11633,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Zeus_god45",
@@ -10955,7 +11681,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Alien--__--",
@@ -10998,9 +11727,12 @@
           "longestKill": 343.83
         },
         "scores": {
-          "mvp": 1353.9,
-          "participacao": 268
-        }
+          "mvp": 1176.3,
+          "participacao": 184
+        },
+        "kills_player": 7,
+        "kills_player_partidas": 7,
+        "kills_player_por_partida": 1.0
       },
       {
         "nick": "TODDNH0",
@@ -11045,7 +11777,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Sazon_de_Frango",
@@ -11090,7 +11825,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pedrinhuu",
@@ -11135,7 +11873,10 @@
         "scores": {
           "mvp": 457.0,
           "participacao": 4
-        }
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 1.0
       },
       {
         "nick": "99_C4IO",
@@ -11180,7 +11921,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BRABOHEBERTE",
@@ -11225,52 +11969,58 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BrtHunt3r_",
         "account_id": "account.b84690326eb54029b9f815ca138ee437",
-        "partidas": 2,
+        "partidas": 3,
         "elegivel_mvp": false,
         "wins": 0,
         "win_rate": 0.0,
         "top10s": 1,
-        "top10_rate": 50.0,
-        "kills": 4,
-        "kills_por_partida": 2.0,
-        "adr": 259.4,
-        "damage_total": 518.84,
-        "dbnos": 2,
+        "top10_rate": 33.3,
+        "kills": 8,
+        "kills_por_partida": 2.67,
+        "adr": 308.4,
+        "damage_total": 925.28,
+        "dbnos": 6,
         "headshots": 0,
         "hs_rate": 0.0,
         "longest_kill": 66.6,
-        "revives": 0,
-        "assists": 0,
-        "heals": 27,
-        "tempo_medio_min": 12.4,
-        "km_rodados": 1.8,
-        "km_pe": 1.57,
-        "road_kills": 0,
+        "revives": 2,
+        "assists": 2,
+        "heals": 32,
+        "tempo_medio_min": 14.5,
+        "km_rodados": 6.0,
+        "km_pe": 1.95,
+        "road_kills": 1,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 13.5,
+        "armas_loot": 13.0,
         "resenha": {
-          "roundsPlayed": 2,
-          "rideDistance": 1757.6277,
+          "roundsPlayed": 3,
+          "rideDistance": 6037.926,
           "teamKills": 0,
           "suicides": 0,
-          "revives": 0,
-          "timeSurvived": 1490,
-          "heals": 22,
-          "boosts": 5,
-          "walkDistance": 3148.0024,
-          "weaponsAcquired": 27,
+          "revives": 2,
+          "timeSurvived": 2605,
+          "heals": 24,
+          "boosts": 8,
+          "walkDistance": 5851.7314,
+          "weaponsAcquired": 39,
           "longestKill": 66.5859
         },
         "scores": {
-          "mvp": 564.1,
-          "participacao": 4
-        }
+          "mvp": 679.2,
+          "participacao": 12
+        },
+        "kills_player": 6,
+        "kills_player_partidas": 3,
+        "kills_player_por_partida": 2.0
       },
       {
         "nick": "DUDUZIN1_",
@@ -11313,9 +12063,12 @@
           "longestKill": 363.28976
         },
         "scores": {
-          "mvp": 1107.7,
-          "participacao": 90
-        }
+          "mvp": 982.7,
+          "participacao": 70
+        },
+        "kills_player": 10,
+        "kills_player_partidas": 8,
+        "kills_player_por_partida": 1.25
       },
       {
         "nick": "To-Brinks",
@@ -11360,7 +12113,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "zEduHenZz",
@@ -11405,7 +12161,10 @@
         "scores": {
           "mvp": 100.0,
           "participacao": 2
-        }
+        },
+        "kills_player": 0,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 0.0
       },
       {
         "nick": "HSzin",
@@ -11448,9 +12207,12 @@
           "longestKill": 97.02281
         },
         "scores": {
-          "mvp": 672.1,
-          "participacao": 4
-        }
+          "mvp": 697.1,
+          "participacao": 5
+        },
+        "kills_player": 5,
+        "kills_player_partidas": 2,
+        "kills_player_por_partida": 2.5
       },
       {
         "nick": "Droga-eo-Mineiro",
@@ -11495,7 +12257,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Japones-Negao",
@@ -11540,7 +12305,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "SailreX",
@@ -11583,54 +12351,60 @@
           "longestKill": 385.8802
         },
         "scores": {
-          "mvp": 679.9,
-          "participacao": 113
-        }
+          "mvp": 647.3,
+          "participacao": 98
+        },
+        "kills_player": 26,
+        "kills_player_partidas": 23,
+        "kills_player_por_partida": 1.13
       },
       {
         "nick": "Mrsumo00",
         "account_id": "account.eebb0703e59f4a88b30d6597fd8f4a97",
-        "partidas": 15,
+        "partidas": 16,
         "elegivel_mvp": true,
         "wins": 2,
-        "win_rate": 13.3,
+        "win_rate": 12.5,
         "top10s": 8,
-        "top10_rate": 53.3,
-        "kills": 14,
-        "kills_por_partida": 0.93,
-        "adr": 178.5,
-        "damage_total": 2677.76,
-        "dbnos": 13,
-        "headshots": 5,
-        "hs_rate": 35.7,
+        "top10_rate": 50.0,
+        "kills": 18,
+        "kills_por_partida": 1.12,
+        "adr": 206.3,
+        "damage_total": 3300.87,
+        "dbnos": 18,
+        "headshots": 7,
+        "hs_rate": 38.9,
         "longest_kill": 287.7,
         "revives": 7,
-        "assists": 11,
-        "heals": 67,
-        "tempo_medio_min": 14.6,
-        "km_rodados": 19.4,
-        "km_pe": 2.03,
+        "assists": 13,
+        "heals": 73,
+        "tempo_medio_min": 14.9,
+        "km_rodados": 21.3,
+        "km_pe": 2.12,
         "road_kills": 0,
         "team_kills": 0,
         "suicides": 0,
         "armas_loot": 11.3,
         "resenha": {
-          "roundsPlayed": 15,
-          "rideDistance": 19418.527,
+          "roundsPlayed": 16,
+          "rideDistance": 21273.889,
           "teamKills": 0,
           "suicides": 0,
           "revives": 7,
-          "timeSurvived": 13130,
-          "heals": 20,
-          "boosts": 47,
-          "walkDistance": 30476.027,
-          "weaponsAcquired": 169,
+          "timeSurvived": 14284,
+          "heals": 23,
+          "boosts": 50,
+          "walkDistance": 33887.746,
+          "weaponsAcquired": 181,
           "longestKill": 287.65192
         },
         "scores": {
-          "mvp": 507.8,
-          "participacao": 79
-        }
+          "mvp": 525.1,
+          "participacao": 78
+        },
+        "kills_player": 11,
+        "kills_player_partidas": 16,
+        "kills_player_por_partida": 0.688
       }
     ],
     "duo": [
@@ -11677,7 +12451,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Burallosh",
@@ -11722,7 +12499,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "VoVoGOW",
@@ -11767,7 +12547,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "lauSL",
@@ -11812,7 +12595,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "ROGER__BR",
@@ -11857,7 +12643,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "crazyrock_com_br",
@@ -11902,7 +12691,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Bicaleto",
@@ -11947,7 +12739,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BoLHa___",
@@ -11992,7 +12787,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "CalanguinhoFPS",
@@ -12037,7 +12835,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "GEMINIAKI",
@@ -12082,7 +12883,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "JBMKTB",
@@ -12127,7 +12931,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "julianfps",
@@ -12172,7 +12979,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "LAUANNA7788",
@@ -12217,7 +13027,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "LuleLixxooXandTB",
@@ -12262,7 +13075,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "M43str0_FPS",
@@ -12307,7 +13123,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "manolobr07",
@@ -12352,7 +13171,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "PIGzinn_30fps",
@@ -12397,7 +13219,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pisanoslixo",
@@ -12442,7 +13267,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "PopMeeN",
@@ -12487,7 +13315,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Padre0027",
@@ -12532,7 +13363,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rasdroc",
@@ -12577,7 +13411,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rickzzs",
@@ -12622,7 +13459,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo__GUERREIRO",
@@ -12667,7 +13507,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "ShigS-08",
@@ -12712,7 +13555,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo-_G",
@@ -12757,7 +13603,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "tematoo",
@@ -12802,7 +13651,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "zPaT0__",
@@ -12847,7 +13699,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Zeus_god45",
@@ -12892,7 +13747,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Alien--__--",
@@ -12937,7 +13795,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "TODDNH0",
@@ -12982,7 +13843,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Sazon_de_Frango",
@@ -13027,7 +13891,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pedrinhuu",
@@ -13072,7 +13939,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "99_C4IO",
@@ -13117,7 +13987,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BRABOHEBERTE",
@@ -13162,7 +14035,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BrtHunt3r_",
@@ -13207,7 +14083,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "DUDUZIN1_",
@@ -13252,7 +14131,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "To-Brinks",
@@ -13297,7 +14179,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "zEduHenZz",
@@ -13342,7 +14227,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "HSzin",
@@ -13387,7 +14275,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Droga-eo-Mineiro",
@@ -13432,7 +14323,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Japones-Negao",
@@ -13477,7 +14371,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "SailreX",
@@ -13522,7 +14419,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Mrsumo00",
@@ -13567,7 +14467,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       }
     ],
     "solo-fpp": [
@@ -13614,7 +14517,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Burallosh",
@@ -13659,7 +14565,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "VoVoGOW",
@@ -13704,7 +14613,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "lauSL",
@@ -13749,7 +14661,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "ROGER__BR",
@@ -13794,7 +14709,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "crazyrock_com_br",
@@ -13839,7 +14757,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Bicaleto",
@@ -13884,7 +14805,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BoLHa___",
@@ -13929,7 +14853,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "CalanguinhoFPS",
@@ -13974,7 +14901,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "GEMINIAKI",
@@ -14019,7 +14949,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "JBMKTB",
@@ -14064,7 +14997,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "julianfps",
@@ -14109,7 +15045,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "LAUANNA7788",
@@ -14154,7 +15093,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "LuleLixxooXandTB",
@@ -14199,7 +15141,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "M43str0_FPS",
@@ -14244,7 +15189,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "manolobr07",
@@ -14289,7 +15237,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "PIGzinn_30fps",
@@ -14334,7 +15285,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pisanoslixo",
@@ -14379,7 +15333,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "PopMeeN",
@@ -14424,7 +15381,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Padre0027",
@@ -14469,7 +15429,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rasdroc",
@@ -14514,7 +15477,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rickzzs",
@@ -14559,7 +15525,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo__GUERREIRO",
@@ -14604,7 +15573,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "ShigS-08",
@@ -14649,7 +15621,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo-_G",
@@ -14694,7 +15669,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "tematoo",
@@ -14739,7 +15717,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "zPaT0__",
@@ -14784,7 +15765,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Zeus_god45",
@@ -14829,7 +15813,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Alien--__--",
@@ -14874,7 +15861,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "TODDNH0",
@@ -14919,7 +15909,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Sazon_de_Frango",
@@ -14964,7 +15957,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pedrinhuu",
@@ -15009,7 +16005,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "99_C4IO",
@@ -15054,7 +16053,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BRABOHEBERTE",
@@ -15099,7 +16101,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BrtHunt3r_",
@@ -15144,7 +16149,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "DUDUZIN1_",
@@ -15189,7 +16197,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "To-Brinks",
@@ -15234,7 +16245,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "zEduHenZz",
@@ -15279,7 +16293,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "HSzin",
@@ -15324,7 +16341,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Droga-eo-Mineiro",
@@ -15369,7 +16389,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Japones-Negao",
@@ -15414,7 +16437,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "SailreX",
@@ -15459,7 +16485,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Mrsumo00",
@@ -15504,7 +16533,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       }
     ],
     "solo": [
@@ -15551,7 +16583,10 @@
         "scores": {
           "mvp": 747.5,
           "participacao": 4
-        }
+        },
+        "kills_player": 4,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 4.0
       },
       {
         "nick": "Burallosh",
@@ -15596,7 +16631,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "VoVoGOW",
@@ -15639,9 +16677,12 @@
           "longestKill": 382.52124
         },
         "scores": {
-          "mvp": 4401.2,
-          "participacao": 39
-        }
+          "mvp": 3551.2,
+          "participacao": 22
+        },
+        "kills_player": 2,
+        "kills_player_partidas": 1,
+        "kills_player_por_partida": 2.0
       },
       {
         "nick": "lauSL",
@@ -15686,7 +16727,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "ROGER__BR",
@@ -15731,7 +16775,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "crazyrock_com_br",
@@ -15776,7 +16823,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Bicaleto",
@@ -15819,9 +16869,12 @@
           "longestKill": 176.46303
         },
         "scores": {
-          "mvp": 1534.9,
-          "participacao": 12
-        }
+          "mvp": 1259.8,
+          "participacao": 1
+        },
+        "kills_player": 1,
+        "kills_player_partidas": 2,
+        "kills_player_por_partida": 0.5
       },
       {
         "nick": "BoLHa___",
@@ -15866,7 +16919,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "CalanguinhoFPS",
@@ -15911,7 +16967,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "GEMINIAKI",
@@ -15956,7 +17015,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "JBMKTB",
@@ -16001,7 +17063,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "julianfps",
@@ -16046,7 +17111,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "LAUANNA7788",
@@ -16091,7 +17159,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "LuleLixxooXandTB",
@@ -16136,7 +17207,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "M43str0_FPS",
@@ -16181,7 +17255,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "manolobr07",
@@ -16226,7 +17303,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "PIGzinn_30fps",
@@ -16271,7 +17351,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pisanoslixo",
@@ -16316,7 +17399,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "PopMeeN",
@@ -16361,7 +17447,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Padre0027",
@@ -16406,7 +17495,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rasdroc",
@@ -16451,7 +17543,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Rickzzs",
@@ -16496,7 +17591,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo__GUERREIRO",
@@ -16541,7 +17639,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "ShigS-08",
@@ -16586,7 +17687,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "robo-_G",
@@ -16631,7 +17735,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "tematoo",
@@ -16676,7 +17783,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "zPaT0__",
@@ -16721,7 +17831,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Zeus_god45",
@@ -16766,7 +17879,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Alien--__--",
@@ -16811,7 +17927,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "TODDNH0",
@@ -16856,7 +17975,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Sazon_de_Frango",
@@ -16901,7 +18023,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Pedrinhuu",
@@ -16946,7 +18071,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "99_C4IO",
@@ -16991,7 +18119,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BRABOHEBERTE",
@@ -17036,7 +18167,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "BrtHunt3r_",
@@ -17081,7 +18215,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "DUDUZIN1_",
@@ -17126,7 +18263,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "To-Brinks",
@@ -17171,7 +18311,10 @@
         "scores": {
           "mvp": 57.4,
           "participacao": 0
-        }
+        },
+        "kills_player": 0,
+        "kills_player_partidas": 2,
+        "kills_player_por_partida": 0.0
       },
       {
         "nick": "zEduHenZz",
@@ -17214,9 +18357,12 @@
           "longestKill": 254.67867
         },
         "scores": {
-          "mvp": 735.5,
-          "participacao": 10
-        }
+          "mvp": 673.0,
+          "participacao": 5
+        },
+        "kills_player": 5,
+        "kills_player_partidas": 4,
+        "kills_player_por_partida": 1.25
       },
       {
         "nick": "HSzin",
@@ -17261,7 +18407,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Droga-eo-Mineiro",
@@ -17306,7 +18455,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Japones-Negao",
@@ -17351,7 +18503,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "SailreX",
@@ -17396,7 +18551,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       },
       {
         "nick": "Mrsumo00",
@@ -17441,7 +18599,10 @@
         "scores": {
           "mvp": 0.0,
           "participacao": 0
-        }
+        },
+        "kills_player": null,
+        "kills_player_partidas": 0,
+        "kills_player_por_partida": null
       }
     ]
   },
@@ -17487,9 +18648,12 @@
         "longestKill": 392.72415
       },
       "scores": {
-        "mvp": 1001.9,
-        "participacao": 625
-      }
+        "mvp": 870.6,
+        "participacao": 486
+      },
+      "kills_player": 33,
+      "kills_player_partidas": 53,
+      "kills_player_por_partida": 0.623
     },
     {
       "nick": "Burallosh",
@@ -17532,9 +18696,12 @@
         "longestKill": 465.80212
       },
       "scores": {
-        "mvp": 910.0,
-        "participacao": 722
-      }
+        "mvp": 778.8,
+        "participacao": 538
+      },
+      "kills_player": 39,
+      "kills_player_partidas": 70,
+      "kills_player_por_partida": 0.557
     },
     {
       "nick": "VoVoGOW",
@@ -17577,9 +18744,12 @@
         "longestKill": 468.9318
       },
       "scores": {
-        "mvp": 988.6,
-        "participacao": 449
-      }
+        "mvp": 862.6,
+        "participacao": 313
+      },
+      "kills_player": 47,
+      "kills_player_partidas": 54,
+      "kills_player_por_partida": 0.87
     },
     {
       "nick": "lauSL",
@@ -17622,9 +18792,12 @@
         "longestKill": 188.0285
       },
       "scores": {
-        "mvp": 313.4,
-        "participacao": 74
-      }
+        "mvp": 301.5,
+        "participacao": 65
+      },
+      "kills_player": 18,
+      "kills_player_partidas": 38,
+      "kills_player_por_partida": 0.474
     },
     {
       "nick": "ROGER__BR",
@@ -17667,9 +18840,12 @@
         "longestKill": 441.3622
       },
       "scores": {
-        "mvp": 1486.7,
-        "participacao": 177
-      }
+        "mvp": 1291.8,
+        "participacao": 138
+      },
+      "kills_player": 14,
+      "kills_player_partidas": 10,
+      "kills_player_por_partida": 1.4
     },
     {
       "nick": "crazyrock_com_br",
@@ -17712,9 +18888,12 @@
         "longestKill": 536.81244
       },
       "scores": {
-        "mvp": 1085.3,
-        "participacao": 958
-      }
+        "mvp": 921.9,
+        "participacao": 742
+      },
+      "kills_player": 13,
+      "kills_player_partidas": 66,
+      "kills_player_por_partida": 0.197
     },
     {
       "nick": "Bicaleto",
@@ -17757,9 +18936,12 @@
         "longestKill": 328.3199
       },
       "scores": {
-        "mvp": 1179.0,
-        "participacao": 177
-      }
+        "mvp": 1001.5,
+        "participacao": 138
+      },
+      "kills_player": 6,
+      "kills_player_partidas": 11,
+      "kills_player_por_partida": 0.545
     },
     {
       "nick": "BoLHa___",
@@ -17804,7 +18986,10 @@
       "scores": {
         "mvp": 0.0,
         "participacao": 0
-      }
+      },
+      "kills_player": null,
+      "kills_player_partidas": 0,
+      "kills_player_por_partida": null
     },
     {
       "nick": "CalanguinhoFPS",
@@ -17847,9 +19032,12 @@
         "longestKill": 232.30365
       },
       "scores": {
-        "mvp": 389.3,
-        "participacao": 117
-      }
+        "mvp": 374.9,
+        "participacao": 102
+      },
+      "kills_player": 52,
+      "kills_player_partidas": 51,
+      "kills_player_por_partida": 1.02
     },
     {
       "nick": "GEMINIAKI",
@@ -17892,9 +19080,12 @@
         "longestKill": 409.3779
       },
       "scores": {
-        "mvp": 457.6,
-        "participacao": 533
-      }
+        "mvp": 393.8,
+        "participacao": 411
+      },
+      "kills_player": 13,
+      "kills_player_partidas": 96,
+      "kills_player_por_partida": 0.135
     },
     {
       "nick": "JBMKTB",
@@ -17939,7 +19130,10 @@
       "scores": {
         "mvp": 0.0,
         "participacao": 0
-      }
+      },
+      "kills_player": null,
+      "kills_player_partidas": 0,
+      "kills_player_por_partida": null
     },
     {
       "nick": "julianfps",
@@ -17982,9 +19176,12 @@
         "longestKill": 168.13014
       },
       "scores": {
-        "mvp": 520.2,
-        "participacao": 30
-      }
+        "mvp": 432.6,
+        "participacao": 9
+      },
+      "kills_player": 8,
+      "kills_player_partidas": 12,
+      "kills_player_por_partida": 0.667
     },
     {
       "nick": "LAUANNA7788",
@@ -18027,9 +19224,12 @@
         "longestKill": 253.51251
       },
       "scores": {
-        "mvp": 473.3,
-        "participacao": 271
-      }
+        "mvp": 416.8,
+        "participacao": 189
+      },
+      "kills_player": 26,
+      "kills_player_partidas": 73,
+      "kills_player_por_partida": 0.356
     },
     {
       "nick": "LuleLixxooXandTB",
@@ -18074,7 +19274,10 @@
       "scores": {
         "mvp": 0.0,
         "participacao": 0
-      }
+      },
+      "kills_player": null,
+      "kills_player_partidas": 0,
+      "kills_player_por_partida": null
     },
     {
       "nick": "M43str0_FPS",
@@ -18117,9 +19320,12 @@
         "longestKill": 273.95944
       },
       "scores": {
-        "mvp": 1037.0,
-        "participacao": 233
-      }
+        "mvp": 927.0,
+        "participacao": 189
+      },
+      "kills_player": 13,
+      "kills_player_partidas": 20,
+      "kills_player_por_partida": 0.65
     },
     {
       "nick": "manolobr07",
@@ -18162,9 +19368,12 @@
         "longestKill": 376.1256
       },
       "scores": {
-        "mvp": 943.0,
-        "participacao": 366
-      }
+        "mvp": 795.7,
+        "participacao": 269
+      },
+      "kills_player": 8,
+      "kills_player_partidas": 33,
+      "kills_player_por_partida": 0.242
     },
     {
       "nick": "PIGzinn_30fps",
@@ -18207,9 +19416,12 @@
         "longestKill": 247.07701
       },
       "scores": {
-        "mvp": 405.0,
-        "participacao": 121
-      }
+        "mvp": 367.2,
+        "participacao": 96
+      },
+      "kills_player": 13,
+      "kills_player_partidas": 33,
+      "kills_player_por_partida": 0.394
     },
     {
       "nick": "Pisanoslixo",
@@ -18252,9 +19464,12 @@
         "longestKill": 181.17197
       },
       "scores": {
-        "mvp": 767.4,
-        "participacao": 129
-      }
+        "mvp": 684.4,
+        "participacao": 104
+      },
+      "kills_player": 13,
+      "kills_player_partidas": 15,
+      "kills_player_por_partida": 0.867
     },
     {
       "nick": "PopMeeN",
@@ -18297,9 +19512,12 @@
         "longestKill": 392.32034
       },
       "scores": {
-        "mvp": 575.8,
-        "participacao": 288
-      }
+        "mvp": 493.3,
+        "participacao": 212
+      },
+      "kills_player": 8,
+      "kills_player_partidas": 46,
+      "kills_player_por_partida": 0.174
     },
     {
       "nick": "Padre0027",
@@ -18342,9 +19560,12 @@
         "longestKill": 403.56018
       },
       "scores": {
-        "mvp": 1213.8,
-        "participacao": 273
-      }
+        "mvp": 973.6,
+        "participacao": 129
+      },
+      "kills_player": 11,
+      "kills_player_partidas": 30,
+      "kills_player_por_partida": 0.367
     },
     {
       "nick": "Rasdroc",
@@ -18389,7 +19610,10 @@
       "scores": {
         "mvp": 0.0,
         "participacao": 0
-      }
+      },
+      "kills_player": null,
+      "kills_player_partidas": 0,
+      "kills_player_por_partida": null
     },
     {
       "nick": "Rickzzs",
@@ -18432,9 +19656,12 @@
         "longestKill": 499.82773
       },
       "scores": {
-        "mvp": 2348.5,
-        "participacao": 97
-      }
+        "mvp": 1838.4,
+        "participacao": 46
+      },
+      "kills_player": 1,
+      "kills_player_partidas": 5,
+      "kills_player_por_partida": 0.2
     },
     {
       "nick": "robo__GUERREIRO",
@@ -18477,9 +19704,12 @@
         "longestKill": 390.27917
       },
       "scores": {
-        "mvp": 489.7,
-        "participacao": 183
-      }
+        "mvp": 451.5,
+        "participacao": 151
+      },
+      "kills_player": 23,
+      "kills_player_partidas": 42,
+      "kills_player_por_partida": 0.548
     },
     {
       "nick": "ShigS-08",
@@ -18522,9 +19752,12 @@
         "longestKill": 149.17706
       },
       "scores": {
-        "mvp": 670.6,
-        "participacao": 33
-      }
+        "mvp": 620.5,
+        "participacao": 30
+      },
+      "kills_player": 1,
+      "kills_player_partidas": 3,
+      "kills_player_por_partida": 0.333
     },
     {
       "nick": "robo-_G",
@@ -18569,7 +19802,10 @@
       "scores": {
         "mvp": 0.0,
         "participacao": 0
-      }
+      },
+      "kills_player": null,
+      "kills_player_partidas": 0,
+      "kills_player_por_partida": null
     },
     {
       "nick": "tematoo",
@@ -18612,9 +19848,12 @@
         "longestKill": 228.93524
       },
       "scores": {
-        "mvp": 414.3,
-        "participacao": 41
-      }
+        "mvp": 396.5,
+        "participacao": 36
+      },
+      "kills_player": 10,
+      "kills_player_partidas": 14,
+      "kills_player_por_partida": 0.714
     },
     {
       "nick": "zPaT0__",
@@ -18657,9 +19896,12 @@
         "longestKill": 270.51602
       },
       "scores": {
-        "mvp": 565.1,
-        "participacao": 58
-      }
+        "mvp": 509.3,
+        "participacao": 39
+      },
+      "kills_player": 10,
+      "kills_player_partidas": 17,
+      "kills_player_por_partida": 0.588
     },
     {
       "nick": "Zeus_god45",
@@ -18704,7 +19946,10 @@
       "scores": {
         "mvp": 0.0,
         "participacao": 0
-      }
+      },
+      "kills_player": null,
+      "kills_player_partidas": 0,
+      "kills_player_por_partida": null
     },
     {
       "nick": "Alien--__--",
@@ -18747,9 +19992,12 @@
         "longestKill": 462.55948
       },
       "scores": {
-        "mvp": 1722.8,
-        "participacao": 210
-      }
+        "mvp": 1426.7,
+        "participacao": 133
+      },
+      "kills_player": 10,
+      "kills_player_partidas": 13,
+      "kills_player_por_partida": 0.769
     },
     {
       "nick": "TODDNH0",
@@ -18792,9 +20040,12 @@
         "longestKill": 406.07983
       },
       "scores": {
-        "mvp": 629.4,
-        "participacao": 245
-      }
+        "mvp": 591.4,
+        "participacao": 207
+      },
+      "kills_player": 68,
+      "kills_player_partidas": 50,
+      "kills_player_por_partida": 1.36
     },
     {
       "nick": "Sazon_de_Frango",
@@ -18839,7 +20090,10 @@
       "scores": {
         "mvp": 0.0,
         "participacao": 0
-      }
+      },
+      "kills_player": null,
+      "kills_player_partidas": 0,
+      "kills_player_por_partida": null
     },
     {
       "nick": "Pedrinhuu",
@@ -18882,9 +20136,12 @@
         "longestKill": 454.38977
       },
       "scores": {
-        "mvp": 401.1,
-        "participacao": 247
-      }
+        "mvp": 370.1,
+        "participacao": 185
+      },
+      "kills_player": 56,
+      "kills_player_partidas": 100,
+      "kills_player_por_partida": 0.56
     },
     {
       "nick": "99_C4IO",
@@ -18929,7 +20186,10 @@
       "scores": {
         "mvp": 0.0,
         "participacao": 0
-      }
+      },
+      "kills_player": null,
+      "kills_player_partidas": 0,
+      "kills_player_por_partida": null
     },
     {
       "nick": "BRABOHEBERTE",
@@ -18972,54 +20232,60 @@
         "longestKill": 304.83118
       },
       "scores": {
-        "mvp": 488.2,
-        "participacao": 288
-      }
+        "mvp": 466.2,
+        "participacao": 250
+      },
+      "kills_player": 77,
+      "kills_player_partidas": 86,
+      "kills_player_por_partida": 0.895
     },
     {
       "nick": "BrtHunt3r_",
       "account_id": "account.b84690326eb54029b9f815ca138ee437",
-      "partidas": 48,
+      "partidas": 51,
       "elegivel_mvp": true,
-      "wins": 8,
-      "win_rate": 16.7,
-      "top10s": 21,
-      "top10_rate": 43.8,
-      "kills": 153,
-      "kills_por_partida": 3.19,
-      "adr": 373.4,
-      "damage_total": 17922.12,
-      "dbnos": 117,
-      "headshots": 29,
-      "hs_rate": 19.0,
-      "longest_kill": 273.7,
+      "wins": 11,
+      "win_rate": 21.6,
+      "top10s": 24,
+      "top10_rate": 47.1,
+      "kills": 213,
+      "kills_por_partida": 4.18,
+      "adr": 443.6,
+      "damage_total": 22622.69,
+      "dbnos": 155,
+      "headshots": 36,
+      "hs_rate": 16.9,
+      "longest_kill": 306.8,
       "revives": 24,
-      "assists": 28,
-      "heals": 316,
-      "tempo_medio_min": 12.9,
-      "km_rodados": 95.7,
-      "km_pe": 1.8,
+      "assists": 30,
+      "heals": 353,
+      "tempo_medio_min": 13.6,
+      "km_rodados": 116.0,
+      "km_pe": 1.91,
       "road_kills": 0,
       "team_kills": 0,
       "suicides": 0,
-      "armas_loot": 13.4,
+      "armas_loot": 13.6,
       "resenha": {
-        "roundsPlayed": 48,
-        "rideDistance": 95721.28,
+        "roundsPlayed": 51,
+        "rideDistance": 115950,
         "teamKills": 0,
         "suicides": 0,
         "revives": 24,
-        "timeSurvived": 37134,
-        "heals": 170,
-        "boosts": 146,
-        "walkDistance": 86501.664,
-        "weaponsAcquired": 643,
-        "longestKill": 273.74683
+        "timeSurvived": 41597,
+        "heals": 185,
+        "boosts": 168,
+        "walkDistance": 97229.836,
+        "weaponsAcquired": 695,
+        "longestKill": 306.83118
       },
       "scores": {
-        "mvp": 918.4,
-        "participacao": 389
-      }
+        "mvp": 976.4,
+        "participacao": 385
+      },
+      "kills_player": 87,
+      "kills_player_partidas": 51,
+      "kills_player_por_partida": 1.706
     },
     {
       "nick": "DUDUZIN1_",
@@ -19062,9 +20328,12 @@
         "longestKill": 376.95245
       },
       "scores": {
-        "mvp": 1293.5,
-        "participacao": 241
-      }
+        "mvp": 1093.3,
+        "participacao": 169
+      },
+      "kills_player": 14,
+      "kills_player_partidas": 18,
+      "kills_player_por_partida": 0.778
     },
     {
       "nick": "To-Brinks",
@@ -19107,9 +20376,12 @@
         "longestKill": 230.32866
       },
       "scores": {
-        "mvp": 1212.4,
-        "participacao": 85
-      }
+        "mvp": 1017.1,
+        "participacao": 42
+      },
+      "kills_player": 14,
+      "kills_player_partidas": 11,
+      "kills_player_por_partida": 1.273
     },
     {
       "nick": "zEduHenZz",
@@ -19152,9 +20424,12 @@
         "longestKill": 252.47519
       },
       "scores": {
-        "mvp": 599.4,
-        "participacao": 196
-      }
+        "mvp": 567.7,
+        "participacao": 166
+      },
+      "kills_player": 51,
+      "kills_player_partidas": 47,
+      "kills_player_por_partida": 1.085
     },
     {
       "nick": "HSzin",
@@ -19197,9 +20472,12 @@
         "longestKill": 592.91187
       },
       "scores": {
-        "mvp": 625.5,
-        "participacao": 145
-      }
+        "mvp": 542.2,
+        "participacao": 95
+      },
+      "kills_player": 16,
+      "kills_player_partidas": 30,
+      "kills_player_por_partida": 0.533
     },
     {
       "nick": "Droga-eo-Mineiro",
@@ -19244,7 +20522,10 @@
       "scores": {
         "mvp": 0.0,
         "participacao": 0
-      }
+      },
+      "kills_player": null,
+      "kills_player_partidas": 0,
+      "kills_player_por_partida": null
     },
     {
       "nick": "Japones-Negao",
@@ -19287,9 +20568,12 @@
         "longestKill": 282.17682
       },
       "scores": {
-        "mvp": 3291.6,
-        "participacao": 36
-      }
+        "mvp": 2691.6,
+        "participacao": 24
+      },
+      "kills_player": 2,
+      "kills_player_partidas": 1,
+      "kills_player_por_partida": 2.0
     },
     {
       "nick": "SailreX",
@@ -19332,54 +20616,98 @@
         "longestKill": 350.41403
       },
       "scores": {
-        "mvp": 952.3,
-        "participacao": 206
-      }
+        "mvp": 868.3,
+        "participacao": 169
+      },
+      "kills_player": 19,
+      "kills_player_partidas": 22,
+      "kills_player_por_partida": 0.864
     },
     {
       "nick": "Mrsumo00",
       "account_id": "account.eebb0703e59f4a88b30d6597fd8f4a97",
-      "partidas": 12,
+      "partidas": 13,
       "elegivel_mvp": false,
-      "wins": 7,
-      "win_rate": 58.3,
-      "top10s": 12,
+      "wins": 8,
+      "win_rate": 61.5,
+      "top10s": 13,
       "top10_rate": 100.0,
-      "kills": 43,
-      "kills_por_partida": 3.58,
-      "adr": 467.6,
-      "damage_total": 5611.62,
-      "dbnos": 37,
-      "headshots": 11,
-      "hs_rate": 25.6,
+      "kills": 60,
+      "kills_por_partida": 4.62,
+      "adr": 543.5,
+      "damage_total": 7065.75,
+      "dbnos": 50,
+      "headshots": 18,
+      "hs_rate": 30.0,
       "longest_kill": 446.0,
       "revives": 3,
       "assists": 12,
-      "heals": 78,
-      "tempo_medio_min": 20.9,
-      "km_rodados": 42.2,
-      "km_pe": 2.88,
+      "heals": 83,
+      "tempo_medio_min": 21.0,
+      "km_rodados": 47.7,
+      "km_pe": 2.89,
       "road_kills": 0,
       "team_kills": 0,
       "suicides": 0,
-      "armas_loot": 13.6,
+      "armas_loot": 13.8,
       "resenha": {
-        "roundsPlayed": 12,
-        "rideDistance": 42202.992,
+        "roundsPlayed": 13,
+        "rideDistance": 47732.336,
         "teamKills": 0,
         "suicides": 0,
         "revives": 3,
-        "timeSurvived": 15072,
-        "heals": 29,
-        "boosts": 49,
-        "walkDistance": 34592.555,
-        "weaponsAcquired": 163,
+        "timeSurvived": 16349,
+        "heals": 31,
+        "boosts": 52,
+        "walkDistance": 37610.855,
+        "weaponsAcquired": 180,
         "longestKill": 445.97644
       },
       "scores": {
-        "mvp": 1347.3,
-        "participacao": 201
-      }
+        "mvp": 1326.6,
+        "participacao": 186
+      },
+      "kills_player": 8,
+      "kills_player_partidas": 13,
+      "kills_player_por_partida": 0.615
     }
-  ]
+  ],
+  "player_kill_coverage": {
+    "todos": {
+      "partidas_analisadas": 1049,
+      "partidas_conhecidas": 1049
+    },
+    "fpp": {
+      "partidas_analisadas": 794,
+      "partidas_conhecidas": 794
+    },
+    "tpp": {
+      "partidas_analisadas": 245,
+      "partidas_conhecidas": 245
+    },
+    "squad-fpp": {
+      "partidas_analisadas": 657,
+      "partidas_conhecidas": 657
+    },
+    "duo-fpp": {
+      "partidas_analisadas": 137,
+      "partidas_conhecidas": 137
+    },
+    "squad": {
+      "partidas_analisadas": 245,
+      "partidas_conhecidas": 245
+    },
+    "duo": {
+      "partidas_analisadas": 0,
+      "partidas_conhecidas": 0
+    },
+    "solo-fpp": {
+      "partidas_analisadas": 0,
+      "partidas_conhecidas": 0
+    },
+    "solo": {
+      "partidas_analisadas": 10,
+      "partidas_conhecidas": 10
+    }
+  }
 }
