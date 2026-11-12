@@ -5,6 +5,7 @@ from pathlib import Path
 from unittest.mock import patch
 import telemetria as t
 import recuperar_partidas as rp
+import atualizar_ranking as ar
 
 # Windows local sem tzdata: fixtures de outubro de 2026, UTC-3.
 try:
@@ -183,6 +184,38 @@ class TelemetryTests(unittest.TestCase):
         self.assertEqual(archive['semanas'][0]['grupos']['todos']['botkiller'][0]['valor'],3)
         self.assertEqual(archive['semanas'][0]['grupos']['todos']['playerkiller'][0]['valor'],2)
         self.assertNotIn('tpp',archive['semanas'][0]['grupos'])
+    def test_player_kills_merge_and_score_use_only_players(self):
+        alpha={'nick':'Alpha','account_id':A,'partidas':20,'kills':40,'wins':2,'win_rate':10.0,
+               'top10_rate':50.0,'adr':100.0,'damage_total':2000,'revives':10,'assists':3,
+               'scores':{},'resenha':{'roundsPlayed':20}}
+        beta={'nick':'Beta','account_id':B,'partidas':20,'kills':30,'wins':1,'win_rate':5.0,
+              'top10_rate':25.0,'adr':50.0,'damage_total':1000,'revives':2,'assists':1,
+              'scores':{},'resenha':{'roundsPlayed':20}}
+        payload={'updated_at':'2026-11-12T12:00:00+00:00','season_id':'season.1',
+                 'grupos':{'todos':[alpha,beta]}}
+        telemetry={'periodos':{'temporada':{'grupos':{'todos':{
+            'partidas_analisadas':12,'partidas_conhecidas':20,
+            'jogadores':[{'nick':'Alpha','account_id':A,'partidas':10,'kills_player':5}]
+        }}}}}
+        ar.merge_player_kills(payload,telemetry)
+        self.assertEqual(alpha['kills_player'],5)
+        self.assertEqual(alpha['kills_player_partidas'],10)
+        self.assertEqual(alpha['kills_player_por_partida'],0.5)
+        self.assertEqual(alpha['scores']['mvp'],350.0)
+        self.assertEqual(alpha['scores']['participacao'],68)
+        self.assertIsNone(beta['kills_player'])
+        self.assertEqual(beta['scores']['participacao'],25)
+        self.assertEqual(payload['player_kill_coverage']['todos'],
+                         {'partidas_analisadas':12,'partidas_conhecidas':20})
+        snapshot=ar.build_snapshot(payload)
+        self.assertEqual(snapshot['score_version'],3)
+        self.assertEqual(snapshot['grupos']['todos'][0]['kills_player'],5)
+        previous={'at':'2026-11-11T12:00:00+00:00','season_id':'season.1','score_version':2,
+                  'resenha_version':1,'grupos':{'todos':[{'nick':'Alpha','account_id':A}]}}
+        with patch.object(ar,'ZoneInfo',lambda name:timezone(timedelta(hours=-3))):
+            history=ar.update_history({'snapshots':[previous]},snapshot,datetime(2026,11,12,12,tzinfo=timezone.utc))
+        self.assertEqual({item['score_version'] for item in history['snapshots']},{2,3})
+
     def test_registration_json(self):
         cache=json.loads(Path('jogadores_cache.json').read_text(encoding='utf-8'))
         self.assertTrue(all(isinstance(v,str) and v.startswith('account.') for v in cache.values()))
@@ -191,3 +224,4 @@ class TelemetryTests(unittest.TestCase):
         self.assertIn('Alien--__--',members)
         self.assertIn('TODDNH0',members)
 if __name__=='__main__': unittest.main()
+
