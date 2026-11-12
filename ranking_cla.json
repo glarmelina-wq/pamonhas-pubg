@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "score_version": 3,
-  "updated_at": "2026-11-12T10:49:20+00:00",
-  "ultima_atualizacao": "12/11/2026 às 07:49",
+  "updated_at": "2026-11-12T10:55:02+00:00",
+  "ultima_atualizacao": "12/11/2026 às 07:55",
   "season_id": "division.bro.official.pc-2018-44",
   "temporada": "SEASON 44",
   "modo": "SQUAD-FPP + DUO-FPP",
@@ -1541,12 +1541,12 @@
           "longestKill": 454.38977
         },
         "scores": {
-          "mvp": 368.7,
+          "mvp": 368.4,
           "participacao": 189
         },
         "kills_player": 57,
-        "kills_player_partidas": 102,
-        "kills_player_por_partida": 0.559
+        "kills_player_partidas": 103,
+        "kills_player_por_partida": 0.553
       },
       {
         "nick": "99_C4IO",
@@ -3607,12 +3607,12 @@
           "longestKill": 454.38977
         },
         "scores": {
-          "mvp": 367.7,
+          "mvp": 367.4,
           "participacao": 185
         },
         "kills_player": 56,
-        "kills_player_partidas": 101,
-        "kills_player_por_partida": 0.554
+        "kills_player_partidas": 102,
+        "kills_player_por_partida": 0.549
       },
       {
         "nick": "99_C4IO",
@@ -7739,12 +7739,12 @@
           "longestKill": 251.10912
         },
         "scores": {
-          "mvp": 377.9,
+          "mvp": 377.6,
           "participacao": 168
         },
         "kills_player": 45,
-        "kills_player_partidas": 81,
-        "kills_player_por_partida": 0.556
+        "kills_player_partidas": 82,
+        "kills_player_por_partida": 0.549
       },
       {
         "nick": "99_C4IO",
@@ -20136,12 +20136,12 @@
         "longestKill": 454.38977
       },
       "scores": {
-        "mvp": 367.7,
+        "mvp": 367.4,
         "participacao": 185
       },
       "kills_player": 56,
-      "kills_player_partidas": 101,
-      "kills_player_por_partida": 0.554
+      "kills_player_partidas": 102,
+      "kills_player_por_partida": 0.549
     },
     {
       "nick": "99_C4IO",
@@ -20674,20 +20674,20 @@
   ],
   "player_kill_coverage": {
     "todos": {
-      "partidas_analisadas": 1052,
-      "partidas_conhecidas": 1052
+      "partidas_analisadas": 1053,
+      "partidas_conhecidas": 1053
     },
     "fpp": {
-      "partidas_analisadas": 796,
-      "partidas_conhecidas": 796
+      "partidas_analisadas": 797,
+      "partidas_conhecidas": 797
     },
     "tpp": {
       "partidas_analisadas": 246,
       "partidas_conhecidas": 246
     },
     "squad-fpp": {
-      "partidas_analisadas": 659,
-      "partidas_conhecidas": 659
+      "partidas_analisadas": 660,
+      "partidas_conhecidas": 660
     },
     "duo-fpp": {
       "partidas_analisadas": 137,

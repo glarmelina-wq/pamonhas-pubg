@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "fonte": "partidas",
-  "updated_at": "2026-11-12T10:49:20+00:00",
+  "updated_at": "2026-11-12T10:55:02+00:00",
   "inicio_semana": "2026-11-09T00:00:00-03:00",
   "parcial": true,
   "grupos": {
@@ -294,19 +294,19 @@
       {
         "nick": "Pedrinhuu",
         "account_id": "account.0295a08e346e4f12abfbe4bccd3e2f5e",
-        "partidas": 50,
+        "partidas": 51,
         "raw": {
-          "rideDistance": 29541.22287,
+          "rideDistance": 31535.47577,
           "teamKills": 0,
           "revives": 13,
-          "timeSurvived": 25441,
-          "heals": 102,
-          "boosts": 100,
-          "walkDistance": 55209.42872309998,
-          "weaponsAcquired": 249,
+          "timeSurvived": 26507,
+          "heals": 103,
+          "boosts": 105,
+          "walkDistance": 57543.659923099985,
+          "weaponsAcquired": 258,
           "longestKill": 251.10912,
-          "kills": 42,
-          "roundsPlayed": 50,
+          "kills": 45,
+          "roundsPlayed": 51,
           "suicides": 1
         }
       },
@@ -847,19 +847,19 @@
       {
         "nick": "Pedrinhuu",
         "account_id": "account.0295a08e346e4f12abfbe4bccd3e2f5e",
-        "partidas": 49,
+        "partidas": 50,
         "raw": {
-          "rideDistance": 29541.22287,
+          "rideDistance": 31535.47577,
           "teamKills": 0,
           "revives": 12,
-          "timeSurvived": 25110,
-          "heals": 98,
-          "boosts": 98,
-          "walkDistance": 54513.550223099985,
-          "weaponsAcquired": 243,
+          "timeSurvived": 26176,
+          "heals": 99,
+          "boosts": 103,
+          "walkDistance": 56847.78142309999,
+          "weaponsAcquired": 252,
           "longestKill": 251.10912,
-          "kills": 41,
-          "roundsPlayed": 49,
+          "kills": 44,
+          "roundsPlayed": 50,
           "suicides": 1
         }
       },
@@ -1630,19 +1630,19 @@
       {
         "nick": "Pedrinhuu",
         "account_id": "account.0295a08e346e4f12abfbe4bccd3e2f5e",
-        "partidas": 40,
+        "partidas": 41,
         "raw": {
-          "rideDistance": 29228.36115,
+          "rideDistance": 31222.61405,
           "teamKills": 0,
           "revives": 10,
-          "timeSurvived": 21558,
-          "heals": 89,
-          "boosts": 83,
-          "walkDistance": 49310.311037099986,
-          "weaponsAcquired": 211,
+          "timeSurvived": 22624,
+          "heals": 90,
+          "boosts": 88,
+          "walkDistance": 51644.54223709999,
+          "weaponsAcquired": 220,
           "longestKill": 251.10912,
-          "kills": 34,
-          "roundsPlayed": 40,
+          "kills": 37,
+          "roundsPlayed": 41,
           "suicides": 1
         }
       },
@@ -2454,9 +2454,9 @@
       }
     ]
   },
-  "partidas_semana": 394,
-  "partidas_em_cache": 4407,
-  "recuperadas_agora": 2,
+  "partidas_semana": 395,
+  "partidas_em_cache": 4408,
+  "recuperadas_agora": 1,
   "pendentes": 0,
   "falhas_partidas": 0,
   "membros_sem_lista": [],
