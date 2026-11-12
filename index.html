@@ -15,6 +15,7 @@
 .stats-panel{padding:22px}.stats-panel>.tabs{margin-top:18px}.stats-intro{max-width:780px}.stats-explainer{margin:0 0 5px}.coverage-note{margin-top:18px}.metric-source{margin-top:18px}
 @media(max-width:760px){.stats-panel{padding:14px}.stats-panel .tabs{margin:14px 0}.stats-panel .section-head{margin-top:20px}}
 </style>
+<style>.leaders{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}.leaders .stat{padding:16px}.leaders .stat b{font-size:25px}.leaders .stat small{display:block;margin-top:4px;overflow-wrap:anywhere}.sort-button{background:transparent;border:0;padding:0;color:inherit;font-weight:inherit;border-radius:0;text-align:left;white-space:nowrap}.sort-button:hover{background:transparent;color:var(--yellow)}@media(max-width:760px){.leaders{grid-template-columns:repeat(2,minmax(0,1fr))}}</style>
 </head>
 <body>
 <a class="skip" href="#main">Ir para o conteúdo</a>
@@ -42,7 +43,7 @@
 <div class="section-head"><div><span class="eyebrow">Para não deixar esquecer</span><h2>Galeria dos troféus</h2><p class="muted small">Vencedores dos períodos encerrados. Os atuais ainda podem mudar.</p></div></div><div id="party-archive"></div>
 <details><summary>Critérios de apuração</summary><p>Totais usam os eventos registrados. Médias exigem pelo menos 5 partidas recuperadas na semana (ou novas, quando usadas diferenças entre coletas) e 15 na temporada. Empates compartilham o resultado. Valores zero e dados ausentes não recebem troféu. A semana usa partidas oficiais recuperadas e a data de cada partida. A API pode limitar as listas; a cobertura pode ser parcial. Quando a recuperação de partidas não está disponível, usamos diferenças entre coletas e informamos o intervalo. Novos membros aparecem após a recuperação de partidas ou uma coleta comparável.</p><p>As categorias de eliminação distinguem jogadores e bots pela telemetria. O abate mais distante da semana também depende de partidas recuperadas; sem elas, o recorde fica restrito à temporada. Os nomes dos troféus são parte da identidade do clã.</p></details>
 </section>
-<section id="page-ranking" class="page" aria-label="Estatísticas da temporada"><div class="section-head stats-intro" style="margin-top:5px"><div><span class="eyebrow">PUBG · temporada atual</span><h2>Estatísticas dos jogadores</h2><p class="muted">Indicadores de desempenho por modalidade, com critérios e cobertura explicados.</p></div></div><div id="player-kills-coverage" class="notice coverage-note" role="status" hidden></div><article class="card stats-panel"><p class="small muted stats-explainer">Os abates desta página contam somente eliminações de jogadores identificados pela telemetria. Bots são excluídos. A cobertura pode ser parcial.</p><div class="tabs" id="rank-tabs" role="tablist" aria-label="Categoria de estatísticas"><button data-rank="mvp" aria-pressed="true">MVP</button><button data-rank="participacao" aria-pressed="false">Participação</button><button data-rank="adr" aria-pressed="false">Dano médio</button><button data-rank="suporte" aria-pressed="false">Suporte</button><button data-rank="longest_kill" aria-pressed="false">Abate mais distante</button></div><div id="rank-formula" class="formula"></div><div class="toolbar" style="margin-top:20px"><label class="grow">Buscar jogador<input id="ranking-search" type="search" placeholder="Digite um nick"></label><span class="muted small" id="ranking-count"></span></div><div class="table-wrap"><table><caption class="small muted" style="text-align:left;padding:14px" id="ranking-caption"></caption><thead><tr><th scope="col">Posição</th><th scope="col">Jogador</th><th scope="col" id="score-heading">Pontos</th><th scope="col">Partidas</th><th scope="col">Dano médio/jogo</th><th scope="col">Jogadores eliminados</th><th scope="col">Eliminações/jogo</th><th scope="col">Vitórias</th><th scope="col">Status</th></tr></thead><tbody id="ranking-body"></tbody></table></div></article></section>
+<section id="page-ranking" class="page" aria-label="Estatísticas da temporada"><div class="section-head stats-intro" style="margin-top:5px"><div><span class="eyebrow">PUBG · temporada atual</span><h2>Estatísticas dos jogadores</h2><p class="muted">Indicadores de desempenho por modalidade, com critérios e cobertura explicados.</p></div></div><div id="player-kills-coverage" class="notice coverage-note" role="status" hidden></div><article class="card stats-panel"><p class="small muted stats-explainer">Os abates desta página contam somente eliminações de jogadores identificados pela telemetria. Bots são excluídos. A cobertura pode ser parcial.</p><div class="section-head" style="margin:20px 0 0"><div><h3>Líderes por indicador</h3><p class="small muted">Maior resultado na modalidade selecionada.</p></div></div><div id="ranking-leaders" class="leaders"></div><div class="tabs" id="rank-tabs" role="tablist" aria-label="Categoria de estatísticas"><button data-rank="mvp" aria-pressed="true">MVP</button><button data-rank="participacao" aria-pressed="false">Participação</button><button data-rank="adr" aria-pressed="false">Dano médio</button><button data-rank="suporte" aria-pressed="false">Suporte</button><button data-rank="longest_kill" aria-pressed="false">Abate mais distante</button></div><div id="rank-formula" class="formula"></div><div class="toolbar" style="margin-top:20px"><label class="grow">Buscar jogador<input id="ranking-search" type="search" placeholder="Digite um nick"></label><span class="muted small" id="ranking-count"></span></div><p class="small muted" style="margin-top:12px">Clique nos títulos das quatro colunas para ordenar do maior para o menor; clique novamente para inverter.</p><div class="table-wrap"><table><caption class="small muted" style="text-align:left;padding:14px" id="ranking-caption"></caption><thead><tr><th scope="col">Posição</th><th scope="col">Jogador</th><th scope="col" id="score-heading">Pontos</th><th scope="col">Partidas</th><th scope="col"><button type="button" class="sort-button" data-sort="adr" data-label="Dano médio/jogo">Dano médio/jogo</button></th><th scope="col"><button type="button" class="sort-button" data-sort="kills" data-label="Jogadores eliminados">Jogadores eliminados</button></th><th scope="col"><button type="button" class="sort-button" data-sort="kill_rate" data-label="Eliminações/jogo">Eliminações/jogo</button></th><th scope="col"><button type="button" class="sort-button" data-sort="wins" data-label="Vitórias">Vitórias</button></th><th scope="col">Status</th></tr></thead><tbody id="ranking-body"></tbody></table></div></article></section>
 <section id="page-jogadores" class="page" aria-label="Jogadores"><div class="section-head" style="margin-top:5px"><div><span class="eyebrow">Perfis do clã</span><h2>Consultar jogador</h2><p class="muted">Estatísticas individuais dos membros cadastrados.</p></div></div><form id="player-search-form" class="toolbar"><label class="grow" for="player-search">Nick do jogador<input type="search" id="player-search" placeholder="Buscar por nick" autocomplete="off"></label><button type="submit" class="primary">Abrir perfil</button></form><p id="search-feedback" class="status-message" aria-live="polite"></p><div class="member-grid" id="members"></div><details><summary>Sobre a lista de jogadores</summary><p>Esta versão consulta somente os membros cadastrados pelo clã. Jogadores de fora dessa lista não são consultados.</p></details></section>
 <section id="page-perfil" class="page" aria-label="Perfil do jogador"><button class="link" data-page="jogadores" style="margin-bottom:22px">← Todos os jogadores</button><div id="profile"></div></section>
 <section id="page-comparar" class="page" aria-label="Comparação"><div class="section-head" style="margin-top:5px"><div><span class="eyebrow">Análise individual</span><h2>Comparar jogadores</h2><p class="muted">Compare métricas na mesma temporada e modalidade.</p></div></div><div class="toolbar"><label class="grow">Primeiro jogador<select id="compare-a"></select></label><label class="grow">Segundo jogador<select id="compare-b"></select></label></div><div id="comparison"></div></section>
@@ -60,7 +61,7 @@ const $ = id => document.getElementById(id);
 const fmt = (value,digits=0) => Number(value||0).toLocaleString('pt-BR',{maximumFractionDigits:digits,minimumFractionDigits:digits});
 const esc = value => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const MODE_LABELS = {todos:'Todos • Solo, Duo e Squad (FPP + TPP)','solo-fpp':'Solo • FPP',solo:'Solo • TPP',fpp:'Duo + Squad • FPP',tpp:'Duo + Squad • TPP','squad-fpp':'Squad • FPP','duo-fpp':'Duo • FPP',squad:'Squad • TPP',duo:'Duo • TPP'};
-const state = {data:null,history:[],mode:'fpp',rank:'mvp',player:null,page:'inicio',logo:null,adviceRound:0,recovered:null};
+const state = {data:null,history:[],mode:'fpp',rank:'mvp',sort:'score',sortDir:-1,player:null,page:'inicio',logo:null,adviceRound:0,recovered:null};
 const value = (p,k) => Number(p[k]||0);
 const games = p => Math.max(1,value(p,'partidas'));
 const perGame = (p,k) => value(p,k)/games(p);
@@ -158,9 +159,39 @@ function formula(){
  if(state.rank==='mvp')return 'MVP = dano médio/jogo × 1,5 + eliminações de jogadores/jogo × 50 + vitórias (%) × 5 + Top 10 (%) × 1,5 + reanimações/jogo × 100. Eliminações usam partidas com telemetria.';
  return {participacao:'Participação = eliminações de jogadores + vitórias × 20 + reanimações × 2 + assistências. Bots não entram na contagem de eliminações.',adr:'Dano total dividido pelas partidas jogadas.',suporte:'Suporte = reanimações/jogo × 10 + assistências/jogo × 5.',longest_kill:'Maior distância registrada em um abate na temporada. Empates usam partidas e nick como critério.'}[state.rank];
 }
+function renderRankingLeaders(){
+ const stats=players();
+ const metrics=[
+  {key:'adr',label:'Dano médio/jogo',get:p=>Number.isFinite(Number(p.adr))?Number(p.adr):null,format:n=>fmt(n,1)},
+  {key:'kills',label:'Jogadores eliminados',get:p=>playerEliminationStats(p)?.kills??null,format:n=>fmt(n)},
+  {key:'kill_rate',label:'Eliminações/jogo',get:p=>playerEliminationStats(p)?.rate??null,format:n=>fmt(n,2)},
+  {key:'wins',label:'Vitórias',get:p=>Number.isFinite(Number(p.wins))?Number(p.wins):null,format:n=>fmt(n)}
+ ];
+ $('ranking-leaders').innerHTML=metrics.map(m=>{
+  const values=stats.map(p=>({p,n:m.get(p)})).filter(x=>Number.isFinite(x.n));
+  if(!values.length)return metricCard(m.label,'—','Sem dados disponíveis');
+  const max=Math.max(...values.map(x=>x.n)),names=values.filter(x=>x.n===max).map(x=>x.p.nick).join(', ');
+  return metricCard(m.label,m.format(max),names);
+ }).join('');
+}
+function rankingMetric(p,key){
+ if(key==='score')return score(p);
+ if(key==='adr')return Number.isFinite(Number(p.adr))?Number(p.adr):null;
+ if(key==='kills')return playerEliminationStats(p)?.kills??null;
+ if(key==='kill_rate')return playerEliminationStats(p)?.rate??null;
+ if(key==='wins')return Number.isFinite(Number(p.wins))?Number(p.wins):null;
+ return null;
+}
 function renderRanking(){
  const term=$('ranking-search').value.trim().toLowerCase(),participation=state.rank==='participacao';
- const all=ordered(state.rank,false).sort((a,b)=>(participation?0:Number(eligible(b))-Number(eligible(a)))||score(b)-score(a)||b.partidas-a.partidas||a.nick.localeCompare(b.nick));
+ const all=[...players()].sort((a,b)=>{
+  const qualification=participation?0:Number(eligible(b))-Number(eligible(a));if(qualification)return qualification;
+  const av=rankingMetric(a,state.sort),bv=rankingMetric(b,state.sort);
+  if(av===null&&bv!==null)return 1;if(bv===null&&av!==null)return -1;
+  if(av!==null&&bv!==null&&av!==bv)return (bv-av)*state.sortDir;
+  return value(b,'partidas')-value(a,'partidas')||a.nick.localeCompare(b.nick);
+ });
+ renderRankingLeaders();
  let positionNumber=0;
  const rows=all.map(p=>({p,pos:participation||eligible(p)?++positionNumber:null})).filter(({p})=>p.nick.toLowerCase().includes(term));
  $('rank-formula').textContent=formula();
@@ -174,6 +205,7 @@ function renderRanking(){
  $('score-heading').textContent={mvp:'Pontos MVP',participacao:'Pontos',adr:'Dano médio/jogo',suporte:'Pontos/jogo',longest_kill:'Distância (m)'}[state.rank];
  $('ranking-body').innerHTML=rows.map(({p,pos})=>`<tr><td>${pos?pos+'º':'—'}</td><td>${nickButton(p)}</td><td class="yellow"><strong>${fmt(score(p),1)}</strong></td><td>${fmt(p.partidas)}</td><td>${fmt(p.adr,1)}</td><td>${playerEliminationLabel(p)}</td><td>${playerEliminationLabel(p,true)}</td><td>${fmt(p.wins)} <span class="muted small">(${fmt(p.win_rate,1)}%)</span></td><td><span class="badge ${pos?'':'neutral'}">${pos?'Classificado':`${Math.max(0,minimum()-p.partidas)} jogos para classificar`}</span></td></tr>`).join('')||'<tr><td colspan="9">Nenhum jogador encontrado.</td></tr>';
  document.querySelectorAll('[data-rank]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.rank===state.rank?'true':'false'));
+ document.querySelectorAll('[data-sort]').forEach(b=>{const key=b.dataset.sort,active=key===state.sort;b.textContent=b.dataset.label+(active?(state.sortDir<0?' ↓':' ↑'):' ↕');b.setAttribute('aria-label',`Ordenar por ${b.dataset.label}${active?(state.sortDir<0?', decrescente':', crescente'):''}`);});
 }
 function renderMembers(){
  const term=$('player-search').value.trim().toLowerCase(),list=players().filter(p=>p.nick.toLowerCase().includes(term));
@@ -307,6 +339,7 @@ function bind(){
   if(btn.dataset.page)navigate(btn.dataset.page);
   if(btn.dataset.player)openPlayer(btn.dataset.player);
   if(btn.dataset.rank){state.rank=btn.dataset.rank;renderRanking();}
+  if(btn.dataset.sort){if(state.sort===btn.dataset.sort)state.sortDir*=-1;else{state.sort=btn.dataset.sort;state.sortDir=-1;}renderRanking();}
   if(btn.dataset.comparePlayer){$('compare-a').value=btn.dataset.comparePlayer;if($('compare-b').value===btn.dataset.comparePlayer)$('compare-b').value=players().find(p=>p.nick!==btn.dataset.comparePlayer)?.nick||btn.dataset.comparePlayer;renderComparison();navigate('comparar');}
   if(btn.dataset.cardPlayer){$('wrapped-player').value=btn.dataset.cardPlayer;navigate('wrapped');}
  });
