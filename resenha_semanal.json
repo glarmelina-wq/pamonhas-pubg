@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "fonte": "partidas",
-  "updated_at": "2026-11-12T10:28:13+00:00",
+  "updated_at": "2026-11-12T10:43:38+00:00",
   "inicio_semana": "2026-11-09T00:00:00-03:00",
   "parcial": true,
   "grupos": {
@@ -123,19 +123,19 @@
       {
         "nick": "crazyrock_com_br",
         "account_id": "account.fde9d506ba354c4392fc4cebe499a26c",
-        "partidas": 34,
+        "partidas": 35,
         "raw": {
-          "rideDistance": 72045.97724999998,
+          "rideDistance": 75129.13564999998,
           "teamKills": 0,
           "revives": 12,
-          "timeSurvived": 36272,
-          "heals": 100,
-          "boosts": 62,
-          "walkDistance": 83049.32071400003,
-          "weaponsAcquired": 288,
+          "timeSurvived": 37784,
+          "heals": 105,
+          "boosts": 66,
+          "walkDistance": 86401.41031400004,
+          "weaponsAcquired": 299,
           "longestKill": 536.81244,
-          "kills": 132,
-          "roundsPlayed": 34,
+          "kills": 150,
+          "roundsPlayed": 35,
           "suicides": 0
         }
       },
@@ -676,19 +676,19 @@
       {
         "nick": "crazyrock_com_br",
         "account_id": "account.fde9d506ba354c4392fc4cebe499a26c",
-        "partidas": 34,
+        "partidas": 35,
         "raw": {
-          "rideDistance": 72045.97724999998,
+          "rideDistance": 75129.13564999998,
           "teamKills": 0,
           "revives": 12,
-          "timeSurvived": 36272,
-          "heals": 100,
-          "boosts": 62,
-          "walkDistance": 83049.32071400003,
-          "weaponsAcquired": 288,
+          "timeSurvived": 37784,
+          "heals": 105,
+          "boosts": 66,
+          "walkDistance": 86401.41031400004,
+          "weaponsAcquired": 299,
           "longestKill": 536.81244,
-          "kills": 132,
-          "roundsPlayed": 34,
+          "kills": 150,
+          "roundsPlayed": 35,
           "suicides": 0
         }
       },
@@ -1459,19 +1459,19 @@
       {
         "nick": "crazyrock_com_br",
         "account_id": "account.fde9d506ba354c4392fc4cebe499a26c",
-        "partidas": 34,
+        "partidas": 35,
         "raw": {
-          "rideDistance": 72045.97724999998,
+          "rideDistance": 75129.13564999998,
           "teamKills": 0,
           "revives": 12,
-          "timeSurvived": 36272,
-          "heals": 100,
-          "boosts": 62,
-          "walkDistance": 83049.32071400003,
-          "weaponsAcquired": 288,
+          "timeSurvived": 37784,
+          "heals": 105,
+          "boosts": 66,
+          "walkDistance": 86401.41031400004,
+          "weaponsAcquired": 299,
           "longestKill": 536.81244,
-          "kills": 132,
-          "roundsPlayed": 34,
+          "kills": 150,
+          "roundsPlayed": 35,
           "suicides": 0
         }
       },
@@ -2454,9 +2454,9 @@
       }
     ]
   },
-  "partidas_semana": 391,
-  "partidas_em_cache": 4404,
-  "recuperadas_agora": 7,
+  "partidas_semana": 392,
+  "partidas_em_cache": 4405,
+  "recuperadas_agora": 1,
   "pendentes": 0,
   "falhas_partidas": 0,
   "membros_sem_lista": [],
