@@ -1,4 +1,4 @@
-"""Coleta normal (Steam), sem depend�ncias externas. Nunca grava a chave da API."""
+"""Coleta normal (Steam), sem dependências externas. Nunca grava a chave da API."""
 import json
 import math
 import os
@@ -24,7 +24,7 @@ FIELDS = ['roundsPlayed', 'kills', 'losses', 'wins', 'top10s', 'damageDealt', 'd
 def load_members():
     path = BASE / 'membros_cla.txt'
     if not path.exists():
-        return MEMBROS_CLA  # Compatibilidade durante a instala��o.
+        return MEMBROS_CLA  # Compatibilidade durante a instalação.
     members = []
     seen = set()
     for line in path.read_text(encoding='utf-8-sig').splitlines():
@@ -32,12 +32,12 @@ def load_members():
         if not nick or nick.startswith('#'):
             continue
         if any(char.isspace() for char in nick) or len(nick) > 40:
-            raise ValueError('Nick inv�lido em membros_cla.txt: use um nick por linha, sem espa�os.')
+            raise ValueError('Nick inválido em membros_cla.txt: use um nick por linha, sem espaços.')
         if nick.casefold() not in seen:
             members.append(nick)
             seen.add(nick.casefold())
     if not members:
-        raise ValueError('A lista membros_cla.txt est� vazia. Os dados anteriores foram preservados.')
+        raise ValueError('A lista membros_cla.txt está vazia. Os dados anteriores foram preservados.')
     return members
 
 def load_json(name, default):
@@ -56,7 +56,7 @@ def atomic_json(name, value):
 class PUBGClient:
     def __init__(self, key):
         if not key:
-            raise RuntimeError('PUBG_API_KEY ausente. Configure o Secret do reposit�rio.')
+            raise RuntimeError('PUBG_API_KEY ausente. Configure o Secret do repositório.')
         self.key = key
         self.last_request = 0.0
 
@@ -79,7 +79,7 @@ class PUBGClient:
                 if err.code not in (429, 500, 502, 503, 504):
                     raise RuntimeError('Falha da API: HTTP ' + str(err.code)) from None
                 if attempt == 3:
-                    raise RuntimeError('A API continuou indispon�vel ap�s 4 tentativas.') from None
+                    raise RuntimeError('A API continuou indisponível após 4 tentativas.') from None
                 if err.code == 429:
                     reset = err.headers.get('X-RateLimit-Reset', '')
                     delay = max(30, float(reset) - time.time() + 1) if reset.replace('.', '', 1).isdigit() else 60
@@ -88,22 +88,22 @@ class PUBGClient:
                     time.sleep(2 ** (attempt + 1))
             except (URLError, TimeoutError):
                 if attempt == 3:
-                    raise RuntimeError('N�o foi poss�vel conectar � API ap�s 4 tentativas.') from None
+                    raise RuntimeError('Não foi possível conectar à API após 4 tentativas.') from None
                 time.sleep(2 ** (attempt + 1))
-        raise RuntimeError('Coleta n�o conclu�da.')
+        raise RuntimeError('Coleta não concluída.')
 
 def aggregate(stats, modes):
     result = {field: 0 for field in FIELDS}
     for mode in modes:
         item = stats.get(mode)
         if not isinstance(item, dict):
-            raise ValueError('Resposta sem estat�sticas do modo ' + mode)
+            raise ValueError('Resposta sem estatísticas do modo ' + mode)
         for field in FIELDS:
             value = item.get(field, 0)
             if not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
-                raise ValueError('Valor inv�lido na m�trica ' + field)
+                raise ValueError('Valor inválido na métrica ' + field)
             result[field] = max(result[field], value) if field == 'longestKill' else result[field] + value
-    # Aus�ncia da m�trica n�o deve ser confundida com zero real.
+    # Ausência da métrica não deve ser confundida com zero real.
     values = [stats[m].get('weaponsAcquired') for m in modes]
     result['weaponsAcquired'] = sum(values) if all(isinstance(v, (int, float)) and math.isfinite(v) and v >= 0 for v in values) else None
     return result
@@ -160,7 +160,7 @@ def merge_player_kills(payload, telemetry):
             if not isinstance(kills, (int, float)) or kills < 0:
                 kills = None
             elif int(kills) != kills:
-                raise ValueError('Contagem inv�lida de elimina��es de jogadores.')
+                raise ValueError('Contagem inválida de eliminações de jogadores.')
             else:
                 kills = int(kills)
             player['kills_player'] = kills
@@ -187,8 +187,8 @@ def update_history(history, snapshot, now):
     snapshots = [s for s in history.get('snapshots', [])
                  if s.get('season_id') == snapshot['season_id']
                  and datetime.fromisoformat(s['at']) >= cutoff]
-    # Evita duplicar a mesma hora; conserva primeira e �ltima coleta de cada dia.
-    # O ADR mant�m o hist�rico antigo; o ranking MVP come�a uma s�rie nova na vers�o 3.
+    # Evita duplicar a mesma hora; conserva primeira e última coleta de cada dia.
+    # O ADR mantém o histórico antigo; o ranking MVP começa uma série nova na versão 3.
     current_version = [s for s in snapshots if s.get('score_version') == snapshot['score_version']
                        and s['at'][:13] != snapshot['at'][:13]]
     legacy = [s for s in snapshots if s.get('score_version') != snapshot['score_version']]
@@ -212,7 +212,7 @@ def main():
     seasons = client.get('seasons')['data']
     season = next((s['id'] for s in seasons if s['attributes'].get('isCurrentSeason')), None)
     if not season:
-        raise RuntimeError('N�o foi poss�vel identificar a temporada atual.')
+        raise RuntimeError('Não foi possível identificar a temporada atual.')
     # IDs previamente resolvidos evitam gastar consultas repetidas por nick.
     cache = load_json('jogadores_cache.json', {})
     resolved = {}
@@ -240,14 +240,14 @@ def main():
                 season_match_ids.update(item['id'] for item in relation['data'] if isinstance(item.get('id'), str))
         for group, modes in GROUPS.items():
             groups[group].append(metrics(nick, account_id, stats, modes))
-        print('Coleta conclu�da: ' + nick)
+        print('Coleta concluída: ' + nick)
     now = datetime.now(timezone.utc).replace(microsecond=0)
     payload = {
         'schema_version': 2, 'score_version': 3, 'updated_at': now.isoformat(),
-        'ultima_atualizacao': now.astimezone(ZoneInfo('America/Sao_Paulo')).strftime('%d/%m/%Y �s %H:%M'),
+        'ultima_atualizacao': now.astimezone(ZoneInfo('America/Sao_Paulo')).strftime('%d/%m/%Y às %H:%M'),
         'season_id': season, 'temporada': 'SEASON ' + season.split('-')[-1],
         'modo': 'SQUAD-FPP + DUO-FPP', 'min_partidas': MIN_PARTIDAS,
-        'fonte': 'PUBG API  Steam  partidas normais',
+        'fonte': 'PUBG API • Steam • partidas normais',
         'membros_previstos': len(members), 'nao_encontrados': missing,
         'grupos': groups, 'jogadores': groups['fpp']
     }
@@ -258,24 +258,24 @@ def main():
         trophies = archive_matches(match_cache, trophies, resolved, now, AWARDS)
         print(f"Partidas recentes: {weekly['partidas_semana']} na semana; {weekly['pendentes']} pendentes; cobertura pode ser parcial.")
     except Exception:
-        # Estat�sticas da temporada n�o devem desaparecer por uma falha no backfill.
+        # Estatísticas da temporada não devem desaparecer por uma falha no backfill.
         match_cache = old_matches
         weekly = load_json('resenha_semanal.json', {'schema_version': 1, 'fonte': 'partidas', 'grupos': {}})
-        weekly['aviso'] = 'Falha tempor�ria na recupera��o de partidas. Exibindo os �ltimos dados dispon�veis.'
+        weekly['aviso'] = 'Falha temporária na recuperação de partidas. Exibindo os últimos dados disponíveis.'
         weekly['falha_recuperacao'] = True
-        print('Aviso: recupera��o de partidas incompleta; temporada preservada.')
+        print('Aviso: recuperação de partidas incompleta; temporada preservada.')
     match_cache['temporadas'] = old_matches.get('temporadas', {})
     tag_season_matches(match_cache, season, season_match_ids)
     try:
         telemetry = collect_telemetry(match_cache, resolved, now, season_id=season)
     except Exception:
         telemetry = build_report(match_cache, resolved, now, season_id=season)
-        telemetry['aviso'] += ' Coleta de telemetria com falha tempor�ria.'
+        telemetry['aviso'] += ' Coleta de telemetria com falha temporária.'
     merge_player_kills(payload, telemetry)
     history = update_history(load_json('historico_cla.json', {}), build_snapshot(payload), now)
     trophies = archive_weeks(history, trophies, now)
     trophies = archive_blue_awards(match_cache, trophies, resolved, now)
-    # Valida tudo antes de substituir os arquivos. Qualquer falha de coleta aborta a execu��o.
+    # Valida tudo antes de substituir os arquivos. Qualquer falha de coleta aborta a execução.
     json.dumps([payload, history, cache, trophies, match_cache, weekly, telemetry], allow_nan=False)
     atomic_json('historico_cla.json', history)
     atomic_json('jogadores_cache.json', cache)
@@ -284,7 +284,7 @@ def main():
     atomic_json('resenha_semanal.json', weekly)
     atomic_json('telemetria_cla.json', telemetry)
     atomic_json('ranking_cla.json', payload)
-    print(f'Atualizados {len(resolved)} membros; {len(missing)} n�o localizados.')
+    print(f'Atualizados {len(resolved)} membros; {len(missing)} não localizados.')
     if missing:
         print('Revise os nicks: ' + ', '.join(missing))
 
@@ -294,4 +294,3 @@ if __name__ == '__main__':
     except Exception as error:
         print('ERRO: ' + str(error), file=sys.stderr)
         sys.exit(1)
-
