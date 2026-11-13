@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "score_version": 3,
-  "updated_at": "2026-11-13T12:36:30+00:00",
-  "ultima_atualizacao": "13/11/2026 às 09:36",
+  "updated_at": "2026-11-13T12:43:26+00:00",
+  "ultima_atualizacao": "13/11/2026 às 09:43",
   "season_id": "division.bro.official.pc-2018-44",
   "temporada": "SEASON 44",
   "modo": "SQUAD-FPP + DUO-FPP",
@@ -101,12 +101,12 @@
           "longestKill": 465.80212
         },
         "scores": {
-          "mvp": 790.1,
+          "mvp": 789.8,
           "participacao": 663
         },
         "kills_player": 45,
-        "kills_player_partidas": 78,
-        "kills_player_por_partida": 0.577
+        "kills_player_partidas": 79,
+        "kills_player_por_partida": 0.57
       },
       {
         "nick": "VoVoGOW",
@@ -293,12 +293,12 @@
           "longestKill": 536.81244
         },
         "scores": {
-          "mvp": 973.8,
+          "mvp": 973.6,
           "participacao": 904
         },
         "kills_player": 17,
-        "kills_player_partidas": 77,
-        "kills_player_por_partida": 0.221
+        "kills_player_partidas": 78,
+        "kills_player_por_partida": 0.218
       },
       {
         "nick": "Bicaleto",
@@ -917,12 +917,12 @@
           "longestKill": 407.9752
         },
         "scores": {
-          "mvp": 679.5,
-          "participacao": 441
+          "mvp": 681.0,
+          "participacao": 443
         },
-        "kills_player": 11,
-        "kills_player_partidas": 61,
-        "kills_player_por_partida": 0.18
+        "kills_player": 13,
+        "kills_player_partidas": 62,
+        "kills_player_por_partida": 0.21
       },
       {
         "nick": "Padre0027",
@@ -1119,49 +1119,49 @@
       {
         "nick": "ShigS-08",
         "account_id": "account.2c1628a7004a470690cf9007c32c9e0a",
-        "partidas": 5,
+        "partidas": 6,
         "elegivel_mvp": false,
-        "wins": 3,
-        "win_rate": 60.0,
-        "top10s": 4,
-        "top10_rate": 80.0,
-        "kills": 18,
-        "kills_por_partida": 3.6,
-        "adr": 368.3,
-        "damage_total": 1841.42,
-        "dbnos": 10,
-        "headshots": 2,
-        "hs_rate": 11.1,
+        "wins": 4,
+        "win_rate": 66.7,
+        "top10s": 5,
+        "top10_rate": 83.3,
+        "kills": 23,
+        "kills_por_partida": 3.83,
+        "adr": 409.7,
+        "damage_total": 2458.29,
+        "dbnos": 14,
+        "headshots": 3,
+        "hs_rate": 13.0,
         "longest_kill": 334.2,
         "revives": 4,
-        "assists": 4,
-        "heals": 57,
-        "tempo_medio_min": 18.5,
-        "km_rodados": 9.8,
-        "km_pe": 3.11,
+        "assists": 7,
+        "heals": 67,
+        "tempo_medio_min": 19.3,
+        "km_rodados": 12.5,
+        "km_pe": 3.37,
         "road_kills": 0,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 15.0,
+        "armas_loot": 15.3,
         "resenha": {
-          "roundsPlayed": 5,
-          "rideDistance": 9791.06,
+          "roundsPlayed": 6,
+          "rideDistance": 12474.83,
           "teamKills": 0,
           "suicides": 0,
           "revives": 4,
-          "timeSurvived": 5543,
-          "heals": 25,
-          "boosts": 32,
-          "walkDistance": 15572.588,
-          "weaponsAcquired": 75,
+          "timeSurvived": 6960,
+          "heals": 27,
+          "boosts": 40,
+          "walkDistance": 20234.242,
+          "weaponsAcquired": 92,
           "longestKill": 334.15332
         },
         "scores": {
-          "mvp": 1102.5,
-          "participacao": 77
+          "mvp": 1189.7,
+          "participacao": 101
         },
-        "kills_player": 5,
-        "kills_player_partidas": 5,
+        "kills_player": 6,
+        "kills_player_partidas": 6,
         "kills_player_por_partida": 1.0
       },
       {
@@ -2215,12 +2215,12 @@
           "longestKill": 465.80212
         },
         "scores": {
-          "mvp": 790.1,
+          "mvp": 789.8,
           "participacao": 663
         },
         "kills_player": 45,
-        "kills_player_partidas": 78,
-        "kills_player_por_partida": 0.577
+        "kills_player_partidas": 79,
+        "kills_player_por_partida": 0.57
       },
       {
         "nick": "VoVoGOW",
@@ -2407,12 +2407,12 @@
           "longestKill": 536.81244
         },
         "scores": {
-          "mvp": 986.6,
+          "mvp": 986.5,
           "participacao": 904
         },
         "kills_player": 17,
-        "kills_player_partidas": 76,
-        "kills_player_por_partida": 0.224
+        "kills_player_partidas": 77,
+        "kills_player_por_partida": 0.221
       },
       {
         "nick": "Bicaleto",
@@ -3031,12 +3031,12 @@
           "longestKill": 407.9752
         },
         "scores": {
-          "mvp": 679.5,
-          "participacao": 441
+          "mvp": 681.0,
+          "participacao": 443
         },
-        "kills_player": 11,
-        "kills_player_partidas": 61,
-        "kills_player_por_partida": 0.18
+        "kills_player": 13,
+        "kills_player_partidas": 62,
+        "kills_player_por_partida": 0.21
       },
       {
         "nick": "Padre0027",
@@ -3233,49 +3233,49 @@
       {
         "nick": "ShigS-08",
         "account_id": "account.2c1628a7004a470690cf9007c32c9e0a",
-        "partidas": 5,
+        "partidas": 6,
         "elegivel_mvp": false,
-        "wins": 3,
-        "win_rate": 60.0,
-        "top10s": 4,
-        "top10_rate": 80.0,
-        "kills": 18,
-        "kills_por_partida": 3.6,
-        "adr": 368.3,
-        "damage_total": 1841.42,
-        "dbnos": 10,
-        "headshots": 2,
-        "hs_rate": 11.1,
+        "wins": 4,
+        "win_rate": 66.7,
+        "top10s": 5,
+        "top10_rate": 83.3,
+        "kills": 23,
+        "kills_por_partida": 3.83,
+        "adr": 409.7,
+        "damage_total": 2458.29,
+        "dbnos": 14,
+        "headshots": 3,
+        "hs_rate": 13.0,
         "longest_kill": 334.2,
         "revives": 4,
-        "assists": 4,
-        "heals": 57,
-        "tempo_medio_min": 18.5,
-        "km_rodados": 9.8,
-        "km_pe": 3.11,
+        "assists": 7,
+        "heals": 67,
+        "tempo_medio_min": 19.3,
+        "km_rodados": 12.5,
+        "km_pe": 3.37,
         "road_kills": 0,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 15.0,
+        "armas_loot": 15.3,
         "resenha": {
-          "roundsPlayed": 5,
-          "rideDistance": 9791.06,
+          "roundsPlayed": 6,
+          "rideDistance": 12474.83,
           "teamKills": 0,
           "suicides": 0,
           "revives": 4,
-          "timeSurvived": 5543,
-          "heals": 25,
-          "boosts": 32,
-          "walkDistance": 15572.588,
-          "weaponsAcquired": 75,
+          "timeSurvived": 6960,
+          "heals": 27,
+          "boosts": 40,
+          "walkDistance": 20234.242,
+          "weaponsAcquired": 92,
           "longestKill": 334.15332
         },
         "scores": {
-          "mvp": 1102.5,
-          "participacao": 77
+          "mvp": 1189.7,
+          "participacao": 101
         },
-        "kills_player": 5,
-        "kills_player_partidas": 5,
+        "kills_player": 6,
+        "kills_player_partidas": 6,
         "kills_player_por_partida": 1.0
       },
       {
@@ -6443,12 +6443,12 @@
           "longestKill": 465.80212
         },
         "scores": {
-          "mvp": 790.1,
+          "mvp": 789.8,
           "participacao": 663
         },
         "kills_player": 45,
-        "kills_player_partidas": 78,
-        "kills_player_por_partida": 0.577
+        "kills_player_partidas": 79,
+        "kills_player_por_partida": 0.57
       },
       {
         "nick": "VoVoGOW",
@@ -6635,12 +6635,12 @@
           "longestKill": 536.81244
         },
         "scores": {
-          "mvp": 986.6,
+          "mvp": 986.5,
           "participacao": 904
         },
         "kills_player": 17,
-        "kills_player_partidas": 76,
-        "kills_player_por_partida": 0.224
+        "kills_player_partidas": 77,
+        "kills_player_por_partida": 0.221
       },
       {
         "nick": "Bicaleto",
@@ -7259,12 +7259,12 @@
           "longestKill": 407.9752
         },
         "scores": {
-          "mvp": 720.4,
-          "participacao": 441
+          "mvp": 722.0,
+          "participacao": 443
         },
-        "kills_player": 11,
-        "kills_player_partidas": 57,
-        "kills_player_por_partida": 0.193
+        "kills_player": 13,
+        "kills_player_partidas": 58,
+        "kills_player_por_partida": 0.224
       },
       {
         "nick": "Padre0027",
@@ -7461,49 +7461,49 @@
       {
         "nick": "ShigS-08",
         "account_id": "account.2c1628a7004a470690cf9007c32c9e0a",
-        "partidas": 5,
+        "partidas": 6,
         "elegivel_mvp": false,
-        "wins": 3,
-        "win_rate": 60.0,
-        "top10s": 4,
-        "top10_rate": 80.0,
-        "kills": 18,
-        "kills_por_partida": 3.6,
-        "adr": 368.3,
-        "damage_total": 1841.42,
-        "dbnos": 10,
-        "headshots": 2,
-        "hs_rate": 11.1,
+        "wins": 4,
+        "win_rate": 66.7,
+        "top10s": 5,
+        "top10_rate": 83.3,
+        "kills": 23,
+        "kills_por_partida": 3.83,
+        "adr": 409.7,
+        "damage_total": 2458.29,
+        "dbnos": 14,
+        "headshots": 3,
+        "hs_rate": 13.0,
         "longest_kill": 334.2,
         "revives": 4,
-        "assists": 4,
-        "heals": 57,
-        "tempo_medio_min": 18.5,
-        "km_rodados": 9.8,
-        "km_pe": 3.11,
+        "assists": 7,
+        "heals": 67,
+        "tempo_medio_min": 19.3,
+        "km_rodados": 12.5,
+        "km_pe": 3.37,
         "road_kills": 0,
         "team_kills": 0,
         "suicides": 0,
-        "armas_loot": 15.0,
+        "armas_loot": 15.3,
         "resenha": {
-          "roundsPlayed": 5,
-          "rideDistance": 9791.06,
+          "roundsPlayed": 6,
+          "rideDistance": 12474.83,
           "teamKills": 0,
           "suicides": 0,
           "revives": 4,
-          "timeSurvived": 5543,
-          "heals": 25,
-          "boosts": 32,
-          "walkDistance": 15572.588,
-          "weaponsAcquired": 75,
+          "timeSurvived": 6960,
+          "heals": 27,
+          "boosts": 40,
+          "walkDistance": 20234.242,
+          "weaponsAcquired": 92,
           "longestKill": 334.15332
         },
         "scores": {
-          "mvp": 1102.5,
-          "participacao": 77
+          "mvp": 1189.7,
+          "participacao": 101
         },
-        "kills_player": 5,
-        "kills_player_partidas": 5,
+        "kills_player": 6,
+        "kills_player_partidas": 6,
         "kills_player_por_partida": 1.0
       },
       {
@@ -19128,12 +19128,12 @@
         "longestKill": 465.80212
       },
       "scores": {
-        "mvp": 790.1,
+        "mvp": 789.8,
         "participacao": 663
       },
       "kills_player": 45,
-      "kills_player_partidas": 78,
-      "kills_player_por_partida": 0.577
+      "kills_player_partidas": 79,
+      "kills_player_por_partida": 0.57
     },
     {
       "nick": "VoVoGOW",
@@ -19320,12 +19320,12 @@
         "longestKill": 536.81244
       },
       "scores": {
-        "mvp": 986.6,
+        "mvp": 986.5,
         "participacao": 904
       },
       "kills_player": 17,
-      "kills_player_partidas": 76,
-      "kills_player_por_partida": 0.224
+      "kills_player_partidas": 77,
+      "kills_player_por_partida": 0.221
     },
     {
       "nick": "Bicaleto",
@@ -19944,12 +19944,12 @@
         "longestKill": 407.9752
       },
       "scores": {
-        "mvp": 679.5,
-        "participacao": 441
+        "mvp": 681.0,
+        "participacao": 443
       },
-      "kills_player": 11,
-      "kills_player_partidas": 61,
-      "kills_player_por_partida": 0.18
+      "kills_player": 13,
+      "kills_player_partidas": 62,
+      "kills_player_por_partida": 0.21
     },
     {
       "nick": "Padre0027",
@@ -20146,49 +20146,49 @@
     {
       "nick": "ShigS-08",
       "account_id": "account.2c1628a7004a470690cf9007c32c9e0a",
-      "partidas": 5,
+      "partidas": 6,
       "elegivel_mvp": false,
-      "wins": 3,
-      "win_rate": 60.0,
-      "top10s": 4,
-      "top10_rate": 80.0,
-      "kills": 18,
-      "kills_por_partida": 3.6,
-      "adr": 368.3,
-      "damage_total": 1841.42,
-      "dbnos": 10,
-      "headshots": 2,
-      "hs_rate": 11.1,
+      "wins": 4,
+      "win_rate": 66.7,
+      "top10s": 5,
+      "top10_rate": 83.3,
+      "kills": 23,
+      "kills_por_partida": 3.83,
+      "adr": 409.7,
+      "damage_total": 2458.29,
+      "dbnos": 14,
+      "headshots": 3,
+      "hs_rate": 13.0,
       "longest_kill": 334.2,
       "revives": 4,
-      "assists": 4,
-      "heals": 57,
-      "tempo_medio_min": 18.5,
-      "km_rodados": 9.8,
-      "km_pe": 3.11,
+      "assists": 7,
+      "heals": 67,
+      "tempo_medio_min": 19.3,
+      "km_rodados": 12.5,
+      "km_pe": 3.37,
       "road_kills": 0,
       "team_kills": 0,
       "suicides": 0,
-      "armas_loot": 15.0,
+      "armas_loot": 15.3,
       "resenha": {
-        "roundsPlayed": 5,
-        "rideDistance": 9791.06,
+        "roundsPlayed": 6,
+        "rideDistance": 12474.83,
         "teamKills": 0,
         "suicides": 0,
         "revives": 4,
-        "timeSurvived": 5543,
-        "heals": 25,
-        "boosts": 32,
-        "walkDistance": 15572.588,
-        "weaponsAcquired": 75,
+        "timeSurvived": 6960,
+        "heals": 27,
+        "boosts": 40,
+        "walkDistance": 20234.242,
+        "weaponsAcquired": 92,
         "longestKill": 334.15332
       },
       "scores": {
-        "mvp": 1102.5,
-        "participacao": 77
+        "mvp": 1189.7,
+        "participacao": 101
       },
-      "kills_player": 5,
-      "kills_player_partidas": 5,
+      "kills_player": 6,
+      "kills_player_partidas": 6,
       "kills_player_por_partida": 1.0
     },
     {
@@ -21154,20 +21154,20 @@
   ],
   "player_kill_coverage": {
     "todos": {
-      "partidas_analisadas": 1132,
-      "partidas_conhecidas": 1132
+      "partidas_analisadas": 1133,
+      "partidas_conhecidas": 1133
     },
     "fpp": {
-      "partidas_analisadas": 852,
-      "partidas_conhecidas": 852
+      "partidas_analisadas": 853,
+      "partidas_conhecidas": 853
     },
     "tpp": {
       "partidas_analisadas": 268,
       "partidas_conhecidas": 268
     },
     "squad-fpp": {
-      "partidas_analisadas": 707,
-      "partidas_conhecidas": 707
+      "partidas_analisadas": 708,
+      "partidas_conhecidas": 708
     },
     "duo-fpp": {
       "partidas_analisadas": 145,
