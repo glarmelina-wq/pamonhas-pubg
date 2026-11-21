@@ -104,3 +104,7 @@ A página também atualiza o título, a cobertura e o status ao trocar o períod
 temporada e cachebust headshots.js?v=20261023-temporada incluídos.
 Doze testes de telemetria passaram e headshots.js passou em node --check.
 Publicação confirmada: https://github.com/glarmelina-wq/pamonhas-pubg/actions/runs/40030664880
+
+
+## Instagram do clã — diretriz futura para comentários (21/11/2026)
+Ao planejar a interação nos posts, o usuário quer respostas com personas variadas e alternadas: algumas provocativas/“ofensivas” em tom de brincadeira, outras estranhas/absurdas e outros estilos, evitando respostas repetidas. Aplicar essa ideia na etapa de moderação e respostas aos comentários, mantendo claro o humor entre membros e evitando transformar brincadeira em ataque pessoal ou conflito. Ainda não implementar; retomar quando a integração de comentários do Instagram for planejada.
