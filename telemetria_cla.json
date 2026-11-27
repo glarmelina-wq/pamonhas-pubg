@@ -1,15 +1,15 @@
 {
   "schema_version": 3,
   "season_id": "division.bro.official.pc-2018-44",
-  "updated_at": "2026-11-26T23:54:52+00:00",
+  "updated_at": "2026-11-27T08:31:17+00:00",
   "periodos": {
     "semana": {
       "inicio": "2026-11-23T00:00:00-03:00",
-      "ate": "2026-11-26T23:54:52+00:00",
+      "ate": "2026-11-27T08:31:17+00:00",
       "grupos": {
         "todos": {
-          "partidas_conhecidas": 322,
-          "partidas_analisadas": 322,
+          "partidas_conhecidas": 330,
+          "partidas_analisadas": 330,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -593,7 +593,7 @@
             {
               "nick": "CalanguinhoFPS",
               "account_id": "account.9bd078e4cc3943988b165aff1c437533",
-              "partidas": 12,
+              "partidas": 13,
               "hs": {
                 "sniper": 0,
                 "dmr": 0,
@@ -602,8 +602,8 @@
               "recorde_hs": 2,
               "recorde_partida": "2805773a-6bc1-4910-b58e-e0720a8ce275",
               "hs_nao_classificados": 0,
-              "kills_bot": 0,
-              "kills_player": 13,
+              "kills_bot": 1,
+              "kills_player": 18,
               "dano_azul": 106.28463074564934,
               "dano_queda": 76.3711519241333,
               "mortes_azul": 0,
@@ -685,22 +685,40 @@
                   "acertos": 6,
                   "dano": 199.99999809265137,
                   "partidas": 1
+                },
+                "Groza": {
+                  "disparos": 0,
+                  "acertos": 11,
+                  "dano": 234.461088180542,
+                  "partidas": 1
+                },
+                "Mini14": {
+                  "disparos": 0,
+                  "acertos": 6,
+                  "dano": 121.21175003051758,
+                  "partidas": 1
+                },
+                "M24": {
+                  "disparos": 0,
+                  "acertos": 1,
+                  "dano": 83.5,
+                  "partidas": 1
                 }
               },
               "coletados": {
-                "boost": 45,
-                "cura": 79,
-                "fumaca": 16,
-                "granada": 23,
-                "municao": 3917,
-                "kits": 54
+                "boost": 65,
+                "cura": 90,
+                "fumaca": 20,
+                "granada": 28,
+                "municao": 4803,
+                "kits": 60
               },
               "usados": {
-                "boost": 13,
-                "cura": 18,
-                "fumaca": 1,
-                "granada": 14,
-                "kits": 13
+                "boost": 21,
+                "cura": 19,
+                "fumaca": 2,
+                "granada": 17,
+                "kits": 14
               },
               "mortes": 12,
               "mortes_validas": 1,
@@ -710,7 +728,7 @@
                 "fumaca": 0,
                 "granada": 0
               },
-              "eventos_inconsistentes": 11,
+              "eventos_inconsistentes": 12,
               "vida_baixa_sem_cura_estimada": 5
             },
             {
@@ -1064,7 +1082,7 @@
             {
               "nick": "GEMINIAKI",
               "account_id": "account.2ceb61ee56e84abba908330c0524935f",
-              "partidas": 52,
+              "partidas": 53,
               "hs": {
                 "sniper": 1,
                 "dmr": 2,
@@ -1189,11 +1207,11 @@
                 }
               },
               "coletados": {
-                "boost": 158,
+                "boost": 159,
                 "cura": 515,
-                "fumaca": 71,
+                "fumaca": 73,
                 "granada": 66,
-                "municao": 17076,
+                "municao": 17136,
                 "kits": 104
               },
               "usados": {
@@ -1203,13 +1221,13 @@
                 "granada": 11,
                 "kits": 26
               },
-              "mortes": 49,
-              "mortes_validas": 21,
+              "mortes": 50,
+              "mortes_validas": 22,
               "mortes_saldo_zero": {
                 "boost": 12,
-                "cura": 12,
+                "cura": 13,
                 "fumaca": 18,
-                "granada": 15
+                "granada": 16
               },
               "eventos_inconsistentes": 32,
               "vida_baixa_sem_cura_estimada": 25
@@ -1403,7 +1421,7 @@
             {
               "nick": "LAUANNA7788",
               "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
-              "partidas": 26,
+              "partidas": 32,
               "hs": {
                 "sniper": 1,
                 "dmr": 2,
@@ -1413,8 +1431,8 @@
               "recorde_partida": "1a954419-4565-489a-820f-ff8a7e87b0eb",
               "hs_nao_classificados": 0,
               "kills_bot": 20,
-              "kills_player": 15,
-              "dano_azul": 571.041566580534,
+              "kills_player": 17,
+              "dano_azul": 582.6488466858864,
               "dano_queda": 34.91821753978729,
               "mortes_azul": 1,
               "armas": {
@@ -1450,9 +1468,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 12,
-                  "dano": 297.9608860015869,
-                  "partidas": 3
+                  "acertos": 15,
+                  "dano": 375.8756637573242,
+                  "partidas": 4
                 },
                 "Vector": {
                   "disparos": 0,
@@ -1480,41 +1498,41 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 9,
-                  "dano": 421.34950065612793,
-                  "partidas": 1
+                  "acertos": 10,
+                  "dano": 421.5391101837158,
+                  "partidas": 2
                 },
                 "HK416": {
                   "disparos": 0,
-                  "acertos": 2,
-                  "dano": 56.43832015991211,
-                  "partidas": 1
+                  "acertos": 7,
+                  "dano": 156.43832206726074,
+                  "partidas": 2
                 }
               },
               "coletados": {
-                "boost": 180,
-                "cura": 278,
-                "fumaca": 49,
-                "granada": 53,
-                "municao": 15315,
-                "kits": 71
+                "boost": 225,
+                "cura": 350,
+                "fumaca": 63,
+                "granada": 65,
+                "municao": 19446,
+                "kits": 91
               },
               "usados": {
-                "boost": 75,
-                "cura": 41,
-                "fumaca": 24,
-                "granada": 37,
-                "kits": 8
+                "boost": 93,
+                "cura": 45,
+                "fumaca": 35,
+                "granada": 46,
+                "kits": 10
               },
-              "mortes": 25,
-              "mortes_validas": 7,
+              "mortes": 31,
+              "mortes_validas": 8,
               "mortes_saldo_zero": {
                 "boost": 2,
-                "cura": 2,
-                "fumaca": 5,
-                "granada": 6
+                "cura": 3,
+                "fumaca": 6,
+                "granada": 7
               },
-              "eventos_inconsistentes": 19,
+              "eventos_inconsistentes": 24,
               "vida_baixa_sem_cura_estimada": 5
             },
             {
@@ -2033,7 +2051,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 24,
+              "partidas": 25,
               "hs": {
                 "sniper": 6,
                 "dmr": 0,
@@ -2043,16 +2061,16 @@
               "recorde_partida": "65372450-2702-45dc-bf0b-b96927aab518",
               "hs_nao_classificados": 0,
               "kills_bot": 37,
-              "kills_player": 16,
-              "dano_azul": 408.6510751545429,
+              "kills_player": 18,
+              "dano_azul": 470.11431208252907,
               "dano_queda": 25.798450231552124,
               "mortes_azul": 1,
               "armas": {
                 "M24": {
                   "disparos": 0,
-                  "acertos": 14,
-                  "dano": 881.6903076171875,
-                  "partidas": 5
+                  "acertos": 15,
+                  "dano": 935.3452568054199,
+                  "partidas": 6
                 },
                 "SCAR-L": {
                   "disparos": 0,
@@ -2146,19 +2164,19 @@
                 }
               },
               "coletados": {
-                "boost": 113,
-                "cura": 187,
-                "fumaca": 30,
-                "granada": 66,
-                "municao": 9018,
-                "kits": 67
+                "boost": 135,
+                "cura": 195,
+                "fumaca": 34,
+                "granada": 71,
+                "municao": 9868,
+                "kits": 75
               },
               "usados": {
-                "boost": 93,
-                "cura": 25,
-                "fumaca": 7,
-                "granada": 24,
-                "kits": 10
+                "boost": 104,
+                "cura": 27,
+                "fumaca": 11,
+                "granada": 26,
+                "kits": 12
               },
               "mortes": 18,
               "mortes_validas": 3,
@@ -2168,7 +2186,7 @@
                 "fumaca": 2,
                 "granada": 1
               },
-              "eventos_inconsistentes": 21,
+              "eventos_inconsistentes": 22,
               "vida_baixa_sem_cura_estimada": 4
             },
             {
@@ -3091,11 +3109,11 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-11-23T09:03:32+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:21:49+00:00"
+          "ultima_partida_analisada": "2026-11-27T01:31:32+00:00"
         },
         "fpp": {
-          "partidas_conhecidas": 278,
-          "partidas_analisadas": 278,
+          "partidas_conhecidas": 285,
+          "partidas_analisadas": 285,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -4078,7 +4096,7 @@
             {
               "nick": "GEMINIAKI",
               "account_id": "account.2ceb61ee56e84abba908330c0524935f",
-              "partidas": 52,
+              "partidas": 53,
               "hs": {
                 "sniper": 1,
                 "dmr": 2,
@@ -4203,11 +4221,11 @@
                 }
               },
               "coletados": {
-                "boost": 158,
+                "boost": 159,
                 "cura": 515,
-                "fumaca": 71,
+                "fumaca": 73,
                 "granada": 66,
-                "municao": 17076,
+                "municao": 17136,
                 "kits": 104
               },
               "usados": {
@@ -4217,13 +4235,13 @@
                 "granada": 11,
                 "kits": 26
               },
-              "mortes": 49,
-              "mortes_validas": 21,
+              "mortes": 50,
+              "mortes_validas": 22,
               "mortes_saldo_zero": {
                 "boost": 12,
-                "cura": 12,
+                "cura": 13,
                 "fumaca": 18,
-                "granada": 15
+                "granada": 16
               },
               "eventos_inconsistentes": 32,
               "vida_baixa_sem_cura_estimada": 25
@@ -4417,7 +4435,7 @@
             {
               "nick": "LAUANNA7788",
               "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
-              "partidas": 22,
+              "partidas": 28,
               "hs": {
                 "sniper": 1,
                 "dmr": 2,
@@ -4427,8 +4445,8 @@
               "recorde_partida": "1a954419-4565-489a-820f-ff8a7e87b0eb",
               "hs_nao_classificados": 0,
               "kills_bot": 20,
-              "kills_player": 11,
-              "dano_azul": 214.91189175844193,
+              "kills_player": 13,
+              "dano_azul": 226.51917186379433,
               "dano_queda": 32.78956878185272,
               "mortes_azul": 1,
               "armas": {
@@ -4464,9 +4482,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 12,
-                  "dano": 297.9608860015869,
-                  "partidas": 3
+                  "acertos": 15,
+                  "dano": 375.8756637573242,
+                  "partidas": 4
                 },
                 "Vector": {
                   "disparos": 0,
@@ -4482,41 +4500,41 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 9,
-                  "dano": 421.34950065612793,
-                  "partidas": 1
+                  "acertos": 10,
+                  "dano": 421.5391101837158,
+                  "partidas": 2
                 },
                 "HK416": {
                   "disparos": 0,
-                  "acertos": 2,
-                  "dano": 56.43832015991211,
-                  "partidas": 1
+                  "acertos": 7,
+                  "dano": 156.43832206726074,
+                  "partidas": 2
                 }
               },
               "coletados": {
-                "boost": 163,
-                "cura": 243,
-                "fumaca": 41,
-                "granada": 50,
-                "municao": 12908,
-                "kits": 56
+                "boost": 208,
+                "cura": 315,
+                "fumaca": 55,
+                "granada": 62,
+                "municao": 17039,
+                "kits": 76
               },
               "usados": {
-                "boost": 68,
-                "cura": 31,
-                "fumaca": 24,
-                "granada": 34,
-                "kits": 8
+                "boost": 86,
+                "cura": 35,
+                "fumaca": 35,
+                "granada": 43,
+                "kits": 10
               },
-              "mortes": 21,
-              "mortes_validas": 5,
+              "mortes": 27,
+              "mortes_validas": 6,
               "mortes_saldo_zero": {
                 "boost": 2,
-                "cura": 2,
-                "fumaca": 4,
-                "granada": 4
+                "cura": 3,
+                "fumaca": 5,
+                "granada": 5
               },
-              "eventos_inconsistentes": 17,
+              "eventos_inconsistentes": 22,
               "vida_baixa_sem_cura_estimada": 5
             },
             {
@@ -5947,16 +5965,16 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-11-23T09:42:45+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:21:49+00:00"
+          "ultima_partida_analisada": "2026-11-27T01:31:32+00:00"
         },
         "tpp": {
-          "partidas_conhecidas": 31,
-          "partidas_analisadas": 31,
+          "partidas_conhecidas": 32,
+          "partidas_analisadas": 32,
           "jogadores": [
             {
               "nick": "CalanguinhoFPS",
               "account_id": "account.9bd078e4cc3943988b165aff1c437533",
-              "partidas": 11,
+              "partidas": 12,
               "hs": {
                 "sniper": 0,
                 "dmr": 0,
@@ -5965,8 +5983,8 @@
               "recorde_hs": 2,
               "recorde_partida": "2805773a-6bc1-4910-b58e-e0720a8ce275",
               "hs_nao_classificados": 0,
-              "kills_bot": 0,
-              "kills_player": 13,
+              "kills_bot": 1,
+              "kills_player": 18,
               "dano_azul": 106.28463074564934,
               "dano_queda": 76.3711519241333,
               "mortes_azul": 0,
@@ -6042,22 +6060,40 @@
                   "acertos": 6,
                   "dano": 199.99999809265137,
                   "partidas": 1
+                },
+                "Groza": {
+                  "disparos": 0,
+                  "acertos": 11,
+                  "dano": 234.461088180542,
+                  "partidas": 1
+                },
+                "Mini14": {
+                  "disparos": 0,
+                  "acertos": 6,
+                  "dano": 121.21175003051758,
+                  "partidas": 1
+                },
+                "M24": {
+                  "disparos": 0,
+                  "acertos": 1,
+                  "dano": 83.5,
+                  "partidas": 1
                 }
               },
               "coletados": {
-                "boost": 42,
-                "cura": 73,
-                "fumaca": 14,
-                "granada": 22,
-                "municao": 3607,
-                "kits": 53
+                "boost": 62,
+                "cura": 84,
+                "fumaca": 18,
+                "granada": 27,
+                "municao": 4493,
+                "kits": 59
               },
               "usados": {
-                "boost": 12,
-                "cura": 17,
-                "fumaca": 0,
-                "granada": 14,
-                "kits": 12
+                "boost": 20,
+                "cura": 18,
+                "fumaca": 1,
+                "granada": 17,
+                "kits": 13
               },
               "mortes": 11,
               "mortes_validas": 1,
@@ -6067,7 +6103,7 @@
                 "fumaca": 0,
                 "granada": 0
               },
-              "eventos_inconsistentes": 10,
+              "eventos_inconsistentes": 11,
               "vida_baixa_sem_cura_estimada": 5
             },
             {
@@ -6217,7 +6253,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 20,
+              "partidas": 21,
               "hs": {
                 "sniper": 3,
                 "dmr": 0,
@@ -6227,8 +6263,8 @@
               "recorde_partida": "65372450-2702-45dc-bf0b-b96927aab518",
               "hs_nao_classificados": 0,
               "kills_bot": 17,
-              "kills_player": 13,
-              "dano_azul": 387.0197348892689,
+              "kills_player": 15,
+              "dano_azul": 448.482971817255,
               "dano_queda": 8.003869771957397,
               "mortes_azul": 1,
               "armas": {
@@ -6270,9 +6306,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 6,
-                  "dano": 516.3425064086914,
-                  "partidas": 3
+                  "acertos": 7,
+                  "dano": 569.9974555969238,
+                  "partidas": 4
                 },
                 "MG3": {
                   "disparos": 0,
@@ -6312,19 +6348,19 @@
                 }
               },
               "coletados": {
-                "boost": 76,
-                "cura": 146,
-                "fumaca": 20,
-                "granada": 44,
-                "municao": 5488,
-                "kits": 46
+                "boost": 98,
+                "cura": 154,
+                "fumaca": 24,
+                "granada": 49,
+                "municao": 6338,
+                "kits": 54
               },
               "usados": {
-                "boost": 62,
-                "cura": 23,
-                "fumaca": 3,
-                "granada": 20,
-                "kits": 8
+                "boost": 73,
+                "cura": 25,
+                "fumaca": 7,
+                "granada": 22,
+                "kits": 10
               },
               "mortes": 18,
               "mortes_validas": 3,
@@ -6334,7 +6370,7 @@
                 "fumaca": 2,
                 "granada": 1
               },
-              "eventos_inconsistentes": 17,
+              "eventos_inconsistentes": 18,
               "vida_baixa_sem_cura_estimada": 4
             }
           ],
@@ -6349,11 +6385,11 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-11-23T09:03:32+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:16:10+00:00"
+          "ultima_partida_analisada": "2026-11-26T23:56:33+00:00"
         },
         "squad-fpp": {
-          "partidas_conhecidas": 245,
-          "partidas_analisadas": 245,
+          "partidas_conhecidas": 252,
+          "partidas_analisadas": 252,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -7288,7 +7324,7 @@
             {
               "nick": "GEMINIAKI",
               "account_id": "account.2ceb61ee56e84abba908330c0524935f",
-              "partidas": 51,
+              "partidas": 52,
               "hs": {
                 "sniper": 1,
                 "dmr": 2,
@@ -7413,11 +7449,11 @@
                 }
               },
               "coletados": {
-                "boost": 158,
+                "boost": 159,
                 "cura": 515,
-                "fumaca": 69,
+                "fumaca": 71,
                 "granada": 66,
-                "municao": 16822,
+                "municao": 16882,
                 "kits": 104
               },
               "usados": {
@@ -7427,13 +7463,13 @@
                 "granada": 11,
                 "kits": 26
               },
-              "mortes": 48,
-              "mortes_validas": 21,
+              "mortes": 49,
+              "mortes_validas": 22,
               "mortes_saldo_zero": {
                 "boost": 12,
-                "cura": 12,
+                "cura": 13,
                 "fumaca": 18,
-                "granada": 15
+                "granada": 16
               },
               "eventos_inconsistentes": 31,
               "vida_baixa_sem_cura_estimada": 25
@@ -7558,7 +7594,7 @@
             {
               "nick": "LAUANNA7788",
               "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
-              "partidas": 22,
+              "partidas": 28,
               "hs": {
                 "sniper": 1,
                 "dmr": 2,
@@ -7568,8 +7604,8 @@
               "recorde_partida": "1a954419-4565-489a-820f-ff8a7e87b0eb",
               "hs_nao_classificados": 0,
               "kills_bot": 20,
-              "kills_player": 11,
-              "dano_azul": 214.91189175844193,
+              "kills_player": 13,
+              "dano_azul": 226.51917186379433,
               "dano_queda": 32.78956878185272,
               "mortes_azul": 1,
               "armas": {
@@ -7605,9 +7641,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 12,
-                  "dano": 297.9608860015869,
-                  "partidas": 3
+                  "acertos": 15,
+                  "dano": 375.8756637573242,
+                  "partidas": 4
                 },
                 "Vector": {
                   "disparos": 0,
@@ -7623,41 +7659,41 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 9,
-                  "dano": 421.34950065612793,
-                  "partidas": 1
+                  "acertos": 10,
+                  "dano": 421.5391101837158,
+                  "partidas": 2
                 },
                 "HK416": {
                   "disparos": 0,
-                  "acertos": 2,
-                  "dano": 56.43832015991211,
-                  "partidas": 1
+                  "acertos": 7,
+                  "dano": 156.43832206726074,
+                  "partidas": 2
                 }
               },
               "coletados": {
-                "boost": 163,
-                "cura": 243,
-                "fumaca": 41,
-                "granada": 50,
-                "municao": 12908,
-                "kits": 56
+                "boost": 208,
+                "cura": 315,
+                "fumaca": 55,
+                "granada": 62,
+                "municao": 17039,
+                "kits": 76
               },
               "usados": {
-                "boost": 68,
-                "cura": 31,
-                "fumaca": 24,
-                "granada": 34,
-                "kits": 8
+                "boost": 86,
+                "cura": 35,
+                "fumaca": 35,
+                "granada": 43,
+                "kits": 10
               },
-              "mortes": 21,
-              "mortes_validas": 5,
+              "mortes": 27,
+              "mortes_validas": 6,
               "mortes_saldo_zero": {
                 "boost": 2,
-                "cura": 2,
-                "fumaca": 4,
-                "granada": 4
+                "cura": 3,
+                "fumaca": 5,
+                "granada": 5
               },
-              "eventos_inconsistentes": 17,
+              "eventos_inconsistentes": 22,
               "vida_baixa_sem_cura_estimada": 5
             },
             {
@@ -8880,7 +8916,7 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-11-23T09:42:45+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:21:49+00:00"
+          "ultima_partida_analisada": "2026-11-27T01:31:32+00:00"
         },
         "duo-fpp": {
           "partidas_conhecidas": 33,
@@ -9725,13 +9761,13 @@
           "ultima_partida_analisada": "2026-11-26T18:20:29+00:00"
         },
         "squad": {
-          "partidas_conhecidas": 31,
-          "partidas_analisadas": 31,
+          "partidas_conhecidas": 32,
+          "partidas_analisadas": 32,
           "jogadores": [
             {
               "nick": "CalanguinhoFPS",
               "account_id": "account.9bd078e4cc3943988b165aff1c437533",
-              "partidas": 11,
+              "partidas": 12,
               "hs": {
                 "sniper": 0,
                 "dmr": 0,
@@ -9740,8 +9776,8 @@
               "recorde_hs": 2,
               "recorde_partida": "2805773a-6bc1-4910-b58e-e0720a8ce275",
               "hs_nao_classificados": 0,
-              "kills_bot": 0,
-              "kills_player": 13,
+              "kills_bot": 1,
+              "kills_player": 18,
               "dano_azul": 106.28463074564934,
               "dano_queda": 76.3711519241333,
               "mortes_azul": 0,
@@ -9817,22 +9853,40 @@
                   "acertos": 6,
                   "dano": 199.99999809265137,
                   "partidas": 1
+                },
+                "Groza": {
+                  "disparos": 0,
+                  "acertos": 11,
+                  "dano": 234.461088180542,
+                  "partidas": 1
+                },
+                "Mini14": {
+                  "disparos": 0,
+                  "acertos": 6,
+                  "dano": 121.21175003051758,
+                  "partidas": 1
+                },
+                "M24": {
+                  "disparos": 0,
+                  "acertos": 1,
+                  "dano": 83.5,
+                  "partidas": 1
                 }
               },
               "coletados": {
-                "boost": 42,
-                "cura": 73,
-                "fumaca": 14,
-                "granada": 22,
-                "municao": 3607,
-                "kits": 53
+                "boost": 62,
+                "cura": 84,
+                "fumaca": 18,
+                "granada": 27,
+                "municao": 4493,
+                "kits": 59
               },
               "usados": {
-                "boost": 12,
-                "cura": 17,
-                "fumaca": 0,
-                "granada": 14,
-                "kits": 12
+                "boost": 20,
+                "cura": 18,
+                "fumaca": 1,
+                "granada": 17,
+                "kits": 13
               },
               "mortes": 11,
               "mortes_validas": 1,
@@ -9842,7 +9896,7 @@
                 "fumaca": 0,
                 "granada": 0
               },
-              "eventos_inconsistentes": 10,
+              "eventos_inconsistentes": 11,
               "vida_baixa_sem_cura_estimada": 5
             },
             {
@@ -9992,7 +10046,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 20,
+              "partidas": 21,
               "hs": {
                 "sniper": 3,
                 "dmr": 0,
@@ -10002,8 +10056,8 @@
               "recorde_partida": "65372450-2702-45dc-bf0b-b96927aab518",
               "hs_nao_classificados": 0,
               "kills_bot": 17,
-              "kills_player": 13,
-              "dano_azul": 387.0197348892689,
+              "kills_player": 15,
+              "dano_azul": 448.482971817255,
               "dano_queda": 8.003869771957397,
               "mortes_azul": 1,
               "armas": {
@@ -10045,9 +10099,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 6,
-                  "dano": 516.3425064086914,
-                  "partidas": 3
+                  "acertos": 7,
+                  "dano": 569.9974555969238,
+                  "partidas": 4
                 },
                 "MG3": {
                   "disparos": 0,
@@ -10087,19 +10141,19 @@
                 }
               },
               "coletados": {
-                "boost": 76,
-                "cura": 146,
-                "fumaca": 20,
-                "granada": 44,
-                "municao": 5488,
-                "kits": 46
+                "boost": 98,
+                "cura": 154,
+                "fumaca": 24,
+                "granada": 49,
+                "municao": 6338,
+                "kits": 54
               },
               "usados": {
-                "boost": 62,
-                "cura": 23,
-                "fumaca": 3,
-                "granada": 20,
-                "kits": 8
+                "boost": 73,
+                "cura": 25,
+                "fumaca": 7,
+                "granada": 22,
+                "kits": 10
               },
               "mortes": 18,
               "mortes_validas": 3,
@@ -10109,7 +10163,7 @@
                 "fumaca": 2,
                 "granada": 1
               },
-              "eventos_inconsistentes": 17,
+              "eventos_inconsistentes": 18,
               "vida_baixa_sem_cura_estimada": 4
             }
           ],
@@ -10124,7 +10178,7 @@
           },
           "partidas_anteriores_semana": 0,
           "primeira_partida_analisada": "2026-11-23T09:03:32+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:16:10+00:00"
+          "ultima_partida_analisada": "2026-11-26T23:56:33+00:00"
         },
         "duo": {
           "partidas_conhecidas": 0,
@@ -10482,11 +10536,11 @@
     },
     "mes": {
       "inicio": "2026-11-01T00:00:00-03:00",
-      "ate": "2026-11-26T23:54:52+00:00",
+      "ate": "2026-11-27T08:31:17+00:00",
       "grupos": {
         "todos": {
-          "partidas_conhecidas": 3014,
-          "partidas_analisadas": 3014,
+          "partidas_conhecidas": 3022,
+          "partidas_analisadas": 3022,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -11592,7 +11646,7 @@
             {
               "nick": "CalanguinhoFPS",
               "account_id": "account.9bd078e4cc3943988b165aff1c437533",
-              "partidas": 358,
+              "partidas": 359,
               "hs": {
                 "sniper": 13,
                 "dmr": 11,
@@ -11601,17 +11655,17 @@
               "recorde_hs": 4,
               "recorde_partida": "65b7eae9-d32d-4be7-b4fd-6c2b4bb3b87c",
               "hs_nao_classificados": 4,
-              "kills_bot": 24,
-              "kills_player": 439,
+              "kills_bot": 25,
+              "kills_player": 444,
               "dano_azul": 8930.064593519433,
               "dano_queda": 368.34841975569725,
               "mortes_azul": 11,
               "armas": {
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 160,
-                  "dano": 4542.9700756073,
-                  "partidas": 30
+                  "acertos": 166,
+                  "dano": 4664.181825637817,
+                  "partidas": 31
                 },
                 "HK416": {
                   "disparos": 0,
@@ -11639,9 +11693,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 36,
-                  "dano": 2399.675491333008,
-                  "partidas": 18
+                  "acertos": 37,
+                  "dano": 2483.175491333008,
+                  "partidas": 19
                 },
                 "Winchester": {
                   "disparos": 0,
@@ -11798,22 +11852,28 @@
                   "acertos": 1,
                   "dano": 43.3865852355957,
                   "partidas": 1
+                },
+                "Groza": {
+                  "disparos": 0,
+                  "acertos": 11,
+                  "dano": 234.461088180542,
+                  "partidas": 1
                 }
               },
               "coletados": {
-                "boost": 1378,
-                "cura": 2778,
-                "fumaca": 521,
-                "granada": 818,
-                "municao": 96155,
-                "kits": 922
+                "boost": 1398,
+                "cura": 2789,
+                "fumaca": 525,
+                "granada": 823,
+                "municao": 97041,
+                "kits": 928
               },
               "usados": {
-                "boost": 629,
-                "cura": 683,
-                "fumaca": 246,
-                "granada": 489,
-                "kits": 371
+                "boost": 637,
+                "cura": 684,
+                "fumaca": 247,
+                "granada": 492,
+                "kits": 372
               },
               "mortes": 372,
               "mortes_validas": 94,
@@ -11823,7 +11883,7 @@
                 "fumaca": 73,
                 "granada": 65
               },
-              "eventos_inconsistentes": 262,
+              "eventos_inconsistentes": 263,
               "vida_baixa_sem_cura_estimada": 479
             },
             {
@@ -12474,7 +12534,7 @@
             {
               "nick": "GEMINIAKI",
               "account_id": "account.2ceb61ee56e84abba908330c0524935f",
-              "partidas": 355,
+              "partidas": 356,
               "hs": {
                 "sniper": 13,
                 "dmr": 22,
@@ -12677,11 +12737,11 @@
                 }
               },
               "coletados": {
-                "boost": 1491,
+                "boost": 1492,
                 "cura": 3985,
-                "fumaca": 571,
+                "fumaca": 573,
                 "granada": 561,
-                "municao": 129040,
+                "municao": 129100,
                 "kits": 930
               },
               "usados": {
@@ -12691,13 +12751,13 @@
                 "granada": 187,
                 "kits": 241
               },
-              "mortes": 332,
-              "mortes_validas": 123,
+              "mortes": 333,
+              "mortes_validas": 124,
               "mortes_saldo_zero": {
                 "boost": 66,
-                "cura": 50,
+                "cura": 51,
                 "fumaca": 86,
-                "granada": 75
+                "granada": 76
               },
               "eventos_inconsistentes": 236,
               "vida_baixa_sem_cura_estimada": 277
@@ -13446,7 +13506,7 @@
             {
               "nick": "LAUANNA7788",
               "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
-              "partidas": 287,
+              "partidas": 293,
               "hs": {
                 "sniper": 28,
                 "dmr": 15,
@@ -13456,8 +13516,8 @@
               "recorde_partida": "78c08ce5-8383-44f6-ad97-328be1e2cf5b",
               "hs_nao_classificados": 0,
               "kills_bot": 375,
-              "kills_player": 91,
-              "dano_azul": 8649.348205739632,
+              "kills_player": 93,
+              "dano_azul": 8660.955485844985,
               "dano_queda": 549.9008218776435,
               "mortes_azul": 20,
               "armas": {
@@ -13481,9 +13541,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 175,
-                  "dano": 8807.835146903992,
-                  "partidas": 39
+                  "acertos": 176,
+                  "dano": 8808.02475643158,
+                  "partidas": 40
                 },
                 "Vector": {
                   "disparos": 0,
@@ -13517,9 +13577,9 @@
                 },
                 "HK416": {
                   "disparos": 0,
-                  "acertos": 237,
-                  "dano": 5403.613549232483,
-                  "partidas": 36
+                  "acertos": 242,
+                  "dano": 5503.6135511398315,
+                  "partidas": 37
                 },
                 "Mk12": {
                   "disparos": 0,
@@ -13541,9 +13601,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 97,
-                  "dano": 2399.811288833618,
-                  "partidas": 16
+                  "acertos": 100,
+                  "dano": 2477.7260665893555,
+                  "partidas": 17
                 },
                 "AWM": {
                   "disparos": 0,
@@ -13619,29 +13679,29 @@
                 }
               },
               "coletados": {
-                "boost": 2052,
-                "cura": 3310,
-                "fumaca": 569,
-                "granada": 634,
-                "municao": 153744,
-                "kits": 849
+                "boost": 2097,
+                "cura": 3382,
+                "fumaca": 583,
+                "granada": 646,
+                "municao": 157875,
+                "kits": 869
               },
               "usados": {
-                "boost": 1001,
-                "cura": 367,
-                "fumaca": 323,
-                "granada": 473,
-                "kits": 145
+                "boost": 1019,
+                "cura": 371,
+                "fumaca": 334,
+                "granada": 482,
+                "kits": 147
               },
-              "mortes": 272,
-              "mortes_validas": 71,
+              "mortes": 278,
+              "mortes_validas": 72,
               "mortes_saldo_zero": {
                 "boost": 44,
-                "cura": 39,
-                "fumaca": 56,
-                "granada": 53
+                "cura": 40,
+                "fumaca": 57,
+                "granada": 54
               },
-              "eventos_inconsistentes": 218,
+              "eventos_inconsistentes": 223,
               "vida_baixa_sem_cura_estimada": 175
             },
             {
@@ -15135,7 +15195,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 361,
+              "partidas": 362,
               "hs": {
                 "sniper": 39,
                 "dmr": 1,
@@ -15145,8 +15205,8 @@
               "recorde_partida": "bb36dd75-29ca-4cbf-b124-6e7b50e83cf1",
               "hs_nao_classificados": 5,
               "kills_bot": 265,
-              "kills_player": 326,
-              "dano_azul": 11579.024674504995,
+              "kills_player": 328,
+              "dano_azul": 11640.487911432981,
               "dano_queda": 455.62777706980705,
               "mortes_azul": 13,
               "armas": {
@@ -15182,9 +15242,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 158,
-                  "dano": 9116.18931388855,
-                  "partidas": 71
+                  "acertos": 159,
+                  "dano": 9169.844263076782,
+                  "partidas": 72
                 },
                 "FNFal": {
                   "disparos": 0,
@@ -15356,19 +15416,19 @@
                 }
               },
               "coletados": {
-                "boost": 1853,
-                "cura": 2962,
-                "fumaca": 457,
-                "granada": 1070,
-                "municao": 109864,
-                "kits": 1085
+                "boost": 1875,
+                "cura": 2970,
+                "fumaca": 461,
+                "granada": 1075,
+                "municao": 110714,
+                "kits": 1093
               },
               "usados": {
-                "boost": 1344,
-                "cura": 563,
-                "fumaca": 214,
-                "granada": 609,
-                "kits": 306
+                "boost": 1355,
+                "cura": 565,
+                "fumaca": 218,
+                "granada": 611,
+                "kits": 308
               },
               "mortes": 341,
               "mortes_validas": 60,
@@ -15378,7 +15438,7 @@
                 "fumaca": 48,
                 "granada": 36
               },
-              "eventos_inconsistentes": 300,
+              "eventos_inconsistentes": 301,
               "vida_baixa_sem_cura_estimada": 181
             },
             {
@@ -18155,11 +18215,11 @@
           },
           "partidas_anteriores_semana": 2692,
           "primeira_partida_analisada": "2026-11-01T03:00:18+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:21:49+00:00"
+          "ultima_partida_analisada": "2026-11-27T01:31:32+00:00"
         },
         "fpp": {
-          "partidas_conhecidas": 2380,
-          "partidas_analisadas": 2380,
+          "partidas_conhecidas": 2387,
+          "partidas_analisadas": 2387,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -20021,7 +20081,7 @@
             {
               "nick": "GEMINIAKI",
               "account_id": "account.2ceb61ee56e84abba908330c0524935f",
-              "partidas": 350,
+              "partidas": 351,
               "hs": {
                 "sniper": 12,
                 "dmr": 22,
@@ -20218,11 +20278,11 @@
                 }
               },
               "coletados": {
-                "boost": 1473,
+                "boost": 1474,
                 "cura": 3879,
-                "fumaca": 566,
+                "fumaca": 568,
                 "granada": 554,
-                "municao": 127567,
+                "municao": 127627,
                 "kits": 917
               },
               "usados": {
@@ -20232,13 +20292,13 @@
                 "granada": 184,
                 "kits": 239
               },
-              "mortes": 328,
-              "mortes_validas": 122,
+              "mortes": 329,
+              "mortes_validas": 123,
               "mortes_saldo_zero": {
                 "boost": 65,
-                "cura": 49,
+                "cura": 50,
                 "fumaca": 85,
-                "granada": 74
+                "granada": 75
               },
               "eventos_inconsistentes": 232,
               "vida_baixa_sem_cura_estimada": 277
@@ -20975,7 +21035,7 @@
             {
               "nick": "LAUANNA7788",
               "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
-              "partidas": 262,
+              "partidas": 268,
               "hs": {
                 "sniper": 28,
                 "dmr": 14,
@@ -20985,8 +21045,8 @@
               "recorde_partida": "78c08ce5-8383-44f6-ad97-328be1e2cf5b",
               "hs_nao_classificados": 0,
               "kills_bot": 372,
-              "kills_player": 86,
-              "dano_azul": 7627.643594468012,
+              "kills_player": 88,
+              "dano_azul": 7639.250874573365,
               "dano_queda": 531.2853185664862,
               "mortes_azul": 15,
               "armas": {
@@ -21010,9 +21070,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 174,
-                  "dano": 8753.998595237732,
-                  "partidas": 38
+                  "acertos": 175,
+                  "dano": 8754.18820476532,
+                  "partidas": 39
                 },
                 "Vector": {
                   "disparos": 0,
@@ -21046,9 +21106,9 @@
                 },
                 "HK416": {
                   "disparos": 0,
-                  "acertos": 237,
-                  "dano": 5403.613549232483,
-                  "partidas": 36
+                  "acertos": 242,
+                  "dano": 5503.6135511398315,
+                  "partidas": 37
                 },
                 "Mk12": {
                   "disparos": 0,
@@ -21070,9 +21130,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 91,
-                  "dano": 2199.8112869262695,
-                  "partidas": 15
+                  "acertos": 94,
+                  "dano": 2277.726064682007,
+                  "partidas": 16
                 },
                 "AWM": {
                   "disparos": 0,
@@ -21148,29 +21208,29 @@
                 }
               },
               "coletados": {
-                "boost": 2011,
-                "cura": 3213,
-                "fumaca": 552,
-                "granada": 626,
-                "municao": 146007,
-                "kits": 817
+                "boost": 2056,
+                "cura": 3285,
+                "fumaca": 566,
+                "granada": 638,
+                "municao": 150138,
+                "kits": 837
               },
               "usados": {
-                "boost": 989,
-                "cura": 339,
-                "fumaca": 321,
-                "granada": 470,
-                "kits": 140
+                "boost": 1007,
+                "cura": 343,
+                "fumaca": 332,
+                "granada": 479,
+                "kits": 142
               },
-              "mortes": 248,
-              "mortes_validas": 52,
+              "mortes": 254,
+              "mortes_validas": 53,
               "mortes_saldo_zero": {
                 "boost": 33,
-                "cura": 31,
-                "fumaca": 42,
-                "granada": 38
+                "cura": 32,
+                "fumaca": 43,
+                "granada": 39
               },
-              "eventos_inconsistentes": 213,
+              "eventos_inconsistentes": 218,
               "vida_baixa_sem_cura_estimada": 118
             },
             {
@@ -25438,11 +25498,11 @@
           },
           "partidas_anteriores_semana": 2102,
           "primeira_partida_analisada": "2026-11-01T03:00:18+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:21:49+00:00"
+          "ultima_partida_analisada": "2026-11-27T01:31:32+00:00"
         },
         "tpp": {
-          "partidas_conhecidas": 596,
-          "partidas_analisadas": 596,
+          "partidas_conhecidas": 597,
+          "partidas_analisadas": 597,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -25633,7 +25693,7 @@
             {
               "nick": "CalanguinhoFPS",
               "account_id": "account.9bd078e4cc3943988b165aff1c437533",
-              "partidas": 290,
+              "partidas": 291,
               "hs": {
                 "sniper": 6,
                 "dmr": 9,
@@ -25642,8 +25702,8 @@
               "recorde_hs": 4,
               "recorde_partida": "6dac5fd6-a386-47c9-a6ac-ee7d8678f7d2",
               "hs_nao_classificados": 3,
-              "kills_bot": 16,
-              "kills_player": 379,
+              "kills_bot": 17,
+              "kills_player": 384,
               "dano_azul": 7738.36889018293,
               "dano_queda": 315.51504784822464,
               "mortes_azul": 8,
@@ -25668,9 +25728,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 22,
-                  "dano": 1495.4379043579102,
-                  "partidas": 17
+                  "acertos": 23,
+                  "dano": 1578.9379043579102,
+                  "partidas": 18
                 },
                 "Winchester": {
                   "disparos": 0,
@@ -25680,9 +25740,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 145,
-                  "dano": 4047.4557933807373,
-                  "partidas": 26
+                  "acertos": 151,
+                  "dano": 4168.667543411255,
+                  "partidas": 27
                 },
                 "AUG": {
                   "disparos": 0,
@@ -25839,22 +25899,28 @@
                   "acertos": 1,
                   "dano": 43.3865852355957,
                   "partidas": 1
+                },
+                "Groza": {
+                  "disparos": 0,
+                  "acertos": 11,
+                  "dano": 234.461088180542,
+                  "partidas": 1
                 }
               },
               "coletados": {
-                "boost": 1177,
-                "cura": 2375,
-                "fumaca": 451,
-                "granada": 691,
-                "municao": 80894,
-                "kits": 787
+                "boost": 1197,
+                "cura": 2386,
+                "fumaca": 455,
+                "granada": 696,
+                "municao": 81780,
+                "kits": 793
               },
               "usados": {
-                "boost": 538,
-                "cura": 611,
-                "fumaca": 210,
-                "granada": 435,
-                "kits": 326
+                "boost": 546,
+                "cura": 612,
+                "fumaca": 211,
+                "granada": 438,
+                "kits": 327
               },
               "mortes": 305,
               "mortes_validas": 73,
@@ -25864,7 +25930,7 @@
                 "fumaca": 54,
                 "granada": 50
               },
-              "eventos_inconsistentes": 218,
+              "eventos_inconsistentes": 219,
               "vida_baixa_sem_cura_estimada": 385
             },
             {
@@ -27139,7 +27205,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 291,
+              "partidas": 292,
               "hs": {
                 "sniper": 29,
                 "dmr": 1,
@@ -27149,8 +27215,8 @@
               "recorde_partida": "bb36dd75-29ca-4cbf-b124-6e7b50e83cf1",
               "hs_nao_classificados": 3,
               "kills_bot": 157,
-              "kills_player": 276,
-              "dano_azul": 9567.818307876587,
+              "kills_player": 278,
+              "dano_azul": 9629.281544804573,
               "dano_queda": 366.6149456202984,
               "mortes_azul": 12,
               "armas": {
@@ -27168,9 +27234,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 120,
-                  "dano": 7125.104452133179,
-                  "partidas": 57
+                  "acertos": 121,
+                  "dano": 7178.759401321411,
+                  "partidas": 58
                 },
                 "M249": {
                   "disparos": 0,
@@ -27348,19 +27414,19 @@
                 }
               },
               "coletados": {
-                "boost": 1446,
-                "cura": 2364,
-                "fumaca": 357,
-                "granada": 837,
-                "municao": 81919,
-                "kits": 850
+                "boost": 1468,
+                "cura": 2372,
+                "fumaca": 361,
+                "granada": 842,
+                "municao": 82769,
+                "kits": 858
               },
               "usados": {
-                "boost": 1038,
-                "cura": 451,
-                "fumaca": 163,
-                "granada": 501,
-                "kits": 237
+                "boost": 1049,
+                "cura": 453,
+                "fumaca": 167,
+                "granada": 503,
+                "kits": 239
               },
               "mortes": 286,
               "mortes_validas": 49,
@@ -27370,7 +27436,7 @@
                 "fumaca": 41,
                 "granada": 31
               },
-              "eventos_inconsistentes": 242,
+              "eventos_inconsistentes": 243,
               "vida_baixa_sem_cura_estimada": 166
             },
             {
@@ -28240,11 +28306,11 @@
           },
           "partidas_anteriores_semana": 565,
           "primeira_partida_analisada": "2026-11-01T05:03:43+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:16:10+00:00"
+          "ultima_partida_analisada": "2026-11-26T23:56:33+00:00"
         },
         "squad-fpp": {
-          "partidas_conhecidas": 2066,
-          "partidas_analisadas": 2066,
+          "partidas_conhecidas": 2073,
+          "partidas_analisadas": 2073,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -30058,7 +30124,7 @@
             {
               "nick": "GEMINIAKI",
               "account_id": "account.2ceb61ee56e84abba908330c0524935f",
-              "partidas": 348,
+              "partidas": 349,
               "hs": {
                 "sniper": 12,
                 "dmr": 22,
@@ -30255,11 +30321,11 @@
                 }
               },
               "coletados": {
-                "boost": 1463,
+                "boost": 1464,
                 "cura": 3857,
-                "fumaca": 560,
+                "fumaca": 562,
                 "granada": 552,
-                "municao": 126488,
+                "municao": 126548,
                 "kits": 915
               },
               "usados": {
@@ -30269,13 +30335,13 @@
                 "granada": 182,
                 "kits": 237
               },
-              "mortes": 326,
-              "mortes_validas": 122,
+              "mortes": 327,
+              "mortes_validas": 123,
               "mortes_saldo_zero": {
                 "boost": 65,
-                "cura": 49,
+                "cura": 50,
                 "fumaca": 85,
-                "granada": 74
+                "granada": 75
               },
               "eventos_inconsistentes": 230,
               "vida_baixa_sem_cura_estimada": 277
@@ -30964,7 +31030,7 @@
             {
               "nick": "LAUANNA7788",
               "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
-              "partidas": 262,
+              "partidas": 268,
               "hs": {
                 "sniper": 28,
                 "dmr": 14,
@@ -30974,8 +31040,8 @@
               "recorde_partida": "78c08ce5-8383-44f6-ad97-328be1e2cf5b",
               "hs_nao_classificados": 0,
               "kills_bot": 372,
-              "kills_player": 86,
-              "dano_azul": 7627.643594468012,
+              "kills_player": 88,
+              "dano_azul": 7639.250874573365,
               "dano_queda": 531.2853185664862,
               "mortes_azul": 15,
               "armas": {
@@ -30999,9 +31065,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 174,
-                  "dano": 8753.998595237732,
-                  "partidas": 38
+                  "acertos": 175,
+                  "dano": 8754.18820476532,
+                  "partidas": 39
                 },
                 "Vector": {
                   "disparos": 0,
@@ -31035,9 +31101,9 @@
                 },
                 "HK416": {
                   "disparos": 0,
-                  "acertos": 237,
-                  "dano": 5403.613549232483,
-                  "partidas": 36
+                  "acertos": 242,
+                  "dano": 5503.6135511398315,
+                  "partidas": 37
                 },
                 "Mk12": {
                   "disparos": 0,
@@ -31059,9 +31125,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 91,
-                  "dano": 2199.8112869262695,
-                  "partidas": 15
+                  "acertos": 94,
+                  "dano": 2277.726064682007,
+                  "partidas": 16
                 },
                 "AWM": {
                   "disparos": 0,
@@ -31137,29 +31203,29 @@
                 }
               },
               "coletados": {
-                "boost": 2011,
-                "cura": 3213,
-                "fumaca": 552,
-                "granada": 626,
-                "municao": 146007,
-                "kits": 817
+                "boost": 2056,
+                "cura": 3285,
+                "fumaca": 566,
+                "granada": 638,
+                "municao": 150138,
+                "kits": 837
               },
               "usados": {
-                "boost": 989,
-                "cura": 339,
-                "fumaca": 321,
-                "granada": 470,
-                "kits": 140
+                "boost": 1007,
+                "cura": 343,
+                "fumaca": 332,
+                "granada": 479,
+                "kits": 142
               },
-              "mortes": 248,
-              "mortes_validas": 52,
+              "mortes": 254,
+              "mortes_validas": 53,
               "mortes_saldo_zero": {
                 "boost": 33,
-                "cura": 31,
-                "fumaca": 42,
-                "granada": 38
+                "cura": 32,
+                "fumaca": 43,
+                "granada": 39
               },
-              "eventos_inconsistentes": 213,
+              "eventos_inconsistentes": 218,
               "vida_baixa_sem_cura_estimada": 118
             },
             {
@@ -35271,7 +35337,7 @@
           },
           "partidas_anteriores_semana": 1821,
           "primeira_partida_analisada": "2026-11-01T03:00:18+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:21:49+00:00"
+          "ultima_partida_analisada": "2026-11-27T01:31:32+00:00"
         },
         "duo-fpp": {
           "partidas_conhecidas": 314,
@@ -37885,8 +37951,8 @@
           "ultima_partida_analisada": "2026-11-26T18:20:29+00:00"
         },
         "squad": {
-          "partidas_conhecidas": 596,
-          "partidas_analisadas": 596,
+          "partidas_conhecidas": 597,
+          "partidas_analisadas": 597,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -38077,7 +38143,7 @@
             {
               "nick": "CalanguinhoFPS",
               "account_id": "account.9bd078e4cc3943988b165aff1c437533",
-              "partidas": 290,
+              "partidas": 291,
               "hs": {
                 "sniper": 6,
                 "dmr": 9,
@@ -38086,8 +38152,8 @@
               "recorde_hs": 4,
               "recorde_partida": "6dac5fd6-a386-47c9-a6ac-ee7d8678f7d2",
               "hs_nao_classificados": 3,
-              "kills_bot": 16,
-              "kills_player": 379,
+              "kills_bot": 17,
+              "kills_player": 384,
               "dano_azul": 7738.36889018293,
               "dano_queda": 315.51504784822464,
               "mortes_azul": 8,
@@ -38112,9 +38178,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 22,
-                  "dano": 1495.4379043579102,
-                  "partidas": 17
+                  "acertos": 23,
+                  "dano": 1578.9379043579102,
+                  "partidas": 18
                 },
                 "Winchester": {
                   "disparos": 0,
@@ -38124,9 +38190,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 145,
-                  "dano": 4047.4557933807373,
-                  "partidas": 26
+                  "acertos": 151,
+                  "dano": 4168.667543411255,
+                  "partidas": 27
                 },
                 "AUG": {
                   "disparos": 0,
@@ -38283,22 +38349,28 @@
                   "acertos": 1,
                   "dano": 43.3865852355957,
                   "partidas": 1
+                },
+                "Groza": {
+                  "disparos": 0,
+                  "acertos": 11,
+                  "dano": 234.461088180542,
+                  "partidas": 1
                 }
               },
               "coletados": {
-                "boost": 1177,
-                "cura": 2375,
-                "fumaca": 451,
-                "granada": 691,
-                "municao": 80894,
-                "kits": 787
+                "boost": 1197,
+                "cura": 2386,
+                "fumaca": 455,
+                "granada": 696,
+                "municao": 81780,
+                "kits": 793
               },
               "usados": {
-                "boost": 538,
-                "cura": 611,
-                "fumaca": 210,
-                "granada": 435,
-                "kits": 326
+                "boost": 546,
+                "cura": 612,
+                "fumaca": 211,
+                "granada": 438,
+                "kits": 327
               },
               "mortes": 305,
               "mortes_validas": 73,
@@ -38308,7 +38380,7 @@
                 "fumaca": 54,
                 "granada": 50
               },
-              "eventos_inconsistentes": 218,
+              "eventos_inconsistentes": 219,
               "vida_baixa_sem_cura_estimada": 385
             },
             {
@@ -39583,7 +39655,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 291,
+              "partidas": 292,
               "hs": {
                 "sniper": 29,
                 "dmr": 1,
@@ -39593,8 +39665,8 @@
               "recorde_partida": "bb36dd75-29ca-4cbf-b124-6e7b50e83cf1",
               "hs_nao_classificados": 3,
               "kills_bot": 157,
-              "kills_player": 276,
-              "dano_azul": 9567.818307876587,
+              "kills_player": 278,
+              "dano_azul": 9629.281544804573,
               "dano_queda": 366.6149456202984,
               "mortes_azul": 12,
               "armas": {
@@ -39612,9 +39684,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 120,
-                  "dano": 7125.104452133179,
-                  "partidas": 57
+                  "acertos": 121,
+                  "dano": 7178.759401321411,
+                  "partidas": 58
                 },
                 "M249": {
                   "disparos": 0,
@@ -39792,19 +39864,19 @@
                 }
               },
               "coletados": {
-                "boost": 1446,
-                "cura": 2364,
-                "fumaca": 357,
-                "granada": 837,
-                "municao": 81919,
-                "kits": 850
+                "boost": 1468,
+                "cura": 2372,
+                "fumaca": 361,
+                "granada": 842,
+                "municao": 82769,
+                "kits": 858
               },
               "usados": {
-                "boost": 1038,
-                "cura": 451,
-                "fumaca": 163,
-                "granada": 501,
-                "kits": 237
+                "boost": 1049,
+                "cura": 453,
+                "fumaca": 167,
+                "granada": 503,
+                "kits": 239
               },
               "mortes": 286,
               "mortes_validas": 49,
@@ -39814,7 +39886,7 @@
                 "fumaca": 41,
                 "granada": 31
               },
-              "eventos_inconsistentes": 242,
+              "eventos_inconsistentes": 243,
               "vida_baixa_sem_cura_estimada": 166
             },
             {
@@ -40684,7 +40756,7 @@
           },
           "partidas_anteriores_semana": 565,
           "primeira_partida_analisada": "2026-11-01T05:03:43+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:16:10+00:00"
+          "ultima_partida_analisada": "2026-11-26T23:56:33+00:00"
         },
         "duo": {
           "partidas_conhecidas": 0,
@@ -41530,11 +41602,11 @@
     },
     "temporada": {
       "inicio": "2026-11-04T08:43:27+00:00",
-      "ate": "2026-11-26T23:54:52+00:00",
+      "ate": "2026-11-27T08:31:17+00:00",
       "grupos": {
         "todos": {
-          "partidas_conhecidas": 2555,
-          "partidas_analisadas": 2555,
+          "partidas_conhecidas": 2563,
+          "partidas_analisadas": 2563,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -42616,7 +42688,7 @@
             {
               "nick": "CalanguinhoFPS",
               "account_id": "account.9bd078e4cc3943988b165aff1c437533",
-              "partidas": 339,
+              "partidas": 340,
               "hs": {
                 "sniper": 13,
                 "dmr": 10,
@@ -42625,8 +42697,8 @@
               "recorde_hs": 4,
               "recorde_partida": "65b7eae9-d32d-4be7-b4fd-6c2b4bb3b87c",
               "hs_nao_classificados": 4,
-              "kills_bot": 24,
-              "kills_player": 423,
+              "kills_bot": 25,
+              "kills_player": 428,
               "dano_azul": 8416.329374389607,
               "dano_queda": 311.2409540116787,
               "mortes_azul": 10,
@@ -42651,9 +42723,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 141,
-                  "dano": 3981.2135372161865,
-                  "partidas": 26
+                  "acertos": 147,
+                  "dano": 4102.425287246704,
+                  "partidas": 27
                 },
                 "ACE32": {
                   "disparos": 0,
@@ -42663,9 +42735,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 34,
-                  "dano": 2241.175491333008,
-                  "partidas": 16
+                  "acertos": 35,
+                  "dano": 2324.675491333008,
+                  "partidas": 17
                 },
                 "MP5K": {
                   "disparos": 0,
@@ -42822,22 +42894,28 @@
                   "acertos": 1,
                   "dano": 43.3865852355957,
                   "partidas": 1
+                },
+                "Groza": {
+                  "disparos": 0,
+                  "acertos": 11,
+                  "dano": 234.461088180542,
+                  "partidas": 1
                 }
               },
               "coletados": {
-                "boost": 1314,
-                "cura": 2629,
-                "fumaca": 484,
-                "granada": 776,
-                "municao": 90818,
-                "kits": 879
+                "boost": 1334,
+                "cura": 2640,
+                "fumaca": 488,
+                "granada": 781,
+                "municao": 91704,
+                "kits": 885
               },
               "usados": {
-                "boost": 598,
-                "cura": 633,
-                "fumaca": 224,
-                "granada": 471,
-                "kits": 351
+                "boost": 606,
+                "cura": 634,
+                "fumaca": 225,
+                "granada": 474,
+                "kits": 352
               },
               "mortes": 351,
               "mortes_validas": 90,
@@ -42847,7 +42925,7 @@
                 "fumaca": 70,
                 "granada": 62
               },
-              "eventos_inconsistentes": 247,
+              "eventos_inconsistentes": 248,
               "vida_baixa_sem_cura_estimada": 459
             },
             {
@@ -43426,7 +43504,7 @@
             {
               "nick": "GEMINIAKI",
               "account_id": "account.2ceb61ee56e84abba908330c0524935f",
-              "partidas": 293,
+              "partidas": 294,
               "hs": {
                 "sniper": 9,
                 "dmr": 18,
@@ -43617,11 +43695,11 @@
                 }
               },
               "coletados": {
-                "boost": 1271,
+                "boost": 1272,
                 "cura": 3377,
-                "fumaca": 473,
+                "fumaca": 475,
                 "granada": 470,
-                "municao": 106709,
+                "municao": 106769,
                 "kits": 779
               },
               "usados": {
@@ -43631,13 +43709,13 @@
                 "granada": 146,
                 "kits": 203
               },
-              "mortes": 278,
-              "mortes_validas": 106,
+              "mortes": 279,
+              "mortes_validas": 107,
               "mortes_saldo_zero": {
                 "boost": 53,
-                "cura": 43,
+                "cura": 44,
                 "fumaca": 73,
-                "granada": 60
+                "granada": 61
               },
               "eventos_inconsistentes": 193,
               "vida_baixa_sem_cura_estimada": 241
@@ -44254,7 +44332,7 @@
             {
               "nick": "LAUANNA7788",
               "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
-              "partidas": 245,
+              "partidas": 251,
               "hs": {
                 "sniper": 26,
                 "dmr": 12,
@@ -44264,8 +44342,8 @@
               "recorde_partida": "78c08ce5-8383-44f6-ad97-328be1e2cf5b",
               "hs_nao_classificados": 0,
               "kills_bot": 313,
-              "kills_player": 78,
-              "dano_azul": 7946.150343460962,
+              "kills_player": 80,
+              "dano_azul": 7957.757623566315,
               "dano_queda": 488.1466698180884,
               "mortes_azul": 18,
               "armas": {
@@ -44283,9 +44361,9 @@
                 },
                 "HK416": {
                   "disparos": 0,
-                  "acertos": 216,
-                  "dano": 4927.681704521179,
-                  "partidas": 32
+                  "acertos": 221,
+                  "dano": 5027.681706428528,
+                  "partidas": 33
                 },
                 "Mk12": {
                   "disparos": 0,
@@ -44301,9 +44379,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 144,
-                  "dano": 7471.984110832214,
-                  "partidas": 32
+                  "acertos": 145,
+                  "dano": 7472.173720359802,
+                  "partidas": 33
                 },
                 "VSS": {
                   "disparos": 0,
@@ -44319,9 +44397,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 79,
-                  "dano": 1938.4816341400146,
-                  "partidas": 13
+                  "acertos": 82,
+                  "dano": 2016.396411895752,
+                  "partidas": 14
                 },
                 "SKS": {
                   "disparos": 0,
@@ -44421,29 +44499,29 @@
                 }
               },
               "coletados": {
-                "boost": 1791,
-                "cura": 2817,
-                "fumaca": 507,
-                "granada": 567,
-                "municao": 131728,
-                "kits": 735
+                "boost": 1836,
+                "cura": 2889,
+                "fumaca": 521,
+                "granada": 579,
+                "municao": 135859,
+                "kits": 755
               },
               "usados": {
-                "boost": 864,
-                "cura": 313,
-                "fumaca": 286,
-                "granada": 418,
-                "kits": 131
+                "boost": 882,
+                "cura": 317,
+                "fumaca": 297,
+                "granada": 427,
+                "kits": 133
               },
-              "mortes": 236,
-              "mortes_validas": 63,
+              "mortes": 242,
+              "mortes_validas": 64,
               "mortes_saldo_zero": {
                 "boost": 38,
-                "cura": 35,
-                "fumaca": 52,
-                "granada": 47
+                "cura": 36,
+                "fumaca": 53,
+                "granada": 48
               },
-              "eventos_inconsistentes": 184,
+              "eventos_inconsistentes": 189,
               "vida_baixa_sem_cura_estimada": 148
             },
             {
@@ -45796,7 +45874,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 315,
+              "partidas": 316,
               "hs": {
                 "sniper": 36,
                 "dmr": 1,
@@ -45806,8 +45884,8 @@
               "recorde_partida": "bb36dd75-29ca-4cbf-b124-6e7b50e83cf1",
               "hs_nao_classificados": 4,
               "kills_bot": 233,
-              "kills_player": 282,
-              "dano_azul": 9600.265548199415,
+              "kills_player": 284,
+              "dano_azul": 9661.728785127401,
               "dano_queda": 318.8845654428005,
               "mortes_azul": 12,
               "armas": {
@@ -45819,9 +45897,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 142,
-                  "dano": 8451.466213226318,
-                  "partidas": 63
+                  "acertos": 143,
+                  "dano": 8505.12116241455,
+                  "partidas": 64
                 },
                 "UMP": {
                   "disparos": 0,
@@ -46005,19 +46083,19 @@
                 }
               },
               "coletados": {
-                "boost": 1586,
-                "cura": 2558,
-                "fumaca": 389,
-                "granada": 941,
-                "municao": 94744,
-                "kits": 947
+                "boost": 1608,
+                "cura": 2566,
+                "fumaca": 393,
+                "granada": 946,
+                "municao": 95594,
+                "kits": 955
               },
               "usados": {
-                "boost": 1179,
-                "cura": 472,
-                "fumaca": 179,
-                "granada": 529,
-                "kits": 254
+                "boost": 1190,
+                "cura": 474,
+                "fumaca": 183,
+                "granada": 531,
+                "kits": 256
               },
               "mortes": 301,
               "mortes_validas": 51,
@@ -46027,7 +46105,7 @@
                 "fumaca": 41,
                 "granada": 31
               },
-              "eventos_inconsistentes": 264,
+              "eventos_inconsistentes": 265,
               "vida_baixa_sem_cura_estimada": 174
             },
             {
@@ -48756,11 +48834,11 @@
           },
           "partidas_anteriores_semana": 2233,
           "primeira_partida_analisada": "2026-11-04T08:43:27+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:21:49+00:00"
+          "ultima_partida_analisada": "2026-11-27T01:31:32+00:00"
         },
         "fpp": {
-          "partidas_conhecidas": 1989,
-          "partidas_analisadas": 1989,
+          "partidas_conhecidas": 1996,
+          "partidas_analisadas": 1996,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -50502,7 +50580,7 @@
             {
               "nick": "GEMINIAKI",
               "account_id": "account.2ceb61ee56e84abba908330c0524935f",
-              "partidas": 288,
+              "partidas": 289,
               "hs": {
                 "sniper": 8,
                 "dmr": 18,
@@ -50687,11 +50765,11 @@
                 }
               },
               "coletados": {
-                "boost": 1253,
+                "boost": 1254,
                 "cura": 3271,
-                "fumaca": 468,
+                "fumaca": 470,
                 "granada": 463,
-                "municao": 105236,
+                "municao": 105296,
                 "kits": 766
               },
               "usados": {
@@ -50701,13 +50779,13 @@
                 "granada": 143,
                 "kits": 201
               },
-              "mortes": 274,
-              "mortes_validas": 105,
+              "mortes": 275,
+              "mortes_validas": 106,
               "mortes_saldo_zero": {
                 "boost": 52,
-                "cura": 42,
+                "cura": 43,
                 "fumaca": 72,
-                "granada": 59
+                "granada": 60
               },
               "eventos_inconsistentes": 189,
               "vida_baixa_sem_cura_estimada": 241
@@ -51267,7 +51345,7 @@
             {
               "nick": "LAUANNA7788",
               "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
-              "partidas": 221,
+              "partidas": 227,
               "hs": {
                 "sniper": 26,
                 "dmr": 11,
@@ -51277,8 +51355,8 @@
               "recorde_partida": "78c08ce5-8383-44f6-ad97-328be1e2cf5b",
               "hs_nao_classificados": 0,
               "kills_bot": 310,
-              "kills_player": 73,
-              "dano_azul": 7024.4456438254565,
+              "kills_player": 75,
+              "dano_azul": 7036.052923930809,
               "dano_queda": 469.5311665069312,
               "mortes_azul": 14,
               "armas": {
@@ -51296,9 +51374,9 @@
                 },
                 "HK416": {
                   "disparos": 0,
-                  "acertos": 216,
-                  "dano": 4927.681704521179,
-                  "partidas": 32
+                  "acertos": 221,
+                  "dano": 5027.681706428528,
+                  "partidas": 33
                 },
                 "Mk12": {
                   "disparos": 0,
@@ -51308,9 +51386,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 143,
-                  "dano": 7418.147559165955,
-                  "partidas": 31
+                  "acertos": 144,
+                  "dano": 7418.3371686935425,
+                  "partidas": 32
                 },
                 "VSS": {
                   "disparos": 0,
@@ -51326,9 +51404,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 73,
-                  "dano": 1738.481632232666,
-                  "partidas": 12
+                  "acertos": 76,
+                  "dano": 1816.3964099884033,
+                  "partidas": 13
                 },
                 "AUG": {
                   "disparos": 0,
@@ -51434,29 +51512,29 @@
                 }
               },
               "coletados": {
-                "boost": 1750,
-                "cura": 2720,
-                "fumaca": 490,
-                "granada": 559,
-                "municao": 123991,
-                "kits": 703
+                "boost": 1795,
+                "cura": 2792,
+                "fumaca": 504,
+                "granada": 571,
+                "municao": 128122,
+                "kits": 723
               },
               "usados": {
-                "boost": 852,
-                "cura": 285,
-                "fumaca": 284,
-                "granada": 415,
-                "kits": 126
+                "boost": 870,
+                "cura": 289,
+                "fumaca": 295,
+                "granada": 424,
+                "kits": 128
               },
-              "mortes": 213,
-              "mortes_validas": 45,
+              "mortes": 219,
+              "mortes_validas": 46,
               "mortes_saldo_zero": {
                 "boost": 28,
-                "cura": 28,
-                "fumaca": 39,
-                "granada": 33
+                "cura": 29,
+                "fumaca": 40,
+                "granada": 34
               },
-              "eventos_inconsistentes": 179,
+              "eventos_inconsistentes": 184,
               "vida_baixa_sem_cura_estimada": 99
             },
             {
@@ -55469,11 +55547,11 @@
           },
           "partidas_anteriores_semana": 1711,
           "primeira_partida_analisada": "2026-11-04T09:39:11+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:21:49+00:00"
+          "ultima_partida_analisada": "2026-11-27T01:31:32+00:00"
         },
         "tpp": {
-          "partidas_conhecidas": 533,
-          "partidas_analisadas": 533,
+          "partidas_conhecidas": 534,
+          "partidas_analisadas": 534,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -55640,7 +55718,7 @@
             {
               "nick": "CalanguinhoFPS",
               "account_id": "account.9bd078e4cc3943988b165aff1c437533",
-              "partidas": 280,
+              "partidas": 281,
               "hs": {
                 "sniper": 6,
                 "dmr": 9,
@@ -55649,8 +55727,8 @@
               "recorde_hs": 4,
               "recorde_partida": "6dac5fd6-a386-47c9-a6ac-ee7d8678f7d2",
               "hs_nao_classificados": 3,
-              "kills_bot": 16,
-              "kills_player": 371,
+              "kills_bot": 17,
+              "kills_player": 376,
               "dano_azul": 7466.398570673424,
               "dano_queda": 264.27363377809525,
               "mortes_azul": 8,
@@ -55675,9 +55753,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 136,
-                  "dano": 3838.2985515594482,
-                  "partidas": 24
+                  "acertos": 142,
+                  "dano": 3959.510301589966,
+                  "partidas": 25
                 },
                 "ACE32": {
                   "disparos": 0,
@@ -55687,9 +55765,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 20,
-                  "dano": 1336.9379043579102,
-                  "partidas": 15
+                  "acertos": 21,
+                  "dano": 1420.4379043579102,
+                  "partidas": 16
                 },
                 "MP5K": {
                   "disparos": 0,
@@ -55846,22 +55924,28 @@
                   "acertos": 2,
                   "dano": 53.50564765930176,
                   "partidas": 1
+                },
+                "Groza": {
+                  "disparos": 0,
+                  "acertos": 11,
+                  "dano": 234.461088180542,
+                  "partidas": 1
                 }
               },
               "coletados": {
-                "boost": 1135,
-                "cura": 2290,
-                "fumaca": 424,
-                "granada": 660,
-                "municao": 78298,
-                "kits": 768
+                "boost": 1155,
+                "cura": 2301,
+                "fumaca": 428,
+                "granada": 665,
+                "municao": 79184,
+                "kits": 774
               },
               "usados": {
-                "boost": 518,
-                "cura": 576,
-                "fumaca": 195,
-                "granada": 423,
-                "kits": 316
+                "boost": 526,
+                "cura": 577,
+                "fumaca": 196,
+                "granada": 426,
+                "kits": 317
               },
               "mortes": 294,
               "mortes_validas": 71,
@@ -55871,7 +55955,7 @@
                 "fumaca": 53,
                 "granada": 49
               },
-              "eventos_inconsistentes": 210,
+              "eventos_inconsistentes": 211,
               "vida_baixa_sem_cura_estimada": 369
             },
             {
@@ -57010,7 +57094,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 277,
+              "partidas": 278,
               "hs": {
                 "sniper": 28,
                 "dmr": 1,
@@ -57020,8 +57104,8 @@
               "recorde_partida": "bb36dd75-29ca-4cbf-b124-6e7b50e83cf1",
               "hs_nao_classificados": 2,
               "kills_bot": 141,
-              "kills_player": 257,
-              "dano_azul": 8575.711098402739,
+              "kills_player": 259,
+              "dano_azul": 8637.174335330725,
               "dano_queda": 279.7725151479244,
               "mortes_azul": 11,
               "armas": {
@@ -57033,9 +57117,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 112,
-                  "dano": 6871.541465759277,
-                  "partidas": 53
+                  "acertos": 113,
+                  "dano": 6925.19641494751,
+                  "partidas": 54
                 },
                 "UMP": {
                   "disparos": 0,
@@ -57213,19 +57297,19 @@
                 }
               },
               "coletados": {
-                "boost": 1336,
-                "cura": 2201,
-                "fumaca": 335,
-                "granada": 791,
-                "municao": 76951,
-                "kits": 811
+                "boost": 1358,
+                "cura": 2209,
+                "fumaca": 339,
+                "granada": 796,
+                "municao": 77801,
+                "kits": 819
               },
               "usados": {
-                "boost": 988,
-                "cura": 420,
-                "fumaca": 152,
-                "granada": 466,
-                "kits": 220
+                "boost": 999,
+                "cura": 422,
+                "fumaca": 156,
+                "granada": 468,
+                "kits": 222
               },
               "mortes": 272,
               "mortes_validas": 45,
@@ -57235,7 +57319,7 @@
                 "fumaca": 37,
                 "granada": 28
               },
-              "eventos_inconsistentes": 231,
+              "eventos_inconsistentes": 232,
               "vida_baixa_sem_cura_estimada": 161
             },
             {
@@ -58074,11 +58158,11 @@
           },
           "partidas_anteriores_semana": 502,
           "primeira_partida_analisada": "2026-11-04T08:43:27+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:16:10+00:00"
+          "ultima_partida_analisada": "2026-11-26T23:56:33+00:00"
         },
         "squad-fpp": {
-          "partidas_conhecidas": 1727,
-          "partidas_analisadas": 1727,
+          "partidas_conhecidas": 1734,
+          "partidas_analisadas": 1734,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -59736,7 +59820,7 @@
             {
               "nick": "GEMINIAKI",
               "account_id": "account.2ceb61ee56e84abba908330c0524935f",
-              "partidas": 287,
+              "partidas": 288,
               "hs": {
                 "sniper": 8,
                 "dmr": 18,
@@ -59921,11 +60005,11 @@
                 }
               },
               "coletados": {
-                "boost": 1253,
+                "boost": 1254,
                 "cura": 3271,
-                "fumaca": 466,
+                "fumaca": 468,
                 "granada": 463,
-                "municao": 104982,
+                "municao": 105042,
                 "kits": 766
               },
               "usados": {
@@ -59935,13 +60019,13 @@
                 "granada": 143,
                 "kits": 201
               },
-              "mortes": 273,
-              "mortes_validas": 105,
+              "mortes": 274,
+              "mortes_validas": 106,
               "mortes_saldo_zero": {
                 "boost": 52,
-                "cura": 42,
+                "cura": 43,
                 "fumaca": 72,
-                "granada": 59
+                "granada": 60
               },
               "eventos_inconsistentes": 188,
               "vida_baixa_sem_cura_estimada": 241
@@ -60453,7 +60537,7 @@
             {
               "nick": "LAUANNA7788",
               "account_id": "account.e895e878b36b4411a55c09fe313a9b33",
-              "partidas": 221,
+              "partidas": 227,
               "hs": {
                 "sniper": 26,
                 "dmr": 11,
@@ -60463,8 +60547,8 @@
               "recorde_partida": "78c08ce5-8383-44f6-ad97-328be1e2cf5b",
               "hs_nao_classificados": 0,
               "kills_bot": 310,
-              "kills_player": 73,
-              "dano_azul": 7024.4456438254565,
+              "kills_player": 75,
+              "dano_azul": 7036.052923930809,
               "dano_queda": 469.5311665069312,
               "mortes_azul": 14,
               "armas": {
@@ -60482,9 +60566,9 @@
                 },
                 "HK416": {
                   "disparos": 0,
-                  "acertos": 216,
-                  "dano": 4927.681704521179,
-                  "partidas": 32
+                  "acertos": 221,
+                  "dano": 5027.681706428528,
+                  "partidas": 33
                 },
                 "Mk12": {
                   "disparos": 0,
@@ -60494,9 +60578,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 143,
-                  "dano": 7418.147559165955,
-                  "partidas": 31
+                  "acertos": 144,
+                  "dano": 7418.3371686935425,
+                  "partidas": 32
                 },
                 "VSS": {
                   "disparos": 0,
@@ -60512,9 +60596,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 73,
-                  "dano": 1738.481632232666,
-                  "partidas": 12
+                  "acertos": 76,
+                  "dano": 1816.3964099884033,
+                  "partidas": 13
                 },
                 "AUG": {
                   "disparos": 0,
@@ -60620,29 +60704,29 @@
                 }
               },
               "coletados": {
-                "boost": 1750,
-                "cura": 2720,
-                "fumaca": 490,
-                "granada": 559,
-                "municao": 123991,
-                "kits": 703
+                "boost": 1795,
+                "cura": 2792,
+                "fumaca": 504,
+                "granada": 571,
+                "municao": 128122,
+                "kits": 723
               },
               "usados": {
-                "boost": 852,
-                "cura": 285,
-                "fumaca": 284,
-                "granada": 415,
-                "kits": 126
+                "boost": 870,
+                "cura": 289,
+                "fumaca": 295,
+                "granada": 424,
+                "kits": 128
               },
-              "mortes": 213,
-              "mortes_validas": 45,
+              "mortes": 219,
+              "mortes_validas": 46,
               "mortes_saldo_zero": {
                 "boost": 28,
-                "cura": 28,
-                "fumaca": 39,
-                "granada": 33
+                "cura": 29,
+                "fumaca": 40,
+                "granada": 34
               },
-              "eventos_inconsistentes": 179,
+              "eventos_inconsistentes": 184,
               "vida_baixa_sem_cura_estimada": 99
             },
             {
@@ -64487,7 +64571,7 @@
           },
           "partidas_anteriores_semana": 1482,
           "primeira_partida_analisada": "2026-11-04T09:39:11+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:21:49+00:00"
+          "ultima_partida_analisada": "2026-11-27T01:31:32+00:00"
         },
         "duo-fpp": {
           "partidas_conhecidas": 262,
@@ -66917,8 +67001,8 @@
           "ultima_partida_analisada": "2026-11-26T18:20:29+00:00"
         },
         "squad": {
-          "partidas_conhecidas": 533,
-          "partidas_analisadas": 533,
+          "partidas_conhecidas": 534,
+          "partidas_analisadas": 534,
           "jogadores": [
             {
               "nick": "Alien--__--",
@@ -67085,7 +67169,7 @@
             {
               "nick": "CalanguinhoFPS",
               "account_id": "account.9bd078e4cc3943988b165aff1c437533",
-              "partidas": 280,
+              "partidas": 281,
               "hs": {
                 "sniper": 6,
                 "dmr": 9,
@@ -67094,8 +67178,8 @@
               "recorde_hs": 4,
               "recorde_partida": "6dac5fd6-a386-47c9-a6ac-ee7d8678f7d2",
               "hs_nao_classificados": 3,
-              "kills_bot": 16,
-              "kills_player": 371,
+              "kills_bot": 17,
+              "kills_player": 376,
               "dano_azul": 7466.398570673424,
               "dano_queda": 264.27363377809525,
               "mortes_azul": 8,
@@ -67120,9 +67204,9 @@
                 },
                 "Mini14": {
                   "disparos": 0,
-                  "acertos": 136,
-                  "dano": 3838.2985515594482,
-                  "partidas": 24
+                  "acertos": 142,
+                  "dano": 3959.510301589966,
+                  "partidas": 25
                 },
                 "ACE32": {
                   "disparos": 0,
@@ -67132,9 +67216,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 20,
-                  "dano": 1336.9379043579102,
-                  "partidas": 15
+                  "acertos": 21,
+                  "dano": 1420.4379043579102,
+                  "partidas": 16
                 },
                 "MP5K": {
                   "disparos": 0,
@@ -67291,22 +67375,28 @@
                   "acertos": 2,
                   "dano": 53.50564765930176,
                   "partidas": 1
+                },
+                "Groza": {
+                  "disparos": 0,
+                  "acertos": 11,
+                  "dano": 234.461088180542,
+                  "partidas": 1
                 }
               },
               "coletados": {
-                "boost": 1135,
-                "cura": 2290,
-                "fumaca": 424,
-                "granada": 660,
-                "municao": 78298,
-                "kits": 768
+                "boost": 1155,
+                "cura": 2301,
+                "fumaca": 428,
+                "granada": 665,
+                "municao": 79184,
+                "kits": 774
               },
               "usados": {
-                "boost": 518,
-                "cura": 576,
-                "fumaca": 195,
-                "granada": 423,
-                "kits": 316
+                "boost": 526,
+                "cura": 577,
+                "fumaca": 196,
+                "granada": 426,
+                "kits": 317
               },
               "mortes": 294,
               "mortes_validas": 71,
@@ -67316,7 +67406,7 @@
                 "fumaca": 53,
                 "granada": 49
               },
-              "eventos_inconsistentes": 210,
+              "eventos_inconsistentes": 211,
               "vida_baixa_sem_cura_estimada": 369
             },
             {
@@ -68455,7 +68545,7 @@
             {
               "nick": "Pisanoslixo",
               "account_id": "account.6f00dd75aca345d595e05061babc1a1f",
-              "partidas": 277,
+              "partidas": 278,
               "hs": {
                 "sniper": 28,
                 "dmr": 1,
@@ -68465,8 +68555,8 @@
               "recorde_partida": "bb36dd75-29ca-4cbf-b124-6e7b50e83cf1",
               "hs_nao_classificados": 2,
               "kills_bot": 141,
-              "kills_player": 257,
-              "dano_azul": 8575.711098402739,
+              "kills_player": 259,
+              "dano_azul": 8637.174335330725,
               "dano_queda": 279.7725151479244,
               "mortes_azul": 11,
               "armas": {
@@ -68478,9 +68568,9 @@
                 },
                 "M24": {
                   "disparos": 0,
-                  "acertos": 112,
-                  "dano": 6871.541465759277,
-                  "partidas": 53
+                  "acertos": 113,
+                  "dano": 6925.19641494751,
+                  "partidas": 54
                 },
                 "UMP": {
                   "disparos": 0,
@@ -68658,19 +68748,19 @@
                 }
               },
               "coletados": {
-                "boost": 1336,
-                "cura": 2201,
-                "fumaca": 335,
-                "granada": 791,
-                "municao": 76951,
-                "kits": 811
+                "boost": 1358,
+                "cura": 2209,
+                "fumaca": 339,
+                "granada": 796,
+                "municao": 77801,
+                "kits": 819
               },
               "usados": {
-                "boost": 988,
-                "cura": 420,
-                "fumaca": 152,
-                "granada": 466,
-                "kits": 220
+                "boost": 999,
+                "cura": 422,
+                "fumaca": 156,
+                "granada": 468,
+                "kits": 222
               },
               "mortes": 272,
               "mortes_validas": 45,
@@ -68680,7 +68770,7 @@
                 "fumaca": 37,
                 "granada": 28
               },
-              "eventos_inconsistentes": 231,
+              "eventos_inconsistentes": 232,
               "vida_baixa_sem_cura_estimada": 161
             },
             {
@@ -69519,7 +69609,7 @@
           },
           "partidas_anteriores_semana": 502,
           "primeira_partida_analisada": "2026-11-04T08:43:27+00:00",
-          "ultima_partida_analisada": "2026-11-26T23:16:10+00:00"
+          "ultima_partida_analisada": "2026-11-26T23:56:33+00:00"
         },
         "duo": {
           "partidas_conhecidas": 0,
